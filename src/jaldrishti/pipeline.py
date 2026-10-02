@@ -5,7 +5,7 @@ from urllib.parse import urlparse
 from .index import docs, load, build_doc, add_doc, CORPUS, sha
 from .answer import Engine
 from .question import parse, Linker
-from .search import SerpApi, results, trusted, plan, baseline, relevant
+from .search import SerpApi, results, trusted, plan, baseline, relevant, proper_names, resolve_district_step, district_from_results
 from .index import ROOT, CACHE as ICACHE
 
 def nurl(u: str) -> str:
@@ -88,7 +88,7 @@ class Session:
         elif self.live:
             for r in res:
                 u = r["pdf"]
-                if not u or not trusted(u) or nurl(u) in self.by_url or not relevant(r, self.contaminant): continue
+                if not u or not trusted(u) or nurl(u) in self.by_url or not relevant(r, self.contaminant, self.scope + proper_names(self._q)): continue
                 if tries >= self.k: break
                 tries += 1
                 d = self._add(u, fetched)
@@ -96,15 +96,31 @@ class Session:
         return found
     def run(self, question: str, mode: str = "jaldrishti", budget: int = 3) -> dict:
         t0 = time.time()
-        q0 = parse(question, Linker(self.ev)); self.contaminant = q0.contaminant
+        q0 = parse(question, Linker(self.ev)); self.contaminant = q0.contaminant; self._q = question
         if mode == "oracle":
-            ans = Engine(self.ev, self.by_id).ask(question)
-            return {"mode": mode, "trace": [], "credits": 0, "located": sorted(self.by_id), "answer": ans, "seconds": round(time.time() - t0, 2)}
-        places = [p for m in q0.mentions for p in m.places]
-        steps = ([{**baseline(q0), "start": s * 10} for s in range(budget)] if mode == "baseline" else plan(q0, places)[:budget])
+            core = {d["id"] for d in docs()}
+            ans = Engine([e for e in self.ev if e["doc"] in core], self.by_id).ask(question)
+            return {"mode": mode, "trace": [], "credits": 0, "located": sorted(core), "answer": ans, "seconds": round(time.time() - t0, 2)}
         located, trace, credits, ans = set(), [], 0, None
+        self.scope = list(q0.districts)
+        if mode == "baseline":
+            steps = [{**baseline(q0), "start": s * 10} for s in range(budget)]
+        else:
+            names = proper_names(question)
+            if names and not q0.districts:      # spend one search to learn the district, then plan with it
+                st = resolve_district_step(names[0])
+                d = self.api.search(engine="google", q=st["q"]); credits += 0 if d.get("_missing") else 1
+                dist = district_from_results(d)
+                trace.append({**st, "cached": d.get("_cached", False), "n_results": len(results(d)), "located": [], "fetched": [],
+                              "top": [{"rank": r["rank"], "domain": r["domain"], "title": r["title"][:90], "pdf": bool(r["pdf"])} for r in results(d)[:3]],
+                              "resolved_district": dist, "answer_type": None})
+                if dist:
+                    q0.districts = [dist]; self.scope = [dist]
+            steps = plan(q0)[:max(0, budget - credits)]
         for st in steps:
             params = {"engine": st["engine"], "q": st["q"]}
+            for k in ("as_ylo", "as_yhi"):
+                if st.get(k): params[k] = st[k]
             if st.get("start"): params["start"] = st["start"]
             if st.get("as_sitesearch"): params["as_sitesearch"] = st["as_sitesearch"]
             d = self.api.search(**params)

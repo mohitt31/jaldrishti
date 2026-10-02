@@ -12,11 +12,27 @@ def _num(x):
     try: return float(str(x).replace(",", ""))
     except ValueError: return None
 
-def item_matches(item: dict, fact: dict) -> bool:
+import re as _re
+def _toks(s): return [t for t in _re.findall(r"[\w.]+", _re.sub(r"(?<=\d),(?=\d{3})", "", (s or "").lower())) if t]
+
+def item_matches(item: dict, fact: dict, strict: bool = False) -> bool:
+    """Same value, and either the gold document+page, or (non-strict) another copy whose cited page prints the gold row."""
     v1, v2 = _num(item["value"]), _num(fact["value"])
     if v1 is None or v2 is None or abs(v1 - v2) > 1e-9: return False
-    if item.get("url") != fact["source_url"]: return False
-    return not fact["pdf_page_number"] or str(item.get("page")) == str(fact["pdf_page_number"])
+    if item.get("url") == fact["source_url"]:
+        return not fact["pdf_page_number"] or str(item.get("page")) == str(fact["pdf_page_number"])
+    if strict or not item.get("page"): return False
+    from .verify import page_text
+    from .index import docs
+    meta = next((d for d in docs() if d["id"] == item["doc"]), None) or _disc(item["doc"])
+    if not meta: return False
+    pt = " ".join(_toks(page_text(meta["file"], int(item["page"]))))
+    return all(t in pt for t in _toks(fact["exact_quote"]))
+
+def _disc(doc_id):
+    f = ROOT / "cache/discovered.json"
+    if not f.exists(): return None
+    return next((m for m in json.loads(f.read_text()).values() if m.get("id") == doc_id), None)
 
 def score_one(q: dict, r: dict, facts: dict) -> dict:
     exp = q["expected_answer_type"]
@@ -26,12 +42,13 @@ def score_one(q: dict, r: dict, facts: dict) -> dict:
     supported = [i for i in items if any(item_matches(i, f) for f in sup)]
     unsupported = len(items) - len(supported) if exp == "number_with_source" else 0
     covered = all(any(item_matches(i, f) for i in items) for f in sup)
+    strict = all(any(item_matches(i, f, strict=True) for i in items) for f in sup)
     if exp == "number_with_source": correct = type_ok and covered and unsupported == 0
     elif exp == "not_comparable": correct = type_ok
     else: correct = type_ok and not items
     return {"id": q["question_id"], "expected": exp, "got": r["answer_type"], "correct": correct,
             "verified_items": sum(1 for i in items if i.get("page_verified")),
-            "evidence_ok": covered if sup else None, "n_items": len(items), "unsupported": unsupported}
+            "evidence_ok": covered if sup else None, "gold_doc_exact": strict if sup else None, "n_items": len(items), "unsupported": unsupported}
 
 def summarise(rows: list[dict]) -> dict:
     n = len(rows)
@@ -43,6 +60,7 @@ def summarise(rows: list[dict]) -> dict:
     return {"n": n, "accuracy": sum(r["correct"] for r in rows) / n if n else 0,
             "numeric_accuracy": sum(r["correct"] for r in num) / len(num) if num else None,
             "unsupported_items": sum(r["unsupported"] for r in num), "numeric_items": items,
+            "gold_doc_exact_numeric": sum(1 for r in num if r.get("correct") and r.get("gold_doc_exact")),
             "page_verified_items": sum(r.get("verified_items", 0) for r in num),
             "abstention_precision": len(tp) / len(abst_pred) if abst_pred else None,
             "abstention_recall": len(tp) / len(abst_true) if abst_true else None}

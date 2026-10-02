@@ -13,7 +13,7 @@ def _n(s): return re.sub(r"(?<=\d),(?=\d{3})", "", s or "")
 
 def verify_item(item: dict, meta: dict) -> bool:
     v = _n(item["value"]).strip()
-    if not meta: return False
+    if not meta or not (CORPUS / meta.get("file", "")).is_file(): return False
     if meta.get("format") == "pubmed_xml":
         txt = (CORPUS / meta["file"]).read_text(errors="ignore")
     else:

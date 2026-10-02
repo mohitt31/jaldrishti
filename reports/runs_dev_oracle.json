@@ -1,0 +1,970 @@
+[
+ {
+  "question_id": "Q001",
+  "question": "What fluoride value does the CGWB April 2022 shallow-aquifer table report for the dug well at Bhajanghat?",
+  "mode": "oracle",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "amp_purulia",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "naquim_bankura",
+   "pubmed_26164468",
+   "pubmed_26188634",
+   "pubmed_33893897",
+   "yearbook_2015_16"
+  ],
+  "answer": {
+   "answer_type": "number_with_source",
+   "items": [
+    {
+     "value": "0.16",
+     "unit": "mg/L",
+     "statistic": "single",
+     "place": "Krishnaganj, Bhajanghat",
+     "district": "Nadia",
+     "source_type": "Dug Well",
+     "well_id": null,
+     "date": null,
+     "period": "Apr, 2022",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "gwq_west_bengal",
+     "title": "Ground Water Quality of West Bengal",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+     "page": 102,
+     "quote": "Nadia | Krishnaganj | Bhajanghat | Dug Well | 7.88 | 330 | 150 | 24 | 22 | 8 | 2 | 0 | 195 | 160 | 7 | 1 | 8 | 0.16 | 192 | 1.23",
+     "header": "F",
+     "publication_year": null,
+     "evidence_id": "gwq_west_bengal:102:0:4:17",
+     "bbox": [
+      28.319999999999986,
+      161.59000000000003,
+      823.6799899999994,
+      177.18999500000012
+     ],
+     "score": 7.8,
+     "asked": "bhajanghat",
+     "page_verified": true
+    }
+   ],
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What fluoride value does the CGWB April 2022 shallow-aquifer table report for the dug well at Bhajanghat?",
+      "places": [
+       "bhajanghat"
+      ],
+      "well_ids": [],
+      "sources": [
+       "dug well"
+      ],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.21,
+  "score": {
+   "id": "Q001",
+   "expected": "number_with_source",
+   "got": "number_with_source",
+   "correct": true,
+   "verified_items": 1,
+   "evidence_ok": true,
+   "gold_doc_exact": true,
+   "n_items": 1,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.21
+  }
+ },
+ {
+  "question_id": "Q002",
+  "question": "How many Baduria samples exceeded 10 \u00b5g/L arsenic in the ADB-reproduced IMIS 2014\u20132017 table?",
+  "mode": "oracle",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "amp_purulia",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "naquim_bankura",
+   "pubmed_26164468",
+   "pubmed_26188634",
+   "pubmed_33893897",
+   "yearbook_2015_16"
+  ],
+  "answer": {
+   "answer_type": "number_with_source",
+   "items": [
+    {
+     "value": "1,366",
+     "unit": "samples",
+     "statistic": "count_exceeding",
+     "place": "Baduria",
+     "district": "North 24 Parganas",
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": "2014\u20132017",
+     "threshold": "10",
+     "spatial_support": "site",
+     "doc": "adb_49107_006",
+     "title": "Arsenic and Fluoride in Drinking Water in West Bengal: Characteristics, Implications, and Mitigation (RRP IND 49107-006)",
+     "url": "https://www.adb.org/sites/default/files/linked-documents/49107-006-sd-01.pdf",
+     "page": 8,
+     "quote": "Baduria | 155 | 4,537 | 1,366 | 30.1",
+     "header": "No. samples with arsenic >10 \u00b5g/L",
+     "publication_year": null,
+     "evidence_id": "adb_49107_006:8:0:1:3",
+     "bbox": [
+      116.06,
+      279.0616,
+      470.83876,
+      291.02160000000003
+     ],
+     "score": 6.2,
+     "asked": "baduria",
+     "page_verified": true
+    }
+   ],
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "arsenic",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "How many Baduria samples exceeded 10 \u00b5g/L arsenic in the ADB-reproduced IMIS 2014\u20132017 table?",
+      "places": [
+       "baduria"
+      ],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "count_exceeding"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.17,
+  "score": {
+   "id": "Q002",
+   "expected": "number_with_source",
+   "got": "number_with_source",
+   "correct": true,
+   "verified_items": 1,
+   "evidence_ok": true,
+   "gold_doc_exact": true,
+   "n_items": 1,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.17
+  }
+ },
+ {
+  "question_id": "Q003",
+  "question": "What fluoride value is reported for the Daulatabad dug well in April 2022?",
+  "mode": "oracle",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "amp_purulia",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "naquim_bankura",
+   "pubmed_26164468",
+   "pubmed_26188634",
+   "pubmed_33893897",
+   "yearbook_2015_16"
+  ],
+  "answer": {
+   "answer_type": "number_with_source",
+   "items": [
+    {
+     "value": "0.09",
+     "unit": "mg/L",
+     "statistic": "single",
+     "place": "Berhampur, Daulatabad",
+     "district": "Murshidabad",
+     "source_type": "Dug Well",
+     "well_id": null,
+     "date": null,
+     "period": "Apr, 2022",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "gwq_west_bengal",
+     "title": "Ground Water Quality of West Bengal",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+     "page": 101,
+     "quote": "Murshidabad | Berhampur | Daulatabad | Dug Well | 7.79 | 1312 | 445 | 96 | 50 | 75 | 6 | 0 | 525 | 430 | 110 | 42 | 1 | 0.09 | 699 | 0.10",
+     "header": "F",
+     "publication_year": null,
+     "evidence_id": "gwq_west_bengal:101:0:4:17",
+     "bbox": [
+      28.31999999999998,
+      175.5100000000001,
+      823.6799899999996,
+      191.11000000000007
+     ],
+     "score": 7.4,
+     "asked": "daulatabad",
+     "page_verified": true
+    }
+   ],
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What fluoride value is reported for the Daulatabad dug well in April 2022?",
+      "places": [
+       "daulatabad"
+      ],
+      "well_ids": [],
+      "sources": [
+       "dug well"
+      ],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.18,
+  "score": {
+   "id": "Q003",
+   "expected": "number_with_source",
+   "got": "number_with_source",
+   "correct": true,
+   "verified_items": 1,
+   "evidence_ok": true,
+   "gold_doc_exact": true,
+   "n_items": 1,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.18
+  }
+ },
+ {
+  "question_id": "Q004",
+  "question": "What was the highest arsenic concentration detected in Malda during CGWB Special Drive 2015\u201316 and at which location?",
+  "mode": "oracle",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "amp_purulia",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "naquim_bankura",
+   "pubmed_26164468",
+   "pubmed_26188634",
+   "pubmed_33893897",
+   "yearbook_2015_16"
+  ],
+  "answer": {
+   "answer_type": "number_with_source",
+   "items": [
+    {
+     "value": "0.402",
+     "unit": "mg/L",
+     "statistic": "max",
+     "place": "Kaliachak I, Sujapur",
+     "district": "Malda",
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": "2015 \u2013 16",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "yearbook_2015_16",
+     "title": "Ground Water Year Book of West Bengal & Andaman & Nicobar Islands (2015-2016)",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1687515522384483915file.pdf",
+     "page": 49,
+     "quote": "4 | MALDA | 10 | 137 | 43 | 31 | 0.402 | Kaliachak I | Sujapur",
+     "header": "Highest Conc. (in mg l-1) detected from the district",
+     "publication_year": 2017,
+     "evidence_id": "yearbook_2015_16:49:0:3:6",
+     "bbox": [
+      57.84000000000002,
+      211.81999999999994,
+      576.7000200000001,
+      227.2999949999999
+     ],
+     "score": 4.4,
+     "asked": "max",
+     "page_verified": true
+    }
+   ],
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "arsenic",
+    "districts": [
+     "Malda"
+    ],
+    "mentions": [
+     {
+      "text": "What was the highest arsenic concentration detected in Malda during CGWB Special Drive 2015\u201316 and at which location?",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "max"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.17,
+  "score": {
+   "id": "Q004",
+   "expected": "number_with_source",
+   "got": "number_with_source",
+   "correct": true,
+   "verified_items": 1,
+   "evidence_ok": true,
+   "gold_doc_exact": true,
+   "n_items": 1,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.17
+  }
+ },
+ {
+  "question_id": "Q005",
+  "question": "What fluoride value is reported for the Barisha dug well in April 2022?",
+  "mode": "oracle",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "amp_purulia",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "naquim_bankura",
+   "pubmed_26164468",
+   "pubmed_26188634",
+   "pubmed_33893897",
+   "yearbook_2015_16"
+  ],
+  "answer": {
+   "answer_type": "number_with_source",
+   "items": [
+    {
+     "value": "0.23",
+     "unit": "mg/L",
+     "statistic": "single",
+     "place": "Bishnupur II, Barisha",
+     "district": "South 24 Parganas",
+     "source_type": "Dug Well",
+     "well_id": null,
+     "date": null,
+     "period": "Apr, 2022",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "gwq_west_bengal",
+     "title": "Ground Water Quality of West Bengal",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+     "page": 107,
+     "quote": "South 24 Parganas | Bishnupur II | Barisha | Dug Well | 8.21 | 385 | 125 | 34 | 10 | 20 | 5 | 0 | 159 | 130 | 32 | 1 | 11 | 0.23 | 209 | 0.04",
+     "header": "F",
+     "publication_year": null,
+     "evidence_id": "gwq_west_bengal:107:0:11:17",
+     "bbox": [
+      28.319999999999983,
+      268.199995,
+      823.6799899999995,
+      283.7999950000001
+     ],
+     "score": 7.4,
+     "asked": "barisha",
+     "page_verified": true
+    }
+   ],
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What fluoride value is reported for the Barisha dug well in April 2022?",
+      "places": [
+       "barisha"
+      ],
+      "well_ids": [],
+      "sources": [
+       "dug well"
+      ],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.19,
+  "score": {
+   "id": "Q005",
+   "expected": "number_with_source",
+   "got": "number_with_source",
+   "correct": true,
+   "verified_items": 1,
+   "evidence_ok": true,
+   "gold_doc_exact": true,
+   "n_items": 1,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.19
+  }
+ },
+ {
+  "question_id": "Q006",
+  "question": "What drinking-water fluoride range does the Mondal et al. paper published in the 2016 journal issue report for its two study villages?",
+  "mode": "oracle",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "amp_purulia",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "naquim_bankura",
+   "pubmed_26164468",
+   "pubmed_26188634",
+   "pubmed_33893897",
+   "yearbook_2015_16"
+  ],
+  "answer": {
+   "answer_type": "number_with_source",
+   "items": [
+    {
+     "value": "0.33",
+     "unit": "mg/L",
+     "statistic": "range_min",
+     "place": "Birbhum",
+     "district": "Birbhum",
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": null,
+     "threshold": null,
+     "spatial_support": "study",
+     "doc": "pubmed_26164468",
+     "title": "https://pubmed.ncbi.nlm.nih.gov/26164468/",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/26164468/",
+     "page": null,
+     "quote": "Fluoride concentration in drinking water varies from 0.33 to 18.08\u00a0mg/L.",
+     "header": "abstract",
+     "publication_year": 2016,
+     "evidence_id": "pubmed_26164468:s2:range_min",
+     "bbox": null,
+     "score": 2.4,
+     "asked": "min",
+     "page_verified": true
+    },
+    {
+     "value": "18.08",
+     "unit": "mg/L",
+     "statistic": "range_max",
+     "place": "Birbhum",
+     "district": "Birbhum",
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": null,
+     "threshold": null,
+     "spatial_support": "study",
+     "doc": "pubmed_26164468",
+     "title": "https://pubmed.ncbi.nlm.nih.gov/26164468/",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/26164468/",
+     "page": null,
+     "quote": "Fluoride concentration in drinking water varies from 0.33 to 18.08\u00a0mg/L.",
+     "header": "abstract",
+     "publication_year": 2016,
+     "evidence_id": "pubmed_26164468:s2:range_max",
+     "bbox": null,
+     "score": 2.4,
+     "asked": "max",
+     "page_verified": true
+    }
+   ],
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What drinking-water fluoride range does the Mondal et al. paper published in the 2016 journal issue report for its two study villages?",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "range"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.17,
+  "score": {
+   "id": "Q006",
+   "expected": "number_with_source",
+   "got": "number_with_source",
+   "correct": true,
+   "verified_items": 2,
+   "evidence_ok": true,
+   "gold_doc_exact": true,
+   "n_items": 2,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.17
+  }
+ },
+ {
+  "question_id": "Q007",
+  "question": "Can the NAQUIM study maximum and the April 2022 Belsula dug-well value establish a change in Bankura district mean fluoride? Explain the comparability problem.",
+  "mode": "oracle",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "amp_purulia",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "naquim_bankura",
+   "pubmed_26164468",
+   "pubmed_26188634",
+   "pubmed_33893897",
+   "yearbook_2015_16"
+  ],
+  "answer": {
+   "answer_type": "not_comparable",
+   "items": [
+    {
+     "value": "2.9",
+     "unit": "mg/L",
+     "statistic": "max",
+     "place": "Bankura",
+     "district": "Bankura",
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": "September 2022",
+     "threshold": null,
+     "spatial_support": "district",
+     "doc": "naquim_bankura",
+     "title": "Aquifer Mapping and Management of Ground Water Resources: Bankura District, West Bengal (NAQUIM)",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/16905335181706431115file.pdf",
+     "page": 94,
+     "quote": "Fluoride (mg/L) | 1 | 1.5 | 26.3 | 11.8 | 2.9 | Traces",
+     "header": "",
+     "publication_year": 2022,
+     "evidence_id": "naquim_bankura:94:0:11:11",
+     "bbox": [
+      61.06252299999998,
+      480.308157547619,
+      534.3791605000002,
+      496.2009051666667
+     ],
+     "page_verified": true
+    },
+    {
+     "value": "0.14",
+     "unit": "mg/L",
+     "statistic": "single",
+     "place": "Bishnupur, Belsula",
+     "district": "Bankura",
+     "source_type": "Dug Well",
+     "well_id": null,
+     "date": null,
+     "period": "Apr, 2022",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "gwq_west_bengal",
+     "title": "Ground Water Quality of West Bengal",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+     "page": 91,
+     "quote": "Bankura | Bishnupur | Belsula | Dug Well | 7.63 | 940 | 210 | 36 | 29 | 50 | 86 | 0 | 293 | 240 | 113 | 8 | 30 | 0.14 | 531 | 0.08",
+     "header": "F",
+     "publication_year": null,
+     "evidence_id": "gwq_west_bengal:91:0:12:17",
+     "bbox": [
+      28.31999999999998,
+      292.4400100000002,
+      823.6799899999996,
+      307.79999500000014
+     ],
+     "page_verified": true
+    }
+   ],
+   "reasons": [
+    "different statistics: max (Bankura) vs single (Bishnupur, Belsula)",
+    "different spatial support: district vs site",
+    "a district mean is claimed but the values are max and single"
+   ],
+   "note": "After unit conversion: 2900 \u00b5g/L vs 140 \u00b5g/L.",
+   "parsed": {
+    "intent": "compare",
+    "claim": "district_change",
+    "contaminant": "fluoride",
+    "districts": [
+     "Bankura"
+    ],
+    "mentions": [
+     {
+      "text": "NAQUIM study maximum",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "max"
+      ],
+      "attribute": null
+     },
+     {
+      "text": "April 2022 Belsula dug-well value ",
+      "places": [
+       "belsula"
+      ],
+      "well_ids": [],
+      "sources": [
+       "dug well"
+      ],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.3,
+  "score": {
+   "id": "Q007",
+   "expected": "not_comparable",
+   "got": "not_comparable",
+   "correct": true,
+   "verified_items": 2,
+   "evidence_ok": true,
+   "gold_doc_exact": true,
+   "n_items": 2,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.3
+  }
+ },
+ {
+  "question_id": "Q008",
+  "question": "Can the Dhabani M-II value on 20 June 2023 and Damru M-II value on 21 June 2023 establish a one-day increase at the same well?",
+  "mode": "oracle",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "amp_purulia",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "naquim_bankura",
+   "pubmed_26164468",
+   "pubmed_26188634",
+   "pubmed_33893897",
+   "yearbook_2015_16"
+  ],
+  "answer": {
+   "answer_type": "not_comparable",
+   "items": [
+    {
+     "value": "1.82",
+     "unit": "mg/L",
+     "statistic": "single",
+     "place": "Joypur, Dhabani",
+     "district": "Purulia",
+     "source_type": "M-II",
+     "well_id": "RAPU85",
+     "date": "2023-06-20",
+     "period": "2023-06-20",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "amp_purulia",
+     "title": "Aquifer Mapping and Management Plan: Purulia District, West Bengal",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1744936456830985840file.pdf",
+     "page": 195,
+     "quote": "West Bengal | Pur ulia | Joypur | Dhabani | M-II | RAPU 85 | 23.44 704 | 86.14 105 | 20- 06- 2023 | NAQ UIM | 7. 6 2 | 105 0 | 360 | 78 | 40 | 66 | 2 | 187 | 150 | ND | 183 | 43 | 95 | 1.82 | 624 | ND",
+     "header": "F-",
+     "publication_year": 2024,
+     "evidence_id": "amp_purulia:195:0:2:23",
+     "bbox": [
+      20.639999999999993,
+      126.2599999999999,
+      816.3600200000001,
+      155.77999999999986
+     ],
+     "page_verified": true
+    },
+    {
+     "value": "2.99",
+     "unit": "mg/L",
+     "statistic": "single",
+     "place": "Joypur, Damru",
+     "district": "Purulia",
+     "source_type": "M-II",
+     "well_id": "RAPU96",
+     "date": "2023-06-21",
+     "period": "2023-06-21",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "amp_purulia",
+     "title": "Aquifer Mapping and Management Plan: Purulia District, West Bengal",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1744936456830985840file.pdf",
+     "page": 195,
+     "quote": "West Bengal | Pur ulia | Joypur | Damru | M-II | RAPU 96 | 23.54 97 | 86.03 719 | 21- 06- 2023 | NAQ UIM | 8. 0 5 | 645 | 190 | 26 | 30 | 60 | 3 | 9 | 295 | ND | 360 | 15 | 2 | 2.99 | 368 | ND",
+     "header": "F-",
+     "publication_year": 2024,
+     "evidence_id": "amp_purulia:195:0:13:23",
+     "bbox": [
+      20.639999999999993,
+      450.81999499999984,
+      816.3600200000001,
+      480.3399949999996
+     ],
+     "page_verified": true
+    }
+   ],
+   "reasons": [
+    "not the same sampling point: Joypur, Dhabani [M-II RAPU85] vs Joypur, Damru [M-II RAPU96]"
+   ],
+   "note": "After unit conversion: 1820 \u00b5g/L vs 2990 \u00b5g/L.",
+   "parsed": {
+    "intent": "compare",
+    "claim": "change_same_well",
+    "contaminant": null,
+    "districts": [],
+    "mentions": [
+     {
+      "text": "Dhabani M-II value on 20 June 2023",
+      "places": [
+       "dhabani"
+      ],
+      "well_ids": [],
+      "sources": [
+       "m-ii"
+      ],
+      "dates": [
+       "2023-06-20"
+      ],
+      "statistics": [],
+      "attribute": null
+     },
+     {
+      "text": "Damru M-II value on 21 June 2023 ",
+      "places": [
+       "damru"
+      ],
+      "well_ids": [],
+      "sources": [
+       "m-ii"
+      ],
+      "dates": [
+       "2023-06-21"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.31,
+  "score": {
+   "id": "Q008",
+   "expected": "not_comparable",
+   "got": "not_comparable",
+   "correct": true,
+   "verified_items": 2,
+   "evidence_ok": true,
+   "gold_doc_exact": true,
+   "n_items": 2,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.31
+  }
+ },
+ {
+  "question_id": "Q009",
+  "question": "What is the population-weighted district mean groundwater fluoride concentration for calendar year 2025? Use only this frozen corpus.",
+  "mode": "oracle",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "amp_purulia",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "naquim_bankura",
+   "pubmed_26164468",
+   "pubmed_26188634",
+   "pubmed_33893897",
+   "yearbook_2015_16"
+  ],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "reason": "No source in the corpus reports a population-weighted mean; computing one would need population data and a sampling design the sources do not give.",
+   "items": [],
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What is the population-weighted district mean groundwater fluoride concentration for calendar year 2025? Use only this frozen corpus.",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "population_weighted_mean"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.16,
+  "score": {
+   "id": "Q009",
+   "expected": "insufficient_evidence",
+   "got": "insufficient_evidence",
+   "correct": true,
+   "verified_items": 0,
+   "evidence_ok": null,
+   "gold_doc_exact": null,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.16
+  }
+ },
+ {
+  "question_id": "Q010",
+  "question": "What exact calendar date was the Ranjitpara arsenic maximum sample collected during Special Drive 2015\u201316? Use only this frozen corpus.",
+  "mode": "oracle",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "amp_purulia",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "naquim_bankura",
+   "pubmed_26164468",
+   "pubmed_26188634",
+   "pubmed_33893897",
+   "yearbook_2015_16"
+  ],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "related": [
+    {
+     "value": "0.405",
+     "unit": "mg/L",
+     "statistic": "max",
+     "place": "Mur-Jiaganj, Ranjitpara",
+     "district": "Murshidabad",
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": "2015 \u2013 16",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "yearbook_2015_16",
+     "title": "Ground Water Year Book of West Bengal & Andaman & Nicobar Islands (2015-2016)",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1687515522384483915file.pdf",
+     "page": 49,
+     "quote": "5 | MURSHIDABAD | 23 | 179 | 64 | 36 | 0.405 | Mur-Jiaganj | Ranjitpara",
+     "header": "Highest Conc. (in mg l-1) detected from the district",
+     "publication_year": 2017,
+     "evidence_id": "yearbook_2015_16:49:0:4:6",
+     "bbox": [
+      57.84000000000002,
+      227.2999949999999,
+      576.7000200000001,
+      242.80999999999995
+     ],
+     "score": 6.2,
+     "asked": "ranjitpara",
+     "page_verified": true
+    }
+   ],
+   "reason": "The matching record gives only the period '2015 \u2013 16', not a calendar date.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "arsenic",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What exact calendar date was the Ranjitpara arsenic maximum sample collected during Special Drive 2015\u201316? Use only this frozen corpus.",
+      "places": [
+       "ranjitpara"
+      ],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "max"
+      ],
+      "attribute": "date"
+     }
+    ]
+   }
+  },
+  "seconds": 0.16,
+  "score": {
+   "id": "Q010",
+   "expected": "insufficient_evidence",
+   "got": "insufficient_evidence",
+   "correct": true,
+   "verified_items": 0,
+   "evidence_ok": null,
+   "gold_doc_exact": null,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.16
+  }
+ }
+]

@@ -41,8 +41,13 @@ def score(e: dict, m: Mention, q: Query, stat: str | None, meta: dict) -> float 
             y, mo = d[:4], d[5:7]
             per = norm(e["period"])
             mon = ["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"][int(mo) - 1] if mo else None
-            if y in per and (not mon or mon in per): s += 2
-            else: s -= 1
+            years = {int(x) for x in re.findall(r"(?:19|20)\d\d", per)}
+            span = re.search(r"((?:19|20)\d\d)\s*-\s*(\d\d)\b", per)
+            if span: years |= set(range(int(span.group(1)), int(span.group(1)[:2] + span.group(2)) + 1))
+            if int(y) not in years: return None          # question names a time the source does not cover
+            s += 2 if (not mon or mon in per) else 0.5
+        else:
+            s -= 3                                           # period unknown: allowed, but ranked last
     ctx = norm(" ".join([e.get("context", ""), e.get("header", ""), meta.get("title", ""), meta.get("publisher", ""), str(e.get("period") or "")]))
     s += min(3.0, 0.4 * sum(1 for tk in m.tokens if len(tk) > 3 and tk in ctx))
     if e.get("spatial_support") == "district" and re.search(r"\bdistrict\b", norm(m.text)): s += 0.5

@@ -77,10 +77,12 @@ def trusted(url: str) -> bool:
 
 RELEVANT = re.compile(r"arsenic|fluoride|ground ?water|water quality|aquifer|hydrogeo|drinking water", re.I)
 
-def relevant(r: dict, contaminant: str | None) -> bool:
-    """Only fetch results whose title/snippet is about groundwater quality (saves bandwidth, avoids junk)."""
-    t = f"{r['title']} {r['snippet']}"
+def relevant(r: dict, contaminant: str | None, scope: list[str] | None = None) -> bool:
+    """Only fetch results about groundwater quality in the right area (saves bandwidth, avoids junk)."""
+    t = f"{r['title']} {r['snippet']} {r['link']}"
     if not RELEVANT.search(t): return False
+    if scope and not any(re.search(re.escape(x), t, re.I) for x in scope + ["west bengal", "west-bengal", "wb", "eastern region", "GWYB ER"]):
+        return False
     return not contaminant or re.search(contaminant + r"|ground ?water|water quality|aquifer", t, re.I) is not None
 
 # ---------- planner ----------
@@ -118,8 +120,11 @@ def plan(query, places: list[str] | None = None) -> list[dict]:
     steps = []
     authors = re.findall(r"\b([A-Z][a-z]+) et al\b", query.text)
     if authors:
-        steps.append({"level": 1, "why": "named study -> Google Scholar", "engine": "google_scholar",
-                      "q": " ".join(f"{' '.join(authors)} {con} {'drinking water' if 'drinking' in t else 'groundwater'} West Bengal {dist} {years}".split())})
+        st = {"level": 1, "why": "named study -> Google Scholar", "engine": "google_scholar",
+              "q": " ".join(f"{' '.join(authors)} {con} {'drinking water' if 'drinking' in t else 'groundwater'} West Bengal {dist}".split())}
+        yrs = re.findall(r"\b(?:19|20)\d\d\b", query.text)
+        if yrs: st |= {"as_ylo": min(yrs), "as_yhi": max(yrs)}
+        steps.append(st)
     for pat, phrase, site in SOURCE_HINTS:
         if re.search(pat, t):
             steps.append({"level": 1, "why": f"source named in question -> {site}", "engine": "google",
@@ -134,6 +139,23 @@ def plan(query, places: list[str] | None = None) -> list[dict]:
     if not authors and re.search(r"\bstudy\b|paper|journal", t):
         steps.append({"level": 3, "why": "research fallback", "engine": "google_scholar", "q": f"{con} groundwater {dist} West Bengal {years}".strip()})
     return steps
+
+def resolve_district_step(place: str) -> dict:
+    return {"level": 0, "why": f"resolve district of '{place}'", "engine": "google", "q": f"{place} West Bengal district", "resolve": place}
+
+def district_from_results(d: dict) -> str | None:
+    """Vote over knowledge graph + snippets for the district a place belongs to."""
+    from .gazetteer import find_districts
+    texts = []
+    kg = d.get("knowledge_graph") or {}
+    texts += [kg.get("title", ""), kg.get("description", ""), kg.get("type", "")]
+    for r in d.get("organic_results", [])[:6]:
+        texts += [r.get("title", ""), r.get("snippet", "")]
+    votes = {}
+    for i, tx in enumerate(texts):
+        for dd in find_districts(tx)[:1]:
+            votes[dd] = votes.get(dd, 0) + (3 if i < 3 else 1)
+    return max(votes, key=votes.get) if votes else None
 
 def baseline(query) -> dict:
     return {"level": 0, "why": "baseline: the question as typed", "engine": "google", "q": query.text}

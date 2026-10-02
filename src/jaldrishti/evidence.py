@@ -83,7 +83,7 @@ def _places(texts, src):
         out.append(p)
     return out
 
-def table_evidence(t: Table, doc_meta: dict) -> list[dict]:
+def table_evidence(t: Table, doc_meta: dict, page_text: str = "") -> list[dict]:
     out = []
     cap = " | ".join([t.caption, t.note])
     hdr_text = " ".join(t.columns)
@@ -93,7 +93,7 @@ def table_evidence(t: Table, doc_meta: dict) -> list[dict]:
         if not t.columns[j] and roles[j] is None and roles[j - 1] and (j < 2 or t.columns[j - 1]):
             roles[j] = roles[j - 1]
     default_d = find_districts(t.caption) or doc_meta.get("districts") or []
-    per_tbl, per_q = _period(t.caption, t.note, doc_meta.get("period_text", ""))
+    per_tbl, per_q = _period(t.caption, t.note, doc_meta.get("period_text", ""), page_text[:600])
     transposed = any(r and r["role"] == "stat" for r in roles)
     for ri, row in enumerate(t.rows):
         texts = [c for c in row if c and not is_num(c) and norm(c) not in ND]

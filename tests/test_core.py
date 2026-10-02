@@ -1,0 +1,71 @@
+"""Unit tests that need no network and no PDFs."""
+from jaldrishti.gazetteer import find_districts, compact
+from jaldrishti.units import detect_unit, to_mg_l
+from jaldrishti.textfacts import text_evidence
+from jaldrishti.search import proper_names, district_from_results, relevant
+from jaldrishti.question import Linker, parse
+from jaldrishti.answer import Engine
+from jaldrishti.tables import is_data, is_num
+
+def ev(**k):
+    base = {"doc": "d", "page": 1, "table": 0, "row": 0, "col": 0, "method": "lattice", "header_from": None, "contaminant": "fluoride",
+            "statistic": "single", "value_text": "1.0", "value": 1.0, "non_detect": False, "unit": "mg/L", "threshold": None,
+            "district": "Purulia", "places": [], "source": None, "well_id": None, "date": None, "period": None, "period_quote": None,
+            "spatial_support": "site", "context": "", "header": "F", "row_text": "", "bbox": None, "publication_year": 2024, "id": "x"}
+    base.update(k); return base
+
+def test_districts_in_order_and_aliases():
+    assert find_districts("NORTH 24 PARAGANAS and Nadia") == ["North 24 Parganas", "Nadia"]
+    assert find_districts("Barddhman") == ["Purba Bardhaman"]
+
+def test_units():
+    assert detect_unit("Highest Conc. (in mg l-1)") == "mg/L"
+    assert detect_unit("As (ppb)") == "ppb"
+    assert abs(to_mg_l(141.7, "ppb") - 0.1417) < 1e-12
+
+def test_header_thresholds_are_not_data():
+    assert is_num(">10") and not is_data(">10") and is_data("1,366")
+
+def test_compact_matches_well_ids():
+    assert compact("RAPU 90") == compact("rapu90") and compact("WBP R_1") == compact("WBPR_1")
+
+def test_abstract_excludes_saliva_urine_and_other_metals():
+    t = ("Arsenic in groundwater (range: 12-1064 µg L(-1); mean ± S.D: 329±294 µg L(-1)). Manganese average 202±153 µg L(-1), range of 18-604 µg L(-1). "
+         "Urinary F (0.39-20.1 mg/L) excretion. Saliva had mean concentrations of 6.3±7.0 µg As L(-1) (0.70-29 µg L(-1)).")
+    got = {(e["statistic"], e["value_text"]) for e in text_evidence({"id": "p", "title": "Nadia"}, t)}
+    assert got == {("range_min", "12"), ("range_max", "1064"), ("mean", "329")}
+
+def test_proper_names_do_not_use_corpus():
+    assert proper_names("Can the Dhabani M-II value on 20 June 2023 and Damru M-II value establish a change?") == ["Dhabani", "Damru"]
+
+def test_district_vote():
+    d = {"knowledge_graph": {"title": "Baduria", "description": "town in North 24 Parganas district"},
+         "organic_results": [{"title": "Baduria - Wikipedia", "snippet": "Baduria is a city in North 24 Parganas"}]}
+    assert district_from_results(d) == "North 24 Parganas"
+
+def test_relevance_filter_rejects_junk():
+    assert not relevant({"title": "GDS Online Engagement Schedule", "snippet": "West Bengal Circle", "link": "x.pdf"}, "fluoride")
+    assert relevant({"title": "Ground Water Quality of West Bengal", "snippet": "fluoride", "link": "x.pdf"}, "fluoride", ["Nadia"])
+
+def _engine(evs):
+    return Engine(evs, {"d": {"id": "d", "file": "none", "url": "u", "title": "t"}})
+
+def test_comparison_refuses_different_wells():
+    evs = [ev(places=["Joypur", "Dhabani"], source="M-II", well_id="RAPU85", date="2023-06-20", value_text="1.82", value=1.82, id="a"),
+           ev(places=["Joypur", "Damru"], source="M-II", well_id="RAPU96", date="2023-06-21", value_text="2.99", value=2.99, id="b", row=1)]
+    r = _engine(evs).ask("Can the Dhabani M-II value on 20 June 2023 and Damru M-II value on 21 June 2023 establish a one-day increase at the same well?")
+    assert r["answer_type"] == "not_comparable" and any("same sampling point" in x for x in r["reasons"])
+
+def test_date_question_abstains_when_source_gives_only_period():
+    evs = [ev(contaminant="arsenic", statistic="max", places=["Ranjitpara"], period="2015 – 16", value_text="0.405", value=0.405)]
+    r = _engine(evs).ask("What exact calendar date was the Ranjitpara arsenic maximum sample collected?")
+    assert r["answer_type"] == "insufficient_evidence" and not r["items"]
+
+def test_wrong_period_is_rejected():
+    evs = [ev(places=["Bhajanghat"], period="2015-16", value_text="1.11", value=1.11)]
+    r = _engine(evs).ask("What fluoride value is reported for the dug well at Bhajanghat in April 2022?")
+    assert r["answer_type"] == "insufficient_evidence"
+
+def test_named_study_not_in_corpus_abstains():
+    r = _engine([ev()]).ask("What fluoride range does the Mondal et al. paper report?")
+    assert r["answer_type"] == "insufficient_evidence" and r.get("needs_source") == ["Mondal"]

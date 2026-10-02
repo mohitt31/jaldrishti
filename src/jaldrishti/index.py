@@ -41,8 +41,12 @@ def build_doc(meta: dict, force=False) -> list[dict]:
         meta.update({k: info[k] for k in ("title", "authors", "year", "journal")})
         ev = text_evidence(meta, info["title"] + ". " + info["abstract"])
     else:
+        import pypdfium2 as pdfium
+        pdoc = pdfium.PdfDocument(str(pdf))
+        if not meta.get("period_text"):        # document-level period from the cover pages (e.g. 'Year Book 2015-16')
+            meta["period_text"] = " ".join(pdoc[i].get_textpage().get_text_range()[:800] for i in range(min(3, len(pdoc))))
         for t in read_tables(str(pdf), meta["id"]):
-            ev.extend(table_evidence(t, meta))
+            ev.extend(table_evidence(t, meta, pdoc[t.page - 1].get_textpage().get_text_range()))
     for e in ev: e.setdefault("id", f"{meta['id']}:{e['page']}:{e['table']}:{e['row']}:{e['col']}")
     out.write_text(json.dumps({"doc": meta["id"], "sha256": h, "meta": meta, "evidence": ev}))
     return ev

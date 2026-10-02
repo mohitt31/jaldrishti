@@ -176,4 +176,5 @@ def read_tables(pdf_path: str, doc: str, pages: list[int] | None = None) -> list
                     t.columns = hc[-n:] if len(hc) >= n else [""] * (n - len(hc)) + hc
                     t.caption, t.header_from = prev.caption, prev.page
             out.extend(ts)
+            page.close()          # release parsed objects: large reports otherwise exhaust memory
     return out
