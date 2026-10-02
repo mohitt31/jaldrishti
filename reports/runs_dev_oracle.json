@@ -74,7 +74,7 @@
     ]
    }
   },
-  "seconds": 0.18,
+  "seconds": 0.2,
   "score": {
    "id": "Q001",
    "expected": "number_with_source",
@@ -86,7 +86,7 @@
    "n_items": 1,
    "unsupported": 0,
    "credits": 0,
-   "seconds": 0.18
+   "seconds": 0.2
   }
  },
  {
@@ -340,7 +340,7 @@
     ]
    }
   },
-  "seconds": 0.17,
+  "seconds": 0.23,
   "score": {
    "id": "Q004",
    "expected": "number_with_source",
@@ -352,7 +352,7 @@
    "n_items": 1,
    "unsupported": 0,
    "credits": 0,
-   "seconds": 0.17
+   "seconds": 0.23
   }
  },
  {
@@ -430,7 +430,7 @@
     ]
    }
   },
-  "seconds": 0.16,
+  "seconds": 0.18,
   "score": {
    "id": "Q005",
    "expected": "number_with_source",
@@ -442,7 +442,7 @@
    "n_items": 1,
    "unsupported": 0,
    "credits": 0,
-   "seconds": 0.16
+   "seconds": 0.18
   }
  },
  {
@@ -536,7 +536,7 @@
     ]
    }
   },
-  "seconds": 0.19,
+  "seconds": 0.17,
   "score": {
    "id": "Q006",
    "expected": "number_with_source",
@@ -548,7 +548,7 @@
    "n_items": 2,
    "unsupported": 0,
    "credits": 0,
-   "seconds": 0.19
+   "seconds": 0.17
   }
  },
  {
@@ -671,7 +671,7 @@
     ]
    }
   },
-  "seconds": 0.29,
+  "seconds": 0.38,
   "score": {
    "id": "Q007",
    "expected": "not_comparable",
@@ -683,7 +683,7 @@
    "n_items": 2,
    "unsupported": 0,
    "credits": 0,
-   "seconds": 0.29
+   "seconds": 0.38
   }
  },
  {
@@ -806,7 +806,7 @@
     ]
    }
   },
-  "seconds": 0.28,
+  "seconds": 0.32,
   "score": {
    "id": "Q008",
    "expected": "not_comparable",
@@ -818,7 +818,7 @@
    "n_items": 2,
    "unsupported": 0,
    "credits": 0,
-   "seconds": 0.28
+   "seconds": 0.32
   }
  },
  {
@@ -862,7 +862,7 @@
     ]
    }
   },
-  "seconds": 0.17,
+  "seconds": 0.16,
   "score": {
    "id": "Q009",
    "expected": "insufficient_evidence",
@@ -874,7 +874,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 0,
-   "seconds": 0.17
+   "seconds": 0.16
   }
  },
  {
@@ -952,7 +952,7 @@
     ]
    }
   },
-  "seconds": 0.16,
+  "seconds": 0.17,
   "score": {
    "id": "Q010",
    "expected": "insufficient_evidence",
@@ -964,7 +964,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 0,
-   "seconds": 0.16
+   "seconds": 0.17
   }
  }
 ]

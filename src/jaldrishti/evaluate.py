@@ -57,10 +57,20 @@ def summarise(rows: list[dict]) -> dict:
     abst_true = [r for r in rows if r["expected"] in ("insufficient_evidence", "not_comparable")]
     tp = [r for r in abst_pred if r["got"] == r["expected"]]
     items = sum(r["n_items"] for r in num)
+    answered = [r for r in rows if r["got"] in ("number_with_source", "not_comparable", "comparable")]
+    wrong_answered = [r for r in answered if not r["correct"]]
+    cited = sum(r["n_items"] for r in rows)
+    verified = sum(r.get("verified_items", 0) for r in rows)
+    gold_needed = [r for r in num if r.get("evidence_ok") is not None]
     return {"n": n, "accuracy": sum(r["correct"] for r in rows) / n if n else 0,
             "numeric_accuracy": sum(r["correct"] for r in num) / len(num) if num else None,
             "unsupported_items": sum(r["unsupported"] for r in num), "numeric_items": items,
             "gold_doc_exact_numeric": sum(1 for r in num if r.get("correct") and r.get("gold_doc_exact")),
             "page_verified_items": sum(r.get("verified_items", 0) for r in num),
             "abstention_precision": len(tp) / len(abst_pred) if abst_pred else None,
-            "abstention_recall": len(tp) / len(abst_true) if abst_true else None}
+            "abstention_recall": len(tp) / len(abst_true) if abst_true else None,
+            # selective QA (Kamath et al. 2020): how often it commits, and how often a committed answer is wrong
+            "coverage": len(answered) / n if n else 0, "risk": len(wrong_answered) / len(answered) if answered else 0.0,
+            # ALCE-style (Gao et al. 2023): cited numbers re-found on the cited page / gold facts recovered
+            "citation_precision": verified / cited if cited else None,
+            "citation_recall": sum(1 for r in gold_needed if r["evidence_ok"]) / len(gold_needed) if gold_needed else None}

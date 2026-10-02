@@ -117,7 +117,7 @@ class Session:
                               "top": [{"rank": r["rank"], "domain": r["domain"], "title": r["title"][:90], "pdf": bool(r["pdf"])} for r in results(d)[:3]],
                               "resolved_district": dist, "answer_type": None})
                 if dist:
-                    q0.districts = [dist]; self.scope = [dist]
+                    q0.districts = list(dist); self.scope = list(dist)
             steps = plan(q0)[:max(0, budget - credits)]
         for st in steps:
             params = {"engine": st["engine"], "q": st["q"]}

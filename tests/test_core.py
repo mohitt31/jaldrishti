@@ -41,7 +41,7 @@ def test_proper_names_do_not_use_corpus():
 def test_district_vote():
     d = {"knowledge_graph": {"title": "Baduria", "description": "town in North 24 Parganas district"},
          "organic_results": [{"title": "Baduria - Wikipedia", "snippet": "Baduria is a city in North 24 Parganas"}]}
-    assert district_from_results(d) == "North 24 Parganas"
+    assert district_from_results(d) == ["North 24 Parganas"]
 
 def test_relevance_filter_rejects_junk():
     assert not relevant({"title": "GDS Online Engagement Schedule", "snippet": "West Bengal Circle", "link": "x.pdf"}, "fluoride")

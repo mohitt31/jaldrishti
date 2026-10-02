@@ -1,20 +1,24 @@
 {
  "split": "dev",
  "budget": 3,
- "run_at": "2026-10-02T22:25:10+0000",
+ "run_at": "2026-10-02T22:29:33+0000",
  "modes": {
-  "library": {
+  "oracle": {
    "n": 10,
-   "accuracy": 0.2,
-   "numeric_accuracy": 0.0,
+   "accuracy": 1.0,
+   "numeric_accuracy": 1.0,
    "unsupported_items": 0,
-   "numeric_items": 0,
-   "gold_doc_exact_numeric": 0,
-   "page_verified_items": 0,
-   "abstention_precision": 0.2,
-   "abstention_recall": 0.5,
-   "credits": 9,
-   "seconds": 1.6
+   "numeric_items": 7,
+   "gold_doc_exact_numeric": 6,
+   "page_verified_items": 7,
+   "abstention_precision": 1.0,
+   "abstention_recall": 1.0,
+   "coverage": 0.8,
+   "risk": 0.0,
+   "citation_precision": 1.0,
+   "citation_recall": 1.0,
+   "credits": 0,
+   "seconds": 2.2
   }
  }
 }

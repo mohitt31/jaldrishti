@@ -114,7 +114,7 @@ def proper_names(text: str) -> list[str]:
 def plan(query, places: list[str] | None = None) -> list[dict]:
     """Ordered query ladder (level 0 = the question itself, which is also the baseline)."""
     con = query.contaminant or ""
-    dist = " ".join(query.districts)
+    dist = " ".join(query.districts) if len(query.districts) < 2 else "(" + " OR ".join(query.districts) + ")"
     t = norm(query.text)
     years = " ".join(dict.fromkeys(re.findall(r"\b(?:19|20)\d\d\b", query.text)))
     steps = []
@@ -155,7 +155,10 @@ def district_from_results(d: dict) -> str | None:
     for i, tx in enumerate(texts):
         for dd in find_districts(tx)[:1]:
             votes[dd] = votes.get(dd, 0) + (3 if i < 3 else 1)
-    return max(votes, key=votes.get) if votes else None
+    if not votes: return None
+    ranked = sorted(votes, key=votes.get, reverse=True)
+    # a village name shared by two districts: keep both when the runner-up has real support
+    return ranked[:2] if len(ranked) > 1 and votes[ranked[1]] >= 0.5 * votes[ranked[0]] else ranked[:1]
 
 def baseline(query) -> dict:
     return {"level": 0, "why": "baseline: the question as typed", "engine": "google", "q": query.text}
