@@ -25,7 +25,8 @@ def score(e: dict, m: Mention, q: Query, stat: str | None, meta: dict) -> float 
         if not any(norm(e["source"]) in SRC_MAP[x] for x in m.sources): return None
         s += 1
     if stat:
-        want = {"range": {"min", "max", "range_min", "range_max"}}.get(stat, {stat})
+        want = {"range": {"min", "max", "range_min", "range_max"}, "min": {"min", "range_min"},
+                "max": {"max", "range_max"}}.get(stat, {stat})
         if e["statistic"] not in want: return None
         s += 2
     elif not m.places:
@@ -161,6 +162,16 @@ class Engine:
     def ask(self, text: str) -> dict:
         q = parse(text, self.linker)
         r = compare(self.ev, q, self.metas) if q.intent == "compare" else lookup(self.ev, q, self.metas)
+        from .verify import verify_item
+        for key in ("items", "related"):
+            for i in r.get(key, []):
+                i["page_verified"] = verify_item(i, self.metas.get(i["doc"], {}))
+        if r["answer_type"] == "number_with_source":
+            bad = [i for i in r["items"] if not i["page_verified"]]
+            r["items"] = [i for i in r["items"] if i["page_verified"]]
+            if bad: r["dropped_unverified"] = [i["value"] for i in bad]
+            if not r["items"]:
+                r = {"answer_type": "insufficient_evidence", "items": [], "reason": "Candidate numbers failed the page re-read check."} | {"parsed": r.get("parsed")}
         r["parsed"] = {"intent": q.intent, "claim": q.claim, "contaminant": q.contaminant, "districts": q.districts,
                        "mentions": [{"text": m.text, "places": m.places, "well_ids": m.well_ids, "sources": m.sources,
                                      "dates": m.dates, "statistics": m.statistics, "attribute": m.attribute} for m in q.mentions]}

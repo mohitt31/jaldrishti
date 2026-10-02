@@ -43,8 +43,13 @@ class SerpApi:
         key = api_key()
         if not key: raise RuntimeError("SERPAPI_KEY not set (env or .env)")
         t = time.time()
-        r = requests.get(ENDPOINT, params={**params, "api_key": key}, timeout=60)
-        r.raise_for_status()
+        for attempt in range(3):
+            try:
+                r = requests.get(ENDPOINT, params={**params, "api_key": key}, timeout=90)
+                r.raise_for_status(); break
+            except requests.RequestException:
+                if attempt == 2: raise
+                time.sleep(5 * (attempt + 1))
         d = r.json()
         d["_request"] = params
         f.write_text(json.dumps(d))
@@ -70,31 +75,65 @@ def trusted(url: str) -> bool:
     host = urlparse(url or "").netloc.lower()
     return any(host == t or host.endswith("." + t) for t in TRUSTED)
 
-# ---------- planner ----------
-HINTS = {
-    "cgwb": r"\bcgwb\b|central ground ?water|special drive|year ?book|naquim|aquifer mapping|annual ground water quality",
-    "adb": r"\badb\b|asian development bank|imis",
-    "scholar": r"\bet al\b|\bpaper\b|\bstudy\b|journal",
-}
+RELEVANT = re.compile(r"arsenic|fluoride|ground ?water|water quality|aquifer|hydrogeo|drinking water", re.I)
 
-def plan(query, linker_places: list[str]) -> list[dict]:
-    """Ordered query ladder. Level 0 is the fixed baseline query."""
-    con = query.contaminant or "arsenic fluoride"
-    dist = " ".join(query.districts) or "West Bengal"
+def relevant(r: dict, contaminant: str | None) -> bool:
+    """Only fetch results whose title/snippet is about groundwater quality (saves bandwidth, avoids junk)."""
+    t = f"{r['title']} {r['snippet']}"
+    if not RELEVANT.search(t): return False
+    return not contaminant or re.search(contaminant + r"|ground ?water|water quality|aquifer", t, re.I) is not None
+
+# ---------- planner ----------
+SOURCE_HINTS = [  # phrase in question -> (query phrase, site restriction)
+    (r"special drive", '"special drive" year book', "cgwb.gov.in"),
+    (r"naquim|aquifer mapping", "aquifer mapping NAQUIM report", "cgwb.gov.in"),
+    (r"annual ground water quality report", '"annual ground water quality report"', "cgwb.gov.in"),
+    (r"\bcgwb\b|april 2022|shallow-aquifer", '"ground water quality" West Bengal', "cgwb.gov.in"),
+    (r"\badb\b|imis", "ADB arsenic fluoride drinking water West Bengal", "adb.org"),
+]
+
+NOT_PLACE = set("""What Which How Can Could Does Do Is Are Use Only The April June July May March October Special Drive Annual Ground
+Water Quality Report CGWB ADB IMIS NAQUIM Explain Retain Exclude Bengal West North South District Year Book Study Mondal Bhowmick
+Table Dug Well Hand Pump India Mark Gaighata-only""".split())
+
+def proper_names(text: str) -> list[str]:
+    """Candidate place names from capitalisation alone (no corpus lookup, so search does not peek at the answer)."""
+    from .gazetteer import find_districts
+    toks = re.findall(r"[A-Z][a-zA-Z]+(?:\([A-Za-z]+\))?|[a-z]+|\S", text)
+    out, cur = [], []
+    for i, tk in enumerate(toks):
+        if re.match(r"^[A-Z][a-z]", tk) and tk not in NOT_PLACE and i > 0 and not find_districts(tk):
+            cur.append(tk)
+        else:
+            if cur: out.append(" ".join(cur)); cur = []
+    if cur: out.append(" ".join(cur))
+    return [o for o in out if len(o) > 3 and not re.search(r"et$", o)]
+
+def plan(query, places: list[str] | None = None) -> list[dict]:
+    """Ordered query ladder (level 0 = the question itself, which is also the baseline)."""
+    con = query.contaminant or ""
+    dist = " ".join(query.districts)
     t = norm(query.text)
-    years = " ".join(sorted(set(re.findall(r"\b(?:19|20)\d\d\b", query.text)))[:2])
-    ladder = [{"level": 0, "why": "fixed baseline", "engine": "google", "q": f"{con} groundwater {dist} West Bengal"}]
+    years = " ".join(dict.fromkeys(re.findall(r"\b(?:19|20)\d\d\b", query.text)))
+    steps = []
     authors = re.findall(r"\b([A-Z][a-z]+) et al\b", query.text)
-    if authors or re.search(HINTS["scholar"], t) and not re.search(HINTS["cgwb"] + "|" + HINTS["adb"], t):
-        ladder.append({"level": 1, "why": "named study: scholarly index", "engine": "google_scholar",
-                       "q": f"{' '.join(authors)} {con} {dist} {years}".strip()})
-    if re.search(HINTS["adb"], t):
-        ladder.append({"level": 1, "why": "source hint: ADB/IMIS", "engine": "google", "q": f"ADB {con} drinking water West Bengal {dist} filetype:pdf"})
-    if re.search(HINTS["cgwb"], t) or not authors:
-        kind = "special drive year book" if "special drive" in t else "aquifer mapping NAQUIM" if re.search(r"naquim|aquifer mapping", t) else "ground water quality"
-        ladder.append({"level": 2, "why": "official report on the agency site", "engine": "google",
-                       "q": f"site:cgwb.gov.in {con} {dist if 'naquim' in kind else 'West Bengal'} {kind} {years} filetype:pdf".replace("  ", " ")})
-    if linker_places:
-        ladder.append({"level": 3, "why": "place-level alias search", "engine": "google",
-                       "q": f"\"{linker_places[0]}\" {con} {dist} groundwater"})
-    return ladder
+    if authors:
+        steps.append({"level": 1, "why": "named study -> Google Scholar", "engine": "google_scholar",
+                      "q": " ".join(f"{' '.join(authors)} {con} {'drinking water' if 'drinking' in t else 'groundwater'} West Bengal {dist} {years}".split())})
+    for pat, phrase, site in SOURCE_HINTS:
+        if re.search(pat, t):
+            steps.append({"level": 1, "why": f"source named in question -> {site}", "engine": "google",
+                          "q": " ".join(f"{con} {dist} {phrase}".split()), "as_sitesearch": site})
+            break
+    places = proper_names(query.text)
+    for p in places[:2]:
+        steps.append({"level": 2, "why": "place-level search", "engine": "google", "q": " ".join(f'"{p}" {con or "water quality"} groundwater {dist}'.split())})
+    if not authors and not any(s["engine"] == "google" and s.get("as_sitesearch") for s in steps):
+        steps.append({"level": 3, "why": "state report fallback", "engine": "google",
+                      "q": " ".join(f"{con} {dist} groundwater quality report West Bengal".split()), "as_sitesearch": "cgwb.gov.in"})
+    if not authors and re.search(r"\bstudy\b|paper|journal", t):
+        steps.append({"level": 3, "why": "research fallback", "engine": "google_scholar", "q": f"{con} groundwater {dist} West Bengal {years}".strip()})
+    return steps
+
+def baseline(query) -> dict:
+    return {"level": 0, "why": "baseline: the question as typed", "engine": "google", "q": query.text}

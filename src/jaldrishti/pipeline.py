@@ -5,7 +5,8 @@ from urllib.parse import urlparse
 from .index import docs, load, build_doc, add_doc, CORPUS, sha
 from .answer import Engine
 from .question import parse, Linker
-from .search import SerpApi, results, trusted, plan
+from .search import SerpApi, results, trusted, plan, baseline, relevant
+from .index import ROOT, CACHE as ICACHE
 
 def nurl(u: str) -> str:
     p = urlparse(u or "")
@@ -23,29 +24,51 @@ class Session:
         self.api, self.live, self.k = SerpApi(offline=offline), live, fetch_per_step
         self.refresh()
     def refresh(self):
-        self.reg = docs(); self.by_id = {d["id"]: d for d in self.reg}
+        if not hasattr(self, "extra"): self.extra = {}
+        self.reg = docs() + list(self.extra.values()); self.by_id = {d["id"]: d for d in self.reg}
         self.by_url = {nurl(d["url"]): d["id"] for d in self.reg}
         self.by_sha = {}
         for d in self.reg:
             f = CORPUS / d["file"]
             if f.exists() and d.get("format") != "pubmed_xml": self.by_sha[sha(f)] = d["id"]
-        self.ev = load()
+        self.ev = load() + [e for m in self.extra.values() for e in json.loads((ICACHE / f"{m['id']}.json").read_text())["evidence"]]
+    def _discovered(self):
+        f = ROOT / "cache/discovered.json"
+        return json.loads(f.read_text()) if f.exists() else {}
+    def _remember(self, url, meta):
+        d = self._discovered(); d[url] = meta
+        (ROOT / "cache/discovered.json").write_text(json.dumps(d, indent=1))
+    def _use(self, meta):
+        """Make a discovered doc visible to this session (index it if needed)."""
+        if meta["id"] in self.by_id: return meta["id"]
+        build_doc(meta)
+        self.extra[meta["id"]] = meta
+        self.refresh()
+        return meta["id"]
     def _add(self, url, fetched):
         from .fetch import fetch
+        known = self._discovered().get(url)
+        if known:
+            if known.get("same_as"): fetched.append({"url": url, "same_as": known["same_as"]}); return known["same_as"]
+            if known.get("rejected"): fetched.append({"url": url, "error": known["rejected"]}); return None
+            fetched.append({"url": url, "reused": known["id"]}); return self._use(known)
         try:
             meta = fetch(url)
         except Exception as e:
             fetched.append({"url": url, "error": str(e)[:120]}); return None
-        if not meta: fetched.append({"url": url, "error": "not a PDF"}); return None
+        if not meta:
+            self._remember(url, {"rejected": "not a PDF"}); fetched.append({"url": url, "error": "not a PDF"}); return None
         f = CORPUS / meta["file"]
         if meta.get("format") != "pubmed_xml":
             dup = self.by_sha.get(sha(f))
-            if dup: fetched.append({"url": url, "same_as": dup}); return dup
-        if meta["id"] in self.by_id: return meta["id"]
+            if dup:
+                self._remember(url, {"same_as": dup}); fetched.append({"url": url, "same_as": dup}); return dup
+            (CORPUS / "discovered").mkdir(exist_ok=True)
+            f.rename(CORPUS / "discovered" / f.name); meta["file"] = "discovered/" + f.name
         meta["title"] = meta.get("title") or url
-        add_doc(meta); build_doc(meta); self.refresh()
+        self._remember(url, meta)
         fetched.append({"url": url, "new_doc": meta["id"]})
-        return meta["id"]
+        return self._use(meta)
     def locate(self, step: dict, res: list[dict], fetched: list) -> set:
         found, tries = set(), 0
         for r in res:
@@ -65,7 +88,7 @@ class Session:
         elif self.live:
             for r in res:
                 u = r["pdf"]
-                if not u or not trusted(u) or nurl(u) in self.by_url: continue
+                if not u or not trusted(u) or nurl(u) in self.by_url or not relevant(r, self.contaminant): continue
                 if tries >= self.k: break
                 tries += 1
                 d = self._add(u, fetched)
@@ -73,16 +96,17 @@ class Session:
         return found
     def run(self, question: str, mode: str = "jaldrishti", budget: int = 3) -> dict:
         t0 = time.time()
-        q0 = parse(question, Linker(self.ev))
+        q0 = parse(question, Linker(self.ev)); self.contaminant = q0.contaminant
         if mode == "oracle":
             ans = Engine(self.ev, self.by_id).ask(question)
             return {"mode": mode, "trace": [], "credits": 0, "located": sorted(self.by_id), "answer": ans, "seconds": round(time.time() - t0, 2)}
-        ladder = plan(q0, q0.mentions[0].places if q0.mentions else [])
-        steps = ([{**ladder[0], "start": s * 10} for s in range(budget)] if mode == "baseline" else ladder[:budget])
+        places = [p for m in q0.mentions for p in m.places]
+        steps = ([{**baseline(q0), "start": s * 10} for s in range(budget)] if mode == "baseline" else plan(q0, places)[:budget])
         located, trace, credits, ans = set(), [], 0, None
         for st in steps:
             params = {"engine": st["engine"], "q": st["q"]}
             if st.get("start"): params["start"] = st["start"]
+            if st.get("as_sitesearch"): params["as_sitesearch"] = st["as_sitesearch"]
             d = self.api.search(**params)
             credits += 0 if d.get("_missing") else 1
             res = results(d); fetched = []

@@ -55,7 +55,11 @@ def main(argv=None):
     for mode in args.modes.split(","):
         rows, runs = [], []
         for q in qs:
-            r = S.run(q["question"], mode, args.budget)
+            try:
+                r = S.run(q["question"], mode, args.budget)
+            except Exception as ex:   # one failed request must not kill the run
+                r = {"mode": mode, "trace": [], "credits": 0, "located": [], "seconds": 0,
+                     "answer": {"answer_type": "error", "items": [], "reason": f"{type(ex).__name__}: {str(ex)[:160]}"}}
             s = score_one(q, r["answer"], facts) | {"credits": r["credits"], "seconds": r["seconds"]}
             rows.append(s); runs.append({"question_id": q["question_id"], "question": q["question"], **r, "score": s})
             print(f"{mode:10s} {q['question_id']} {'OK' if s['correct'] else 'XX'} {r['answer']['answer_type']:22s} credits={r['credits']}", flush=True)

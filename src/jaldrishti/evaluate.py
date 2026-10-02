@@ -30,6 +30,7 @@ def score_one(q: dict, r: dict, facts: dict) -> dict:
     elif exp == "not_comparable": correct = type_ok
     else: correct = type_ok and not items
     return {"id": q["question_id"], "expected": exp, "got": r["answer_type"], "correct": correct,
+            "verified_items": sum(1 for i in items if i.get("page_verified")),
             "evidence_ok": covered if sup else None, "n_items": len(items), "unsupported": unsupported}
 
 def summarise(rows: list[dict]) -> dict:
@@ -42,5 +43,6 @@ def summarise(rows: list[dict]) -> dict:
     return {"n": n, "accuracy": sum(r["correct"] for r in rows) / n if n else 0,
             "numeric_accuracy": sum(r["correct"] for r in num) / len(num) if num else None,
             "unsupported_items": sum(r["unsupported"] for r in num), "numeric_items": items,
+            "page_verified_items": sum(r.get("verified_items", 0) for r in num),
             "abstention_precision": len(tp) / len(abst_pred) if abst_pred else None,
             "abstention_recall": len(tp) / len(abst_true) if abst_true else None}

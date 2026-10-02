@@ -11,7 +11,8 @@ RANGE = [re.compile(rf"range[sd]?\s*(?:of|was|were|is|between|from|:)?\s*:?\s*{N
          re.compile(rf"\b{NUMX}\s*(?:to|-|–)\s*{NUMX}\s*{UNIT}", re.I)]
 MEAN = re.compile(rf"mean\s*(?:±|\+/-)?\s*(?:s\.?\s*d\.?|sd)?\s*[:=(]?\s*{NUMX}\s*(?:±|\+/-)\s*{NUMX}\s*\)?\s*{UNIT}", re.I)
 WATER = re.compile(r"water|groundwater|tube ?well|aquifer|hand ?pump|drinking", re.I)
-BODY = re.compile(r"saliva|urine|hair|nail|serum|blood|plasma|skin|tissue", re.I)
+BODY = re.compile(r"saliva|urin|hair|nail|serum|blood|plasma|skin|tissue", re.I)
+OTHER = re.compile(r"\b(manganese|mn|chromium|cr|nickel|ni|lead|pb|iron|fe|zinc|zn|uranium|nitrate|barium|selenium)\b", re.I)
 
 def parse_pubmed(xml_bytes: bytes) -> dict:
     root = ET.fromstring(xml_bytes)
@@ -35,9 +36,11 @@ def text_evidence(doc: dict, text: str) -> list[dict]:
     for k, sent in enumerate(_clauses(text)):
         # split at commas/semicolons so 'water ..., saliva ...' are judged separately
         for part in re.split(r";|,\s+(?=(?:while|whereas|and)?\s*(?:in\s+)?(?:saliva|urine|hair|nail|serum|blood))", sent):
-            if BODY.search(part) and not WATER.search(part): continue
+            if BODY.search(part) and (not WATER.search(part) or "urin" in part.lower()): continue
             if BODY.search(part) and WATER.search(part) and BODY.search(part).start() < WATER.search(part).start(): continue
-            con = find_contaminant(part) or con_doc
+            own = find_contaminant(part)
+            if not own and OTHER.search(part): continue      # e.g. a manganese range in an arsenic paper
+            con = own or con_doc
             for rx in RANGE:
                 m = rx.search(part)
                 if m:

@@ -1,8 +1,86 @@
 [
- {"id": "yearbook_2015_16", "file": "yearbook_2015_16.pdf", "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1687515522384483915file.pdf", "title": "Ground Water Year Book of West Bengal & Andaman & Nicobar Islands (2015-2016)", "publisher": "CGWB", "year": 2017, "type": "government"},
- {"id": "gwq_west_bengal", "file": "gwq_west_bengal.pdf", "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf", "title": "Ground Water Quality of West Bengal", "publisher": "CGWB", "year": null, "type": "government"},
- {"id": "annual_gwq_2025", "file": "annual_gwq_2025.pdf", "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1762854375262680475file.pdf", "title": "Annual Ground Water Quality Report 2025", "publisher": "CGWB", "year": 2025, "type": "government"},
- {"id": "naquim_bankura", "file": "naquim_bankura.pdf", "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/16905335181706431115file.pdf", "title": "Aquifer Mapping and Management of Ground Water Resources: Bankura District, West Bengal (NAQUIM)", "publisher": "CGWB", "year": 2022, "type": "government", "districts": ["Bankura"]},
- {"id": "amp_purulia", "file": "amp_purulia.pdf", "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1744936456830985840file.pdf", "title": "Aquifer Mapping and Management Plan: Purulia District, West Bengal", "publisher": "CGWB", "year": 2024, "type": "government", "districts": ["Purulia"]},
- {"id": "adb_49107_006", "file": "adb_49107-006-sd-01.pdf", "url": "https://www.adb.org/sites/default/files/linked-documents/49107-006-sd-01.pdf", "title": "Arsenic and Fluoride in Drinking Water in West Bengal: Characteristics, Implications, and Mitigation (RRP IND 49107-006)", "publisher": "ADB", "year": null, "type": "multilateral"}
+ {
+  "id": "yearbook_2015_16",
+  "file": "yearbook_2015_16.pdf",
+  "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1687515522384483915file.pdf",
+  "title": "Ground Water Year Book of West Bengal & Andaman & Nicobar Islands (2015-2016)",
+  "publisher": "CGWB",
+  "year": 2017,
+  "type": "government"
+ },
+ {
+  "id": "gwq_west_bengal",
+  "file": "gwq_west_bengal.pdf",
+  "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+  "title": "Ground Water Quality of West Bengal",
+  "publisher": "CGWB",
+  "year": null,
+  "type": "government"
+ },
+ {
+  "id": "annual_gwq_2025",
+  "file": "annual_gwq_2025.pdf",
+  "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1762854375262680475file.pdf",
+  "title": "Annual Ground Water Quality Report 2025",
+  "publisher": "CGWB",
+  "year": 2025,
+  "type": "government"
+ },
+ {
+  "id": "naquim_bankura",
+  "file": "naquim_bankura.pdf",
+  "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/16905335181706431115file.pdf",
+  "title": "Aquifer Mapping and Management of Ground Water Resources: Bankura District, West Bengal (NAQUIM)",
+  "publisher": "CGWB",
+  "year": 2022,
+  "type": "government",
+  "districts": [
+   "Bankura"
+  ]
+ },
+ {
+  "id": "amp_purulia",
+  "file": "amp_purulia.pdf",
+  "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1744936456830985840file.pdf",
+  "title": "Aquifer Mapping and Management Plan: Purulia District, West Bengal",
+  "publisher": "CGWB",
+  "year": 2024,
+  "type": "government",
+  "districts": [
+   "Purulia"
+  ]
+ },
+ {
+  "id": "adb_49107_006",
+  "file": "adb_49107-006-sd-01.pdf",
+  "url": "https://www.adb.org/sites/default/files/linked-documents/49107-006-sd-01.pdf",
+  "title": "Arsenic and Fluoride in Drinking Water in West Bengal: Characteristics, Implications, and Mitigation (RRP IND 49107-006)",
+  "publisher": "ADB",
+  "year": null,
+  "type": "multilateral"
+ },
+ {
+  "id": "pubmed_26188634",
+  "file": "pubmed_26188634.xml",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/26188634/",
+  "type": "peer_reviewed",
+  "format": "pubmed_xml",
+  "title": "https://pubmed.ncbi.nlm.nih.gov/26188634/"
+ },
+ {
+  "id": "pubmed_26164468",
+  "file": "pubmed_26164468.xml",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/26164468/",
+  "type": "peer_reviewed",
+  "format": "pubmed_xml",
+  "title": "https://pubmed.ncbi.nlm.nih.gov/26164468/"
+ },
+ {
+  "id": "pubmed_33893897",
+  "file": "pubmed_33893897.xml",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/33893897/",
+  "type": "peer_reviewed",
+  "format": "pubmed_xml",
+  "title": "https://pubmed.ncbi.nlm.nih.gov/33893897/"
+ }
 ]
