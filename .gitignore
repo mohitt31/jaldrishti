@@ -8,3 +8,5 @@ logs/
 scratch_*.py
 __pycache__/
 *.egg-info/
+corpus/**/*.pdf
+corpus/**/*.xml
