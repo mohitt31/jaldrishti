@@ -1,4 +1,10 @@
 .env
 pilot/
 .venv/
-corpus/
+corpus/*.pdf
+corpus/*.xml
+cache/
+logs/
+scratch_*.py
+__pycache__/
+*.egg-info/
