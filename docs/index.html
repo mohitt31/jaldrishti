@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JalDrishti</title>
+<meta name="description" content="Cited groundwater arsenic and fluoride evidence for West Bengal, found with SerpApi and checked against the source page.">
+<style>
+:root{--bg:#f7f6f2;--card:#fff;--ink:#1b1f23;--mute:#5b6570;--line:#e3e0d8;--acc:#0b6e74;--acc2:#d9480f;--ok:#2b8a3e;--warn:#b35c00;--no:#8a1c1c;--chip:#eef4f4}
+@media (prefers-color-scheme:dark){:root{--bg:#101315;--card:#171b1e;--ink:#e8eaec;--mute:#9aa4ad;--line:#2a3035;--acc:#4fb3b9;--acc2:#ff8a4c;--ok:#69c37b;--warn:#f0a44b;--no:#ef7b7b;--chip:#1d2a2c}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--acc)}.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+header{padding:40px 0 20px;border-bottom:1px solid var(--line)}h1{font-size:34px;margin:0 0 6px;letter-spacing:-.5px}
+.lede{font-size:18px;max-width:780px;color:var(--mute);margin:0}.warn{display:inline-block;margin-top:14px;padding:6px 10px;border-radius:6px;background:var(--chip);font-size:13px}
+h2{font-size:20px;margin:34px 0 12px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+.big{font-size:40px;font-weight:700;line-height:1}.lbl{font-weight:600}.sub{color:var(--mute);font-size:13px}
+.bar{height:8px;background:var(--line);border-radius:4px;margin:10px 0 8px;overflow:hidden}.bar i{display:block;height:100%;background:var(--acc)}
+.card.hl{border-color:var(--acc);box-shadow:0 0 0 1px var(--acc) inset}
+.ex{display:grid;grid-template-columns:330px 1fr;gap:14px;align-items:start}
+.list{max-height:720px;overflow:auto;padding:6px}.q{padding:9px 10px;border-radius:8px;cursor:pointer;border:1px solid transparent}
+.q:hover{background:var(--chip)}.q.on{border-color:var(--acc);background:var(--chip)}.q .t{font-size:13px}.q .m{font-size:11px;color:var(--mute);margin-top:3px}
+.dots span{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:3px;vertical-align:middle}
+.y{background:var(--ok)}.n{background:var(--no)}.tabs{display:flex;gap:6px;margin:12px 0}
+.tabs button{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:6px 12px;border-radius:999px;cursor:pointer;font:inherit;font-size:13px}
+.tabs button.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.badge{display:inline-block;font-size:12px;font-weight:700;padding:3px 8px;border-radius:5px;letter-spacing:.3px;text-transform:uppercase}
+.b-number_with_source{background:#e6f4ea;color:#1e6b2f}.b-not_comparable{background:#fff1e0;color:#8a4b00}.b-insufficient_evidence{background:#f1f1f1;color:#555}.b-error{background:#fde8e8;color:#8a1c1c}
+@media (prefers-color-scheme:dark){.b-number_with_source{background:#1f3a26;color:#9be0a8}.b-not_comparable{background:#3a2c17;color:#f4c27d}.b-insufficient_evidence{background:#2a2e31;color:#c9ced3}}
+.item{border-top:1px solid var(--line);padding:12px 0}.val{font-size:26px;font-weight:700}.val small{font-size:14px;font-weight:500;color:var(--mute)}
+.crop{max-width:100%;border:1px solid var(--line);border-radius:6px;margin-top:8px;background:#fff}
+.reasons li{margin:4px 0}.trace{font-size:13px}.trace .st{padding:8px 10px;border-left:3px solid var(--line);margin:6px 0;background:var(--bg)}
+code{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;background:var(--chip);padding:1px 5px;border-radius:4px}
+.flt{display:flex;gap:6px;padding:6px}.flt button{flex:1}
+table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left}
+details summary{cursor:pointer;color:var(--acc)}footer{margin:40px 0;color:var(--mute);font-size:13px}
+@media (max-width:860px){.grid{grid-template-columns:1fr}.ex{grid-template-columns:1fr}.list{max-height:320px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <h1>JalDrishti</h1>
+  <p class="lede">Ask about groundwater arsenic or fluoride in West Bengal. Get the exact number with its document, page and table row, or a reasoned refusal when the evidence cannot support the question.</p>
+  <span class="warn">Not a household safety tool: a survey value says nothing about your own tube well today.</span>
+</div></header>
+<main class="wrap">
+  <h2>Held-out test: 20 questions, run once</h2>
+  <div class="grid" id="cards"></div>
+  <p class="sub">Same reader in all three modes; only how sources are found differs. Risk = wrong answers among answers given. Every cited number was re-found on its cited page. <a href="https://github.com/mohitt31/jaldrishti">Code, benchmark and full traces on GitHub</a>.</p>
+
+  <h2>Explore every answer</h2>
+  <div class="ex">
+    <div class="card" style="padding:0">
+      <div class="flt tabs" id="flt"></div>
+      <div class="sub" style="padding:0 12px">Dots: baseline · JalDrishti · oracle (green = scored correct)</div>
+      <div class="list" id="list"></div>
+    </div>
+    <div class="card" id="detail"></div>
+  </div>
+
+  <h2>The library SerpApi built</h2>
+  <div class="card" id="lib"></div>
+
+  <h2>How it works</h2>
+  <div class="card">
+    <ol>
+      <li><b>Harvest.</b> 56 Google and Google Scholar searches over generic district templates build a library of government reports and paper abstracts. No question text is used.</li>
+      <li><b>Read.</b> Every table cell becomes a typed record: value, unit, statistic, place, well, date or period, spatial support, page, row.</li>
+      <li><b>Answer or refuse.</b> Places must exist in a table row. Comparisons are checked for the same sampling point, statistic, spatial support and time separation. Requests the sources cannot support are refused with a reason.</li>
+      <li><b>Re-read.</b> Before answering, each number is searched for again on the cited PDF page with a second PDF library.</li>
+      <li><b>Fallback.</b> If a source is missing, at most one live search, planned from cues in the question (named study → Scholar, publisher → site filter, village → quoted place).</li>
+    </ol>
+  </div>
+</main>
+<footer class="wrap">Data © CGWB, ADB and the cited journals; crops are shown for verification. Built for the SerpApi India Hackathon 2026, Knowledge &amp; Public Interest track.</footer>
+<script>
+const MODES={baseline:"Baseline: Google the question",library:"JalDrishti",oracle:"Oracle: gold documents"};
+const LBL={number_with_source:"number with source",not_comparable:"not comparable",insufficient_evidence:"insufficient evidence",error:"error",comparable:"comparable"};
+let D,cur=null,mode="library",split="test";
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+fetch("data.json").then(r=>r.json()).then(d=>{D=d;cards();filters();list();lib();});
+function cards(){const s=D.summary.test;document.getElementById("cards").innerHTML=Object.keys(MODES).map(m=>{const v=s[m],c=Math.round(v.accuracy*v.n);
+ return `<div class="card ${m==="library"?"hl":""}"><div class="lbl">${MODES[m]}</div><div class="big" style="margin-top:8px">${c}<span style="font-size:20px;color:var(--mute)"> / ${v.n}</span></div>
+ <div class="bar"><i style="width:${v.accuracy*100}%"></i></div><div class="sub">${v.credits} SerpApi credits${m==="library"?" + "+D.library.credits+" once for the library":""} · answers given ${Math.round(v.coverage*100)}% · risk ${v.coverage?Math.round(v.risk*100)+"%":"–"}</div>
+ <div class="sub">dev: ${Math.round(D.summary.dev[m].accuracy*10)}/10</div></div>`}).join("");}
+function filters(){document.getElementById("flt").innerHTML=["test","dev"].map(s=>`<button class="${s===split?"on":""}" onclick="split='${s}';filters();list()">${s} split</button>`).join("");}
+function list(){const qs=D.questions.filter(q=>q.split===split);if(!cur||cur.split!==split)cur=qs[0];
+ document.getElementById("list").innerHTML=qs.map(q=>`<div class="q ${q===cur?"on":""}" onclick="pick('${q.id}')"><div class="t"><b>${q.id}</b> ${esc(q.question)}</div>
+ <div class="m dots">${Object.keys(MODES).map(m=>`<span class="${q.modes[m].correct?"y":"n"}" title="${MODES[m]}"></span>`).join("")} expected: ${LBL[q.expected]}</div></div>`).join("");detail();}
+function pick(id){cur=D.questions.find(q=>q.id===id);list();}
+function item(i){const link=i.url?`<a href="${esc(i.url)}#page=${i.page||1}" target="_blank" rel="noopener">${esc(i.title)}</a>`:esc(i.title);
+ return `<div class="item"><div class="val">${esc(i.value)} <small>${esc(i.unit||"")} · ${esc(i.statistic)}</small></div>
+ <div>${esc(i.place||i.district||"")}${i.source_type?" · "+esc(i.source_type):""}${i.well_id?" · "+esc(i.well_id):""} · ${esc(i.date||i.period||"period not stated")}</div>
+ <div class="sub">${link}${i.page?", page "+i.page:" (abstract)"} ${i.page_verified?(i.page?"· ✓ re-found on page":"· ✓ re-found in abstract"):""}</div>
+ ${i.crop?`<img class="crop" loading="lazy" src="crops/${i.crop}" alt="Cited table row, highlighted">`:`<div class="sub" style="margin-top:6px">“${esc((i.quote||"").slice(0,220))}”</div>`}</div>`;}
+function detail(){if(!cur)return;const a=cur.modes[mode];
+ let h=`<div class="sub">${cur.id} · ${cur.split} split · expected <b>${LBL[cur.expected]}</b></div><h3 style="margin:6px 0 4px">${esc(cur.question)}</h3>
+ <div class="tabs">${Object.keys(MODES).map(m=>`<button class="${m===mode?"on":""}" onclick="mode='${m}';detail()">${MODES[m]} ${cur.modes[m].correct?"✓":"✗"}</button>`).join("")}</div>
+ <span class="badge b-${a.answer_type}">${LBL[a.answer_type]||a.answer_type}</span> <span class="sub">${a.credits} search credit${a.credits===1?"":"s"} for this question · ${a.correct?"scored correct":"scored wrong"}</span>`;
+ if(a.reasons&&a.reasons.length)h+=`<ul class="reasons">${a.reasons.map(r=>`<li>${esc(r)}</li>`).join("")}</ul>`;
+ if(a.note)h+=`<p class="sub">${esc(a.note)}</p>`;if(a.reason)h+=`<p>${esc(a.reason)}</p>`;
+ h+=a.items.map(item).join("");
+ if(a.related&&a.related.length)h+=`<p class="sub" style="margin-top:12px">Related record (shown as context, not as an answer):</p>`+a.related.map(item).join("");
+ if(a.trace&&a.trace.length)h+=`<h4 style="margin:18px 0 4px">Searches</h4><div class="trace">${a.trace.map(t=>`<div class="st"><code>${esc(t.engine)}</code> ${esc(t.q)}${t.site?` <code>site: ${esc(t.site)}</code>`:""}
+ <div class="sub">${t.n} results${t.district?" · district: "+esc([].concat(t.district).join(" or ")):""}${t.located&&t.located.length?" · located "+t.located.length+" source(s)":""}</div></div>`).join("")}</div>`;
+ else if(mode==="library")h+=`<p class="sub" style="margin-top:14px">Answered from the harvested library, no search for this question.</p>`;
+ document.getElementById("detail").innerHTML=h;}
+function lib(){const L=D.library;document.getElementById("lib").innerHTML=`<p>${L.docs.length} documents from ${L.credits} searches (${L.queries.filter(q=>q.engine==="google").length} Google, ${L.queries.filter(q=>q.engine!=="google").length} Google Scholar).</p>
+ <details><summary>Documents</summary><table>${L.docs.map(d=>`<tr><td>${d.url?`<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title)}</a>`:esc(d.title)}</td></tr>`).join("")}</table></details>
+ <details style="margin-top:8px"><summary>All harvest queries</summary><table>${L.queries.map(q=>`<tr><td><code>${q.engine}</code></td><td>${esc(q.q)}</td><td class="sub">${q.found.length} found</td></tr>`).join("")}</table></details>`;}
+</script>
+</body>
+</html>
