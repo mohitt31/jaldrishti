@@ -1,0 +1,475 @@
+[
+ {
+  "id": "F001",
+  "dist": "Nadia",
+  "val": "0.332",
+  "page": "49",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F002",
+  "dist": "Nadia",
+  "val": "84",
+  "page": "49",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F003",
+  "dist": "Nadia",
+  "val": "24.2",
+  "page": "104",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F004",
+  "dist": "Nadia",
+  "val": "141.7",
+  "page": "104",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F005",
+  "dist": "Nadia",
+  "val": "12",
+  "page": "",
+  "status": "EXTERNAL"
+ },
+ {
+  "id": "F006",
+  "dist": "Nadia",
+  "val": "1064",
+  "page": "",
+  "status": "EXTERNAL"
+ },
+ {
+  "id": "F007",
+  "dist": "Nadia",
+  "val": "329",
+  "page": "",
+  "status": "EXTERNAL"
+ },
+ {
+  "id": "F008",
+  "dist": "Nadia",
+  "val": "0.02",
+  "page": "102",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F009",
+  "dist": "Nadia",
+  "val": "0.76",
+  "page": "102",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F010",
+  "dist": "Nadia",
+  "val": "0.16",
+  "page": "102",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F011",
+  "dist": "North 24 Parganas",
+  "val": "0.761",
+  "page": "49",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F012",
+  "dist": "North 24 Parganas",
+  "val": "52",
+  "page": "49",
+  "status": "EXACT",
+  "row_match": false
+ },
+ {
+  "id": "F013",
+  "dist": "North 24 Parganas",
+  "val": "0.51",
+  "page": "101",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F014",
+  "dist": "North 24 Parganas",
+  "val": "0.21",
+  "page": "102",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F015",
+  "dist": "North 24 Parganas",
+  "val": "0.24",
+  "page": "102",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F016",
+  "dist": "North 24 Parganas",
+  "val": "1366",
+  "page": "8",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F017",
+  "dist": "North 24 Parganas",
+  "val": "1157",
+  "page": "8",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F018",
+  "dist": "North 24 Parganas",
+  "val": "805",
+  "page": "8",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F019",
+  "dist": "North 24 Parganas",
+  "val": "867",
+  "page": "8",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F020",
+  "dist": "Murshidabad",
+  "val": "0.405",
+  "page": "49",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F021",
+  "dist": "Murshidabad",
+  "val": "64",
+  "page": "49",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F022",
+  "dist": "Murshidabad",
+  "val": "0.09",
+  "page": "101",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F023",
+  "dist": "Murshidabad",
+  "val": "0.08",
+  "page": "101",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F024",
+  "dist": "Murshidabad",
+  "val": "0.74",
+  "page": "101",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F025",
+  "dist": "Murshidabad",
+  "val": "1.00",
+  "page": "101",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F026",
+  "dist": "Malda",
+  "val": "0.402",
+  "page": "49",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F027",
+  "dist": "Malda",
+  "val": "43",
+  "page": "49",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F028",
+  "dist": "Malda",
+  "val": "0.16",
+  "page": "100",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F029",
+  "dist": "Malda",
+  "val": "0.20",
+  "page": "100",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F030",
+  "dist": "Malda",
+  "val": "0.60",
+  "page": "100",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F031",
+  "dist": "Malda",
+  "val": "0.24",
+  "page": "100",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F032",
+  "dist": "South 24 Parganas",
+  "val": "0.083",
+  "page": "49",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F033",
+  "dist": "South 24 Parganas",
+  "val": "7",
+  "page": "49",
+  "status": "EXACT",
+  "row_match": false
+ },
+ {
+  "id": "F034",
+  "dist": "South 24 Parganas",
+  "val": "0.20",
+  "page": "107",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F035",
+  "dist": "South 24 Parganas",
+  "val": "0.47",
+  "page": "107",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F036",
+  "dist": "South 24 Parganas",
+  "val": "0.23",
+  "page": "107",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F037",
+  "dist": "South 24 Parganas",
+  "val": "0.19",
+  "page": "107",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F038",
+  "dist": "South 24 Parganas",
+  "val": "0.12",
+  "page": "107",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F039",
+  "dist": "Birbhum",
+  "val": "0.33",
+  "page": "",
+  "status": "EXTERNAL"
+ },
+ {
+  "id": "F040",
+  "dist": "Birbhum",
+  "val": "18.08",
+  "page": "",
+  "status": "EXTERNAL"
+ },
+ {
+  "id": "F041",
+  "dist": "Birbhum",
+  "val": "0.3",
+  "page": "",
+  "status": "EXTERNAL"
+ },
+ {
+  "id": "F042",
+  "dist": "Birbhum",
+  "val": "17.6",
+  "page": "",
+  "status": "EXTERNAL"
+ },
+ {
+  "id": "F043",
+  "dist": "Birbhum",
+  "val": "0.23",
+  "page": "94",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F044",
+  "dist": "Bankura",
+  "val": "2.9",
+  "page": "94",
+  "status": "EXACT",
+  "row_match": false
+ },
+ {
+  "id": "F045",
+  "dist": "Bankura",
+  "val": "0.14",
+  "page": "91",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F046",
+  "dist": "Bankura",
+  "val": "0.13",
+  "page": "91",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F047",
+  "dist": "Bankura",
+  "val": "0.03",
+  "page": "91",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F048",
+  "dist": "Bankura",
+  "val": "67",
+  "page": "24",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F049",
+  "dist": "Bankura",
+  "val": "43",
+  "page": "24",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F050",
+  "dist": "Bankura",
+  "val": "167",
+  "page": "24",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F051",
+  "dist": "Bankura",
+  "val": "25",
+  "page": "24",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F052",
+  "dist": "Purulia",
+  "val": "0.10",
+  "page": "183",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F053",
+  "dist": "Purulia",
+  "val": "1.00",
+  "page": "183",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F054",
+  "dist": "Purulia",
+  "val": "0.16",
+  "page": "183",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F055",
+  "dist": "Purulia",
+  "val": "1.82",
+  "page": "195",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F056",
+  "dist": "Purulia",
+  "val": "2.50",
+  "page": "195",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F057",
+  "dist": "Purulia",
+  "val": "1.59",
+  "page": "195",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F058",
+  "dist": "Purulia",
+  "val": "1.87",
+  "page": "195",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F059",
+  "dist": "Purulia",
+  "val": "2.99",
+  "page": "195",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "F060",
+  "dist": "Purulia",
+  "val": "1.52",
+  "page": "195",
+  "status": "EXACT",
+  "row_match": true
+ }
+]

@@ -1,0 +1,31 @@
+question_id,split,district,contaminant,question,expected_answer_type,supporting_fact_ids
+Q001,dev,Nadia,fluoride,What fluoride value does the CGWB April 2022 shallow-aquifer table report for the dug well at Bhajanghat?,number_with_source,F010
+Q002,dev,North 24 Parganas,arsenic,How many Baduria samples exceeded 10 µg/L arsenic in the ADB-reproduced IMIS 2014–2017 table?,number_with_source,F016
+Q003,dev,Murshidabad,fluoride,What fluoride value is reported for the Daulatabad dug well in April 2022?,number_with_source,F022
+Q004,dev,Malda,arsenic,What was the highest arsenic concentration detected in Malda during CGWB Special Drive 2015–16 and at which location?,number_with_source,F026
+Q005,dev,South 24 Parganas,fluoride,What fluoride value is reported for the Barisha dug well in April 2022?,number_with_source,F036
+Q006,dev,Birbhum,fluoride,What drinking-water fluoride range does the Mondal et al. paper published in the 2016 journal issue report for its two study villages?,number_with_source,F039;F040
+Q007,dev,Bankura,fluoride,Can the NAQUIM study maximum and the April 2022 Belsula dug-well value establish a change in Bankura district mean fluoride? Explain the comparability problem.,not_comparable,F044;F045
+Q008,dev,Purulia,fluoride,Can the Dhabani M-II value on 20 June 2023 and Damru M-II value on 21 June 2023 establish a one-day increase at the same well?,not_comparable,F055;F059
+Q009,dev,Nadia,fluoride,What is the population-weighted district mean groundwater fluoride concentration for calendar year 2025? Use only this frozen corpus.,insufficient_evidence,
+Q010,dev,Murshidabad,arsenic,What exact calendar date was the Ranjitpara arsenic maximum sample collected during Special Drive 2015–16? Use only this frozen corpus.,insufficient_evidence,
+Q011,test,Nadia,arsenic,What arsenic concentrations are listed for Napatipara and Sahidpally in CGWB Annual Ground Water Quality Report-2025? Retain the reported unit and distinguish publication from sampling year.,number_with_source,F003;F004
+Q012,test,Nadia,arsenic,What groundwater arsenic range and mean does Bhowmick et al. (2015) report for its Nadia study samples? Exclude saliva results.,number_with_source,F005;F006;F007
+Q013,test,Nadia,fluoride,What fluoride concentrations are recorded at the Utr Kechuadanga and Mahisbathan dug wells in April 2022?,number_with_source,F008;F009
+Q014,test,North 24 Parganas,arsenic,What maximum arsenic concentration and location does CGWB Special Drive 2015–16 report for North 24 Parganas?,number_with_source,F011
+Q015,test,North 24 Parganas,arsenic,How many samples exceeded 10 µg/L arsenic in Basirhat I and Swarupnagar in the IMIS 2014–2017 table reproduced by ADB?,number_with_source,F017;F019
+Q016,test,Murshidabad,arsenic,What arsenic maximum and number of samples above 0.01 mg l⁻¹ does CGWB Special Drive 2015–16 report for Murshidabad?,number_with_source,F020;F021
+Q017,test,Malda,fluoride,What fluoride values are listed for Bamangola and Khiripara(Makuli) dug wells in April 2022?,number_with_source,F028;F029
+Q018,test,South 24 Parganas,fluoride,What fluoride values are listed for Hatuganj and Goragacha dug wells in April 2022?,number_with_source,F034;F035
+Q019,test,Birbhum,fluoride,What fluoride range was reported for Khayrasole and Rajnagar samples collected during pre-monsoon and post-monsoon in 2016?,number_with_source,F041;F042
+Q020,test,Bankura,fluoride,How many samples exceeded 1.5 mg/L fluoride in Chhatna and Simlipal in the IMIS 2013–2017 table reproduced by ADB?,number_with_source,F048;F050
+Q021,test,Purulia,fluoride,What fluoride value and sampling date are listed for the Polasdih M-II well RAPU90?,number_with_source,F056
+Q022,test,Purulia,fluoride,What fluoride values are listed for the Loharsol DW well WBPR_1 and Pathardih TW well WBPR_4 on 4 June 2023?,number_with_source,F052;F053
+Q023,test,Nadia,arsenic,Can the Special Drive maximum at Karimpur and the Bhowmick et al. study mean be treated as conflicting estimates of the same district mean after unit conversion?,not_comparable,F001;F007
+Q024,test,North 24 Parganas,arsenic,Does comparing the district Special Drive 2015–16 exceedance count with the Gaighata-only IMIS 2014–2017 count establish a worsening district trend?,not_comparable,F012;F018
+Q025,test,South 24 Parganas,arsenic,Can the Special Drive maximum concentration at Dhopar more and the district count of samples above 0.01 mg l⁻¹ be averaged into one arsenic concentration?,not_comparable,F032;F033
+Q026,test,Birbhum,fluoride,Can the 2016 Khayrasole-and-Rajnagar study upper endpoint and the April 2022 Rajnagar dug-well value establish a fall in district mean fluoride?,not_comparable,F042;F043
+Q027,test,Murshidabad,fluoride,Do the April 2022 Saidpur and Gangedda values constitute a before-and-after fluoride time series for one well?,not_comparable,F023;F024
+Q028,test,Purulia,fluoride,Can Ropo M-II and Konkara Dug Well readings from 21 June 2023 be treated as repeat measurements of one sampling point?,not_comparable,F057;F060
+Q029,test,Bankura,arsenic,What was the groundwater arsenic concentration at the Belsula dug well on 1 October 2026? Use only this frozen corpus.,insufficient_evidence,
+Q030,test,Malda,fluoride,What is the detection limit of the fluoride method specifically for the April 2022 Matoil result? Use only this frozen corpus.,insufficient_evidence,
