@@ -1,0 +1,891 @@
+[
+ {
+  "question_id": "Q001",
+  "question": "What fluoride value does the CGWB April 2022 shallow-aquifer table report for the dug well at Bhajanghat?",
+  "mode": "library",
+  "trace": [
+   {
+    "level": 1,
+    "why": "source named in question -> cgwb.gov.in",
+    "engine": "google",
+    "q": "fluoride \"ground water quality\" West Bengal",
+    "as_sitesearch": "cgwb.gov.in",
+    "cached": true,
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "cgwb.gov.in",
+      "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u092e\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
+      "pdf": true
+     },
+     {
+      "rank": 2,
+      "domain": "cgwb.gov.in",
+      "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u092e\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
+      "pdf": true
+     },
+     {
+      "rank": 3,
+      "domain": "cgwb.gov.in",
+      "title": "\u092d\u093e\u0930\u0924\u0938\u0930\u0915\u093e\u0930 \u091c\u0932\u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u0935\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902\u0917\u093e \u0938\u0902\u0930\u0915\u094d\u0937\u0923\u092e\u0902",
+      "pdf": true
+     },
+     {
+      "rank": 4,
+      "domain": "cgwb.gov.in",
+      "title": "dynamic ground water resources mizoram (2025)",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "cgwb.gov.in",
+      "title": "Bihar",
+      "pdf": true
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 1,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches None.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What fluoride value does the CGWB April 2022 shallow-aquifer table report for the dug well at Bhajanghat?",
+      "places": [],
+      "well_ids": [],
+      "sources": [
+       "dug well"
+      ],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.15,
+  "library_size": 0,
+  "score": {
+   "id": "Q001",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 1,
+   "seconds": 0.15
+  }
+ },
+ {
+  "question_id": "Q002",
+  "question": "How many Baduria samples exceeded 10 \u00b5g/L arsenic in the ADB-reproduced IMIS 2014\u20132017 table?",
+  "mode": "library",
+  "trace": [
+   {
+    "level": 1,
+    "why": "source named in question -> adb.org",
+    "engine": "google",
+    "q": "arsenic ADB arsenic fluoride drinking water West Bengal",
+    "as_sitesearch": "adb.org",
+    "cached": true,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.adb.org",
+      "title": "Environmental Monitoring Report",
+      "pdf": true
+     },
+     {
+      "rank": 2,
+      "domain": "www.adb.org",
+      "title": "Emergency Assistance Project - Additional Financing",
+      "pdf": true
+     },
+     {
+      "rank": 3,
+      "domain": "www.adb.org",
+      "title": "IND: Bihar State Highways II Project \u2013 Additional Financing",
+      "pdf": true
+     },
+     {
+      "rank": 4,
+      "domain": "www.adb.org",
+      "title": "South Asia Subregional Economic Cooperation Road ...",
+      "pdf": true
+     },
+     {
+      "rank": 5,
+      "domain": "www.adb.org",
+      "title": "50165-002: Phuentsholing Township Development Project",
+      "pdf": true
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 1,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches count_exceeding.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "arsenic",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "How many Baduria samples exceeded 10 \u00b5g/L arsenic in the ADB-reproduced IMIS 2014\u20132017 table?",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "count_exceeding"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.15,
+  "library_size": 0,
+  "score": {
+   "id": "Q002",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 1,
+   "seconds": 0.15
+  }
+ },
+ {
+  "question_id": "Q003",
+  "question": "What fluoride value is reported for the Daulatabad dug well in April 2022?",
+  "mode": "library",
+  "trace": [
+   {
+    "level": 1,
+    "why": "source named in question -> cgwb.gov.in",
+    "engine": "google",
+    "q": "fluoride \"ground water quality\" West Bengal",
+    "as_sitesearch": "cgwb.gov.in",
+    "cached": true,
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "cgwb.gov.in",
+      "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u092e\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
+      "pdf": true
+     },
+     {
+      "rank": 2,
+      "domain": "cgwb.gov.in",
+      "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u092e\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
+      "pdf": true
+     },
+     {
+      "rank": 3,
+      "domain": "cgwb.gov.in",
+      "title": "\u092d\u093e\u0930\u0924\u0938\u0930\u0915\u093e\u0930 \u091c\u0932\u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u0935\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902\u0917\u093e \u0938\u0902\u0930\u0915\u094d\u0937\u0923\u092e\u0902",
+      "pdf": true
+     },
+     {
+      "rank": 4,
+      "domain": "cgwb.gov.in",
+      "title": "dynamic ground water resources mizoram (2025)",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "cgwb.gov.in",
+      "title": "Bihar",
+      "pdf": true
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 1,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches None.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What fluoride value is reported for the Daulatabad dug well in April 2022?",
+      "places": [],
+      "well_ids": [],
+      "sources": [
+       "dug well"
+      ],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.14,
+  "library_size": 0,
+  "score": {
+   "id": "Q003",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 1,
+   "seconds": 0.14
+  }
+ },
+ {
+  "question_id": "Q004",
+  "question": "What was the highest arsenic concentration detected in Malda during CGWB Special Drive 2015\u201316 and at which location?",
+  "mode": "library",
+  "trace": [
+   {
+    "level": 1,
+    "why": "source named in question -> cgwb.gov.in",
+    "engine": "google",
+    "q": "arsenic Malda \"special drive\" year book",
+    "as_sitesearch": "cgwb.gov.in",
+    "cached": true,
+    "n_results": 3,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "cgwb.gov.in",
+      "title": "central ground water board ministry of water resources",
+      "pdf": true
+     },
+     {
+      "rank": 2,
+      "domain": "cgwb.gov.in",
+      "title": "CENTRAL GROUND WATER BOARD",
+      "pdf": true
+     },
+     {
+      "rank": 3,
+      "domain": "cgwb.gov.in",
+      "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u0935\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
+      "pdf": true
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 1,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches max.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "arsenic",
+    "districts": [
+     "Malda"
+    ],
+    "mentions": [
+     {
+      "text": "What was the highest arsenic concentration detected in Malda during CGWB Special Drive 2015\u201316 and at which location?",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "max"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.15,
+  "library_size": 0,
+  "score": {
+   "id": "Q004",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 1,
+   "seconds": 0.15
+  }
+ },
+ {
+  "question_id": "Q005",
+  "question": "What fluoride value is reported for the Barisha dug well in April 2022?",
+  "mode": "library",
+  "trace": [
+   {
+    "level": 1,
+    "why": "source named in question -> cgwb.gov.in",
+    "engine": "google",
+    "q": "fluoride \"ground water quality\" West Bengal",
+    "as_sitesearch": "cgwb.gov.in",
+    "cached": true,
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "cgwb.gov.in",
+      "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u092e\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
+      "pdf": true
+     },
+     {
+      "rank": 2,
+      "domain": "cgwb.gov.in",
+      "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u092e\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
+      "pdf": true
+     },
+     {
+      "rank": 3,
+      "domain": "cgwb.gov.in",
+      "title": "\u092d\u093e\u0930\u0924\u0938\u0930\u0915\u093e\u0930 \u091c\u0932\u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u0935\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902\u0917\u093e \u0938\u0902\u0930\u0915\u094d\u0937\u0923\u092e\u0902",
+      "pdf": true
+     },
+     {
+      "rank": 4,
+      "domain": "cgwb.gov.in",
+      "title": "dynamic ground water resources mizoram (2025)",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "cgwb.gov.in",
+      "title": "Bihar",
+      "pdf": true
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 1,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches None.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What fluoride value is reported for the Barisha dug well in April 2022?",
+      "places": [],
+      "well_ids": [],
+      "sources": [
+       "dug well"
+      ],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.15,
+  "library_size": 0,
+  "score": {
+   "id": "Q005",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 1,
+   "seconds": 0.15
+  }
+ },
+ {
+  "question_id": "Q006",
+  "question": "What drinking-water fluoride range does the Mondal et al. paper published in the 2016 journal issue report for its two study villages?",
+  "mode": "library",
+  "trace": [
+   {
+    "level": 1,
+    "why": "named study -> Google Scholar",
+    "engine": "google_scholar",
+    "q": "Mondal fluoride drinking water West Bengal",
+    "as_ylo": "2016",
+    "as_yhi": "2016",
+    "cached": true,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "link.springer.com",
+      "title": "\u2026 fluoride hydrogeochemistry and effect of consuming fluoride-contaminated drinking water ",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "link.springer.com",
+      "title": "Fluoride adsorption by calcium carbonate, activated alumina and activated sugarcane ash",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "link.springer.com",
+      "title": "Dental fluorosis and urinary fluoride concentration as a reflection of fluoride exposure a",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "link.springer.com",
+      "title": "Deleneation of groundwater quality in the presence of fluoride in selected villages of Sim",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.sciencedirect.com",
+      "title": "Competitive adsorption between arsenic and fluoride from binary mixture on chemically trea",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 1,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches min, max.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What drinking-water fluoride range does the Mondal et al. paper published in the 2016 journal issue report for its two study villages?",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "range"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.15,
+  "library_size": 0,
+  "score": {
+   "id": "Q006",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 1,
+   "seconds": 0.15
+  }
+ },
+ {
+  "question_id": "Q007",
+  "question": "Can the NAQUIM study maximum and the April 2022 Belsula dug-well value establish a change in Bankura district mean fluoride? Explain the comparability problem.",
+  "mode": "library",
+  "trace": [
+   {
+    "level": 1,
+    "why": "source named in question -> cgwb.gov.in",
+    "engine": "google",
+    "q": "fluoride Bankura aquifer mapping NAQUIM report",
+    "as_sitesearch": "cgwb.gov.in",
+    "cached": true,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "cgwb.gov.in",
+      "title": "CGWB - Publications Repository",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) NAQUIM Report of Purulia District West Bengal",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "cgwb.gov.in",
+      "title": "CGWB - Publications Repository",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.scribd.com",
+      "title": "Bhavnagar Aquifer Management Report | PDF | Groundwater",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.scribd.com",
+      "title": "Aquifer Management in Mathura District | PDF | Groundwater",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 1,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record matches: 'NAQUIM study maximum'.",
+   "parsed": {
+    "intent": "compare",
+    "claim": "district_change",
+    "contaminant": "fluoride",
+    "districts": [
+     "Bankura"
+    ],
+    "mentions": [
+     {
+      "text": "NAQUIM study maximum",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "max"
+      ],
+      "attribute": null
+     },
+     {
+      "text": "April 2022 Belsula dug-well value ",
+      "places": [],
+      "well_ids": [],
+      "sources": [
+       "dug well"
+      ],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.26,
+  "library_size": 0,
+  "score": {
+   "id": "Q007",
+   "expected": "not_comparable",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 1,
+   "seconds": 0.26
+  }
+ },
+ {
+  "question_id": "Q008",
+  "question": "Can the Dhabani M-II value on 20 June 2023 and Damru M-II value on 21 June 2023 establish a one-day increase at the same well?",
+  "mode": "library",
+  "trace": [
+   {
+    "level": 2,
+    "why": "place-level search",
+    "engine": "google",
+    "q": "\"Dhabani\" water quality groundwater",
+    "cached": true,
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "ocmms.nic.in",
+      "title": "WEST BENGAL POLLUTION CONTROL BOARD Paribesh ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.justdial.com",
+      "title": "Top 24 Hours Water Suppliers in Arrah, Arrah near me - Justdial",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.ondathanamahavidyalaya.in",
+      "title": "Affiliated to Bankura University",
+      "pdf": true
+     },
+     {
+      "rank": 4,
+      "domain": "www.researchgate.net",
+      "title": "A Study in the Lateritic Micro- watersheds of River ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "x.com",
+      "title": "CGWB, ER, Kolkata (@CgwbK) / X",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 1,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record matches: 'Dhabani M-II value on 20 June 2023'.",
+   "parsed": {
+    "intent": "compare",
+    "claim": "change_same_well",
+    "contaminant": null,
+    "districts": [],
+    "mentions": [
+     {
+      "text": "Dhabani M-II value on 20 June 2023",
+      "places": [],
+      "well_ids": [],
+      "sources": [
+       "m-ii"
+      ],
+      "dates": [
+       "2023-06-20"
+      ],
+      "statistics": [],
+      "attribute": null
+     },
+     {
+      "text": "Damru M-II value on 21 June 2023 ",
+      "places": [],
+      "well_ids": [],
+      "sources": [
+       "m-ii"
+      ],
+      "dates": [
+       "2023-06-21"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.26,
+  "library_size": 0,
+  "score": {
+   "id": "Q008",
+   "expected": "not_comparable",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 1,
+   "seconds": 0.26
+  }
+ },
+ {
+  "question_id": "Q009",
+  "question": "What is the population-weighted district mean groundwater fluoride concentration for calendar year 2025? Use only this frozen corpus.",
+  "mode": "library",
+  "trace": [],
+  "credits": 0,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "reason": "No source in the corpus reports a population-weighted mean; computing one would need population data and a sampling design the sources do not give.",
+   "items": [],
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What is the population-weighted district mean groundwater fluoride concentration for calendar year 2025? Use only this frozen corpus.",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "population_weighted_mean"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.08,
+  "library_size": 0,
+  "score": {
+   "id": "Q009",
+   "expected": "insufficient_evidence",
+   "got": "insufficient_evidence",
+   "correct": true,
+   "verified_items": 0,
+   "evidence_ok": null,
+   "gold_doc_exact": null,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.08
+  }
+ },
+ {
+  "question_id": "Q010",
+  "question": "What exact calendar date was the Ranjitpara arsenic maximum sample collected during Special Drive 2015\u201316? Use only this frozen corpus.",
+  "mode": "library",
+  "trace": [
+   {
+    "level": 1,
+    "why": "source named in question -> cgwb.gov.in",
+    "engine": "google",
+    "q": "arsenic \"special drive\" year book",
+    "as_sitesearch": "cgwb.gov.in",
+    "cached": true,
+    "n_results": 3,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "cgwb.gov.in",
+      "title": "CENTRAL GROUND WATER BOARD",
+      "pdf": true
+     },
+     {
+      "rank": 2,
+      "domain": "cgwb.gov.in",
+      "title": "central ground water board ministry of water resources",
+      "pdf": true
+     },
+     {
+      "rank": 3,
+      "domain": "cgwb.gov.in",
+      "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u0935\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
+      "pdf": true
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 1,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches max.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "arsenic",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What exact calendar date was the Ranjitpara arsenic maximum sample collected during Special Drive 2015\u201316? Use only this frozen corpus.",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "max"
+      ],
+      "attribute": "date"
+     }
+    ]
+   }
+  },
+  "seconds": 0.15,
+  "library_size": 0,
+  "score": {
+   "id": "Q010",
+   "expected": "insufficient_evidence",
+   "got": "insufficient_evidence",
+   "correct": true,
+   "verified_items": 0,
+   "evidence_ok": null,
+   "gold_doc_exact": null,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 1,
+   "seconds": 0.15
+  }
+ }
+]

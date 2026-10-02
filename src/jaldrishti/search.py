@@ -81,7 +81,7 @@ def relevant(r: dict, contaminant: str | None, scope: list[str] | None = None) -
     """Only fetch results about groundwater quality in the right area (saves bandwidth, avoids junk)."""
     t = f"{r['title']} {r['snippet']} {r['link']}"
     if not RELEVANT.search(t): return False
-    if scope and not any(re.search(re.escape(x), t, re.I) for x in scope + ["west bengal", "west-bengal", "wb", "eastern region", "GWYB ER"]):
+    if scope and not any(re.search(r"(?<![a-z])" + re.escape(x) + r"(?![a-z])", t, re.I) for x in scope + ["west bengal", "west-bengal", "eastern region", "GWYB ER"]):
         return False
     return not contaminant or re.search(contaminant + r"|ground ?water|water quality|aquifer", t, re.I) is not None
 

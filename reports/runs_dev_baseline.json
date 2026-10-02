@@ -14,9 +14,20 @@
     "missing_cache": false,
     "n_results": 9,
     "located": [
-     "annual_gwq_2025"
+     "annual_gwq_2025",
+     "web_25fb90c2d34e",
+     "web_88d21df8a1f6"
     ],
-    "fetched": [],
+    "fetched": [
+     {
+      "url": "https://cgwb.gov.in/old_website/Regions/SR/Reports/Andhrapradesh_13.10.22.pdf",
+      "reused": "web_25fb90c2d34e"
+     },
+     {
+      "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1703237300342091479file.pdf",
+      "reused": "web_88d21df8a1f6"
+     }
+    ],
     "top": [
      {
       "rank": 1,
@@ -113,7 +124,9 @@
   ],
   "credits": 3,
   "located": [
-   "annual_gwq_2025"
+   "annual_gwq_2025",
+   "web_25fb90c2d34e",
+   "web_88d21df8a1f6"
   ],
   "answer": {
    "answer_type": "insufficient_evidence",
@@ -141,7 +154,7 @@
     ]
    }
   },
-  "seconds": 0.09,
+  "seconds": 0.23,
   "score": {
    "id": "Q001",
    "expected": "number_with_source",
@@ -153,7 +166,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 0.09
+   "seconds": 0.23
   }
  },
  {
@@ -323,7 +336,7 @@
     ]
    }
   },
-  "seconds": 0.07,
+  "seconds": 0.06,
   "score": {
    "id": "Q002",
    "expected": "number_with_source",
@@ -335,7 +348,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 0.07
+   "seconds": 0.06
   }
  },
  {
@@ -445,7 +458,7 @@
     ]
    }
   },
-  "seconds": 0.07,
+  "seconds": 0.05,
   "score": {
    "id": "Q003",
    "expected": "number_with_source",
@@ -457,7 +470,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 0.07
+   "seconds": 0.05
   }
  },
  {
@@ -629,7 +642,7 @@
     ]
    }
   },
-  "seconds": 0.07,
+  "seconds": 0.05,
   "score": {
    "id": "Q004",
    "expected": "number_with_source",
@@ -641,7 +654,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 0.07
+   "seconds": 0.05
   }
  },
  {
@@ -759,7 +772,7 @@
     ]
    }
   },
-  "seconds": 0.1,
+  "seconds": 0.31,
   "score": {
    "id": "Q005",
    "expected": "number_with_source",
@@ -771,7 +784,7 @@
    "n_items": 1,
    "unsupported": 0,
    "credits": 1,
-   "seconds": 0.1
+   "seconds": 0.31
   }
  },
  {
@@ -941,7 +954,7 @@
     ]
    }
   },
-  "seconds": 0.08,
+  "seconds": 0.06,
   "score": {
    "id": "Q006",
    "expected": "number_with_source",
@@ -953,7 +966,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 0.08
+   "seconds": 0.06
   }
  },
  {
@@ -1107,7 +1120,7 @@
     ]
    }
   },
-  "seconds": 0.13,
+  "seconds": 0.1,
   "score": {
    "id": "Q007",
    "expected": "not_comparable",
@@ -1119,7 +1132,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 0.13
+   "seconds": 0.1
   }
  },
  {
@@ -1273,7 +1286,7 @@
     ]
    }
   },
-  "seconds": 0.13,
+  "seconds": 0.1,
   "score": {
    "id": "Q008",
    "expected": "not_comparable",
@@ -1285,7 +1298,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 0.13
+   "seconds": 0.1
   }
  },
  {
@@ -1365,7 +1378,7 @@
     ]
    }
   },
-  "seconds": 0.07,
+  "seconds": 0.05,
   "score": {
    "id": "Q009",
    "expected": "insufficient_evidence",
@@ -1377,7 +1390,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 1,
-   "seconds": 0.07
+   "seconds": 0.05
   }
  },
  {
@@ -1516,7 +1529,7 @@
     ]
    }
   },
-  "seconds": 0.08,
+  "seconds": 0.05,
   "score": {
    "id": "Q010",
    "expected": "insufficient_evidence",
@@ -1528,7 +1541,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 0.08
+   "seconds": 0.05
   }
  }
 ]

@@ -222,5 +222,69 @@
   "type": "web_pdf",
   "format": "pdf",
   "title": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1687168580292551714file.pdf"
+ },
+ "https://maps.wbphed.gov.in/hgm/hgm_pdf/gwm79b14.pdf": {
+  "id": "web_826d21ad2464",
+  "file": "discovered/web_826d21ad2464.pdf",
+  "url": "https://maps.wbphed.gov.in/hgm/hgm_pdf/gwm79b14.pdf",
+  "type": "web_pdf",
+  "format": "pdf",
+  "title": "https://maps.wbphed.gov.in/hgm/hgm_pdf/gwm79b14.pdf"
+ },
+ "https://gsda.maharashtra.gov.in/wp-content/uploads/2025/04/National-GWRE-2024.pdf": {
+  "id": "web_4d6f2354968b",
+  "file": "discovered/web_4d6f2354968b.pdf",
+  "url": "https://gsda.maharashtra.gov.in/wp-content/uploads/2025/04/National-GWRE-2024.pdf",
+  "type": "web_pdf",
+  "format": "pdf",
+  "title": "https://gsda.maharashtra.gov.in/wp-content/uploads/2025/04/National-GWRE-2024.pdf"
+ },
+ "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/176302296020936587file.pdf": {
+  "id": "web_3c1ef959ac3b",
+  "file": "discovered/web_3c1ef959ac3b.pdf",
+  "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/176302296020936587file.pdf",
+  "type": "web_pdf",
+  "format": "pdf",
+  "title": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/176302296020936587file.pdf"
+ },
+ "http://cgwb.gov.in/cgwbpnm/public/uploads/documents/16855171161297779827file.pdf": {
+  "id": "web_215997fceb43",
+  "file": "discovered/web_215997fceb43.pdf",
+  "url": "http://cgwb.gov.in/cgwbpnm/public/uploads/documents/16855171161297779827file.pdf",
+  "type": "web_pdf",
+  "format": "pdf",
+  "title": "http://cgwb.gov.in/cgwbpnm/public/uploads/documents/16855171161297779827file.pdf"
+ },
+ "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/17170701551280369375file.pdf": {
+  "id": "web_e7ce9dacf797",
+  "file": "discovered/web_e7ce9dacf797.pdf",
+  "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/17170701551280369375file.pdf",
+  "type": "web_pdf",
+  "format": "pdf",
+  "title": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/17170701551280369375file.pdf"
+ },
+ "https://pubmed.ncbi.nlm.nih.gov/26960765/": {
+  "id": "pubmed_26960765",
+  "file": "pubmed_26960765.xml",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/26960765/",
+  "type": "peer_reviewed",
+  "format": "pubmed_xml",
+  "title": "https://pubmed.ncbi.nlm.nih.gov/26960765/"
+ },
+ "https://maps.wbphed.gov.in/hgm/hgm_pdf/gwm73j9.pdf": {
+  "id": "web_170f6882853a",
+  "file": "discovered/web_170f6882853a.pdf",
+  "url": "https://maps.wbphed.gov.in/hgm/hgm_pdf/gwm73j9.pdf",
+  "type": "web_pdf",
+  "format": "pdf",
+  "title": "https://maps.wbphed.gov.in/hgm/hgm_pdf/gwm73j9.pdf"
+ },
+ "https://maps.wbphed.gov.in/hgm/hgm_pdf/gwm73i8.pdf": {
+  "id": "web_3fcb2c0a7d39",
+  "file": "discovered/web_3fcb2c0a7d39.pdf",
+  "url": "https://maps.wbphed.gov.in/hgm/hgm_pdf/gwm73i8.pdf",
+  "type": "web_pdf",
+  "format": "pdf",
+  "title": "https://maps.wbphed.gov.in/hgm/hgm_pdf/gwm73i8.pdf"
  }
 }

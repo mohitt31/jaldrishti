@@ -5,58 +5,79 @@
   "mode": "jaldrishti",
   "trace": [
    {
-    "level": 1,
-    "why": "source named in question -> cgwb.gov.in",
+    "level": 0,
+    "why": "resolve district of 'Bhajanghat'",
     "engine": "google",
-    "q": "fluoride \"ground water quality\" West Bengal",
-    "as_sitesearch": "cgwb.gov.in",
+    "q": "Bhajanghat West Bengal district",
+    "resolve": "Bhajanghat",
     "cached": false,
-    "missing_cache": false,
     "n_results": 9,
-    "located": [
-     "web_1913851a7f27",
-     "web_2167e127e913"
-    ],
-    "fetched": [
-     {
-      "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1699436393334922504file.pdf",
-      "new_doc": "web_2167e127e913"
-     },
-     {
-      "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1698233238158483686file.pdf",
-      "new_doc": "web_1913851a7f27"
-     }
-    ],
+    "located": [],
+    "fetched": [],
     "top": [
      {
       "rank": 1,
-      "domain": "cgwb.gov.in",
-      "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u092e\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
-      "pdf": true
+      "domain": "www.viewvillage.in",
+      "title": "Villages list of Krishnaganj sub-district - Nadia",
+      "pdf": false
      },
      {
       "rank": 2,
-      "domain": "cgwb.gov.in",
-      "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u092e\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
-      "pdf": true
+      "domain": "nadia.gov.in",
+      "title": "HARINGHATA | Nadia District, Government of West Bengal",
+      "pdf": false
      },
      {
       "rank": 3,
-      "domain": "cgwb.gov.in",
-      "title": "\u092d\u093e\u0930\u0924\u0938\u0930\u0915\u093e\u0930 \u091c\u0932\u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u0935\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902\u0917\u093e \u0938\u0902\u0930\u0915\u094d\u0937\u0923\u092e\u0902",
-      "pdf": true
+      "domain": "www.justdial.com",
+      "title": "Banks in Bhajanghat, Nadia - Best Bank Branches near me",
+      "pdf": false
+     }
+    ],
+    "resolved_district": "Nadia",
+    "answer_type": null
+   },
+   {
+    "level": 1,
+    "why": "source named in question -> cgwb.gov.in",
+    "engine": "google",
+    "q": "fluoride Nadia \"ground water quality\" West Bengal",
+    "as_sitesearch": "cgwb.gov.in",
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "en.wikipedia.org",
+      "title": "Fluoride",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "ods.od.nih.gov",
+      "title": "Fluoride - Health Professional Fact Sheet",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "nutritionsource.hsph.harvard.edu",
+      "title": "Fluoride - The Nutrition Source",
+      "pdf": false
      },
      {
       "rank": 4,
-      "domain": "cgwb.gov.in",
-      "title": "dynamic ground water resources mizoram (2025)",
+      "domain": "pmc.ncbi.nlm.nih.gov",
+      "title": "Role of Fluoride in Dentistry: A Narrative Review - PMC - NIH",
       "pdf": false
      },
      {
       "rank": 5,
-      "domain": "cgwb.gov.in",
-      "title": "Bihar",
-      "pdf": true
+      "domain": "my.clevelandclinic.org",
+      "title": "Fluoride: Uses, Benefits & Side Effects",
+      "pdf": false
      }
     ],
     "answer_type": "insufficient_evidence"
@@ -65,100 +86,53 @@
     "level": 2,
     "why": "place-level search",
     "engine": "google",
-    "q": "\"Bhajanghat\" fluoride groundwater",
+    "q": "\"Bhajanghat\" fluoride groundwater Nadia",
     "cached": false,
     "missing_cache": false,
-    "n_results": 6,
-    "located": [
-     "web_bf185a48acc4",
-     "web_c528bfe36da1"
-    ],
-    "fetched": [
-     {
-      "url": "https://cgwb.gov.in/old_website/Regions/GW-year-Books/GWYB-2015-16/GWYB%20ER%202015-16.pdf",
-      "new_doc": "web_bf185a48acc4"
-     },
-     {
-      "url": "https://saiindia.gov.in/uploads/download_audit_report/2021/Report%20No.4%20of%202021_English-06243f94b533ee4.15568552.pdf",
-      "new_doc": "web_c528bfe36da1"
-     }
-    ],
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
     "top": [
      {
       "rank": 1,
-      "domain": "cgwb.gov.in",
-      "title": "central ground water board ministry of water resources",
-      "pdf": true
+      "domain": "locate.pnb.bank.in",
+      "title": "Find IFSC for Punjab National Bank, Bhajanghat",
+      "pdf": false
      },
      {
       "rank": 2,
-      "domain": "www.scribd.com",
-      "title": "WB Year Book 21-22 | PDF | Groundwater | Sodium",
+      "domain": "nadia.gov.in",
+      "title": "Notice inviting tender for repairing work at roof of godown ...",
       "pdf": false
      },
      {
       "rank": 3,
-      "domain": "www.scribd.com",
-      "title": "Doda District Ground Water Report 2010-11 | PDF",
+      "domain": "www.accuweather.com",
+      "title": "Bhajanghat, West Bengal, India Weather Forecast",
       "pdf": false
      },
      {
       "rank": 4,
-      "domain": "saiindia.gov.in",
-      "title": "Audit Report of the Comptroller and Auditor General of ...",
-      "pdf": true
+      "domain": "www.justdial.com",
+      "title": "Explore Top Tourist Attractions in Bhajanghat, Nadia",
+      "pdf": false
      },
      {
       "rank": 5,
-      "domain": "www.scribd.com",
-      "title": "Ground Water Year Book 2015-16 | PDF | Arsenic",
+      "domain": "cleartax.in",
+      "title": "IFSC Code of Punjab National Bank, Bhajanghat, West ...",
       "pdf": false
      }
     ],
-    "answer_type": "number_with_source"
+    "answer_type": "insufficient_evidence"
    }
   ],
-  "credits": 2,
-  "located": [
-   "web_1913851a7f27",
-   "web_2167e127e913",
-   "web_bf185a48acc4",
-   "web_c528bfe36da1"
-  ],
+  "credits": 3,
+  "located": [],
   "answer": {
-   "answer_type": "number_with_source",
-   "items": [
-    {
-     "value": "1.11",
-     "unit": null,
-     "statistic": "single",
-     "place": "Krishnaganj, Bhajanghat",
-     "district": "Nadia",
-     "source_type": null,
-     "well_id": "WBND155",
-     "date": null,
-     "period": null,
-     "threshold": null,
-     "spatial_support": "site",
-     "doc": "web_bf185a48acc4",
-     "title": "https://cgwb.gov.in/old_website/Regions/GW-year-Books/GWYB-2015-16/GWYB%20ER%202015-16.pdf",
-     "url": "https://cgwb.gov.in/old_website/Regions/GW-year-Books/GWYB-2015-16/GWYB%20ER%202015-16.pdf",
-     "page": 150,
-     "quote": "883 | Nadia | Krishnaganj | Bhajanghat | WBND155 | 23.3886 | 88.7358 | 7.9 | 653 | 245 | 38 | 36 | 43 | 2.3 | BDL | 304 | 56 | 36 | 1.11 | BDL | 9",
-     "header": "F",
-     "publication_year": null,
-     "evidence_id": "web_bf185a48acc4:150:0:26:18",
-     "bbox": [
-      14.28,
-      454.27001,
-      824.16002,
-      469.78001000000006
-     ],
-     "score": 4.4,
-     "asked": "bhajanghat",
-     "page_verified": true
-    }
-   ],
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches None.",
    "parsed": {
     "intent": "lookup",
     "claim": null,
@@ -167,9 +141,7 @@
     "mentions": [
      {
       "text": "What fluoride value does the CGWB April 2022 shallow-aquifer table report for the dug well at Bhajanghat?",
-      "places": [
-       "bhajanghat"
-      ],
+      "places": [],
       "well_ids": [],
       "sources": [
        "dug well"
@@ -183,18 +155,19 @@
     ]
    }
   },
-  "seconds": 69.79,
+  "seconds": 52.39,
   "score": {
    "id": "Q001",
    "expected": "number_with_source",
-   "got": "number_with_source",
+   "got": "insufficient_evidence",
    "correct": false,
-   "verified_items": 1,
+   "verified_items": 0,
    "evidence_ok": false,
-   "n_items": 1,
-   "unsupported": 1,
-   "credits": 2,
-   "seconds": 69.79
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 52.39
   }
  },
  {
@@ -203,51 +176,79 @@
   "mode": "jaldrishti",
   "trace": [
    {
+    "level": 0,
+    "why": "resolve district of 'Baduria'",
+    "engine": "google",
+    "q": "Baduria West Bengal district",
+    "resolve": "Baduria",
+    "cached": false,
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "en.wikipedia.org",
+      "title": "Bengal",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.instagram.com",
+      "title": "Bengal (@bengalgram) \u2022 Instagram photos and videos",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "dst.gov.in",
+      "title": "Scientists discover unusual ozone layer above North Bay ...",
+      "pdf": false
+     }
+    ],
+    "resolved_district": "Kolkata",
+    "answer_type": null
+   },
+   {
     "level": 1,
     "why": "source named in question -> adb.org",
     "engine": "google",
-    "q": "arsenic ADB arsenic fluoride drinking water West Bengal",
+    "q": "arsenic Kolkata ADB arsenic fluoride drinking water West Bengal",
     "as_sitesearch": "adb.org",
     "cached": false,
     "missing_cache": false,
     "n_results": 10,
     "located": [],
-    "fetched": [
-     {
-      "url": "https://www.adb.org/sites/default/files/linked-documents/52174-002-ieeab-02.pdf",
-      "error": "403 Client Error: Forbidden for url: https://www.adb.org/sites/default/files/linked-documents/52174-002-ieeab-02.pdf"
-     }
-    ],
+    "fetched": [],
     "top": [
      {
       "rank": 1,
-      "domain": "www.adb.org",
-      "title": "Environmental Monitoring Report",
-      "pdf": true
+      "domain": "www.ijsssr.com",
+      "title": "Status of Drinking-water in Nadia district, West Bengal, India",
+      "pdf": false
      },
      {
       "rank": 2,
-      "domain": "www.adb.org",
-      "title": "Emergency Assistance Project - Additional Financing",
-      "pdf": true
+      "domain": "www.easterneye.biz",
+      "title": "India, ADB Sign \u00a3184.97 Million Loan to Provide Safe ...",
+      "pdf": false
      },
      {
       "rank": 3,
-      "domain": "www.adb.org",
-      "title": "IND: Bihar State Highways II Project \u2013 Additional Financing",
-      "pdf": true
+      "domain": "www.academia.edu",
+      "title": "Status of groundwater arsenic contamination in the state ...",
+      "pdf": false
      },
      {
       "rank": 4,
-      "domain": "www.adb.org",
-      "title": "South Asia Subregional Economic Cooperation Road ...",
-      "pdf": true
+      "domain": "www.facebook.com",
+      "title": "More than 25 million people in West Bengal are believed to ...",
+      "pdf": false
      },
      {
       "rank": 5,
-      "domain": "www.adb.org",
-      "title": "50165-002: Phuentsholing Township Development Project",
-      "pdf": true
+      "domain": "www.indiawaterportal.org",
+      "title": "Formulating action plan for removal of arsenic ...",
+      "pdf": false
      }
     ],
     "answer_type": "insufficient_evidence"
@@ -256,41 +257,98 @@
     "level": 2,
     "why": "place-level search",
     "engine": "google",
-    "q": "\"Baduria\" arsenic groundwater",
+    "q": "\"Baduria\" arsenic groundwater Kolkata",
     "cached": false,
     "missing_cache": false,
-    "n_results": 3,
-    "located": [],
-    "fetched": [],
+    "n_results": 9,
+    "located": [
+     "web_4d6f2354968b",
+     "web_826d21ad2464"
+    ],
+    "fetched": [
+     {
+      "url": "https://maps.wbphed.gov.in/hgm/hgm_pdf/gwm79b14.pdf",
+      "new_doc": "web_826d21ad2464"
+     },
+     {
+      "url": "https://gsda.maharashtra.gov.in/wp-content/uploads/2025/04/National-GWRE-2024.pdf",
+      "new_doc": "web_4d6f2354968b"
+     }
+    ],
     "top": [
      {
       "rank": 1,
-      "domain": "www.researchgate.net",
-      "title": "(PDF) Arsenic in groundwater of India",
-      "pdf": false
+      "domain": "maps.wbphed.gov.in",
+      "title": "GROUND WATER PROSPECTS MAP",
+      "pdf": true
      },
      {
       "rank": 2,
-      "domain": "www.academia.edu",
-      "title": "Arsenic Contamination in West Bengal: Its Present & Future",
+      "domain": "pubs.acs.org",
+      "title": "Genetic Variants Associated with Arsenic Susceptibility: Study ...",
       "pdf": false
      },
      {
       "rank": 3,
-      "domain": "www.scribd.com",
-      "title": "Arsenic Contamination in Indian Groundwater | PDF",
+      "domain": "www.researchgate.net",
+      "title": "Srikanta Samanta PhD Principal Scientist at Central Inland ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "20.198.91.3:8080",
+      "title": "COMPENDIUM ON GROUND WATER POTENTIAL AND ...",
+      "pdf": true
+     },
+     {
+      "rank": 5,
+      "domain": "www.wikiwand.com",
+      "title": "Baduria (community development block)",
       "pdf": false
      }
     ],
-    "answer_type": "insufficient_evidence"
+    "answer_type": "number_with_source"
    }
   ],
-  "credits": 2,
-  "located": [],
+  "credits": 3,
+  "located": [
+   "web_4d6f2354968b",
+   "web_826d21ad2464"
+  ],
   "answer": {
-   "answer_type": "insufficient_evidence",
-   "items": [],
-   "reason": "No record in the corpus matches count_exceeding.",
+   "answer_type": "number_with_source",
+   "items": [
+    {
+     "value": "1",
+     "unit": "samples",
+     "statistic": "count_exceeding",
+     "place": "Ahmedabad, Bavla, Dhandhuka (C)",
+     "district": null,
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": "December, 2024",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "web_4d6f2354968b",
+     "title": "https://gsda.maharashtra.gov.in/wp-content/uploads/2025/04/National-GWRE-2024.pdf",
+     "url": "https://gsda.maharashtra.gov.in/wp-content/uploads/2025/04/National-GWRE-2024.pdf",
+     "page": 410,
+     "quote": "1 | Ahmedabad | 1 | Bavla | 1 | Dhandhuka (C)",
+     "header": "S. No Name of Assessment Units affected by Arsenic S. No",
+     "publication_year": null,
+     "evidence_id": "web_4d6f2354968b:410:0:0:4",
+     "bbox": [
+      89.36000000000001,
+      94.40000000000002,
+      552.5600000000001,
+      102.30000000000001
+     ],
+     "score": 2.4,
+     "asked": "count_exceeding",
+     "page_verified": true
+    }
+   ],
    "parsed": {
     "intent": "lookup",
     "claim": null,
@@ -311,18 +369,19 @@
     ]
    }
   },
-  "seconds": 2.87,
+  "seconds": 19.98,
   "score": {
    "id": "Q002",
    "expected": "number_with_source",
-   "got": "insufficient_evidence",
+   "got": "number_with_source",
    "correct": false,
-   "verified_items": 0,
+   "verified_items": 1,
    "evidence_ok": false,
-   "n_items": 0,
-   "unsupported": 0,
-   "credits": 2,
-   "seconds": 2.87
+   "gold_doc_exact": false,
+   "n_items": 1,
+   "unsupported": 1,
+   "credits": 3,
+   "seconds": 19.98
   }
  },
  {
@@ -331,59 +390,78 @@
   "mode": "jaldrishti",
   "trace": [
    {
+    "level": 0,
+    "why": "resolve district of 'Daulatabad'",
+    "engine": "google",
+    "q": "Daulatabad West Bengal district",
+    "resolve": "Daulatabad",
+    "cached": false,
+    "n_results": 8,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.getpincodes.com",
+      "title": "Pin code 742302, Daulatabad S.O (Murshidabad) Post ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "villageinfo.in",
+      "title": "Pincode 742302, Daulatabad SOMurshidabad",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "schools.org.in",
+      "title": "DAULATABAD J B - Gazipur -vii District South Twenty Four ...",
+      "pdf": false
+     }
+    ],
+    "resolved_district": "Murshidabad",
+    "answer_type": null
+   },
+   {
     "level": 1,
     "why": "source named in question -> cgwb.gov.in",
     "engine": "google",
-    "q": "fluoride \"ground water quality\" West Bengal",
+    "q": "fluoride Murshidabad \"ground water quality\" West Bengal",
     "as_sitesearch": "cgwb.gov.in",
-    "cached": true,
+    "cached": false,
     "missing_cache": false,
-    "n_results": 9,
+    "n_results": 3,
     "located": [
-     "web_1913851a7f27",
-     "web_2167e127e913",
-     "web_b127db988af8",
-     "web_c863843662b6"
+     "web_3c1ef959ac3b",
+     "web_d711f78ffa1c"
     ],
     "fetched": [
      {
-      "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/16877738651456962048file.pdf",
-      "new_doc": "web_c863843662b6"
+      "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/176302296020936587file.pdf",
+      "new_doc": "web_3c1ef959ac3b"
      },
      {
-      "url": "https://cgwb.gov.in/sites/default/files/MainLinks/Bihar_State_Report_Resource2020.pdf",
-      "new_doc": "web_b127db988af8"
+      "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/16999565801823163200file.pdf",
+      "reused": "web_d711f78ffa1c"
      }
     ],
     "top": [
      {
       "rank": 1,
       "domain": "cgwb.gov.in",
-      "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u092e\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
+      "title": "List of Annexures",
       "pdf": true
      },
      {
       "rank": 2,
       "domain": "cgwb.gov.in",
-      "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u092e\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
+      "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u0935\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
       "pdf": true
      },
      {
       "rank": 3,
       "domain": "cgwb.gov.in",
-      "title": "\u092d\u093e\u0930\u0924\u0938\u0930\u0915\u093e\u0930 \u091c\u0932\u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u0935\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902\u0917\u093e \u0938\u0902\u0930\u0915\u094d\u0937\u0923\u092e\u0902",
-      "pdf": true
-     },
-     {
-      "rank": 4,
-      "domain": "cgwb.gov.in",
-      "title": "dynamic ground water resources mizoram (2025)",
-      "pdf": false
-     },
-     {
-      "rank": 5,
-      "domain": "cgwb.gov.in",
-      "title": "Bihar",
+      "title": "Institutional Framework for Regulating Use of Ground ...",
       "pdf": true
      }
     ],
@@ -393,53 +471,51 @@
     "level": 2,
     "why": "place-level search",
     "engine": "google",
-    "q": "\"Daulatabad\" fluoride groundwater",
+    "q": "\"Daulatabad\" fluoride groundwater Murshidabad",
     "cached": false,
     "missing_cache": false,
-    "n_results": 9,
+    "n_results": 8,
     "located": [],
     "fetched": [],
     "top": [
      {
       "rank": 1,
       "domain": "www.scribd.com",
-      "title": "Aurangabad | PDF",
+      "title": "MPPSC Pre:indian Geography (Unit 3) in English",
       "pdf": false
      },
      {
       "rank": 2,
-      "domain": "storage.sleepyclasses.com",
-      "title": "UPSC MAINS",
+      "domain": "www.researchgate.net",
+      "title": "Urbanisation in South Asia: Focus on Mega Cities",
       "pdf": true
      },
      {
       "rank": 3,
-      "domain": "www.academia.edu",
-      "title": "Physico-Chemical Studies on Kagzipura and Mombatta ...",
-      "pdf": false
+      "domain": "www.itrhd.com",
+      "title": "C-56 (G.F.) Nizamuddin East New Delhi 110 013 Tel",
+      "pdf": true
      },
      {
       "rank": 4,
-      "domain": "www.researchgate.net",
-      "title": "(PDF) Sustainable Tourism at Lonar Lake in Maharashtra",
+      "domain": "www.scribd.com",
+      "title": "SSC Exam 2025 General Awareness Guide | PDF | Ashoka",
       "pdf": false
      },
      {
       "rank": 5,
-      "domain": "www.sankei-india.com",
-      "title": "M/s Sankei Giken India Private Limited",
-      "pdf": true
+      "domain": "www.scribd.com",
+      "title": "Ancient History Test for BPSC Prelims | PDF | Ashoka | Vedas",
+      "pdf": false
      }
     ],
     "answer_type": "insufficient_evidence"
    }
   ],
-  "credits": 2,
+  "credits": 3,
   "located": [
-   "web_1913851a7f27",
-   "web_2167e127e913",
-   "web_b127db988af8",
-   "web_c863843662b6"
+   "web_3c1ef959ac3b",
+   "web_d711f78ffa1c"
   ],
   "answer": {
    "answer_type": "insufficient_evidence",
@@ -467,7 +543,7 @@
     ]
    }
   },
-  "seconds": 59.5,
+  "seconds": 17.59,
   "score": {
    "id": "Q003",
    "expected": "number_with_source",
@@ -475,10 +551,11 @@
    "correct": false,
    "verified_items": 0,
    "evidence_ok": false,
+   "gold_doc_exact": false,
    "n_items": 0,
    "unsupported": 0,
-   "credits": 2,
-   "seconds": 59.5
+   "credits": 3,
+   "seconds": 17.59
   }
  },
  {
@@ -492,7 +569,7 @@
     "engine": "google",
     "q": "arsenic Malda \"special drive\" year book",
     "as_sitesearch": "cgwb.gov.in",
-    "cached": false,
+    "cached": true,
     "missing_cache": false,
     "n_results": 3,
     "located": [
@@ -502,12 +579,12 @@
     ],
     "fetched": [
      {
-      "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/16878645271924875218file.pdf",
-      "new_doc": "web_a5096f56827e"
+      "url": "https://cgwb.gov.in/old_website/Regions/GW-year-Books/GWYB-2015-16/GWYB%20ER%202015-16.pdf",
+      "reused": "web_bf185a48acc4"
      },
      {
-      "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/16999565801823163200file.pdf",
-      "new_doc": "web_d711f78ffa1c"
+      "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/16878645271924875218file.pdf",
+      "reused": "web_a5096f56827e"
      }
     ],
     "top": [
@@ -563,10 +640,10 @@
      "publication_year": null,
      "evidence_id": "web_bf185a48acc4:49:0:3:6",
      "bbox": [
-      57.839999999999996,
+      57.84000000000002,
       211.81999999999994,
-      576.70002,
-      227.29999499999997
+      576.7000200000001,
+      227.2999949999999
      ],
      "score": 4.8,
      "asked": "max",
@@ -595,18 +672,19 @@
     ]
    }
   },
-  "seconds": 19.66,
+  "seconds": 0.35,
   "score": {
    "id": "Q004",
    "expected": "number_with_source",
    "got": "number_with_source",
-   "correct": false,
+   "correct": true,
    "verified_items": 1,
-   "evidence_ok": false,
+   "evidence_ok": true,
+   "gold_doc_exact": false,
    "n_items": 1,
-   "unsupported": 1,
+   "unsupported": 0,
    "credits": 1,
-   "seconds": 19.66
+   "seconds": 0.35
   }
  },
  {
@@ -615,61 +693,79 @@
   "mode": "jaldrishti",
   "trace": [
    {
+    "level": 0,
+    "why": "resolve district of 'Barisha'",
+    "engine": "google",
+    "q": "Barisha West Bengal district",
+    "resolve": "Barisha",
+    "cached": false,
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "villageinfo.in",
+      "title": "Barisha Village in Pingla, Paschim Medinipur, West Bengal",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "westbengal.villagecodes.in",
+      "title": "Bara Barisha (P) Village Code 344430, Kolaghat Sub-District",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.census2011.co.in",
+      "title": "Bara Barisha Population - Purba Medinipur, West Bengal",
+      "pdf": false
+     }
+    ],
+    "resolved_district": "Paschim Medinipur",
+    "answer_type": null
+   },
+   {
     "level": 1,
     "why": "source named in question -> cgwb.gov.in",
     "engine": "google",
-    "q": "fluoride \"ground water quality\" West Bengal",
+    "q": "fluoride Paschim Medinipur \"ground water quality\" West Bengal",
     "as_sitesearch": "cgwb.gov.in",
-    "cached": true,
+    "cached": false,
     "missing_cache": false,
-    "n_results": 9,
+    "n_results": 3,
     "located": [
-     "web_1913851a7f27",
-     "web_2167e127e913",
-     "web_8f0d715d906e",
-     "web_b127db988af8",
-     "web_c3ce829f3160",
-     "web_c863843662b6"
+     "web_215997fceb43",
+     "web_3c1ef959ac3b",
+     "web_e7ce9dacf797"
     ],
     "fetched": [
      {
-      "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/16841319761646604229file.pdf",
-      "reused": "web_8f0d715d906e"
+      "url": "http://cgwb.gov.in/cgwbpnm/public/uploads/documents/16855171161297779827file.pdf",
+      "new_doc": "web_215997fceb43"
      },
      {
-      "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1703238149956169450file.pdf",
-      "reused": "web_c3ce829f3160"
+      "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/17170701551280369375file.pdf",
+      "new_doc": "web_e7ce9dacf797"
      }
     ],
     "top": [
      {
       "rank": 1,
       "domain": "cgwb.gov.in",
-      "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u092e\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
+      "title": "List of Annexures",
       "pdf": true
      },
      {
       "rank": 2,
       "domain": "cgwb.gov.in",
-      "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u092e\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
+      "title": "ANNUAL REPORT",
       "pdf": true
      },
      {
       "rank": 3,
       "domain": "cgwb.gov.in",
-      "title": "\u092d\u093e\u0930\u0924\u0938\u0930\u0915\u093e\u0930 \u091c\u0932\u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u0935\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902\u0917\u093e \u0938\u0902\u0930\u0915\u094d\u0937\u0923\u092e\u0902",
-      "pdf": true
-     },
-     {
-      "rank": 4,
-      "domain": "cgwb.gov.in",
-      "title": "dynamic ground water resources mizoram (2025)",
-      "pdf": false
-     },
-     {
-      "rank": 5,
-      "domain": "cgwb.gov.in",
-      "title": "Bihar",
+      "title": "Bhujal Samvad",
       "pdf": true
      }
     ],
@@ -679,55 +775,21 @@
     "level": 2,
     "why": "place-level search",
     "engine": "google",
-    "q": "\"Barisha\" fluoride groundwater",
+    "q": "\"Barisha\" fluoride groundwater Paschim Medinipur",
     "cached": false,
     "missing_cache": false,
-    "n_results": 9,
+    "n_results": 0,
     "located": [],
     "fetched": [],
-    "top": [
-     {
-      "rank": 1,
-      "domain": "ajapplchem.org",
-      "title": "Assessment of Drinking Water Pollution in the Department of Dar Al ...",
-      "pdf": false
-     },
-     {
-      "rank": 2,
-      "domain": "prod-qt-images.s3.amazonaws.com",
-      "title": "STATUS OF GROUNDWATER QUALITY IN INDIA -Part-II",
-      "pdf": true
-     },
-     {
-      "rank": 3,
-      "domain": "www.scribd.com",
-      "title": "National Initiatives for Rural Development | PDF | Nature",
-      "pdf": false
-     },
-     {
-      "rank": 4,
-      "domain": "library.oapen.org",
-      "title": "Clean Technologies Toward the Development of a ...",
-      "pdf": true
-     },
-     {
-      "rank": 5,
-      "domain": "www.academia.edu",
-      "title": "The Implementation of Shallow Geophysical Survey for ...",
-      "pdf": false
-     }
-    ],
+    "top": [],
     "answer_type": "insufficient_evidence"
    }
   ],
-  "credits": 2,
+  "credits": 3,
   "located": [
-   "web_1913851a7f27",
-   "web_2167e127e913",
-   "web_8f0d715d906e",
-   "web_b127db988af8",
-   "web_c3ce829f3160",
-   "web_c863843662b6"
+   "web_215997fceb43",
+   "web_3c1ef959ac3b",
+   "web_e7ce9dacf797"
   ],
   "answer": {
    "answer_type": "insufficient_evidence",
@@ -755,7 +817,7 @@
     ]
    }
   },
-  "seconds": 1.72,
+  "seconds": 31.75,
   "score": {
    "id": "Q005",
    "expected": "number_with_source",
@@ -763,10 +825,11 @@
    "correct": false,
    "verified_items": 0,
    "evidence_ok": false,
+   "gold_doc_exact": false,
    "n_items": 0,
    "unsupported": 0,
-   "credits": 2,
-   "seconds": 1.72
+   "credits": 3,
+   "seconds": 31.75
   }
  },
  {
@@ -778,29 +841,116 @@
     "level": 1,
     "why": "named study -> Google Scholar",
     "engine": "google_scholar",
-    "q": "Mondal fluoride drinking water West Bengal 2016",
+    "q": "Mondal fluoride drinking water West Bengal",
+    "as_ylo": "2016",
+    "as_yhi": "2016",
     "cached": false,
     "missing_cache": false,
-    "n_results": 1,
-    "located": [],
-    "fetched": [],
+    "n_results": 10,
+    "located": [
+     "pubmed_26164468",
+     "pubmed_26960765"
+    ],
+    "fetched": [
+     {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26960765/",
+      "new_doc": "pubmed_26960765"
+     }
+    ],
     "top": [
      {
       "rank": 1,
       "domain": "link.springer.com",
+      "title": "\u2026 fluoride hydrogeochemistry and effect of consuming fluoride-contaminated drinking water ",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "link.springer.com",
+      "title": "Fluoride adsorption by calcium carbonate, activated alumina and activated sugarcane ash",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "link.springer.com",
+      "title": "Dental fluorosis and urinary fluoride concentration as a reflection of fluoride exposure a",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "link.springer.com",
       "title": "Deleneation of groundwater quality in the presence of fluoride in selected villages of Sim",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.sciencedirect.com",
+      "title": "Competitive adsorption between arsenic and fluoride from binary mixture on chemically trea",
       "pdf": false
      }
     ],
-    "answer_type": "insufficient_evidence"
+    "answer_type": "number_with_source"
    }
   ],
   "credits": 1,
-  "located": [],
+  "located": [
+   "pubmed_26164468",
+   "pubmed_26960765"
+  ],
   "answer": {
-   "answer_type": "insufficient_evidence",
-   "items": [],
-   "reason": "No record in the corpus matches min, max.",
+   "answer_type": "number_with_source",
+   "items": [
+    {
+     "value": "0.33",
+     "unit": "mg/L",
+     "statistic": "range_min",
+     "place": "Birbhum",
+     "district": "Birbhum",
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": null,
+     "threshold": null,
+     "spatial_support": "study",
+     "doc": "pubmed_26164468",
+     "title": "https://pubmed.ncbi.nlm.nih.gov/26164468/",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/26164468/",
+     "page": null,
+     "quote": "Fluoride concentration in drinking water varies from 0.33 to 18.08\u00a0mg/L.",
+     "header": "abstract",
+     "publication_year": 2016,
+     "evidence_id": "pubmed_26164468:s2:range_min",
+     "bbox": null,
+     "score": 2.4,
+     "asked": "min",
+     "page_verified": true
+    },
+    {
+     "value": "18.08",
+     "unit": "mg/L",
+     "statistic": "range_max",
+     "place": "Birbhum",
+     "district": "Birbhum",
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": null,
+     "threshold": null,
+     "spatial_support": "study",
+     "doc": "pubmed_26164468",
+     "title": "https://pubmed.ncbi.nlm.nih.gov/26164468/",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/26164468/",
+     "page": null,
+     "quote": "Fluoride concentration in drinking water varies from 0.33 to 18.08\u00a0mg/L.",
+     "header": "abstract",
+     "publication_year": 2016,
+     "evidence_id": "pubmed_26164468:s2:range_max",
+     "bbox": null,
+     "score": 2.4,
+     "asked": "max",
+     "page_verified": true
+    }
+   ],
    "parsed": {
     "intent": "lookup",
     "claim": null,
@@ -821,18 +971,19 @@
     ]
    }
   },
-  "seconds": 4.18,
+  "seconds": 7.79,
   "score": {
    "id": "Q006",
    "expected": "number_with_source",
-   "got": "insufficient_evidence",
-   "correct": false,
-   "verified_items": 0,
-   "evidence_ok": false,
-   "n_items": 0,
+   "got": "number_with_source",
+   "correct": true,
+   "verified_items": 2,
+   "evidence_ok": true,
+   "gold_doc_exact": true,
+   "n_items": 2,
    "unsupported": 0,
    "credits": 1,
-   "seconds": 4.18
+   "seconds": 7.79
   }
  },
  {
@@ -846,7 +997,7 @@
     "engine": "google",
     "q": "fluoride Bankura aquifer mapping NAQUIM report",
     "as_sitesearch": "cgwb.gov.in",
-    "cached": false,
+    "cached": true,
     "missing_cache": false,
     "n_results": 10,
     "located": [],
@@ -890,7 +1041,7 @@
     "why": "place-level search",
     "engine": "google",
     "q": "\"Belsula\" fluoride groundwater Bankura",
-    "cached": false,
+    "cached": true,
     "missing_cache": false,
     "n_results": 4,
     "located": [
@@ -900,7 +1051,7 @@
     "fetched": [
      {
       "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/16875126461850365383file.pdf",
-      "new_doc": "web_82587ba907b0"
+      "reused": "web_82587ba907b0"
      }
     ],
     "top": [
@@ -929,16 +1080,60 @@
       "pdf": false
      }
     ],
-    "answer_type": "not_comparable"
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 3,
+    "why": "research fallback",
+    "engine": "google_scholar",
+    "q": "fluoride groundwater Bankura West Bengal 2022",
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "link.springer.com",
+      "title": "\u2026 assessment of fluoride occurrence and groundwater usability: a critical concern for drin",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "iwaponline.com",
+      "title": "Hydrochemical characterisation and critical evaluation of groundwater quality in Dakshin D",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "sayamjournal.com",
+      "title": "Fluoride content in ground water: A case study in Bankura and Purulia district of West Ben",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "papers.ssrn.com",
+      "title": "Hydro-geochemistry of fluoride concentration in groundwater and potential human health ris",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "link.springer.com",
+      "title": "Spatial distribution of groundwater fluoride and iron in a semi-arid region in Eastern Ind",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
    }
   ],
-  "credits": 2,
+  "credits": 3,
   "located": [
    "web_82587ba907b0",
    "web_bf185a48acc4"
   ],
   "answer": {
-   "answer_type": "not_comparable",
+   "answer_type": "insufficient_evidence",
    "items": [
     {
      "value": "0.90",
@@ -949,7 +1144,7 @@
      "source_type": null,
      "well_id": null,
      "date": null,
-     "period": null,
+     "period": "March 2017",
      "threshold": null,
      "spatial_support": "site",
      "doc": "web_bf185a48acc4",
@@ -961,49 +1156,15 @@
      "publication_year": null,
      "evidence_id": "web_bf185a48acc4:174:0:11:2",
      "bbox": [
-      145.219995,
+      145.21999499999998,
       435.789995,
-      450.189995,
-      451.38999499999994
-     ],
-     "page_verified": true
-    },
-    {
-     "value": "BDL",
-     "unit": null,
-     "statistic": "single",
-     "place": "Bishnupur, Belsula, WBBK 81A",
-     "district": "Bankura",
-     "source_type": null,
-     "well_id": null,
-     "date": null,
-     "period": "Apr, 2015",
-     "threshold": null,
-     "spatial_support": "site",
-     "doc": "web_bf185a48acc4",
-     "title": "https://cgwb.gov.in/old_website/Regions/GW-year-Books/GWYB-2015-16/GWYB%20ER%202015-16.pdf",
-     "url": "https://cgwb.gov.in/old_website/Regions/GW-year-Books/GWYB-2015-16/GWYB%20ER%202015-16.pdf",
-     "page": 119,
-     "quote": "21 | Bankura | Bishnupur | Belsula | WBBK 81A | 23.0272 | 87.4014 | 8.0 | 150 | 60 | 18 | 4 | 30 | 0.1 | BDL | 73 | 46 | BDL | BDL | BDL | 15",
-     "header": "F",
-     "publication_year": null,
-     "evidence_id": "web_bf185a48acc4:119:0:20:18",
-     "bbox": [
-      14.28,
-      442.50999500000006,
-      824.1600199999999,
-      457.99001000000004
+      450.18999499999984,
+      451.389995
      ],
      "page_verified": true
     }
    ],
-   "reasons": [
-    "different statistics: max (0.28 \u00b1 0.19) vs single (Bishnupur, Belsula, WBBK 81A)",
-    "different quantities: concentration vs unknown",
-    "neither value is a district-wide mean",
-    "a district mean is claimed but the values are max and single"
-   ],
-   "note": null,
+   "reason": "No record matches: 'April 2022 Belsula dug-well value'.",
    "parsed": {
     "intent": "compare",
     "claim": "district_change",
@@ -1041,18 +1202,19 @@
     ]
    }
   },
-  "seconds": 25.23,
+  "seconds": 5.36,
   "score": {
    "id": "Q007",
    "expected": "not_comparable",
-   "got": "not_comparable",
-   "correct": true,
-   "verified_items": 2,
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 1,
    "evidence_ok": false,
-   "n_items": 2,
+   "gold_doc_exact": false,
+   "n_items": 1,
    "unsupported": 0,
-   "credits": 2,
-   "seconds": 25.23
+   "credits": 3,
+   "seconds": 5.36
   }
  },
  {
@@ -1061,45 +1223,90 @@
   "mode": "jaldrishti",
   "trace": [
    {
-    "level": 2,
-    "why": "place-level search",
+    "level": 0,
+    "why": "resolve district of 'Dhabani'",
     "engine": "google",
-    "q": "\"Dhabani\" water quality groundwater",
+    "q": "Dhabani West Bengal district",
+    "resolve": "Dhabani",
     "cached": false,
-    "missing_cache": false,
     "n_results": 9,
     "located": [],
     "fetched": [],
     "top": [
      {
       "rank": 1,
-      "domain": "ocmms.nic.in",
-      "title": "WEST BENGAL POLLUTION CONTROL BOARD Paribesh ...",
+      "domain": "www.mapsofindia.com",
+      "title": "Map of Dhabani Village in Khatra, Bankura of West Bengal",
       "pdf": false
      },
      {
       "rank": 2,
-      "domain": "www.justdial.com",
-      "title": "Top 24 Hours Water Suppliers in Arrah, Arrah near me - Justdial",
+      "domain": "www.mapsofindia.com",
+      "title": "Map of Dhabani Village in Bundwan, Puruliya of West Bengal",
       "pdf": false
      },
      {
       "rank": 3,
-      "domain": "www.ondathanamahavidyalaya.in",
-      "title": "Affiliated to Bankura University",
+      "domain": "news.abplive.com",
+      "title": "Dhabani Pin Code - 713205, All Post Office ... - ABP Live English",
+      "pdf": false
+     }
+    ],
+    "resolved_district": "Bankura",
+    "answer_type": null
+   },
+   {
+    "level": 2,
+    "why": "place-level search",
+    "engine": "google",
+    "q": "\"Dhabani\" water quality groundwater Bankura",
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 9,
+    "located": [
+     "web_170f6882853a",
+     "web_3fcb2c0a7d39"
+    ],
+    "fetched": [
+     {
+      "url": "https://maps.wbphed.gov.in/hgm/hgm_pdf/gwm73j9.pdf",
+      "new_doc": "web_170f6882853a"
+     },
+     {
+      "url": "https://maps.wbphed.gov.in/hgm/hgm_pdf/gwm73i8.pdf",
+      "new_doc": "web_3fcb2c0a7d39"
+     }
+    ],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "techvistas.makautwb.ac.in",
+      "title": "A Case Study of Purulia District W",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "svfct.com",
+      "title": "Assessment of Ground Water Quality Using ...",
+      "pdf": true
+     },
+     {
+      "rank": 3,
+      "domain": "maps.wbphed.gov.in",
+      "title": "GROUND WATER PROSPECTS MAP",
       "pdf": true
      },
      {
       "rank": 4,
-      "domain": "www.researchgate.net",
-      "title": "A Study in the Lateritic Micro- watersheds of River ...",
-      "pdf": false
+      "domain": "maps.wbphed.gov.in",
+      "title": "GROUND WATER PROSPECTS MAP",
+      "pdf": true
      },
      {
       "rank": 5,
-      "domain": "x.com",
-      "title": "CGWB, ER, Kolkata (@CgwbK) / X",
-      "pdf": false
+      "domain": "maps.wbphed.gov.in",
+      "title": "GROUND WATER PROSPECTS MAP",
+      "pdf": true
      }
     ],
     "answer_type": "insufficient_evidence"
@@ -1108,7 +1315,7 @@
     "level": 2,
     "why": "place-level search",
     "engine": "google",
-    "q": "\"Damru\" water quality groundwater",
+    "q": "\"Damru\" water quality groundwater Bankura",
     "cached": false,
     "missing_cache": false,
     "n_results": 0,
@@ -1116,55 +1323,13 @@
     "fetched": [],
     "top": [],
     "answer_type": "insufficient_evidence"
-   },
-   {
-    "level": 3,
-    "why": "state report fallback",
-    "engine": "google",
-    "q": "groundwater quality report West Bengal",
-    "as_sitesearch": "cgwb.gov.in",
-    "cached": false,
-    "missing_cache": false,
-    "n_results": 10,
-    "located": [],
-    "fetched": [],
-    "top": [
-     {
-      "rank": 1,
-      "domain": "cgwb.gov.in",
-      "title": "cgwb - intra",
-      "pdf": false
-     },
-     {
-      "rank": 2,
-      "domain": "cgwb.gov.in",
-      "title": "Central Ground Water Board MIS",
-      "pdf": false
-     },
-     {
-      "rank": 3,
-      "domain": "cgwb.gov.in",
-      "title": "\u0905\u0928\u094d\u0935\u0947\u0937\u0923\u093e\u0924\u094d\u092e\u0915 \u0921\u094d\u0930\u093f\u0932\u093f\u0902\u0917",
-      "pdf": false
-     },
-     {
-      "rank": 4,
-      "domain": "cgwb.gov.in",
-      "title": "Draft Recruitment Rules",
-      "pdf": false
-     },
-     {
-      "rank": 5,
-      "domain": "cgwb.gov.in",
-      "title": "\u0928\u093e\u0917\u0930\u093f\u0915 \u091a\u093e\u0930\u094d\u091f\u0930",
-      "pdf": false
-     }
-    ],
-    "answer_type": "insufficient_evidence"
    }
   ],
   "credits": 3,
-  "located": [],
+  "located": [
+   "web_170f6882853a",
+   "web_3fcb2c0a7d39"
+  ],
   "answer": {
    "answer_type": "insufficient_evidence",
    "items": [],
@@ -1204,7 +1369,7 @@
     ]
    }
   },
-  "seconds": 19.93,
+  "seconds": 23.53,
   "score": {
    "id": "Q008",
    "expected": "not_comparable",
@@ -1212,10 +1377,11 @@
    "correct": false,
    "verified_items": 0,
    "evidence_ok": false,
+   "gold_doc_exact": false,
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 19.93
+   "seconds": 23.53
   }
  },
  {
@@ -1229,23 +1395,21 @@
     "engine": "google",
     "q": "fluoride groundwater quality report West Bengal",
     "as_sitesearch": "cgwb.gov.in",
-    "cached": false,
+    "cached": true,
     "missing_cache": false,
     "n_results": 10,
     "located": [
      "web_14606205ca49",
-     "web_436ded4b3ce9",
-     "web_b127db988af8",
-     "web_c3ce829f3160"
+     "web_436ded4b3ce9"
     ],
     "fetched": [
      {
       "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/16861393401996534164file.pdf",
-      "new_doc": "web_14606205ca49"
+      "reused": "web_14606205ca49"
      },
      {
       "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1687168580292551714file.pdf",
-      "new_doc": "web_436ded4b3ce9"
+      "reused": "web_436ded4b3ce9"
      }
     ],
     "top": [
@@ -1286,9 +1450,7 @@
   "credits": 1,
   "located": [
    "web_14606205ca49",
-   "web_436ded4b3ce9",
-   "web_b127db988af8",
-   "web_c3ce829f3160"
+   "web_436ded4b3ce9"
   ],
   "answer": {
    "answer_type": "insufficient_evidence",
@@ -1314,7 +1476,7 @@
     ]
    }
   },
-  "seconds": 34.03,
+  "seconds": 0.42,
   "score": {
    "id": "Q009",
    "expected": "insufficient_evidence",
@@ -1322,10 +1484,11 @@
    "correct": true,
    "verified_items": 0,
    "evidence_ok": null,
+   "gold_doc_exact": null,
    "n_items": 0,
    "unsupported": 0,
    "credits": 1,
-   "seconds": 34.03
+   "seconds": 0.42
   }
  },
  {
@@ -1334,16 +1497,48 @@
   "mode": "jaldrishti",
   "trace": [
    {
+    "level": 0,
+    "why": "resolve district of 'Ranjitpara'",
+    "engine": "google",
+    "q": "Ranjitpara West Bengal district",
+    "resolve": "Ranjitpara",
+    "cached": false,
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "chotu.com",
+      "title": "Catering Near You in Murshidabad | Book for Events & Parties",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.goodreturns.in",
+      "title": "Common Service Centers in Bhanvad, CSC Near Me with ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "mnregaweb2.nic.in",
+      "title": "No. of Works Violates Labour-Material Ratio(60-40) in ...",
+      "pdf": false
+     }
+    ],
+    "resolved_district": "Murshidabad",
+    "answer_type": null
+   },
+   {
     "level": 1,
     "why": "source named in question -> cgwb.gov.in",
     "engine": "google",
-    "q": "arsenic \"special drive\" year book",
+    "q": "arsenic Murshidabad \"special drive\" year book",
     "as_sitesearch": "cgwb.gov.in",
     "cached": false,
     "missing_cache": false,
-    "n_results": 3,
+    "n_results": 2,
     "located": [
-     "web_a5096f56827e",
      "web_bf185a48acc4",
      "web_d711f78ffa1c"
     ],
@@ -1352,17 +1547,11 @@
      {
       "rank": 1,
       "domain": "cgwb.gov.in",
-      "title": "CENTRAL GROUND WATER BOARD",
-      "pdf": true
-     },
-     {
-      "rank": 2,
-      "domain": "cgwb.gov.in",
       "title": "central ground water board ministry of water resources",
       "pdf": true
      },
      {
-      "rank": 3,
+      "rank": 2,
       "domain": "cgwb.gov.in",
       "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u0935\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
       "pdf": true
@@ -1371,9 +1560,8 @@
     "answer_type": "insufficient_evidence"
    }
   ],
-  "credits": 1,
+  "credits": 2,
   "located": [
-   "web_a5096f56827e",
    "web_bf185a48acc4",
    "web_d711f78ffa1c"
   ],
@@ -1402,9 +1590,9 @@
      "publication_year": null,
      "evidence_id": "web_bf185a48acc4:49:0:4:6",
      "bbox": [
-      57.839999999999996,
-      227.29999499999997,
-      576.70002,
+      57.84000000000002,
+      227.2999949999999,
+      576.7000200000001,
       242.80999999999995
      ],
      "score": 6.6,
@@ -1435,7 +1623,7 @@
     ]
    }
   },
-  "seconds": 1.1,
+  "seconds": 2.16,
   "score": {
    "id": "Q010",
    "expected": "insufficient_evidence",
@@ -1443,10 +1631,11 @@
    "correct": true,
    "verified_items": 0,
    "evidence_ok": null,
+   "gold_doc_exact": null,
    "n_items": 0,
    "unsupported": 0,
-   "credits": 1,
-   "seconds": 1.1
+   "credits": 2,
+   "seconds": 2.16
   }
  }
 ]

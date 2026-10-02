@@ -18,19 +18,25 @@ def _print_answer(r):
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="jaldrishti")
     sub = ap.add_subparsers(dest="cmd", required=True)
-    a = sub.add_parser("ask"); a.add_argument("question"); a.add_argument("--mode", default="jaldrishti", choices=["jaldrishti", "baseline", "oracle"])
+    a = sub.add_parser("ask"); a.add_argument("question"); a.add_argument("--mode", default="jaldrishti", choices=["library", "jaldrishti", "baseline", "oracle"])
     a.add_argument("--live", action="store_true", help="fetch newly found sources"); a.add_argument("--offline", action="store_true", help="cached search results only")
     a.add_argument("--budget", type=int, default=3); a.add_argument("--json", action="store_true")
-    e = sub.add_parser("eval"); e.add_argument("--split", default="dev", choices=["dev", "test"]); e.add_argument("--modes", default="baseline,jaldrishti,oracle")
+    e = sub.add_parser("eval"); e.add_argument("--split", default="dev", choices=["dev", "test"]); e.add_argument("--modes", default="baseline,library,oracle")
     e.add_argument("--live", action="store_true"); e.add_argument("--offline", action="store_true"); e.add_argument("--budget", type=int, default=3)
     e.add_argument("--i-understand-test-is-final", action="store_true")
     sub.add_parser("index"); sub.add_parser("credits")
+    hv = sub.add_parser("harvest", help="build the West Bengal evidence library with a fixed SerpApi budget"); hv.add_argument("--budget", type=int, default=40)
     ad = sub.add_parser("add-source", help="fetch a PDF or PubMed URL into the corpus"); ad.add_argument("urls", nargs="+")
     args = ap.parse_args(argv)
     if args.cmd == "index":
         from .index import docs, build_doc
         for m in docs(): print(m["id"], len(build_doc(m, force=True)))
         return
+    if args.cmd == "harvest":
+        from .pipeline import Session
+        from .harvest import harvest
+        lib = harvest(Session(live=True), args.budget)
+        print(f"library: {len(lib['docs'])} documents for {lib['credits']} credits"); return
     if args.cmd == "add-source":
         from .pipeline import Session
         S = Session(live=True)

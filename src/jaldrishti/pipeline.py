@@ -97,6 +97,8 @@ class Session:
     def run(self, question: str, mode: str = "jaldrishti", budget: int = 3) -> dict:
         t0 = time.time()
         q0 = parse(question, Linker(self.ev)); self.contaminant = q0.contaminant; self._q = question
+        if mode == "library":
+            return self.run_library(question, t0, budget=1)
         if mode == "oracle":
             core = {d["id"] for d in docs()}
             ans = Engine([e for e in self.ev if e["doc"] in core], self.by_id).ask(question)
@@ -137,3 +139,35 @@ class Session:
             if satisfied(ans): break
         return {"mode": mode, "trace": trace, "credits": credits, "located": sorted(located), "answer": ans,
                 "seconds": round(time.time() - t0, 2)}
+
+    def library_docs(self) -> set:
+        from .harvest import LIBRARY
+        if not LIBRARY.exists(): return set()
+        lib = json.loads(LIBRARY.read_text())
+        for did in lib["docs"]:               # make harvested docs visible
+            if did not in self.by_id:
+                meta = next((m for m in self._discovered().values() if m.get("id") == did), None)
+                if meta: self._use(meta)
+        return set(lib["docs"])
+    def run_library(self, question: str, t0: float, budget: int = 1) -> dict:
+        """Answer from the harvested library; spend at most `budget` live searches if a source is missing."""
+        libdocs = self.library_docs()
+        ans = Engine([e for e in self.ev if e["doc"] in libdocs], self.by_id).ask(question)
+        trace, credits, located = [], 0, set(libdocs)
+        if not satisfied(ans) and budget:
+            q0 = parse(question, Linker(self.ev)); self.contaminant = q0.contaminant; self._q = question
+            self.scope = list(q0.districts)
+            for st in plan(q0)[:budget]:
+                params = {"engine": st["engine"], "q": st["q"]}
+                for k in ("as_sitesearch", "as_ylo", "as_yhi"):
+                    if st.get(k): params[k] = st[k]
+                d = self.api.search(**params); credits += 0 if d.get("_missing") else 1
+                res = results(d); fetched = []
+                new = self.locate(st, res, fetched); located |= new
+                ans = Engine([e for e in self.ev if e["doc"] in located], self.by_id).ask(question)
+                trace.append({**st, "cached": d.get("_cached", False), "n_results": len(res), "located": sorted(new), "fetched": fetched,
+                              "top": [{"rank": r["rank"], "domain": r["domain"], "title": r["title"][:90], "pdf": bool(r["pdf"])} for r in res[:5]],
+                              "answer_type": ans["answer_type"]})
+                if satisfied(ans): break
+        return {"mode": "library", "trace": trace, "credits": credits, "located": sorted(located & {e["doc"] for e in self.ev}),
+                "answer": ans, "seconds": round(time.time() - t0, 2), "library_size": len(libdocs)}
