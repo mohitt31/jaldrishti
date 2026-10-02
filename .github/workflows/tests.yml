@@ -1,0 +1,23 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -e ".[dev]"
+      - run: pytest -q
+      - name: Benchmark files and cache are consistent
+        run: |
+          python - <<'PY'
+          import csv, json, glob
+          facts = {r["fact_id"] for r in csv.DictReader(open("benchmark/jaldrishti_facts.csv", encoding="utf-8"))}
+          qs = list(csv.DictReader(open("benchmark/jaldrishti_questions.csv", encoding="utf-8")))
+          assert len(facts) == 60 and len(qs) == 30
+          for q in qs:
+              assert all(f in facts for f in q["supporting_fact_ids"].split(";") if f), q["question_id"]
+          assert len(glob.glob("cache/serpapi/*.json")) > 0
+          print("ok:", len(facts), "facts,", len(qs), "questions")
+          PY
