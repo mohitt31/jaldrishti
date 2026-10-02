@@ -457,5 +457,13 @@
   "type": "peer_reviewed",
   "format": "pubmed_xml",
   "title": "https://pubmed.ncbi.nlm.nih.gov/26047720/"
+ },
+ "https://pubmed.ncbi.nlm.nih.gov/28850835/": {
+  "id": "pubmed_28850835",
+  "file": "pubmed_28850835.xml",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/28850835/",
+  "type": "peer_reviewed",
+  "format": "pubmed_xml",
+  "title": "https://pubmed.ncbi.nlm.nih.gov/28850835/"
  }
 }

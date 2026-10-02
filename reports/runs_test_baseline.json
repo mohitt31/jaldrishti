@@ -1,0 +1,2987 @@
+[
+ {
+  "question_id": "Q011",
+  "question": "What arsenic concentrations are listed for Napatipara and Sahidpally in CGWB Annual Ground Water Quality Report-2025? Retain the reported unit and distinguish publication from sampling year.",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What arsenic concentrations are listed for Napatipara and Sahidpally in CGWB Annual Ground Water Quality Report-2025? Retain the reported unit and distinguish publication from sampling year.",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What arsenic concentrations are listed for Napatipara and Sahidpally in CGWB Annual Ground Water Quality Report-2025? Retain the reported unit and distinguish publication from sampling year.",
+    "start": 10,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What arsenic concentrations are listed for Napatipara and Sahidpally in CGWB Annual Ground Water Quality Report-2025? Retain the reported unit and distinguish publication from sampling year.",
+    "start": 20,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "nwdp.nwic.gov.in",
+      "title": "Ground Water Quality Chemical Parameters CGWB ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.nwdp.nwic.gov.in",
+      "title": "Ground Water Quality Chemical Parameters CGWB Uttar ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.nwdp.nwic.gov.in",
+      "title": "Ground Water Quality Chemical Parameters CGWB Uttar ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "nwdp.nwic.gov.in",
+      "title": "Ground Water Quality Chemical Parameters CGWB ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "nwdp.nwic.gov.in",
+      "title": "Ground Water Quality Chemical Parameters CGWB Uttar ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 3,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches None.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "arsenic",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What arsenic concentrations are listed for Napatipara and Sahidpally in CGWB Annual Ground Water Quality Report-2025? Retain the reported unit and distinguish publication from sampling year.",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 11.63,
+  "score": {
+   "id": "Q011",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 11.63
+  }
+ },
+ {
+  "question_id": "Q012",
+  "question": "What groundwater arsenic range and mean does Bhowmick et al. (2015) report for its Nadia study samples? Exclude saliva results.",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What groundwater arsenic range and mean does Bhowmick et al. (2015) report for its Nadia study samples? Exclude saliva results.",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.academia.edu",
+      "title": "Health impact of Arsenic Contamination in Groundwater ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.researchgate.net",
+      "title": "Groundwater arsenic contamination in India: Extent and ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "Arsenic in groundwater of West Bengal, India: A review ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.researchgate.net",
+      "title": "Where can I find groundwater arsenic level data of India, if ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "brieflands.com",
+      "title": "Determination of Total Arsenic in Water Resources",
+      "pdf": true
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What groundwater arsenic range and mean does Bhowmick et al. (2015) report for its Nadia study samples? Exclude saliva results.",
+    "start": 10,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.researchgate.net",
+      "title": "Example on arsenic contamination in the Gangetic Plain of ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.researchgate.net",
+      "title": "Distribution, prevalence and health risk assessment of ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "Co-occurrence of arsenic-fluoride in Nadia district (West ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.researchgate.net",
+      "title": "Current Status of Ground Water Arsenic Contamination in ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.researchgate.net",
+      "title": "Environmental contamination of arsenic: pathway analysis ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What groundwater arsenic range and mean does Bhowmick et al. (2015) report for its Nadia study samples? Exclude saliva results.",
+    "start": 20,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.researchgate.net",
+      "title": "Major and trace (including arsenic) groundwater chemistry ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.researchgate.net",
+      "title": "Field testing of over 30000 wells for arsenic across 400 ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "Recent Status of Arsenic Contamination in Groundwater ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.researchgate.net",
+      "title": "A Review of Arsenic Contamination in Groundwater ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) An overview of Arsenic contamination in Bangladesh ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 3,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches mean, min, max.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "arsenic",
+    "districts": [
+     "Nadia"
+    ],
+    "mentions": [
+     {
+      "text": "What groundwater arsenic range and mean does Bhowmick et al. (2015) report for its Nadia study samples? Exclude saliva results.",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "range",
+       "mean"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 72.0,
+  "score": {
+   "id": "Q012",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 72.0
+  }
+ },
+ {
+  "question_id": "Q013",
+  "question": "What fluoride concentrations are recorded at the Utr Kechuadanga and Mahisbathan dug wells in April 2022?",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What fluoride concentrations are recorded at the Utr Kechuadanga and Mahisbathan dug wells in April 2022?",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 2,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.scribd.com",
+      "title": "WB Year Book 21-22 | PDF | Groundwater | Sodium",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.scribd.com",
+      "title": "Ground Water Year Book 2015-16 | PDF | Arsenic",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What fluoride concentrations are recorded at the Utr Kechuadanga and Mahisbathan dug wells in April 2022?",
+    "start": 10,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.researchgate.net",
+      "title": "Concentration of fluoride in groundwater and its distribution ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.ijsr.net",
+      "title": "Assessment of Groundwater Quality with ...",
+      "pdf": true
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "Fluoride content in various sources of drinking water ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.researchgate.net",
+      "title": "Fluoride concentration in ground waters at Raebareli ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.researchgate.net",
+      "title": "A REVIEW ON BANKURA DISTRICT, WEST BENGAL, INDIA",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What fluoride concentrations are recorded at the Utr Kechuadanga and Mahisbathan dug wells in April 2022?",
+    "start": 20,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "ijsdr.org",
+      "title": "Ground Water Quality Evaluation in Raghunathapalli ...",
+      "pdf": true
+     },
+     {
+      "rank": 2,
+      "domain": "www.researchgate.net",
+      "title": "Survey of Fluoride Concentration in Drinking Water ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "Studies on the Level of Fluoride in Ground Water ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.researchgate.net",
+      "title": "Fluoride concentration in drinking water in various places ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "bpasjournals.com",
+      "title": "Spatio-Temporal Variations Of Fluoride Content In The ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 3,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches None.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What fluoride concentrations are recorded at the Utr Kechuadanga and Mahisbathan dug wells in April 2022?",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 11.91,
+  "score": {
+   "id": "Q013",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 11.91
+  }
+ },
+ {
+  "question_id": "Q014",
+  "question": "What maximum arsenic concentration and location does CGWB Special Drive 2015\u201316 report for North 24 Parganas?",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What maximum arsenic concentration and location does CGWB Special Drive 2015\u201316 report for North 24 Parganas?",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.researchgate.net",
+      "title": "crop sequences vis-a-vis irrigation water related problems ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "pubs.geoscienceworld.org",
+      "title": "Multivariate Assessment of Groundwater Depletion and ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.academia.edu",
+      "title": "Groundwater budgeting and its management in pandua ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.wbpcb.gov.in",
+      "title": "I Sand Mine (MIN_JH_23B)",
+      "pdf": true
+     },
+     {
+      "rank": 5,
+      "domain": "cag.gov.in",
+      "title": "Chapter 2 Performance Audits",
+      "pdf": true
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What maximum arsenic concentration and location does CGWB Special Drive 2015\u201316 report for North 24 Parganas?",
+    "start": 10,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "epariyojana.up.gov.in",
+      "title": "progress report, 2025",
+      "pdf": true
+     },
+     {
+      "rank": 2,
+      "domain": "www.scribd.com",
+      "title": "Baranagar ESIA Report | PDF | Environmental Impact ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "prod-qt-images.s3.amazonaws.com",
+      "title": "Twelfth Five Year Plan \u2013 2012-2017 Report of the Working ...",
+      "pdf": true
+     },
+     {
+      "rank": 4,
+      "domain": "www.researchgate.net",
+      "title": "Arsenic and fluoride exposure in drinking water caused ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.isroset.org",
+      "title": "Volume-7 , Issue-9 , Sep 2021, ISSN 2454-9312 (Online), ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What maximum arsenic concentration and location does CGWB Special Drive 2015\u201316 report for North 24 Parganas?",
+    "start": 20,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) Groundwater Arsenic Contamination in West Bengal",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.researchgate.net",
+      "title": "Map of West Bengal, India showing nine arsenic-affected ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) Groundwater arsenic pollution affecting deltaic West ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.researchgate.net",
+      "title": "Distribution of arsenic concentrations (log scale) in a Hair ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.researchgate.net",
+      "title": "Estimation of Arsenic Contamination in the Groundwaters ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 3,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches max.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "arsenic",
+    "districts": [
+     "North 24 Parganas"
+    ],
+    "mentions": [
+     {
+      "text": "What maximum arsenic concentration and location does CGWB Special Drive 2015\u201316 report for North 24 Parganas?",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "max"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 54.96,
+  "score": {
+   "id": "Q014",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 54.96
+  }
+ },
+ {
+  "question_id": "Q015",
+  "question": "How many samples exceeded 10 \u00b5g/L arsenic in Basirhat I and Swarupnagar in the IMIS 2014\u20132017 table reproduced by ADB?",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "How many samples exceeded 10 \u00b5g/L arsenic in Basirhat I and Swarupnagar in the IMIS 2014\u20132017 table reproduced by ADB?",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.researchgate.net",
+      "title": "Status of groundwater arsenic contamination in all 17 ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.academia.edu",
+      "title": "Arsenic Contamination in States of India: A Brief Overview",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "Estimation of Arsenic Contamination in the Groundwaters ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.academia.edu",
+      "title": "Status of groundwater arsenic contamination in the state ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.researchgate.net",
+      "title": "Where can I find groundwater arsenic level data of India, if ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "How many samples exceeded 10 \u00b5g/L arsenic in Basirhat I and Swarupnagar in the IMIS 2014\u20132017 table reproduced by ADB?",
+    "start": 10,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.deswater.com",
+      "title": "Assessment of arsenic in drinking water samples in south- ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.scribd.com",
+      "title": "Arsenic in Groundwater: Cancer Risks in Bengal | PDF",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.academia.edu",
+      "title": "Arsenic in groundwater in six districts of West Bengal, India",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) A decade of investigations on groundwater arsenic ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.academia.edu",
+      "title": "Status of groundwater arsenic contamination in the state ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "How many samples exceeded 10 \u00b5g/L arsenic in Basirhat I and Swarupnagar in the IMIS 2014\u20132017 table reproduced by ADB?",
+    "start": 20,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 3,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches count_exceeding.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "arsenic",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "How many samples exceeded 10 \u00b5g/L arsenic in Basirhat I and Swarupnagar in the IMIS 2014\u20132017 table reproduced by ADB?",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "count_exceeding"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 58.35,
+  "score": {
+   "id": "Q015",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 58.35
+  }
+ },
+ {
+  "question_id": "Q016",
+  "question": "What arsenic maximum and number of samples above 0.01 mg l\u207b\u00b9 does CGWB Special Drive 2015\u201316 report for Murshidabad?",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What arsenic maximum and number of samples above 0.01 mg l\u207b\u00b9 does CGWB Special Drive 2015\u201316 report for Murshidabad?",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "dictionary.cambridge.org",
+      "title": "SPECIAL | English meaning - Cambridge Dictionary",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.merriam-webster.com",
+      "title": "SPECIAL Definition & Meaning",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.ohchr.org",
+      "title": "Special Procedures of the Human Rights Council",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.youtube.com",
+      "title": "GloRilla - Special (Official Music Video)",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.imdb.com",
+      "title": "Special (TV Series 2019\u20132021)",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What arsenic maximum and number of samples above 0.01 mg l\u207b\u00b9 does CGWB Special Drive 2015\u201316 report for Murshidabad?",
+    "start": 10,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What arsenic maximum and number of samples above 0.01 mg l\u207b\u00b9 does CGWB Special Drive 2015\u201316 report for Murshidabad?",
+    "start": 20,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.ijplantenviro.com",
+      "title": "Current Status of Ground Water Arsenic Contamination in ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.chronicleindia.in",
+      "title": "CGWB released report on Groundwater Arsenic ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.cabidigitallibrary.org",
+      "title": "Ground Water Arsenic Contamination in Malda, West ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "hal.science",
+      "title": "Technical Bulletin on Arsenic- A health risk assessment",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.academia.edu",
+      "title": "Murshidabad\u2014One of the Nine Groundwater Arsenic ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 3,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches max, count_exceeding.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "arsenic",
+    "districts": [
+     "Murshidabad"
+    ],
+    "mentions": [
+     {
+      "text": "What arsenic maximum and number of samples above 0.01 mg l\u207b\u00b9 does CGWB Special Drive 2015\u201316 report for Murshidabad?",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "max",
+       "count_exceeding"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 43.99,
+  "score": {
+   "id": "Q016",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 43.99
+  }
+ },
+ {
+  "question_id": "Q017",
+  "question": "What fluoride values are listed for Bamangola and Khiripara(Makuli) dug wells in April 2022?",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What fluoride values are listed for Bamangola and Khiripara(Makuli) dug wells in April 2022?",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "ijrras.com",
+      "title": "Study of Ground Water Quality in Barwani District with ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) FLUORIDE CONTAMINATION OF GROUND WATER",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "Ranges of fluoride concentrations in various natural waters.",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.researchgate.net",
+      "title": "Fluoride contamination in ground water of Anekal taluk ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.researchgate.net",
+      "title": "Prevalence of dental fluorosis in relation with different ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What fluoride values are listed for Bamangola and Khiripara(Makuli) dug wells in April 2022?",
+    "start": 10,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.researchgate.net",
+      "title": "Distribution of Fluoride in various states of India (Source",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.primescholars.com",
+      "title": "Determination of Fluoride Status in Groundwater of Kommala ...",
+      "pdf": true
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "State wise details of distribution of fluoride in groundwater ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.academia.edu",
+      "title": "(PDF) Evaluating Fluoride Contamination In Ground Water ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) Geomedical Assessment of Areas Having Varying ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What fluoride values are listed for Bamangola and Khiripara(Makuli) dug wells in April 2022?",
+    "start": 20,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 3,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches None.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What fluoride values are listed for Bamangola and Khiripara(Makuli) dug wells in April 2022?",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 44.26,
+  "score": {
+   "id": "Q017",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 44.26
+  }
+ },
+ {
+  "question_id": "Q018",
+  "question": "What fluoride values are listed for Hatuganj and Goragacha dug wells in April 2022?",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What fluoride values are listed for Hatuganj and Goragacha dug wells in April 2022?",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 2,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.scribd.com",
+      "title": "List of Annexures: Annual Ground Water Quality Report",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.scribd.com",
+      "title": "WB Year Book 21-22 | PDF | Groundwater | Sodium",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What fluoride values are listed for Hatuganj and Goragacha dug wells in April 2022?",
+    "start": 10,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.researchgate.net",
+      "title": "State wise details of distribution of fluoride in groundwater ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) Status of Fluoride in Groundwater and its Suitability ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "medicopublication.com",
+      "title": "Geomedical Assessment of Areas Having Varying ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.academia.edu",
+      "title": "(PDF) Evaluating Fluoride Contamination In Ground Water ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) Fluoride in groundwater, Varaha River Basin ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What fluoride values are listed for Hatuganj and Goragacha dug wells in April 2022?",
+    "start": 20,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 3,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches None.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What fluoride values are listed for Hatuganj and Goragacha dug wells in April 2022?",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 30.24,
+  "score": {
+   "id": "Q018",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 30.24
+  }
+ },
+ {
+  "question_id": "Q019",
+  "question": "What fluoride range was reported for Khayrasole and Rajnagar samples collected during pre-monsoon and post-monsoon in 2016?",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What fluoride range was reported for Khayrasole and Rajnagar samples collected during pre-monsoon and post-monsoon in 2016?",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.researchgate.net",
+      "title": "Fluoride contamination status of groundwater in Mudhol ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.researchgate.net",
+      "title": "Fluoride contamination of underground water in West ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "pubmed.ncbi.nlm.nih.gov",
+      "title": "Fluoride-contaminated groundwater of Birbhum district, ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.jocpr.com",
+      "title": "assessment-of-ground-water-pollution-due-to-fluoride- ...",
+      "pdf": true
+     },
+     {
+      "rank": 5,
+      "domain": "www.researchgate.net",
+      "title": "studies on estimation of fluoride level and defluoridation ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What fluoride range was reported for Khayrasole and Rajnagar samples collected during pre-monsoon and post-monsoon in 2016?",
+    "start": 10,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.researchgate.net",
+      "title": "Delineation of potential fluoride contamination zones in ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "mausamjournal.imd.gov.in",
+      "title": "letters",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "Assessment of groundwater quality scenario in respect ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.researchgate.net",
+      "title": "The overall assessment of quality and quantity of drinking ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) Fluoride in fractionated soil samples of Ajmer district ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What fluoride range was reported for Khayrasole and Rajnagar samples collected during pre-monsoon and post-monsoon in 2016?",
+    "start": 20,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 3,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches min, max.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What fluoride range was reported for Khayrasole and Rajnagar samples collected during pre-monsoon and post-monsoon in 2016?",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "range"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 56.14,
+  "score": {
+   "id": "Q019",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 56.14
+  }
+ },
+ {
+  "question_id": "Q020",
+  "question": "How many samples exceeded 1.5 mg/L fluoride in Chhatna and Simlipal in the IMIS 2013\u20132017 table reproduced by ADB?",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "How many samples exceeded 1.5 mg/L fluoride in Chhatna and Simlipal in the IMIS 2013\u20132017 table reproduced by ADB?",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "arcjournals.org",
+      "title": "The Statistical Assesment of Fluoride and Nitrate ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.academia.edu",
+      "title": "Quantification of Fluoride in Drinking Water of Rural and ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) A survey on fluoride concentration in drinking water ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "data.conferenceworld.in",
+      "title": "FLUORIDE TOXICITY IN GROUND WATER OF BANAS ...",
+      "pdf": true
+     },
+     {
+      "rank": 5,
+      "domain": "www.academia.edu",
+      "title": "Table 1 - from Fluoride Toxicity and its Distribution in",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "How many samples exceeded 1.5 mg/L fluoride in Chhatna and Simlipal in the IMIS 2013\u20132017 table reproduced by ADB?",
+    "start": 10,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) Assessment of Fluoride Level in Groundwater and ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.academia.edu",
+      "title": "from ASSESSMENT AND EVALUATION OF FLUORIDE",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.ijesi.org",
+      "title": "Fluoride Consumption in Endemic Villages of India and Its ...",
+      "pdf": true
+     },
+     {
+      "rank": 4,
+      "domain": "www.scribd.com",
+      "title": "Fluoride Levels in Drinking Water | PDF",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.researchgate.net",
+      "title": "State wise details of distribution of fluoride in groundwater ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "How many samples exceeded 1.5 mg/L fluoride in Chhatna and Simlipal in the IMIS 2013\u20132017 table reproduced by ADB?",
+    "start": 20,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 3,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches count_exceeding.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "How many samples exceeded 1.5 mg/L fluoride in Chhatna and Simlipal in the IMIS 2013\u20132017 table reproduced by ADB?",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "count_exceeding"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 63.46,
+  "score": {
+   "id": "Q020",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 63.46
+  }
+ },
+ {
+  "question_id": "Q021",
+  "question": "What fluoride value and sampling date are listed for the Polasdih M-II well RAPU90?",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What fluoride value and sampling date are listed for the Polasdih M-II well RAPU90?",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What fluoride value and sampling date are listed for the Polasdih M-II well RAPU90?",
+    "start": 10,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What fluoride value and sampling date are listed for the Polasdih M-II well RAPU90?",
+    "start": 20,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.academia.edu",
+      "title": "Determination of Fluoride Content of Selected Sachet ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.academia.edu",
+      "title": "Assessment of fluoride content of selected chewing sticks ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.academia.edu",
+      "title": "Monitoring the Fluoride Concentration in Various Tooth Paste",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "journals.innovareacademics.in",
+      "title": "EFFECTIVENESS OF SILVER DIAMINE FLUORIDE AND ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.academia.edu",
+      "title": "(PDF) Fluoride estimation and its correlation with other ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 3,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches None.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What fluoride value and sampling date are listed for the Polasdih M-II well RAPU90?",
+      "places": [],
+      "well_ids": [],
+      "sources": [
+       "m-ii"
+      ],
+      "dates": [],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 31.44,
+  "score": {
+   "id": "Q021",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 31.44
+  }
+ },
+ {
+  "question_id": "Q022",
+  "question": "What fluoride values are listed for the Loharsol DW well WBPR_1 and Pathardih TW well WBPR_4 on 4 June 2023?",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What fluoride values are listed for the Loharsol DW well WBPR_1 and Pathardih TW well WBPR_4 on 4 June 2023?",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What fluoride values are listed for the Loharsol DW well WBPR_1 and Pathardih TW well WBPR_4 on 4 June 2023?",
+    "start": 10,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.researchgate.net",
+      "title": "Fluoride concentration of drinking water and dental fluorosis",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.researchgate.net",
+      "title": "Distribution-of-fluoride-in-groundwater-and-its-suitability- ...",
+      "pdf": true
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "Comparison of oral health indicators between two places ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.researchgate.net",
+      "title": "OLR analysis for dental fluorosis.",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.researchgate.net",
+      "title": "Forest plot of the prevalence of dental fluorosis for different...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What fluoride values are listed for the Loharsol DW well WBPR_1 and Pathardih TW well WBPR_4 on 4 June 2023?",
+    "start": 20,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 3,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches None.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What fluoride values are listed for the Loharsol DW well WBPR_1 and Pathardih TW well WBPR_4 on 4 June 2023?",
+      "places": [],
+      "well_ids": [],
+      "sources": [
+       "dug well",
+       "tube well"
+      ],
+      "dates": [
+       "2023-06-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 31.81,
+  "score": {
+   "id": "Q022",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 31.81
+  }
+ },
+ {
+  "question_id": "Q023",
+  "question": "Can the Special Drive maximum at Karimpur and the Bhowmick et al. study mean be treated as conflicting estimates of the same district mean after unit conversion?",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "Can the Special Drive maximum at Karimpur and the Bhowmick et al. study mean be treated as conflicting estimates of the same district mean after unit conversion?",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.researchgate.net",
+      "title": "High arsenic groundwater: Mobilization, metabolism and ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.researchgate.net",
+      "title": "The groundwater arsenic contamination in the Bengal ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.scribd.com",
+      "title": "Human Development in Nadia District | PDF",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "link.springer.com",
+      "title": "Sustainable Advanced Technologies for Environmental ...",
+      "pdf": true
+     },
+     {
+      "rank": 5,
+      "domain": "www.science.gov",
+      "title": "Sample records for himachal north india",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "Can the Special Drive maximum at Karimpur and the Bhowmick et al. study mean be treated as conflicting estimates of the same district mean after unit conversion?",
+    "start": 10,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 4,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "papers.sae.org",
+      "title": "Untitled",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "scholarworks.uvm.edu",
+      "title": "DSpace - UVM ScholarWorks - University of Vermont",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.corepaedia.pub",
+      "title": "https://www.corepaedia.pub/index.php/JDRSSA/articl...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "researchmap.jp",
+      "title": "https://researchmap.jp/7000024866/published_papers...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "Can the Special Drive maximum at Karimpur and the Bhowmick et al. study mean be treated as conflicting estimates of the same district mean after unit conversion?",
+    "start": 20,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 4,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "archive.org",
+      "title": "Full text of \"The Calcutta Gazette : July\"",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "archive.org",
+      "title": "Full text of \"Bengal Legislative Assembly Proceedings ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "archive.org",
+      "title": "Full text of \"Bengal Legislative Assembly Proceedings ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "archive.org",
+      "title": "Full text of \"The Calcutta Gazette : November\"",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 3,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record matches: 'Special Drive maximum at Karimpur'.",
+   "parsed": {
+    "intent": "compare",
+    "claim": "same_quantity",
+    "contaminant": null,
+    "districts": [],
+    "mentions": [
+     {
+      "text": "Special Drive maximum at Karimpur",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "max"
+      ],
+      "attribute": null
+     },
+     {
+      "text": "Bhowmick et al. study mean ",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "mean"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 21.64,
+  "score": {
+   "id": "Q023",
+   "expected": "not_comparable",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 21.64
+  }
+ },
+ {
+  "question_id": "Q024",
+  "question": "Does comparing the district Special Drive 2015\u201316 exceedance count with the Gaighata-only IMIS 2014\u20132017 count establish a worsening district trend?",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "Does comparing the district Special Drive 2015\u201316 exceedance count with the Gaighata-only IMIS 2014\u20132017 count establish a worsening district trend?",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "Does comparing the district Special Drive 2015\u201316 exceedance count with the Gaighata-only IMIS 2014\u20132017 count establish a worsening district trend?",
+    "start": 10,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "idr-sdlib.iitbhu.ac.in",
+      "title": "DSpace Repository - IIT BHU",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.researchgate.net",
+      "title": "Analysing Different Categories of Extreme Rainfall Events ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "dspace.mccclt.ac.in",
+      "title": "DSpace Repository - Malabar Christian College",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "kr.cup.edu.in",
+      "title": "DSpace Repository - Central University of Punjab",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "elibrary.sansad.in",
+      "title": "Digital Library :: Statistics - eLibrary Sansad",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "Does comparing the district Special Drive 2015\u201316 exceedance count with the Gaighata-only IMIS 2014\u20132017 count establish a worsening district trend?",
+    "start": 20,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 3,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record matches: 'district Special Drive 2015\u201316 exceedance count'.",
+   "parsed": {
+    "intent": "compare",
+    "claim": "district_change",
+    "contaminant": null,
+    "districts": [],
+    "mentions": [
+     {
+      "text": "district Special Drive 2015\u201316 exceedance count",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "count_exceeding"
+      ],
+      "attribute": null
+     },
+     {
+      "text": "Gaighata-only IMIS 2014\u20132017 count ",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "count_exceeding"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 54.68,
+  "score": {
+   "id": "Q024",
+   "expected": "not_comparable",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 54.68
+  }
+ },
+ {
+  "question_id": "Q025",
+  "question": "Can the Special Drive maximum concentration at Dhopar more and the district count of samples above 0.01 mg l\u207b\u00b9 be averaged into one arsenic concentration?",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "Can the Special Drive maximum concentration at Dhopar more and the district count of samples above 0.01 mg l\u207b\u00b9 be averaged into one arsenic concentration?",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "jasianresearch.com",
+      "title": "STUDY OF SEASONAL VARIATION OF ARSENIC ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.academia.edu",
+      "title": "(PDF) Determination of arsenic concentration and ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "SDDC limitations for high amount of arsenic?",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.researchgate.net",
+      "title": "Arsenic in Drinking Water: Is 10 \u03bcg/L a Safe Limit?",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "homework.study.com",
+      "title": "The maximum concentration of arsenic allowed in different ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "Can the Special Drive maximum concentration at Dhopar more and the district count of samples above 0.01 mg l\u207b\u00b9 be averaged into one arsenic concentration?",
+    "start": 10,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.researchgate.net",
+      "title": "Extremely high concentration of arsenic and its speciation ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "prepp.in",
+      "title": "Analyze Arsenic Concentration Distribution",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.scribd.com",
+      "title": "Arsenic Concentration in Drinking Water | PDF | Groundwater",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "brainly.com",
+      "title": "The maximum contaminant level for arsenic is 0.010 ppm ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.chegg.com",
+      "title": "Solved The maximum contaminant level for arsenic is 0.010",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "Can the Special Drive maximum concentration at Dhopar more and the district count of samples above 0.01 mg l\u207b\u00b9 be averaged into one arsenic concentration?",
+    "start": 20,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) Investigation the Level of Groundwater Pollution with ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.researchgate.net",
+      "title": "Determination of arsenic (as) in some environmental ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) High through-put groundwater arsenic speciation ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.semanticscholar.org",
+      "title": "analysis of arsenic contamination in district azamgarh, uttar ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) Effects of elevated arsenic and nitrate concentrations ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 3,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record matches: 'Special Drive maximum concentration at Dhopar more'.",
+   "parsed": {
+    "intent": "compare",
+    "claim": "average",
+    "contaminant": "arsenic",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "Special Drive maximum concentration at Dhopar more",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "max"
+      ],
+      "attribute": null
+     },
+     {
+      "text": "district count of samples above 0.01 mg l\u207b\u00b9 ",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "count_exceeding"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 5.19,
+  "score": {
+   "id": "Q025",
+   "expected": "not_comparable",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 5.19
+  }
+ },
+ {
+  "question_id": "Q026",
+  "question": "Can the 2016 Khayrasole-and-Rajnagar study upper endpoint and the April 2022 Rajnagar dug-well value establish a fall in district mean fluoride?",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "Can the 2016 Khayrasole-and-Rajnagar study upper endpoint and the April 2022 Rajnagar dug-well value establish a fall in district mean fluoride?",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "Can the 2016 Khayrasole-and-Rajnagar study upper endpoint and the April 2022 Rajnagar dug-well value establish a fall in district mean fluoride?",
+    "start": 10,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "Can the 2016 Khayrasole-and-Rajnagar study upper endpoint and the April 2022 Rajnagar dug-well value establish a fall in district mean fluoride?",
+    "start": 20,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.researchgate.net",
+      "title": "Fluoride incidence in groundwater in an area of Peninsular ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.researchgate.net",
+      "title": "High fluoride in groundwater and fluorosis related health ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "Distribution and Prevalence of Fluoride in Drinking Water ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "pubmed.ncbi.nlm.nih.gov",
+      "title": "Fluoride-contaminated groundwater of Birbhum district, ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.ijera.com",
+      "title": "A Review of Groundwater Quality Issue in Jharkhand Due ...",
+      "pdf": true
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 3,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record matches: '2016 Khayrasole-and-Rajnagar study upper endpoint'.",
+   "parsed": {
+    "intent": "compare",
+    "claim": "district_change",
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "2016 Khayrasole-and-Rajnagar study upper endpoint",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "max"
+      ],
+      "attribute": null
+     },
+     {
+      "text": "April 2022 Rajnagar dug-well value ",
+      "places": [],
+      "well_ids": [],
+      "sources": [
+       "dug well"
+      ],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 32.43,
+  "score": {
+   "id": "Q026",
+   "expected": "not_comparable",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 32.43
+  }
+ },
+ {
+  "question_id": "Q027",
+  "question": "Do the April 2022 Saidpur and Gangedda values constitute a before-and-after fluoride time series for one well?",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "Do the April 2022 Saidpur and Gangedda values constitute a before-and-after fluoride time series for one well?",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "digitalrepo.alnoor.edu.iq",
+      "title": "Assessment of Fluoride Release and Recharge of Giomer ...",
+      "pdf": true
+     },
+     {
+      "rank": 2,
+      "domain": "media.neliti.com",
+      "title": "EFFECT OF TIME ON FLUORIDE RELE! ...",
+      "pdf": true
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "Estimation of fluoride concentration of fluoride in drinking ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.researchgate.net",
+      "title": "Measurement of Fluoride Ion Release From Restorative ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) Estimation of Fluoride Release from Various Dental ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "Do the April 2022 Saidpur and Gangedda values constitute a before-and-after fluoride time series for one well?",
+    "start": 10,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "Do the April 2022 Saidpur and Gangedda values constitute a before-and-after fluoride time series for one well?",
+    "start": 20,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "scispace.com",
+      "title": "Salivary fluoride from fluoride dentifrices or rinses after use ...",
+      "pdf": true
+     },
+     {
+      "rank": 2,
+      "domain": "www.researchgate.net",
+      "title": "Correlation between fluoride release, surface hardness ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) Relation between enamel fluoride uptake and time ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.researchgate.net",
+      "title": "Measurement of Fluoride Ion Release From Restorative ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.researchgate.net",
+      "title": "Therapeutic roles of fluoride released from restorative ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 3,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record matches: 'April 2022 Saidpur'.",
+   "parsed": {
+    "intent": "compare",
+    "claim": "time_series",
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "April 2022 Saidpur",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     },
+     {
+      "text": "Gangedda values ",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 35.69,
+  "score": {
+   "id": "Q027",
+   "expected": "not_comparable",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 35.69
+  }
+ },
+ {
+  "question_id": "Q028",
+  "question": "Can Ropo M-II and Konkara Dug Well readings from 21 June 2023 be treated as repeat measurements of one sampling point?",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "Can Ropo M-II and Konkara Dug Well readings from 21 June 2023 be treated as repeat measurements of one sampling point?",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "Can Ropo M-II and Konkara Dug Well readings from 21 June 2023 be treated as repeat measurements of one sampling point?",
+    "start": 10,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.chromatographyonline.com",
+      "title": "How Many Repetitions Do I Need? Caught Between Sound ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "nepis.epa.gov",
+      "title": "Guidelines for Assessing and Reporting Data Quality ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "leprosyreview.org",
+      "title": "Leprosy Review submission guidelines",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.semanticscholar.org",
+      "title": "Dominant marker (inter-simple sequence repeat ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.eurl-pesticides.eu",
+      "title": "Doubts and interpretation problems",
+      "pdf": true
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "Can Ropo M-II and Konkara Dug Well readings from 21 June 2023 be treated as repeat measurements of one sampling point?",
+    "start": 20,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.researchgate.net",
+      "title": "Using Patient-Reported Outcome Measures (PROMs) to ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.researchgate.net",
+      "title": "Development and validation of a new RP-UPLC method for ...",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "A Change in the Trend of Quality Reporting in Leprosy Trials",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "plant.researchfloor.org",
+      "title": "Random Amplified Polymorphic DNA (RAPD) Markers ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) METHOD DEVELOPMENT & VALIDATION FOR THE ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 3,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record matches: 'Ropo M-II'.",
+   "parsed": {
+    "intent": "compare",
+    "claim": "repeat",
+    "contaminant": null,
+    "districts": [],
+    "mentions": [
+     {
+      "text": "Ropo M-II",
+      "places": [],
+      "well_ids": [],
+      "sources": [
+       "m-ii"
+      ],
+      "dates": [],
+      "statistics": [],
+      "attribute": null
+     },
+     {
+      "text": "Konkara Dug Well readings from 21 June 2023 ",
+      "places": [],
+      "well_ids": [],
+      "sources": [
+       "dug well"
+      ],
+      "dates": [
+       "2023-06-21"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 42.65,
+  "score": {
+   "id": "Q028",
+   "expected": "not_comparable",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 42.65
+  }
+ },
+ {
+  "question_id": "Q029",
+  "question": "What was the groundwater arsenic concentration at the Belsula dug well on 1 October 2026? Use only this frozen corpus.",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What was the groundwater arsenic concentration at the Belsula dug well on 1 October 2026? Use only this frozen corpus.",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 9,
+    "located": [
+     "annual_gwq_2025"
+    ],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "pmc.ncbi.nlm.nih.gov",
+      "title": "Arsenic Contamination of Groundwater: A Review of Sources ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.health.state.mn.us",
+      "title": "Arsenic in Well Water",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "Groundwater arsenic in Chandrapur District, Central India",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.envchemgroup.com",
+      "title": "Arsenic pollution in groundwater: another piece of the puzzle ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.beg.utexas.edu",
+      "title": "Groundwater Arsenic Contamination",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What was the groundwater arsenic concentration at the Belsula dug well on 1 October 2026? Use only this frozen corpus.",
+    "start": 10,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.eurekalert.org",
+      "title": "Scientist on personal mission to improve global water ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) Groundwater Arsenic contamination in Karnataka",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.researchgate.net",
+      "title": "Where can I find groundwater arsenic level data of India, if ...",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.researchgate.net",
+      "title": "(PDF) Status of Arsenic Contamination of Groundwater In ...",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.etvbharat.com",
+      "title": "Environmentalist Expresses Concern Over Presence Of ...",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What was the groundwater arsenic concentration at the Belsula dug well on 1 October 2026? Use only this frozen corpus.",
+    "start": 20,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 3,
+  "located": [
+   "annual_gwq_2025"
+  ],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches None.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "arsenic",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What was the groundwater arsenic concentration at the Belsula dug well on 1 October 2026? Use only this frozen corpus.",
+      "places": [],
+      "well_ids": [],
+      "sources": [
+       "dug well"
+      ],
+      "dates": [
+       "2026-10-01"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 24.83,
+  "score": {
+   "id": "Q029",
+   "expected": "insufficient_evidence",
+   "got": "insufficient_evidence",
+   "correct": true,
+   "verified_items": 0,
+   "evidence_ok": null,
+   "gold_doc_exact": null,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 3,
+   "seconds": 24.83
+  }
+ },
+ {
+  "question_id": "Q030",
+  "question": "What is the detection limit of the fluoride method specifically for the April 2022 Matoil result? Use only this frozen corpus.",
+  "mode": "baseline",
+  "trace": [
+   {
+    "level": 0,
+    "why": "baseline: the question as typed",
+    "engine": "google",
+    "q": "What is the detection limit of the fluoride method specifically for the April 2022 Matoil result? Use only this frozen corpus.",
+    "start": 0,
+    "cached": false,
+    "missing_cache": false,
+    "n_results": 3,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "patents.google.com",
+      "title": "Solid forms of isoquinolinone derivatives, process ...",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.researchgate.net",
+      "title": "Review of clays and clay minerals in Jordan | Request PDF",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "promainsupply.com",
+      "title": "Chemicals & Janitorial",
+      "pdf": true
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 1,
+  "located": [],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "related": [],
+   "reason": "The matching row reports a value but no detection limit for that result.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What is the detection limit of the fluoride method specifically for the April 2022 Matoil result? Use only this frozen corpus.",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": "detection_limit"
+     }
+    ]
+   }
+  },
+  "seconds": 1.31,
+  "score": {
+   "id": "Q030",
+   "expected": "insufficient_evidence",
+   "got": "insufficient_evidence",
+   "correct": true,
+   "verified_items": 0,
+   "evidence_ok": null,
+   "gold_doc_exact": null,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 1,
+   "seconds": 1.31
+  }
+ }
+]

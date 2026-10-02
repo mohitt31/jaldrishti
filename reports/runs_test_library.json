@@ -1,0 +1,2315 @@
+[
+ {
+  "question_id": "Q011",
+  "question": "What arsenic concentrations are listed for Napatipara and Sahidpally in CGWB Annual Ground Water Quality Report-2025? Retain the reported unit and distinguish publication from sampling year.",
+  "mode": "library",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "number_with_source",
+   "items": [
+    {
+     "value": "24.2",
+     "unit": "ppb",
+     "statistic": "single",
+     "place": "Chakdah, Napatipara",
+     "district": "Nadia",
+     "source_type": "Hand Pump",
+     "well_id": null,
+     "date": null,
+     "period": "November, 2025",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "annual_gwq_2025",
+     "title": "Annual Ground Water Quality Report 2025",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1762854375262680475file.pdf",
+     "page": 104,
+     "quote": "15 | West Bengal | Nadia | Chakdah | Napatipara | 88.51980 | 23.02510 | Hand Pump | 24.2",
+     "header": "As (ppb)",
+     "publication_year": 2025,
+     "evidence_id": "annual_gwq_2025:104:0:0:8",
+     "bbox": [
+      72.14962499999993,
+      103.7289655172413,
+      549.4741836065579,
+      114.62000000000006
+     ],
+     "score": 6.0,
+     "asked": "napatipara",
+     "page_verified": true
+    },
+    {
+     "value": "141.7",
+     "unit": "ppb",
+     "statistic": "single",
+     "place": "Chakdah, Sahidpally",
+     "district": "Nadia",
+     "source_type": "Hand Pump",
+     "well_id": null,
+     "date": null,
+     "period": "November, 2025",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "annual_gwq_2025",
+     "title": "Annual Ground Water Quality Report 2025",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1762854375262680475file.pdf",
+     "page": 104,
+     "quote": "19 | West Bengal | Nadia | Chakdah | Sahidpally | 88.41690 | 22.95870 | Hand Pump | 141.7",
+     "header": "As (ppb)",
+     "publication_year": 2025,
+     "evidence_id": "annual_gwq_2025:104:0:4:8",
+     "bbox": [
+      72.14962499999993,
+      147.26,
+      549.4741836065579,
+      158.05999999999995
+     ],
+     "score": 6.0,
+     "asked": "sahidpally",
+     "page_verified": true
+    }
+   ],
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "arsenic",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What arsenic concentrations are listed for Napatipara and Sahidpally in CGWB Annual Ground Water Quality Report-2025? Retain the reported unit and distinguish publication from sampling year.",
+      "places": [
+       "napatipara",
+       "sahidpally"
+      ],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 1.4,
+  "library_size": 23,
+  "score": {
+   "id": "Q011",
+   "expected": "number_with_source",
+   "got": "number_with_source",
+   "correct": true,
+   "verified_items": 2,
+   "evidence_ok": true,
+   "gold_doc_exact": true,
+   "n_items": 2,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 1.4
+  }
+ },
+ {
+  "question_id": "Q012",
+  "question": "What groundwater arsenic range and mean does Bhowmick et al. (2015) report for its Nadia study samples? Exclude saliva results.",
+  "mode": "library",
+  "trace": [
+   {
+    "level": 1,
+    "why": "named study -> Google Scholar",
+    "engine": "google_scholar",
+    "q": "Bhowmick arsenic groundwater West Bengal Nadia",
+    "as_ylo": "2015",
+    "as_yhi": "2015",
+    "cached": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.sciencedirect.com",
+      "title": "Assessment of toxic metals in groundwater and saliva in an arsenic affected area of West B",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "link.springer.com",
+      "title": "An insight into the spatio-vertical heterogeneity of dissolved arsenic in part of the Beng",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.cabidigitallibrary.org",
+      "title": "Assessment of toxic metals in groundwater and saliva in an arsenic affected area of West B",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "journals.plos.org",
+      "title": "Diversity, metabolic properties and arsenic mobilization potential of indigenous bacteria ",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.sciencedirect.com",
+      "title": "Concentrations of arsenic and other elements in groundwater of Bangladesh and West Bengal,",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 1,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches mean, min, max.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "arsenic",
+    "districts": [
+     "Nadia"
+    ],
+    "mentions": [
+     {
+      "text": "What groundwater arsenic range and mean does Bhowmick et al. (2015) report for its Nadia study samples? Exclude saliva results.",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "range",
+       "mean"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 9.22,
+  "library_size": 23,
+  "score": {
+   "id": "Q012",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 1,
+   "seconds": 9.22
+  }
+ },
+ {
+  "question_id": "Q013",
+  "question": "What fluoride concentrations are recorded at the Utr Kechuadanga and Mahisbathan dug wells in April 2022?",
+  "mode": "library",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "number_with_source",
+   "items": [
+    {
+     "value": "0.02",
+     "unit": "mg/L",
+     "statistic": "single",
+     "place": "Krimpur - I, Utr Kechuadanga",
+     "district": "Nadia",
+     "source_type": "Dug Well",
+     "well_id": null,
+     "date": null,
+     "period": "Apr, 2022",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "gwq_west_bengal",
+     "title": "Ground Water Quality of West Bengal",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+     "page": 102,
+     "quote": "Nadia | Krimpur - I | Utr Kechuadanga | Dug Well | 7.49 | 629 | 240 | 60 | 22 | 26 | 28 | 0 | 293 | 240 | 32 | 1 | 37 | 0.02 | 385 | 0.08",
+     "header": "F",
+     "publication_year": null,
+     "evidence_id": "gwq_west_bengal:102:0:2:17",
+     "bbox": [
+      28.319999999999986,
+      130.6099950000001,
+      823.6799899999994,
+      146.21000000000004
+     ],
+     "score": 6.4,
+     "asked": "utr kechuadanga",
+     "page_verified": true
+    },
+    {
+     "value": "0.76",
+     "unit": "mg/L",
+     "statistic": "single",
+     "place": "Krimpur - II, Mahisbathan",
+     "district": "Nadia",
+     "source_type": "Dug Well",
+     "well_id": null,
+     "date": null,
+     "period": "Apr, 2022",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "gwq_west_bengal",
+     "title": "Ground Water Quality of West Bengal",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+     "page": 102,
+     "quote": "Nadia | Krimpur - II | Mahisbathan | Dug Well | 7.36 | 1197 | 390 | 58 | 60 | 93 | 5 | 0 | 226 | 185 | 209 | 9 | 122 | 0.76 | 694 | 1.53",
+     "header": "F",
+     "publication_year": null,
+     "evidence_id": "gwq_west_bengal:102:0:3:17",
+     "bbox": [
+      28.319999999999986,
+      146.21000000000004,
+      823.6799899999994,
+      161.59000000000003
+     ],
+     "score": 6.4,
+     "asked": "mahisbathan",
+     "page_verified": true
+    }
+   ],
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What fluoride concentrations are recorded at the Utr Kechuadanga and Mahisbathan dug wells in April 2022?",
+      "places": [
+       "utr kechuadanga",
+       "mahisbathan"
+      ],
+      "well_ids": [],
+      "sources": [],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.3,
+  "library_size": 23,
+  "score": {
+   "id": "Q013",
+   "expected": "number_with_source",
+   "got": "number_with_source",
+   "correct": true,
+   "verified_items": 2,
+   "evidence_ok": true,
+   "gold_doc_exact": true,
+   "n_items": 2,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.3
+  }
+ },
+ {
+  "question_id": "Q014",
+  "question": "What maximum arsenic concentration and location does CGWB Special Drive 2015\u201316 report for North 24 Parganas?",
+  "mode": "library",
+  "trace": [
+   {
+    "level": 1,
+    "why": "source named in question -> cgwb.gov.in",
+    "engine": "google",
+    "q": "arsenic North 24 Parganas \"special drive\" year book",
+    "as_sitesearch": "cgwb.gov.in",
+    "cached": false,
+    "n_results": 10,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "en.wikipedia.org",
+      "title": "North",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "cohere.com",
+      "title": "North: The AI Platform Where Work Flows",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "www.imdb.com",
+      "title": "North (1994)",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "nadbank.org",
+      "title": "North American Development Bank: NADBank",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.sciencedirect.com",
+      "title": "Pediatric Clinics of North America | Journal",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 1,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches max.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "arsenic",
+    "districts": [
+     "North 24 Parganas"
+    ],
+    "mentions": [
+     {
+      "text": "What maximum arsenic concentration and location does CGWB Special Drive 2015\u201316 report for North 24 Parganas?",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "max"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 1.34,
+  "library_size": 23,
+  "score": {
+   "id": "Q014",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 1,
+   "seconds": 1.34
+  }
+ },
+ {
+  "question_id": "Q015",
+  "question": "How many samples exceeded 10 \u00b5g/L arsenic in Basirhat I and Swarupnagar in the IMIS 2014\u20132017 table reproduced by ADB?",
+  "mode": "library",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "number_with_source",
+   "items": [
+    {
+     "value": "867",
+     "unit": "samples",
+     "statistic": "count_exceeding",
+     "place": "Swarupnagar",
+     "district": "North 24 Parganas",
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": "2014\u20132017",
+     "threshold": "10",
+     "spatial_support": "site",
+     "doc": "adb_49107_006",
+     "title": "Arsenic and Fluoride in Drinking Water in West Bengal: Characteristics, Implications, and Mitigation (RRP IND 49107-006)",
+     "url": "https://www.adb.org/sites/default/files/linked-documents/49107-006-sd-01.pdf",
+     "page": 8,
+     "quote": "Swarupnagar | 205 | 2,528 | 867 | 34.3",
+     "header": "No. samples with arsenic >10 \u00b5g/L",
+     "publication_year": null,
+     "evidence_id": "adb_49107_006:8:0:21:3",
+     "bbox": [
+      116.06,
+      509.0016,
+      470.83876,
+      520.9616000000001
+     ],
+     "score": 6.2,
+     "asked": "swarupnagar",
+     "page_verified": true
+    },
+    {
+     "value": "1,157",
+     "unit": "samples",
+     "statistic": "count_exceeding",
+     "place": "Basirhat I",
+     "district": "North 24 Parganas",
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": "2014\u20132017",
+     "threshold": "10",
+     "spatial_support": "site",
+     "doc": "adb_49107_006",
+     "title": "Arsenic and Fluoride in Drinking Water in West Bengal: Characteristics, Implications, and Mitigation (RRP IND 49107-006)",
+     "url": "https://www.adb.org/sites/default/files/linked-documents/49107-006-sd-01.pdf",
+     "page": 8,
+     "quote": "Basirhat I | 234 | 2,762 | 1,157 | 41.9",
+     "header": "No. samples with arsenic >10 \u00b5g/L",
+     "publication_year": null,
+     "evidence_id": "adb_49107_006:8:0:7:3",
+     "bbox": [
+      116.06,
+      348.0616,
+      470.83876,
+      360.02160000000003
+     ],
+     "score": 6.2,
+     "asked": "basirhat i",
+     "page_verified": true
+    }
+   ],
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "arsenic",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "How many samples exceeded 10 \u00b5g/L arsenic in Basirhat I and Swarupnagar in the IMIS 2014\u20132017 table reproduced by ADB?",
+      "places": [
+       "swarupnagar",
+       "basirhat i"
+      ],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "count_exceeding"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.09,
+  "library_size": 23,
+  "score": {
+   "id": "Q015",
+   "expected": "number_with_source",
+   "got": "number_with_source",
+   "correct": true,
+   "verified_items": 2,
+   "evidence_ok": true,
+   "gold_doc_exact": true,
+   "n_items": 2,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.09
+  }
+ },
+ {
+  "question_id": "Q016",
+  "question": "What arsenic maximum and number of samples above 0.01 mg l\u207b\u00b9 does CGWB Special Drive 2015\u201316 report for Murshidabad?",
+  "mode": "library",
+  "trace": [
+   {
+    "level": 1,
+    "why": "source named in question -> cgwb.gov.in",
+    "engine": "google",
+    "q": "arsenic Murshidabad \"special drive\" year book",
+    "as_sitesearch": "cgwb.gov.in",
+    "cached": true,
+    "n_results": 2,
+    "located": [
+     "web_bf185a48acc4"
+    ],
+    "fetched": [
+     {
+      "url": "https://cgwb.gov.in/old_website/Regions/GW-year-Books/GWYB-2015-16/GWYB%20ER%202015-16.pdf",
+      "reused": "web_bf185a48acc4"
+     }
+    ],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "cgwb.gov.in",
+      "title": "central ground water board ministry of water resources",
+      "pdf": true
+     },
+     {
+      "rank": 2,
+      "domain": "cgwb.gov.in",
+      "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u0935\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
+      "pdf": true
+     }
+    ],
+    "answer_type": "number_with_source"
+   }
+  ],
+  "credits": 1,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_bf185a48acc4",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "number_with_source",
+   "items": [
+    {
+     "value": "0.405",
+     "unit": "mg/L",
+     "statistic": "max",
+     "place": "Mur-Jiaganj, Ranjitpara",
+     "district": "Murshidabad",
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": "2015 \u2013 16",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "web_bf185a48acc4",
+     "title": "https://cgwb.gov.in/old_website/Regions/GW-year-Books/GWYB-2015-16/GWYB%20ER%202015-16.pdf",
+     "url": "https://cgwb.gov.in/old_website/Regions/GW-year-Books/GWYB-2015-16/GWYB%20ER%202015-16.pdf",
+     "page": 49,
+     "quote": "5 | MURSHIDABAD | 23 | 179 | 64 | 36 | 0.405 | Mur-Jiaganj | Ranjitpara",
+     "header": "Highest Conc. (in mg l-1) detected from the district",
+     "publication_year": null,
+     "evidence_id": "web_bf185a48acc4:49:0:4:6",
+     "bbox": [
+      57.84000000000002,
+      227.2999949999999,
+      576.7000200000001,
+      242.80999999999995
+     ],
+     "score": 4.0,
+     "asked": "max",
+     "page_verified": true
+    },
+    {
+     "value": "23",
+     "unit": "blocks",
+     "statistic": "count_exceeding",
+     "place": "Mur-Jiaganj, Ranjitpara",
+     "district": "Murshidabad",
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": "2015 \u2013 16",
+     "threshold": "0.01",
+     "spatial_support": "site",
+     "doc": "web_bf185a48acc4",
+     "title": "https://cgwb.gov.in/old_website/Regions/GW-year-Books/GWYB-2015-16/GWYB%20ER%202015-16.pdf",
+     "url": "https://cgwb.gov.in/old_website/Regions/GW-year-Books/GWYB-2015-16/GWYB%20ER%202015-16.pdf",
+     "page": 49,
+     "quote": "5 | MURSHIDABAD | 23 | 179 | 64 | 36 | 0.405 | Mur-Jiaganj | Ranjitpara",
+     "header": "No. of Block having As >0.01 mg l-1",
+     "publication_year": null,
+     "evidence_id": "web_bf185a48acc4:49:0:4:2",
+     "bbox": [
+      57.84000000000002,
+      227.2999949999999,
+      576.7000200000001,
+      242.80999999999995
+     ],
+     "score": 4.4,
+     "asked": "count_exceeding",
+     "page_verified": true
+    }
+   ],
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "arsenic",
+    "districts": [
+     "Murshidabad"
+    ],
+    "mentions": [
+     {
+      "text": "What arsenic maximum and number of samples above 0.01 mg l\u207b\u00b9 does CGWB Special Drive 2015\u201316 report for Murshidabad?",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "max",
+       "count_exceeding"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.33,
+  "library_size": 23,
+  "score": {
+   "id": "Q016",
+   "expected": "number_with_source",
+   "got": "number_with_source",
+   "correct": false,
+   "verified_items": 2,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 2,
+   "unsupported": 1,
+   "credits": 1,
+   "seconds": 0.33
+  }
+ },
+ {
+  "question_id": "Q017",
+  "question": "What fluoride values are listed for Bamangola and Khiripara(Makuli) dug wells in April 2022?",
+  "mode": "library",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "number_with_source",
+   "items": [
+    {
+     "value": "0.20",
+     "unit": "mg/L",
+     "statistic": "single",
+     "place": "Bamangola, Khiripara(Makuli)",
+     "district": "Malda",
+     "source_type": "Dug Well",
+     "well_id": null,
+     "date": null,
+     "period": "Apr, 2022",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "gwq_west_bengal",
+     "title": "Ground Water Quality of West Bengal",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+     "page": 100,
+     "quote": "Malda | Bamangola | Khiripara(Makuli) | Dug Well | 7.65 | 1214 | 370 | 90 | 35 | 100 | 31 | 0 | 244 | 200 | 255 | 8 | 1 | 0.20 | 670 | 0.21",
+     "header": "F",
+     "publication_year": null,
+     "evidence_id": "gwq_west_bengal:100:0:18:17",
+     "bbox": [
+      28.31999999999998,
+      378.3800100000003,
+      823.6799899999996,
+      394.0099950000002
+     ],
+     "score": 6.4,
+     "asked": "khiripara(makuli)",
+     "page_verified": true
+    },
+    {
+     "value": "0.16",
+     "unit": "mg/L",
+     "statistic": "single",
+     "place": "Bamangola, Bamangola",
+     "district": "Malda",
+     "source_type": "Dug Well",
+     "well_id": null,
+     "date": null,
+     "period": "Apr, 2022",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "gwq_west_bengal",
+     "title": "Ground Water Quality of West Bengal",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+     "page": 100,
+     "quote": "Malda | Bamangola | Bamangola | Dug Well | 7.69 | 1151 | 440 | 48 | 78 | 79 | 1 | 0 | 207 | 170 | 323 | 0 | 0 | 0.16 | 655 | 0.31",
+     "header": "F",
+     "publication_year": null,
+     "evidence_id": "gwq_west_bengal:100:0:17:17",
+     "bbox": [
+      28.31999999999998,
+      363.0199950000003,
+      823.6799899999996,
+      378.3800100000003
+     ],
+     "score": 6.4,
+     "asked": "bamangola",
+     "page_verified": true
+    }
+   ],
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What fluoride values are listed for Bamangola and Khiripara(Makuli) dug wells in April 2022?",
+      "places": [
+       "khiripara(makuli)",
+       "bamangola"
+      ],
+      "well_ids": [],
+      "sources": [],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.1,
+  "library_size": 23,
+  "score": {
+   "id": "Q017",
+   "expected": "number_with_source",
+   "got": "number_with_source",
+   "correct": true,
+   "verified_items": 2,
+   "evidence_ok": true,
+   "gold_doc_exact": true,
+   "n_items": 2,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.1
+  }
+ },
+ {
+  "question_id": "Q018",
+  "question": "What fluoride values are listed for Hatuganj and Goragacha dug wells in April 2022?",
+  "mode": "library",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "number_with_source",
+   "items": [
+    {
+     "value": "0.47",
+     "unit": "mg/L",
+     "statistic": "single",
+     "place": "Basanti, Goragacha",
+     "district": "South 24 Parganas",
+     "source_type": "Dug Well",
+     "well_id": null,
+     "date": null,
+     "period": "Apr, 2022",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "gwq_west_bengal",
+     "title": "Ground Water Quality of West Bengal",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+     "page": 107,
+     "quote": "South 24 Parganas | Basanti | Goragacha | Dug Well | 8.26 | 1492 | 225 | 42 | 29 | 205 | 4 | 0 | 336 | 275 | 220 | 8 | 77 | 0.47 | 790 | 2.24",
+     "header": "F",
+     "publication_year": null,
+     "evidence_id": "gwq_west_bengal:107:0:10:17",
+     "bbox": [
+      28.319999999999983,
+      252.82000000000002,
+      823.6799899999995,
+      268.199995
+     ],
+     "score": 6.4,
+     "asked": "goragacha",
+     "page_verified": true
+    },
+    {
+     "value": "0.20",
+     "unit": "mg/L",
+     "statistic": "single",
+     "place": "Canning-II, Hatuganj",
+     "district": "South 24 Parganas",
+     "source_type": "Dug Well",
+     "well_id": null,
+     "date": null,
+     "period": "Apr, 2022",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "gwq_west_bengal",
+     "title": "Ground Water Quality of West Bengal",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+     "page": 107,
+     "quote": "South 24 Parganas | Canning-II | Hatuganj | Dug Well | 8.24 | 5831 | 475 | 86 | 63 | 980 | 29 | 0 | 537 | 440 | 144 3 | 28 | 130 | 0.20 | 3086 | 0.63",
+     "header": "F",
+     "publication_year": null,
+     "evidence_id": "gwq_west_bengal:107:0:9:17",
+     "bbox": [
+      28.319999999999983,
+      230.49999500000013,
+      823.6799899999995,
+      252.82000000000002
+     ],
+     "score": 6.4,
+     "asked": "hatuganj",
+     "page_verified": true
+    }
+   ],
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What fluoride values are listed for Hatuganj and Goragacha dug wells in April 2022?",
+      "places": [
+       "goragacha",
+       "hatuganj"
+      ],
+      "well_ids": [],
+      "sources": [],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.1,
+  "library_size": 23,
+  "score": {
+   "id": "Q018",
+   "expected": "number_with_source",
+   "got": "number_with_source",
+   "correct": true,
+   "verified_items": 2,
+   "evidence_ok": true,
+   "gold_doc_exact": true,
+   "n_items": 2,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.1
+  }
+ },
+ {
+  "question_id": "Q019",
+  "question": "What fluoride range was reported for Khayrasole and Rajnagar samples collected during pre-monsoon and post-monsoon in 2016?",
+  "mode": "library",
+  "trace": [
+   {
+    "level": 2,
+    "why": "place-level search",
+    "engine": "google",
+    "q": "\"Khayrasole\" fluoride groundwater",
+    "cached": false,
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "ngwa.onlinelibrary.wiley.com",
+      "title": "Journal Metrics - National Groundwater Association - Wiley",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.usgs.gov",
+      "title": "What is groundwater? | U.S. Geological Survey",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "en.wikipedia.org",
+      "title": "Groundwater",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "groundwater.org",
+      "title": "What is Groundwater?",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "www.pib.gov.in",
+      "title": "Strengthening Groundwater Management for India",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 1,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches rajnagar, rajnagar.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What fluoride range was reported for Khayrasole and Rajnagar samples collected during pre-monsoon and post-monsoon in 2016?",
+      "places": [
+       "rajnagar"
+      ],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "range"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 1.61,
+  "library_size": 23,
+  "score": {
+   "id": "Q019",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 1,
+   "seconds": 1.61
+  }
+ },
+ {
+  "question_id": "Q020",
+  "question": "How many samples exceeded 1.5 mg/L fluoride in Chhatna and Simlipal in the IMIS 2013\u20132017 table reproduced by ADB?",
+  "mode": "library",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "number_with_source",
+   "items": [
+    {
+     "value": "167",
+     "unit": "samples",
+     "statistic": "count_exceeding",
+     "place": "Simlipal",
+     "district": "Bankura",
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": "2013\u20132017",
+     "threshold": "1.5",
+     "spatial_support": "site",
+     "doc": "adb_49107_006",
+     "title": "Arsenic and Fluoride in Drinking Water in West Bengal: Characteristics, Implications, and Mitigation (RRP IND 49107-006)",
+     "url": "https://www.adb.org/sites/default/files/linked-documents/49107-006-sd-01.pdf",
+     "page": 24,
+     "quote": "Simlipal | 2,149 | 167 | 7.77 | 68 | 3.16 | 95 | 57",
+     "header": "Fluoride >1.5 mg/L No.",
+     "publication_year": null,
+     "evidence_id": "adb_49107_006:24:0:19:2",
+     "bbox": [
+      81.864,
+      446.2416,
+      491.63772,
+      458.20160000000004
+     ],
+     "score": 6.2,
+     "asked": "simlipal",
+     "page_verified": true
+    },
+    {
+     "value": "67",
+     "unit": "samples",
+     "statistic": "count_exceeding",
+     "place": "Chhatna",
+     "district": "Bankura",
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": "2013\u20132017",
+     "threshold": "1.5",
+     "spatial_support": "site",
+     "doc": "adb_49107_006",
+     "title": "Arsenic and Fluoride in Drinking Water in West Bengal: Characteristics, Implications, and Mitigation (RRP IND 49107-006)",
+     "url": "https://www.adb.org/sites/default/files/linked-documents/49107-006-sd-01.pdf",
+     "page": 24,
+     "quote": "Chhatna | 5,250 | 67 | 1.28 | 198 | 3.77 | 47 | 137",
+     "header": "Fluoride >1.5 mg/L No.",
+     "publication_year": null,
+     "evidence_id": "adb_49107_006:24:0:4:2",
+     "bbox": [
+      81.864,
+      273.1816,
+      491.63768,
+      285.14160000000004
+     ],
+     "score": 6.2,
+     "asked": "chhatna",
+     "page_verified": true
+    }
+   ],
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "How many samples exceeded 1.5 mg/L fluoride in Chhatna and Simlipal in the IMIS 2013\u20132017 table reproduced by ADB?",
+      "places": [
+       "simlipal",
+       "chhatna"
+      ],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "count_exceeding"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.1,
+  "library_size": 23,
+  "score": {
+   "id": "Q020",
+   "expected": "number_with_source",
+   "got": "number_with_source",
+   "correct": true,
+   "verified_items": 2,
+   "evidence_ok": true,
+   "gold_doc_exact": true,
+   "n_items": 2,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.1
+  }
+ },
+ {
+  "question_id": "Q021",
+  "question": "What fluoride value and sampling date are listed for the Polasdih M-II well RAPU90?",
+  "mode": "library",
+  "trace": [
+   {
+    "level": 2,
+    "why": "place-level search",
+    "engine": "google",
+    "q": "\"Polasdih\" fluoride groundwater",
+    "cached": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 1,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches None.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What fluoride value and sampling date are listed for the Polasdih M-II well RAPU90?",
+      "places": [],
+      "well_ids": [],
+      "sources": [
+       "m-ii"
+      ],
+      "dates": [],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 1.23,
+  "library_size": 23,
+  "score": {
+   "id": "Q021",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 1,
+   "seconds": 1.23
+  }
+ },
+ {
+  "question_id": "Q022",
+  "question": "What fluoride values are listed for the Loharsol DW well WBPR_1 and Pathardih TW well WBPR_4 on 4 June 2023?",
+  "mode": "library",
+  "trace": [
+   {
+    "level": 2,
+    "why": "place-level search",
+    "engine": "google",
+    "q": "\"Loharsol\" fluoride groundwater",
+    "cached": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 1,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches None.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What fluoride values are listed for the Loharsol DW well WBPR_1 and Pathardih TW well WBPR_4 on 4 June 2023?",
+      "places": [],
+      "well_ids": [],
+      "sources": [
+       "dug well",
+       "tube well"
+      ],
+      "dates": [
+       "2023-06-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 1.33,
+  "library_size": 23,
+  "score": {
+   "id": "Q022",
+   "expected": "number_with_source",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 1,
+   "seconds": 1.33
+  }
+ },
+ {
+  "question_id": "Q023",
+  "question": "Can the Special Drive maximum at Karimpur and the Bhowmick et al. study mean be treated as conflicting estimates of the same district mean after unit conversion?",
+  "mode": "library",
+  "trace": [
+   {
+    "level": 1,
+    "why": "named study -> Google Scholar",
+    "engine": "google_scholar",
+    "q": "Bhowmick groundwater West Bengal",
+    "cached": false,
+    "n_results": 10,
+    "located": [
+     "pubmed_22999019",
+     "pubmed_28850835"
+    ],
+    "fetched": [
+     {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28850835/",
+      "new_doc": "pubmed_28850835"
+     }
+    ],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "www.sciencedirect.com",
+      "title": "Arsenic mobilization in the aquifers of three physiographic settings of West Bengal, India",
+      "pdf": false
+     },
+     {
+      "rank": 2,
+      "domain": "www.sciencedirect.com",
+      "title": "Arsenic in groundwater of West Bengal, India: a review of human health risks and assessmen",
+      "pdf": false
+     },
+     {
+      "rank": 3,
+      "domain": "link.springer.com",
+      "title": "Evaluating the feasibility of arsenic-safe drinking water options in the Western Bengal Ba",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.sciencedirect.com",
+      "title": "Assessment of toxic metals in groundwater and saliva in an arsenic affected area of West B",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "pubs.rsc.org",
+      "title": "A review of arsenic mitigation strategies in community water supplies with insights from S",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 1,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [
+    {
+     "value": "1.9",
+     "unit": "mg/L",
+     "statistic": "max",
+     "place": "",
+     "district": null,
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": "August 2022",
+     "threshold": null,
+     "spatial_support": "district",
+     "doc": "web_38c724236c24",
+     "title": "https://cgwb.gov.in/old_website/AQM/NAQUIM_REPORT/WEST-BENGAL/Purulia%20Final%20West%20Bengal.pdf",
+     "url": "https://cgwb.gov.in/old_website/AQM/NAQUIM_REPORT/WEST-BENGAL/Purulia%20Final%20West%20Bengal.pdf",
+     "page": 87,
+     "quote": "Fluoride (mg/L) | 1 | 1.5 | 1.7 | 1.7 | 1.9 | Traces | 13.0 | 2.2 | 1.6 | Traces",
+     "header": "Max",
+     "publication_year": null,
+     "evidence_id": "web_38c724236c24:87:1:7:5",
+     "bbox": [
+      66.62400500000001,
+      640.26999,
+      528.82001,
+      651.90999
+     ],
+     "page_verified": true
+    }
+   ],
+   "reason": "No record matches: 'Bhowmick et al. study mean'.",
+   "parsed": {
+    "intent": "compare",
+    "claim": "same_quantity",
+    "contaminant": null,
+    "districts": [],
+    "mentions": [
+     {
+      "text": "Special Drive maximum at Karimpur",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "max"
+      ],
+      "attribute": null
+     },
+     {
+      "text": "Bhowmick et al. study mean ",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "mean"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 5.82,
+  "library_size": 23,
+  "score": {
+   "id": "Q023",
+   "expected": "not_comparable",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 1,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 1,
+   "unsupported": 0,
+   "credits": 1,
+   "seconds": 5.82
+  }
+ },
+ {
+  "question_id": "Q024",
+  "question": "Does comparing the district Special Drive 2015\u201316 exceedance count with the Gaighata-only IMIS 2014\u20132017 count establish a worsening district trend?",
+  "mode": "library",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "not_comparable",
+   "items": [
+    {
+     "value": "2",
+     "unit": "samples",
+     "statistic": "count_exceeding",
+     "place": "Bankura I",
+     "district": "Bankura",
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": "2013\u20132017",
+     "threshold": "1.5",
+     "spatial_support": "district",
+     "doc": "adb_49107_006",
+     "title": "Arsenic and Fluoride in Drinking Water in West Bengal: Characteristics, Implications, and Mitigation (RRP IND 49107-006)",
+     "url": "https://www.adb.org/sites/default/files/linked-documents/49107-006-sd-01.pdf",
+     "page": 24,
+     "quote": "Bankura I | 1854 | 2 | 0.11 | 29 | 1.56 | 2 | 18",
+     "header": "Fluoride >1.5 mg/L No.",
+     "publication_year": null,
+     "evidence_id": "adb_49107_006:24:0:0:2",
+     "bbox": [
+      81.864,
+      227.1916,
+      491.63772,
+      239.15159999999992
+     ],
+     "page_verified": true
+    },
+    {
+     "value": "805",
+     "unit": "samples",
+     "statistic": "count_exceeding",
+     "place": "Gaighata",
+     "district": "North 24 Parganas",
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": "2014\u20132017",
+     "threshold": "10",
+     "spatial_support": "site",
+     "doc": "adb_49107_006",
+     "title": "Arsenic and Fluoride in Drinking Water in West Bengal: Characteristics, Implications, and Mitigation (RRP IND 49107-006)",
+     "url": "https://www.adb.org/sites/default/files/linked-documents/49107-006-sd-01.pdf",
+     "page": 8,
+     "quote": "Gaighata | 174 | 2,113 | 805 | 38.1",
+     "header": "No. samples with arsenic >10 \u00b5g/L",
+     "publication_year": null,
+     "evidence_id": "adb_49107_006:8:0:11:3",
+     "bbox": [
+      116.06,
+      394.0216,
+      470.83876,
+      405.9816
+     ],
+     "page_verified": true
+    }
+   ],
+   "reasons": [
+    "different spatial support: district vs site",
+    "counts come from different programmes or thresholds"
+   ],
+   "note": null,
+   "parsed": {
+    "intent": "compare",
+    "claim": "district_change",
+    "contaminant": null,
+    "districts": [],
+    "mentions": [
+     {
+      "text": "district Special Drive 2015\u201316 exceedance count",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "count_exceeding"
+      ],
+      "attribute": null
+     },
+     {
+      "text": "Gaighata-only IMIS 2014\u20132017 count ",
+      "places": [
+       "gaighata"
+      ],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "count_exceeding"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.16,
+  "library_size": 23,
+  "score": {
+   "id": "Q024",
+   "expected": "not_comparable",
+   "got": "not_comparable",
+   "correct": true,
+   "verified_items": 2,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 2,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.16
+  }
+ },
+ {
+  "question_id": "Q025",
+  "question": "Can the Special Drive maximum concentration at Dhopar more and the district count of samples above 0.01 mg l\u207b\u00b9 be averaged into one arsenic concentration?",
+  "mode": "library",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "not_comparable",
+   "items": [
+    {
+     "value": "186.00",
+     "unit": "\u00b5g/L",
+     "statistic": "range_max",
+     "place": "Nadia",
+     "district": "Nadia",
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": null,
+     "threshold": null,
+     "spatial_support": "study",
+     "doc": "pubmed_37442929",
+     "title": "https://pubmed.ncbi.nlm.nih.gov/37442929/",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37442929/",
+     "page": null,
+     "quote": "The results revealed the presence of As in high concentrations in groundwater (35.00 to 186.00\u00a0\u00b5g L-1), surface water (30.00 to 61.00\u00a0\u00b5g L-1), soil (46.17 to 66.00\u00a0mg\u00a0kg-1), rice grains (0.017 to 1.27\u00a0\u00b5g\u00a0g-1) and rice-based food products (0.012 to 0.40\u00a0\u00b5g\u00a0g-1).",
+     "header": "abstract",
+     "publication_year": null,
+     "evidence_id": "pubmed_37442929:s4:range_max",
+     "bbox": null,
+     "page_verified": true
+    },
+    {
+     "value": "0",
+     "unit": "samples",
+     "statistic": "count_exceeding",
+     "place": "A&N Islands",
+     "district": null,
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": "November, 2025",
+     "threshold": "10",
+     "spatial_support": "site",
+     "doc": "annual_gwq_2025",
+     "title": "Annual Ground Water Quality Report 2025",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1762854375262680475file.pdf",
+     "page": 68,
+     "quote": "1 | A&N Islands | 28 | 0 | 0",
+     "header": "No. of Samples Arsenic >10 ppb Pre-M",
+     "publication_year": 2025,
+     "evidence_id": "annual_gwq_2025:68:0:0:5",
+     "bbox": [
+      75.42027906976736,
+      217.44066944444438,
+      521.3562390163937,
+      234.18714642857142
+     ],
+     "page_verified": true
+    }
+   ],
+   "reasons": [
+    "different statistics: range_max (Nadia) vs count_exceeding (A&N Islands)",
+    "different quantities: concentration vs count of samples"
+   ],
+   "note": null,
+   "parsed": {
+    "intent": "compare",
+    "claim": "average",
+    "contaminant": "arsenic",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "Special Drive maximum concentration at Dhopar more",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "max"
+      ],
+      "attribute": null
+     },
+     {
+      "text": "district count of samples above 0.01 mg l\u207b\u00b9 ",
+      "places": [],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "count_exceeding"
+      ],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.15,
+  "library_size": 23,
+  "score": {
+   "id": "Q025",
+   "expected": "not_comparable",
+   "got": "not_comparable",
+   "correct": true,
+   "verified_items": 2,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 2,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.15
+  }
+ },
+ {
+  "question_id": "Q026",
+  "question": "Can the 2016 Khayrasole-and-Rajnagar study upper endpoint and the April 2022 Rajnagar dug-well value establish a fall in district mean fluoride?",
+  "mode": "library",
+  "trace": [
+   {
+    "level": 1,
+    "why": "source named in question -> cgwb.gov.in",
+    "engine": "google",
+    "q": "fluoride \"ground water quality\" West Bengal",
+    "as_sitesearch": "cgwb.gov.in",
+    "cached": true,
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "cgwb.gov.in",
+      "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u092e\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
+      "pdf": true
+     },
+     {
+      "rank": 2,
+      "domain": "cgwb.gov.in",
+      "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u092e\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
+      "pdf": true
+     },
+     {
+      "rank": 3,
+      "domain": "cgwb.gov.in",
+      "title": "\u092d\u093e\u0930\u0924\u0938\u0930\u0915\u093e\u0930 \u091c\u0932\u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u0935\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902\u0917\u093e \u0938\u0902\u0930\u0915\u094d\u0937\u0923\u092e\u0902",
+      "pdf": true
+     },
+     {
+      "rank": 4,
+      "domain": "cgwb.gov.in",
+      "title": "dynamic ground water resources mizoram (2025)",
+      "pdf": false
+     },
+     {
+      "rank": 5,
+      "domain": "cgwb.gov.in",
+      "title": "Bihar",
+      "pdf": true
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 1,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record matches: '2016 Khayrasole-and-Rajnagar study upper endpoint'.",
+   "parsed": {
+    "intent": "compare",
+    "claim": "district_change",
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "2016 Khayrasole-and-Rajnagar study upper endpoint",
+      "places": [
+       "rajnagar"
+      ],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [
+       "max"
+      ],
+      "attribute": null
+     },
+     {
+      "text": "April 2022 Rajnagar dug-well value ",
+      "places": [
+       "rajnagar"
+      ],
+      "well_ids": [],
+      "sources": [
+       "dug well"
+      ],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.31,
+  "library_size": 23,
+  "score": {
+   "id": "Q026",
+   "expected": "not_comparable",
+   "got": "insufficient_evidence",
+   "correct": false,
+   "verified_items": 0,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 1,
+   "seconds": 0.31
+  }
+ },
+ {
+  "question_id": "Q027",
+  "question": "Do the April 2022 Saidpur and Gangedda values constitute a before-and-after fluoride time series for one well?",
+  "mode": "library",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "not_comparable",
+   "items": [
+    {
+     "value": "0.08",
+     "unit": "mg/L",
+     "statistic": "single",
+     "place": "Bhagawangola II, Saidpur",
+     "district": "Murshidabad",
+     "source_type": "Dug Well",
+     "well_id": null,
+     "date": null,
+     "period": "Apr, 2022",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "gwq_west_bengal",
+     "title": "Ground Water Quality of West Bengal",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+     "page": 101,
+     "quote": "Murshidabad | Bhagawangola II | Saidpur | Dug Well | 7.50 | 833 | 360 | 62 | 50 | 38 | 7 | 0 | 366 | 300 | 92 | 33 | 1 | 0.08 | 505 | 0.80",
+     "header": "F",
+     "publication_year": null,
+     "evidence_id": "gwq_west_bengal:101:0:5:17",
+     "bbox": [
+      28.31999999999998,
+      191.11000000000007,
+      823.6799899999996,
+      213.46000000000004
+     ],
+     "page_verified": true
+    },
+    {
+     "value": "0.74",
+     "unit": "mg/L",
+     "statistic": "single",
+     "place": "Bharatpur I, Gangedda",
+     "district": "Murshidabad",
+     "source_type": "Dug Well",
+     "well_id": null,
+     "date": null,
+     "period": "Apr, 2022",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "gwq_west_bengal",
+     "title": "Ground Water Quality of West Bengal",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+     "page": 101,
+     "quote": "Murshidabad | Bharatpur I | Gangedda | Dug Well | 7.88 | 583 | 130 | 36 | 10 | 99 | 4 | 0 | 366 | 300 | 43 | 4 | 1 | 0.74 | 420 | 0.10",
+     "header": "F",
+     "publication_year": null,
+     "evidence_id": "gwq_west_bengal:101:0:6:17",
+     "bbox": [
+      28.31999999999998,
+      213.46000000000004,
+      823.6799899999996,
+      229.06
+     ],
+     "page_verified": true
+    }
+   ],
+   "reasons": [
+    "not the same sampling point: Bhagawangola II, Saidpur [Dug Well] vs Bharatpur I, Gangedda [Dug Well]",
+    "no time separation: both Apr, 2022"
+   ],
+   "note": "After unit conversion: 80 \u00b5g/L vs 740 \u00b5g/L.",
+   "parsed": {
+    "intent": "compare",
+    "claim": "time_series",
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "April 2022 Saidpur",
+      "places": [
+       "saidpur"
+      ],
+      "well_ids": [],
+      "sources": [],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": null
+     },
+     {
+      "text": "Gangedda values ",
+      "places": [
+       "gangedda"
+      ],
+      "well_ids": [],
+      "sources": [],
+      "dates": [],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.16,
+  "library_size": 23,
+  "score": {
+   "id": "Q027",
+   "expected": "not_comparable",
+   "got": "not_comparable",
+   "correct": true,
+   "verified_items": 2,
+   "evidence_ok": true,
+   "gold_doc_exact": true,
+   "n_items": 2,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.16
+  }
+ },
+ {
+  "question_id": "Q028",
+  "question": "Can Ropo M-II and Konkara Dug Well readings from 21 June 2023 be treated as repeat measurements of one sampling point?",
+  "mode": "library",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "not_comparable",
+   "items": [
+    {
+     "value": "0.19",
+     "unit": "mg/L",
+     "statistic": "single",
+     "place": "Kotulpur, Kotulpur",
+     "district": "Bankura",
+     "source_type": "M-II",
+     "well_id": null,
+     "date": null,
+     "period": "Apr, 2022",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "gwq_west_bengal",
+     "title": "Ground Water Quality of West Bengal",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+     "page": 109,
+     "quote": "Bankura | Kotulpur | Kotulpur | M-II | 6.43 | 554 | 185 | 44 | 18 | 29 | 4 | 0 | 153 | 125 | 67 | 13 | 33 | 0.19 | 301 | 20.8",
+     "header": "F",
+     "publication_year": null,
+     "evidence_id": "gwq_west_bengal:109:0:1:17",
+     "bbox": [
+      29.039999999999992,
+      253.54000000000002,
+      829.6799928571427,
+      269.1600099999998
+     ],
+     "page_verified": true
+    },
+    {
+     "value": "0",
+     "unit": null,
+     "statistic": "single",
+     "place": "A & N Islands",
+     "district": null,
+     "source_type": null,
+     "well_id": null,
+     "date": null,
+     "period": null,
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "web_61fb1257af8e",
+     "title": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/17363272771910393216file.pdf",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/17363272771910393216file.pdf",
+     "page": 50,
+     "quote": "A & N Islands | 29 | 14 | 15 | 0 | 0.00 | 0 | 0.00",
+     "header": "Locations with Fluoride> 1.5 mg/ Pre",
+     "publication_year": null,
+     "evidence_id": "web_61fb1257af8e:50:0:0:9",
+     "bbox": [
+      57.888000000000005,
+      490.82999777777775,
+      512.6882778571428,
+      504.700005
+     ],
+     "page_verified": true
+    }
+   ],
+   "reasons": [
+    "not the same sampling point: Kotulpur, Kotulpur [M-II] vs A & N Islands [-]"
+   ],
+   "note": null,
+   "parsed": {
+    "intent": "compare",
+    "claim": "repeat",
+    "contaminant": null,
+    "districts": [],
+    "mentions": [
+     {
+      "text": "Ropo M-II",
+      "places": [],
+      "well_ids": [],
+      "sources": [
+       "m-ii"
+      ],
+      "dates": [],
+      "statistics": [],
+      "attribute": null
+     },
+     {
+      "text": "Konkara Dug Well readings from 21 June 2023 ",
+      "places": [],
+      "well_ids": [],
+      "sources": [
+       "dug well"
+      ],
+      "dates": [
+       "2023-06-21"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 0.18,
+  "library_size": 23,
+  "score": {
+   "id": "Q028",
+   "expected": "not_comparable",
+   "got": "not_comparable",
+   "correct": true,
+   "verified_items": 2,
+   "evidence_ok": false,
+   "gold_doc_exact": false,
+   "n_items": 2,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.18
+  }
+ },
+ {
+  "question_id": "Q029",
+  "question": "What was the groundwater arsenic concentration at the Belsula dug well on 1 October 2026? Use only this frozen corpus.",
+  "mode": "library",
+  "trace": [
+   {
+    "level": 2,
+    "why": "place-level search",
+    "engine": "google",
+    "q": "\"Belsula\" arsenic groundwater",
+    "cached": false,
+    "n_results": 4,
+    "located": [
+     "web_82587ba907b0",
+     "web_bf185a48acc4"
+    ],
+    "fetched": [
+     {
+      "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/16875126461850365383file.pdf",
+      "reused": "web_82587ba907b0"
+     }
+    ],
+    "top": [
+     {
+      "rank": 1,
+      "domain": "cgwb.gov.in",
+      "title": "central ground water board ministry of water resources",
+      "pdf": true
+     },
+     {
+      "rank": 2,
+      "domain": "cgwb.gov.in",
+      "title": "central ground water board ministry of water resources",
+      "pdf": true
+     },
+     {
+      "rank": 3,
+      "domain": "www.scribd.com",
+      "title": "Ground Water Year Book 2015-16 | PDF | Arsenic",
+      "pdf": false
+     },
+     {
+      "rank": 4,
+      "domain": "www.scribd.com",
+      "title": "WB Year Book 21-22 | PDF | Groundwater | Sodium",
+      "pdf": false
+     }
+    ],
+    "answer_type": "insufficient_evidence"
+   }
+  ],
+  "credits": 1,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_82587ba907b0",
+   "web_bf185a48acc4",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "reason": "No record in the corpus matches belsula.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "arsenic",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What was the groundwater arsenic concentration at the Belsula dug well on 1 October 2026? Use only this frozen corpus.",
+      "places": [
+       "belsula"
+      ],
+      "well_ids": [],
+      "sources": [
+       "dug well"
+      ],
+      "dates": [
+       "2026-10-01"
+      ],
+      "statistics": [],
+      "attribute": null
+     }
+    ]
+   }
+  },
+  "seconds": 19.18,
+  "library_size": 23,
+  "score": {
+   "id": "Q029",
+   "expected": "insufficient_evidence",
+   "got": "insufficient_evidence",
+   "correct": true,
+   "verified_items": 0,
+   "evidence_ok": null,
+   "gold_doc_exact": null,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 1,
+   "seconds": 19.18
+  }
+ },
+ {
+  "question_id": "Q030",
+  "question": "What is the detection limit of the fluoride method specifically for the April 2022 Matoil result? Use only this frozen corpus.",
+  "mode": "library",
+  "trace": [],
+  "credits": 0,
+  "located": [
+   "adb_49107_006",
+   "annual_gwq_2025",
+   "gwq_west_bengal",
+   "pubmed_25408071",
+   "pubmed_28676931",
+   "pubmed_37442929",
+   "web_38c724236c24",
+   "web_61fb1257af8e",
+   "web_ddadb2a1f246"
+  ],
+  "answer": {
+   "answer_type": "insufficient_evidence",
+   "items": [],
+   "related": [
+    {
+     "value": "0.24",
+     "unit": "mg/L",
+     "statistic": "single",
+     "place": "Gazole, Matoil",
+     "district": "Malda",
+     "source_type": "Dug Well",
+     "well_id": null,
+     "date": null,
+     "period": "Apr, 2022",
+     "threshold": null,
+     "spatial_support": "site",
+     "doc": "gwq_west_bengal",
+     "title": "Ground Water Quality of West Bengal",
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+     "page": 100,
+     "quote": "Malda | Gazole | Matoil | Dug Well | 7.92 | 390 | 140 | 32 | 15 | 25 | 0 | 0 | 226 | 185 | 11 | 0 | 0 | 0.24 | 220 | 0.21",
+     "header": "F",
+     "publication_year": null,
+     "evidence_id": "gwq_west_bengal:100:0:21:17",
+     "bbox": [
+      28.31999999999998,
+      424.72999499999986,
+      823.6799899999996,
+      440.3300099999998
+     ],
+     "score": 6.4,
+     "asked": "matoil",
+     "page_verified": true
+    }
+   ],
+   "reason": "The matching row reports a value but no detection limit for that result.",
+   "parsed": {
+    "intent": "lookup",
+    "claim": null,
+    "contaminant": "fluoride",
+    "districts": [],
+    "mentions": [
+     {
+      "text": "What is the detection limit of the fluoride method specifically for the April 2022 Matoil result? Use only this frozen corpus.",
+      "places": [
+       "matoil"
+      ],
+      "well_ids": [],
+      "sources": [],
+      "dates": [
+       "2022-04"
+      ],
+      "statistics": [],
+      "attribute": "detection_limit"
+     }
+    ]
+   }
+  },
+  "seconds": 0.09,
+  "library_size": 23,
+  "score": {
+   "id": "Q030",
+   "expected": "insufficient_evidence",
+   "got": "insufficient_evidence",
+   "correct": true,
+   "verified_items": 0,
+   "evidence_ok": null,
+   "gold_doc_exact": null,
+   "n_items": 0,
+   "unsupported": 0,
+   "credits": 0,
+   "seconds": 0.09
+  }
+ }
+]

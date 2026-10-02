@@ -25,6 +25,7 @@ def main(argv=None):
     e.add_argument("--live", action="store_true"); e.add_argument("--offline", action="store_true"); e.add_argument("--budget", type=int, default=3)
     e.add_argument("--i-understand-test-is-final", action="store_true")
     sub.add_parser("index"); sub.add_parser("credits")
+    sub.add_parser("restore", help="download every source the recorded runs used (no SerpApi key needed)")
     hv = sub.add_parser("harvest", help="build the West Bengal evidence library with a fixed SerpApi budget"); hv.add_argument("--budget", type=int, default=56)
     ad = sub.add_parser("add-source", help="fetch a PDF or PubMed URL into the corpus"); ad.add_argument("urls", nargs="+")
     args = ap.parse_args(argv)
@@ -32,6 +33,26 @@ def main(argv=None):
         from .index import docs, build_doc
         for m in docs(): print(m["id"], len(build_doc(m, force=True)))
         return
+    if args.cmd == "restore":
+        from .fetch import _session, pmid_of
+        from .index import CORPUS
+        import json as _j
+        disc = _j.loads((ROOT / "cache/discovered.json").read_text())
+        S, ok = _session(), 0
+        for url, m in disc.items():
+            if not m.get("file"): continue
+            f = CORPUS / m["file"]
+            if f.exists(): ok += 1; continue
+            f.parent.mkdir(parents=True, exist_ok=True)
+            try:
+                if m.get("format") == "pubmed_xml":
+                    r = S.get("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi", params={"db": "pubmed", "id": pmid_of(url), "rettype": "abstract", "retmode": "xml"}, timeout=60)
+                else:
+                    r = S.get(url, timeout=120)
+                r.raise_for_status(); f.write_bytes(r.content); ok += 1
+            except Exception as e:
+                print("could not fetch", url, e)
+        print(f"{ok}/{sum(1 for m in disc.values() if m.get('file'))} sources present"); return
     if args.cmd == "harvest":
         from .pipeline import Session
         from .harvest import harvest
