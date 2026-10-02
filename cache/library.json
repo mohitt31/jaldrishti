@@ -1,0 +1,476 @@
+{
+ "built": "2026-10-03T04:01:27+0530",
+ "budget": 40,
+ "queries": [
+  {
+   "engine": "google",
+   "q": "ground water quality West Bengal CGWB report",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "ground water year book West Bengal CGWB",
+   "cached": false,
+   "n_results": 6,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "annual ground water quality report CGWB arsenic fluoride",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "arsenic fluoride drinking water West Bengal assessment report",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "Nadia district aquifer mapping groundwater report CGWB",
+   "district": "Nadia",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "North 24 Parganas district aquifer mapping groundwater report CGWB",
+   "district": "North 24 Parganas",
+   "cached": false,
+   "n_results": 9,
+   "found": [
+    "web_a57110423daa"
+   ],
+   "fetched": [
+    {
+     "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1686918298526047827file.pdf",
+     "new_doc": "web_a57110423daa"
+    }
+   ]
+  },
+  {
+   "engine": "google",
+   "q": "South 24 Parganas district aquifer mapping groundwater report CGWB",
+   "district": "South 24 Parganas",
+   "cached": false,
+   "n_results": 9,
+   "found": [
+    "web_a57110423daa"
+   ],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "Murshidabad district aquifer mapping groundwater report CGWB",
+   "district": "Murshidabad",
+   "cached": false,
+   "n_results": 8,
+   "found": [
+    "web_cc9c5b60f02a"
+   ],
+   "fetched": [
+    {
+     "url": "https://insa.nic.in/writereaddata/UpLoadedFiles/PINSA/PINSA_2020_Art15.pdf",
+     "new_doc": "web_cc9c5b60f02a"
+    }
+   ]
+  },
+  {
+   "engine": "google",
+   "q": "Malda district aquifer mapping groundwater report CGWB",
+   "district": "Malda",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "Hooghly district aquifer mapping groundwater report CGWB",
+   "district": "Hooghly",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "Purba Bardhaman district aquifer mapping groundwater report CGWB",
+   "district": "Purba Bardhaman",
+   "cached": false,
+   "n_results": 8,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "Howrah district aquifer mapping groundwater report CGWB",
+   "district": "Howrah",
+   "cached": false,
+   "n_results": 8,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "Birbhum district aquifer mapping groundwater report CGWB",
+   "district": "Birbhum",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "Bankura district aquifer mapping groundwater report CGWB",
+   "district": "Bankura",
+   "cached": false,
+   "n_results": 7,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "Purulia district aquifer mapping groundwater report CGWB",
+   "district": "Purulia",
+   "cached": false,
+   "n_results": 8,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "Dakshin Dinajpur district aquifer mapping groundwater report CGWB",
+   "district": "Dakshin Dinajpur",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "Uttar Dinajpur district aquifer mapping groundwater report CGWB",
+   "district": "Uttar Dinajpur",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "arsenic groundwater Nadia West Bengal report",
+   "district": "Nadia",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "arsenic groundwater North 24 Parganas West Bengal report",
+   "district": "North 24 Parganas",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "arsenic groundwater South 24 Parganas West Bengal report",
+   "district": "South 24 Parganas",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "arsenic groundwater Murshidabad West Bengal report",
+   "district": "Murshidabad",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": [
+    {
+     "url": "https://link.springer.com/content/pdf/10.1007/978-94-011-5864-0_9.pdf",
+     "error": "not a PDF"
+    }
+   ]
+  },
+  {
+   "engine": "google",
+   "q": "arsenic groundwater Malda West Bengal report",
+   "district": "Malda",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "arsenic groundwater Hooghly West Bengal report",
+   "district": "Hooghly",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "arsenic groundwater Purba Bardhaman West Bengal report",
+   "district": "Purba Bardhaman",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "arsenic groundwater Howrah West Bengal report",
+   "district": "Howrah",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "fluoride groundwater Birbhum West Bengal report",
+   "district": "Birbhum",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "fluoride groundwater Bankura West Bengal report",
+   "district": "Bankura",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "fluoride groundwater Purulia West Bengal report",
+   "district": "Purulia",
+   "cached": false,
+   "n_results": 9,
+   "found": [
+    "annual_gwq_2025"
+   ],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "fluoride groundwater Dakshin Dinajpur West Bengal report",
+   "district": "Dakshin Dinajpur",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "fluoride groundwater Uttar Dinajpur West Bengal report",
+   "district": "Uttar Dinajpur",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google_scholar",
+   "q": "arsenic groundwater Nadia West Bengal",
+   "district": "Nadia",
+   "cached": false,
+   "n_results": 10,
+   "found": [
+    "pubmed_20922118",
+    "pubmed_30963366"
+   ],
+   "fetched": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/20922118/",
+     "new_doc": "pubmed_20922118"
+    },
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30963366/",
+     "new_doc": "pubmed_30963366"
+    }
+   ]
+  },
+  {
+   "engine": "google_scholar",
+   "q": "arsenic groundwater North 24 Parganas West Bengal",
+   "district": "North 24 Parganas",
+   "cached": false,
+   "n_results": 10,
+   "found": [
+    "pubmed_12635818",
+    "pubmed_19382148",
+    "pubmed_19819054"
+   ],
+   "fetched": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/12635818/",
+     "new_doc": "pubmed_12635818"
+    },
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/19382148/",
+     "new_doc": "pubmed_19382148"
+    },
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/19819054/",
+     "new_doc": "pubmed_19819054"
+    }
+   ]
+  },
+  {
+   "engine": "google_scholar",
+   "q": "arsenic groundwater South 24 Parganas West Bengal",
+   "district": "South 24 Parganas",
+   "cached": false,
+   "n_results": 10,
+   "found": [
+    "pubmed_19382148",
+    "pubmed_19819054"
+   ],
+   "fetched": []
+  },
+  {
+   "engine": "google_scholar",
+   "q": "arsenic groundwater Murshidabad West Bengal",
+   "district": "Murshidabad",
+   "cached": false,
+   "n_results": 10,
+   "found": [
+    "pubmed_24694939"
+   ],
+   "fetched": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/24694939/",
+     "new_doc": "pubmed_24694939"
+    }
+   ]
+  },
+  {
+   "engine": "google_scholar",
+   "q": "arsenic groundwater Malda West Bengal",
+   "district": "Malda",
+   "cached": false,
+   "n_results": 10,
+   "found": [
+    "pubmed_19819054"
+   ],
+   "fetched": []
+  },
+  {
+   "engine": "google_scholar",
+   "q": "arsenic groundwater Hooghly West Bengal",
+   "district": "Hooghly",
+   "cached": false,
+   "n_results": 10,
+   "found": [
+    "pubmed_22999019"
+   ],
+   "fetched": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/22999019/",
+     "new_doc": "pubmed_22999019"
+    }
+   ]
+  },
+  {
+   "engine": "google_scholar",
+   "q": "arsenic groundwater Purba Bardhaman West Bengal",
+   "district": "Purba Bardhaman",
+   "cached": false,
+   "n_results": 10,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google_scholar",
+   "q": "arsenic groundwater Howrah West Bengal",
+   "district": "Howrah",
+   "cached": false,
+   "n_results": 10,
+   "found": [
+    "pubmed_11778666"
+   ],
+   "fetched": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/11778666/",
+     "new_doc": "pubmed_11778666"
+    }
+   ]
+  },
+  {
+   "engine": "google_scholar",
+   "q": "fluoride groundwater Birbhum West Bengal",
+   "district": "Birbhum",
+   "cached": false,
+   "n_results": 10,
+   "found": [
+    "pubmed_28676931"
+   ],
+   "fetched": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28676931/",
+     "new_doc": "pubmed_28676931"
+    }
+   ]
+  },
+  {
+   "engine": "google_scholar",
+   "q": "fluoride groundwater Bankura West Bengal",
+   "district": "Bankura",
+   "cached": false,
+   "n_results": 10,
+   "found": [
+    "pubmed_25408071",
+    "pubmed_28702918"
+   ],
+   "fetched": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25408071/",
+     "new_doc": "pubmed_25408071"
+    },
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28702918/",
+     "new_doc": "pubmed_28702918"
+    }
+   ]
+  }
+ ],
+ "docs": [
+  "annual_gwq_2025",
+  "pubmed_11778666",
+  "pubmed_12635818",
+  "pubmed_19382148",
+  "pubmed_19819054",
+  "pubmed_20922118",
+  "pubmed_22999019",
+  "pubmed_24694939",
+  "pubmed_25408071",
+  "pubmed_28676931",
+  "pubmed_28702918",
+  "pubmed_30963366",
+  "web_a57110423daa",
+  "web_cc9c5b60f02a"
+ ],
+ "credits": 40
+}

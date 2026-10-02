@@ -22,22 +22,23 @@ def queries():
     per = []
     for d in ARSENIC_DISTRICTS + FLUORIDE_DISTRICTS:
         c = "arsenic" if d in ARSENIC_DISTRICTS else "fluoride"
-        per.append([{"engine": "google", "q": f"{d} district aquifer mapping groundwater report CGWB", "district": d},
+        per.append([{"engine": "google", "q": f"{c} groundwater {d} West Bengal CGWB report", "district": d},
+                    {"engine": "google", "q": f"{d} district aquifer mapping groundwater report CGWB", "district": d},
                     {"engine": "google", "q": f"{c} groundwater {d} West Bengal report", "district": d},
                     {"engine": "google_scholar", "q": f"{c} groundwater {d} West Bengal", "district": d}])
     out = list(STATE)
-    for k in range(3):                       # round-robin: every district gets template 1 before any gets template 2
+    for k in range(4):                       # round-robin: every district gets template 1 before any gets template 2
         out += [p[k] for p in per]
     return out
 
-def harvest(session, budget: int = 40, fetch_per_query: int = 3) -> dict:
+def harvest(session, budget: int = 50, fetch_per_query: int = 4) -> dict:
     lib = {"built": time.strftime("%Y-%m-%dT%H:%M:%S%z"), "budget": budget, "queries": [], "docs": []}
     credits, docs = 0, set()
     for q in queries():
         if credits >= budget: break
         params = {"engine": q["engine"], "q": q["q"]}
         d = session.api.search(**params)
-        credits += 0 if d.get("_cached") or d.get("_missing") else 1
+        credits += 0 if d.get("_missing") else 1      # cached responses were paid for once: count them
         res = results(d); fetched, found = [], set()
         session.contaminant = None
         scope = [q["district"]] if q.get("district") else ["West Bengal"]

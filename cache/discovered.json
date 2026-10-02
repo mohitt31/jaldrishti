@@ -286,5 +286,120 @@
   "type": "web_pdf",
   "format": "pdf",
   "title": "https://maps.wbphed.gov.in/hgm/hgm_pdf/gwm73i8.pdf"
+ },
+ "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1686918298526047827file.pdf": {
+  "id": "web_a57110423daa",
+  "file": "discovered/web_a57110423daa.pdf",
+  "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1686918298526047827file.pdf",
+  "type": "web_pdf",
+  "format": "pdf",
+  "title": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1686918298526047827file.pdf"
+ },
+ "https://insa.nic.in/writereaddata/UpLoadedFiles/PINSA/PINSA_2020_Art15.pdf": {
+  "id": "web_cc9c5b60f02a",
+  "file": "discovered/web_cc9c5b60f02a.pdf",
+  "url": "https://insa.nic.in/writereaddata/UpLoadedFiles/PINSA/PINSA_2020_Art15.pdf",
+  "type": "web_pdf",
+  "format": "pdf",
+  "title": "https://insa.nic.in/writereaddata/UpLoadedFiles/PINSA/PINSA_2020_Art15.pdf"
+ },
+ "https://link.springer.com/content/pdf/10.1007/978-94-011-5864-0_9.pdf": {
+  "rejected": "not a PDF"
+ },
+ "https://pubmed.ncbi.nlm.nih.gov/20922118/": {
+  "id": "pubmed_20922118",
+  "file": "pubmed_20922118.xml",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/20922118/",
+  "type": "peer_reviewed",
+  "format": "pubmed_xml",
+  "title": "https://pubmed.ncbi.nlm.nih.gov/20922118/"
+ },
+ "https://pubmed.ncbi.nlm.nih.gov/30963366/": {
+  "id": "pubmed_30963366",
+  "file": "pubmed_30963366.xml",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/30963366/",
+  "type": "peer_reviewed",
+  "format": "pubmed_xml",
+  "title": "https://pubmed.ncbi.nlm.nih.gov/30963366/"
+ },
+ "https://pubmed.ncbi.nlm.nih.gov/12635818/": {
+  "id": "pubmed_12635818",
+  "file": "pubmed_12635818.xml",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/12635818/",
+  "type": "peer_reviewed",
+  "format": "pubmed_xml",
+  "title": "https://pubmed.ncbi.nlm.nih.gov/12635818/"
+ },
+ "https://pubmed.ncbi.nlm.nih.gov/19382148/": {
+  "id": "pubmed_19382148",
+  "file": "pubmed_19382148.xml",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/19382148/",
+  "type": "peer_reviewed",
+  "format": "pubmed_xml",
+  "title": "https://pubmed.ncbi.nlm.nih.gov/19382148/"
+ },
+ "https://pubmed.ncbi.nlm.nih.gov/19819054/": {
+  "id": "pubmed_19819054",
+  "file": "pubmed_19819054.xml",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/19819054/",
+  "type": "peer_reviewed",
+  "format": "pubmed_xml",
+  "title": "https://pubmed.ncbi.nlm.nih.gov/19819054/"
+ },
+ "https://pubmed.ncbi.nlm.nih.gov/24694939/": {
+  "id": "pubmed_24694939",
+  "file": "pubmed_24694939.xml",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/24694939/",
+  "type": "peer_reviewed",
+  "format": "pubmed_xml",
+  "title": "https://pubmed.ncbi.nlm.nih.gov/24694939/"
+ },
+ "https://pubmed.ncbi.nlm.nih.gov/22999019/": {
+  "id": "pubmed_22999019",
+  "file": "pubmed_22999019.xml",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/22999019/",
+  "type": "peer_reviewed",
+  "format": "pubmed_xml",
+  "title": "https://pubmed.ncbi.nlm.nih.gov/22999019/"
+ },
+ "https://pubmed.ncbi.nlm.nih.gov/11778666/": {
+  "id": "pubmed_11778666",
+  "file": "pubmed_11778666.xml",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/11778666/",
+  "type": "peer_reviewed",
+  "format": "pubmed_xml",
+  "title": "https://pubmed.ncbi.nlm.nih.gov/11778666/"
+ },
+ "https://pubmed.ncbi.nlm.nih.gov/28676931/": {
+  "id": "pubmed_28676931",
+  "file": "pubmed_28676931.xml",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/28676931/",
+  "type": "peer_reviewed",
+  "format": "pubmed_xml",
+  "title": "https://pubmed.ncbi.nlm.nih.gov/28676931/"
+ },
+ "https://pubmed.ncbi.nlm.nih.gov/25408071/": {
+  "id": "pubmed_25408071",
+  "file": "pubmed_25408071.xml",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/25408071/",
+  "type": "peer_reviewed",
+  "format": "pubmed_xml",
+  "title": "https://pubmed.ncbi.nlm.nih.gov/25408071/"
+ },
+ "https://pubmed.ncbi.nlm.nih.gov/28702918/": {
+  "id": "pubmed_28702918",
+  "file": "pubmed_28702918.xml",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/28702918/",
+  "type": "peer_reviewed",
+  "format": "pubmed_xml",
+  "title": "https://pubmed.ncbi.nlm.nih.gov/28702918/"
+ },
+ "https://cgwb.gov.in/old_website/AQM/NAQUIM_REPORT/WEST-BENGAL/Dakshin%20Dinajpur%20WB%20Final.pdf": {
+  "id": "web_7201a1d9a73a",
+  "file": "discovered/web_7201a1d9a73a.pdf",
+  "url": "https://cgwb.gov.in/old_website/AQM/NAQUIM_REPORT/WEST-BENGAL/Dakshin%20Dinajpur%20WB%20Final.pdf",
+  "type": "web_pdf",
+  "format": "pdf",
+  "title": "https://cgwb.gov.in/old_website/AQM/NAQUIM_REPORT/WEST-BENGAL/Dakshin%20Dinajpur%20WB%20Final.pdf"
  }
 }

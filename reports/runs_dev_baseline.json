@@ -15,17 +15,12 @@
     "n_results": 9,
     "located": [
      "annual_gwq_2025",
-     "web_25fb90c2d34e",
-     "web_88d21df8a1f6"
+     "web_7201a1d9a73a"
     ],
     "fetched": [
      {
-      "url": "https://cgwb.gov.in/old_website/Regions/SR/Reports/Andhrapradesh_13.10.22.pdf",
-      "reused": "web_25fb90c2d34e"
-     },
-     {
-      "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1703237300342091479file.pdf",
-      "reused": "web_88d21df8a1f6"
+      "url": "https://cgwb.gov.in/old_website/AQM/NAQUIM_REPORT/WEST-BENGAL/Dakshin%20Dinajpur%20WB%20Final.pdf",
+      "new_doc": "web_7201a1d9a73a"
      }
     ],
     "top": [
@@ -125,8 +120,7 @@
   "credits": 3,
   "located": [
    "annual_gwq_2025",
-   "web_25fb90c2d34e",
-   "web_88d21df8a1f6"
+   "web_7201a1d9a73a"
   ],
   "answer": {
    "answer_type": "insufficient_evidence",
@@ -154,7 +148,7 @@
     ]
    }
   },
-  "seconds": 0.23,
+  "seconds": 5.4,
   "score": {
    "id": "Q001",
    "expected": "number_with_source",
@@ -166,7 +160,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 0.23
+   "seconds": 5.4
   }
  },
  {
@@ -772,7 +766,7 @@
     ]
    }
   },
-  "seconds": 0.31,
+  "seconds": 0.08,
   "score": {
    "id": "Q005",
    "expected": "number_with_source",
@@ -784,7 +778,7 @@
    "n_items": 1,
    "unsupported": 0,
    "credits": 1,
-   "seconds": 0.31
+   "seconds": 0.08
   }
  },
  {
@@ -1120,7 +1114,7 @@
     ]
    }
   },
-  "seconds": 0.1,
+  "seconds": 0.09,
   "score": {
    "id": "Q007",
    "expected": "not_comparable",
@@ -1132,7 +1126,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 0.1
+   "seconds": 0.09
   }
  },
  {
@@ -1286,7 +1280,7 @@
     ]
    }
   },
-  "seconds": 0.1,
+  "seconds": 0.09,
   "score": {
    "id": "Q008",
    "expected": "not_comparable",
@@ -1298,7 +1292,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 0.1
+   "seconds": 0.09
   }
  },
  {

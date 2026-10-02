@@ -25,7 +25,7 @@ def main(argv=None):
     e.add_argument("--live", action="store_true"); e.add_argument("--offline", action="store_true"); e.add_argument("--budget", type=int, default=3)
     e.add_argument("--i-understand-test-is-final", action="store_true")
     sub.add_parser("index"); sub.add_parser("credits")
-    hv = sub.add_parser("harvest", help="build the West Bengal evidence library with a fixed SerpApi budget"); hv.add_argument("--budget", type=int, default=40)
+    hv = sub.add_parser("harvest", help="build the West Bengal evidence library with a fixed SerpApi budget"); hv.add_argument("--budget", type=int, default=56)
     ad = sub.add_parser("add-source", help="fetch a PDF or PubMed URL into the corpus"); ad.add_argument("urls", nargs="+")
     args = ap.parse_args(argv)
     if args.cmd == "index":
