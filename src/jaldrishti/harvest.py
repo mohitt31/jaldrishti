@@ -49,7 +49,7 @@ def harvest(session, budget: int = 50, fetch_per_query: int = 4) -> dict:
         if q["engine"] == "google_scholar":
             from .fetch import pmid_for_title
             for r in res[:fetch_per_query]:
-                try: pm = pmid_for_title(r["title"])
+                try: pm = pmid_for_title(r["title"], offline=not session.live)
                 except Exception: pm = None
                 if pm:
                     did = f"pubmed_{pm}"

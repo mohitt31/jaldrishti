@@ -401,5 +401,61 @@
   "type": "web_pdf",
   "format": "pdf",
   "title": "https://cgwb.gov.in/old_website/AQM/NAQUIM_REPORT/WEST-BENGAL/Dakshin%20Dinajpur%20WB%20Final.pdf"
+ },
+ "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/17363272771910393216file.pdf": {
+  "id": "web_61fb1257af8e",
+  "file": "discovered/web_61fb1257af8e.pdf",
+  "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/17363272771910393216file.pdf",
+  "type": "web_pdf",
+  "format": "pdf",
+  "title": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/17363272771910393216file.pdf"
+ },
+ "https://nihroorkee.gov.in/studies_2014-2025/109-Integrated%20study%20on%20GW%20dynamics_WEST%20BENGAL_PDS_Sudhir.pdf": {
+  "id": "web_cabfc52ee8dc",
+  "file": "discovered/web_cabfc52ee8dc.pdf",
+  "url": "https://nihroorkee.gov.in/studies_2014-2025/109-Integrated%20study%20on%20GW%20dynamics_WEST%20BENGAL_PDS_Sudhir.pdf",
+  "type": "web_pdf",
+  "format": "pdf",
+  "title": "https://nihroorkee.gov.in/studies_2014-2025/109-Integrated%20study%20on%20GW%20dynamics_WEST%20BENGAL_PDS_Sudhir.pdf"
+ },
+ "https://cgwb.gov.in/old_website/AQM/NAQUIM_REPORT/WEST-BENGAL/Bankura_west%20Bengal.pdf": {
+  "id": "web_ddadb2a1f246",
+  "file": "discovered/web_ddadb2a1f246.pdf",
+  "url": "https://cgwb.gov.in/old_website/AQM/NAQUIM_REPORT/WEST-BENGAL/Bankura_west%20Bengal.pdf",
+  "type": "web_pdf",
+  "format": "pdf",
+  "title": "https://cgwb.gov.in/old_website/AQM/NAQUIM_REPORT/WEST-BENGAL/Bankura_west%20Bengal.pdf"
+ },
+ "https://cgwb.gov.in/old_website/AQM/NAQUIM_REPORT/WEST-BENGAL/Purulia%20Final%20West%20Bengal.pdf": {
+  "id": "web_38c724236c24",
+  "file": "discovered/web_38c724236c24.pdf",
+  "url": "https://cgwb.gov.in/old_website/AQM/NAQUIM_REPORT/WEST-BENGAL/Purulia%20Final%20West%20Bengal.pdf",
+  "type": "web_pdf",
+  "format": "pdf",
+  "title": "https://cgwb.gov.in/old_website/AQM/NAQUIM_REPORT/WEST-BENGAL/Purulia%20Final%20West%20Bengal.pdf"
+ },
+ "https://pubmed.ncbi.nlm.nih.gov/37442929/": {
+  "id": "pubmed_37442929",
+  "file": "pubmed_37442929.xml",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/37442929/",
+  "type": "peer_reviewed",
+  "format": "pubmed_xml",
+  "title": "https://pubmed.ncbi.nlm.nih.gov/37442929/"
+ },
+ "https://pubmed.ncbi.nlm.nih.gov/16440511/": {
+  "id": "pubmed_16440511",
+  "file": "pubmed_16440511.xml",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/16440511/",
+  "type": "peer_reviewed",
+  "format": "pubmed_xml",
+  "title": "https://pubmed.ncbi.nlm.nih.gov/16440511/"
+ },
+ "https://pubmed.ncbi.nlm.nih.gov/26047720/": {
+  "id": "pubmed_26047720",
+  "file": "pubmed_26047720.xml",
+  "url": "https://pubmed.ncbi.nlm.nih.gov/26047720/",
+  "type": "peer_reviewed",
+  "format": "pubmed_xml",
+  "title": "https://pubmed.ncbi.nlm.nih.gov/26047720/"
  }
 }

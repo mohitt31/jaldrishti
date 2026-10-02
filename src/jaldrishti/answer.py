@@ -55,7 +55,7 @@ def score(e: dict, m: Mention, q: Query, stat: str | None, meta: dict) -> float 
 
 def _cite(e, metas):
     m = metas.get(e["doc"], {})
-    return {"value": e["value_text"], "unit": e["unit"], "statistic": e["statistic"], "place": ", ".join(e["places"][:3]) or e.get("district"),
+    return {"value": e["value_text"], "unit": e["unit"], "statistic": e["statistic"], "place": ", ".join(e["places"][:3]) or e.get("district") or "",
             "district": e.get("district"), "source_type": e.get("source"), "well_id": e.get("well_id"), "date": e.get("date"),
             "period": e.get("period"), "threshold": e.get("threshold"), "spatial_support": e.get("spatial_support"),
             "doc": e["doc"], "title": m.get("title"), "url": m.get("url"), "page": e["page"], "quote": e["row_text"],

@@ -32,12 +32,19 @@ def fetch(url: str) -> dict | None:
     f = CORPUS / f"web_{h}.pdf"; f.write_bytes(r.content)
     return {"id": f"web_{h}", "file": f.name, "url": url, "type": "web_pdf", "format": "pdf"}
 
-def pmid_for_title(title: str) -> str | None:
-    """Resolve a paper title (e.g. from a Scholar result) to a PubMed ID."""
+PMID_CACHE = CORPUS.parent / "cache" / "pmid.json"
+
+def pmid_for_title(title: str, offline: bool = False) -> str | None:
+    """Resolve a paper title (e.g. from a Scholar result) to a PubMed ID. Answers are cached for offline replay."""
     t = re.sub(r"[^\w\s-]", " ", title or "").strip()
     if len(t) < 20: return None
+    cache = json.loads(PMID_CACHE.read_text()) if PMID_CACHE.exists() else {}
+    if t in cache: return cache[t]
+    if offline: return None
     r = _session().get("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
                        params={"db": "pubmed", "term": f"{t}[Title]", "retmode": "json", "retmax": 1}, timeout=30)
     if not r.ok: return None
     ids = r.json().get("esearchresult", {}).get("idlist", [])
-    return ids[0] if ids else None
+    cache[t] = ids[0] if ids else None
+    PMID_CACHE.write_text(json.dumps(cache, indent=0))
+    return cache[t]

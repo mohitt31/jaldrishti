@@ -69,3 +69,9 @@ def test_wrong_period_is_rejected():
 def test_named_study_not_in_corpus_abstains():
     r = _engine([ev()]).ask("What fluoride range does the Mondal et al. paper report?")
     assert r["answer_type"] == "insufficient_evidence" and r.get("needs_source") == ["Mondal"]
+
+def test_comparison_with_district_level_item_without_place():
+    evs = [ev(statistic="max", places=[], district=None, spatial_support="district", value_text="2.9", value=2.9, id="a"),
+           ev(places=["Belsula"], source="Dug Well", period="Apr, 2022", value_text="0.14", value=0.14, id="b", row=1)]
+    r = _engine(evs).ask("Can the NAQUIM study maximum and the April 2022 Belsula dug-well value establish a change in district mean fluoride?")
+    assert r["answer_type"] == "not_comparable"

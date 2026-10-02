@@ -77,22 +77,26 @@ class Session:
         if step["engine"] == "google_scholar":
             from .fetch import pmid_for_title
             for r in res[:3]:
-                try: pm = pmid_for_title(r["title"]) if self.live or not self.api.offline else None
+                try: pm = pmid_for_title(r["title"], offline=not self.live)
                 except Exception: pm = None
                 if not pm: continue
                 did = f"pubmed_{pm}"
+                known = next((m for m in self._discovered().values() if m.get("id") == did), None)
                 if did in self.by_id: found.add(did)
+                elif known: found.add(self._use(known))
                 elif self.live:
                     d = self._add(f"https://pubmed.ncbi.nlm.nih.gov/{pm}/", fetched)
                     if d: found.add(d)
-        elif self.live:
+        else:
+            disc = self._discovered()
             for r in res:
                 u = r["pdf"]
                 if not u or not trusted(u) or nurl(u) in self.by_url or not relevant(r, self.contaminant, self.scope + proper_names(self._q)): continue
                 if tries >= self.k: break
                 tries += 1
-                d = self._add(u, fetched)
-                if d: found.add(d)
+                if self.live or u in disc:          # offline replay reuses documents fetched in the live run
+                    d = self._add(u, fetched)
+                    if d: found.add(d)
         return found
     def run(self, question: str, mode: str = "jaldrishti", budget: int = 3) -> dict:
         t0 = time.time()
