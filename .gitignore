@@ -3,7 +3,7 @@ pilot/
 .venv/
 corpus/*.pdf
 corpus/*.xml
-cache/
+cache/index/
 logs/
 scratch_*.py
 __pycache__/
