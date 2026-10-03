@@ -12,6 +12,18 @@ JalDrishti answers a question with the exact number, unit, place, period, docume
 
 [Open the recorded demo](https://mohitt31.github.io/jaldrishti/) — explore all 50 recorded dev, original-test and fresh-holdout answers, including failures. This is a static evidence explorer, not a live query service.
 
+## At a glance
+
+| | Result |
+|---|---|
+| Frozen test (20 Qs, run once) | **12/20 vs 2/20** for Googling the question, with **9 searches instead of 58** |
+| Fresh holdout (new places, written after the v0.2 freeze, run once) | **17/20** (numeric 10/12) |
+| Cited numbers re-found on the cited PDF page | **100 %** in every run |
+| Bad comparisons (different wells, statistics, periods, spatial support) | refused, with the failing checks listed |
+| Reproducible without an API key | every SerpApi response is cached; `jaldrishti eval --offline` |
+
+Known limits, all disclosed below: the holdout audit found two comparisons that scored correct while citing the wrong rows (guarded against in v0.3, post-hoc), and the library does not yet contain the newer Purulia keywell report.
+
 ## Results (v0.1 frozen test split, run once)
 
 20 held-out questions, scored against 60 hand-verified facts. Every mode uses the same reader. Only how sources are found differs.
