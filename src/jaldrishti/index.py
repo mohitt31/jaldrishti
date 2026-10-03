@@ -33,7 +33,8 @@ def build_doc(meta: dict, force=False) -> list[dict]:
     h = sha(pdf)
     if out.exists() and not force:
         d = json.loads(out.read_text())
-        if d.get("sha256") == h: return d["evidence"]
+        if d.get("sha256") == h and (meta.get("format") != "pubmed_xml" or d.get("abstract_version") == 2):
+            return d["evidence"]
     ev = []
     if meta.get("format") == "pubmed_xml":
         from .textfacts import parse_pubmed, text_evidence
@@ -42,20 +43,22 @@ def build_doc(meta: dict, force=False) -> list[dict]:
         ev = text_evidence(meta, info["title"] + ". " + info["abstract"])
     else:
         import pypdfium2 as pdfium
-        pdoc = pdfium.PdfDocument(str(pdf))
-        if not meta.get("period_text"):        # document-level period from the cover pages (e.g. 'Year Book 2015-16')
-            meta["period_text"] = " ".join(pdoc[i].get_textpage().get_text_range()[:800] for i in range(min(3, len(pdoc))))
-        for t in read_tables(str(pdf), meta["id"]):
-            ev.extend(table_evidence(t, meta, pdoc[t.page - 1].get_textpage().get_text_range()))
+        from .pdftext import page_text
+        with pdfium.PdfDocument(str(pdf)) as pdoc:
+            if not meta.get("period_text"):
+                meta["period_text"] = " ".join(page_text(pdoc, i)[:800] for i in range(min(3, len(pdoc))))
+            for t in read_tables(str(pdf), meta["id"]):
+                ev.extend(table_evidence(t, meta, page_text(pdoc, t.page - 1)))
     for e in ev: e.setdefault("id", f"{meta['id']}:{e['page']}:{e['table']}:{e['row']}:{e['col']}")
-    out.write_text(json.dumps({"doc": meta["id"], "sha256": h, "meta": meta, "evidence": ev}))
+    out.write_text(json.dumps({"doc": meta["id"], "sha256": h, "meta": meta, "evidence": ev, "abstract_version": 2}))
     return ev
 
 def load(build=True) -> list[dict]:
     ev = []
     for m in docs():
         f = CACHE / f"{m['id']}.json"
-        if f.exists(): ev.extend(json.loads(f.read_text())["evidence"])
+        if m.get("format") == "pubmed_xml" and build: ev.extend(build_doc(m))
+        elif f.exists(): ev.extend(json.loads(f.read_text())["evidence"])
         elif build: ev.extend(build_doc(m))
     return ev
 

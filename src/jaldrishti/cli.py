@@ -24,9 +24,11 @@ def main(argv=None):
     e = sub.add_parser("eval"); e.add_argument("--split", default="dev", choices=["dev", "test"]); e.add_argument("--modes", default="baseline,library,oracle")
     e.add_argument("--live", action="store_true"); e.add_argument("--offline", action="store_true"); e.add_argument("--budget", type=int, default=3)
     e.add_argument("--i-understand-test-is-final", action="store_true")
+    e.add_argument("--bench", choices=["original", "holdout"], default="original")
     sub.add_parser("index"); sub.add_parser("credits")
     sub.add_parser("restore", help="download every source the recorded runs used (no SerpApi key needed)")
     hv = sub.add_parser("harvest", help="build the West Bengal evidence library with a fixed SerpApi budget"); hv.add_argument("--budget", type=int, default=56)
+    hv.add_argument("--supplement", action="store_true", help="append generic PDF query variants to the existing library")
     ad = sub.add_parser("add-source", help="fetch a PDF or PubMed URL into the corpus"); ad.add_argument("urls", nargs="+")
     args = ap.parse_args(argv)
     if args.cmd == "index":
@@ -56,7 +58,7 @@ def main(argv=None):
     if args.cmd == "harvest":
         from .pipeline import Session
         from .harvest import harvest
-        lib = harvest(Session(live=True), args.budget)
+        lib = harvest(Session(live=True), args.budget, supplement=args.supplement)
         print(f"library: {len(lib['docs'])} documents for {lib['credits']} credits"); return
     if args.cmd == "add-source":
         from .pipeline import Session
@@ -72,14 +74,34 @@ def main(argv=None):
     if args.cmd == "ask":
         r = Session(live=args.live, offline=args.offline).run(args.question, args.mode, args.budget)
         print(json.dumps(r, indent=1, default=str)) if args.json else _print_answer(r); return
+    if args.bench == "holdout":
+        args.split = "holdout"
+    if args.split == "test" and (ROOT / "reports/eval_test.json").exists():
+        sys.exit("Frozen test reports already exist; rerunning the test split is prohibited.")
     if args.split == "test" and not args.i_understand_test_is_final:
         sys.exit("The test split is run once, after the freeze. Re-run with --i-understand-test-is-final.")
     from .evaluate import load_bench, score_one, summarise
-    facts, qs = load_bench(); qs = [q for q in qs if q["split"] == args.split]
+    facts, qs = load_bench(args.bench); qs = [q for q in qs if q["split"] == args.split]
+    if not qs: sys.exit("No questions in selected benchmark split")
+    modes = args.modes.split(",")
+    if not set(modes) <= {"baseline", "library", "oracle", "jaldrishti"}:
+        sys.exit("Unknown evaluation mode")
+    if args.bench == "holdout":
+        import subprocess, hashlib
+        marker = ROOT / "reports/holdout_started.json"
+        marker.parent.mkdir(exist_ok=True)
+        provenance = {"commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
+                      "offline": args.offline, "modes": modes,
+                      "sha256": {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+                                 for p in (ROOT / "benchmark/holdout").glob("*.csv")}}
+        try:
+            with marker.open("x") as f: json.dump(provenance, f, indent=2)
+        except FileExistsError:
+            sys.exit("Holdout already started; this benchmark is run once and cannot be overwritten.")
     S = Session(live=args.live, offline=args.offline)
     out = ROOT / "reports"; out.mkdir(exist_ok=True)
     summary = {"split": args.split, "budget": args.budget, "run_at": time.strftime("%Y-%m-%dT%H:%M:%S%z"), "modes": {}}
-    for mode in args.modes.split(","):
+    for mode in modes:
         rows, runs = [], []
         for q in qs:
             try:

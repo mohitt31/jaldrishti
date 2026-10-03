@@ -10,7 +10,7 @@ JalDrishti answers a question with the exact number, unit, place, period, docume
 
 **Track:** Knowledge & Public Interest
 
-## Results (frozen test split, run once)
+## Results (v0.1 frozen test split, run once)
 
 20 held-out questions, scored against 60 hand-verified facts. Every mode uses the same reader. Only how sources are found differs.
 
@@ -29,11 +29,26 @@ JalDrishti answers a question with the exact number, unit, place, period, docume
 - Q019, Q026: the village names in a paper abstract (Khayrasole, Rajnagar) are not linked as places, so the abstract range is not found. Reader fails in oracle mode too.
 - Library misses: Q012/Q023 (Bhowmick et al. 2015 was not surfaced by Scholar), Q014 (CGWB Year Book 2015–16 not harvested), Q021/Q022 (Purulia aquifer-mapping keywell tables from 2023 not harvested).
 
+## v0.2 status (post-hoc)
+
+The original test results above remain unchanged. v0.2 fixes were selected after the v0.1 error categories were known; they are **post-hoc**, not an improvement measured on the original test set.
+
+| Development split | Baseline | Library | Oracle |
+|---|---:|---:|---:|
+| v0.1 | 3/10 | 9/10 | 10/10 |
+| v0.2 offline replay after supplemental harvest | 3/10 | 9/10 | 10/10 |
+
+Changes: match the entity in count questions; link capitalised abstract place names; resolve an unnamed district before library fallback (at most two searches including resolution); close native PDF handles; add bounded generic PDF harvest templates. Abstract place extraction is a heuristic and records retain study-level spatial support.
+
+A new place-disjoint holdout will be written after the v0.2 freeze commit, committed before execution, and run once. The implementation and benchmark author are the same assistant, so this is not an independently authored blind evaluation. Earlier benchmark content was already in the assistant's conversation history; no test questions were reread for these fixes.
+
+The existing scorer is retained for comparability. Its citation metric checks whether a number occurs on the cited page; it does not independently validate the complete measurement tuple. Numeric matching uses value and document/page (or quote tokens), and does not independently check units. Comparison correctness is scored by answer type, not by a semantic assessment of each reason.
+
 ## How it uses SerpApi
 
-1. **Harvest (56 searches, once).** Generic templates over the 13 districts where arsenic or fluoride is reported (`src/jaldrishti/harvest.py`). Several phrasings per district, because Google is erratic on these queries: the same template returns the CGWB report at rank 1 for Nadia and Wikipedia's *Arsenic* page for Malda. Google results give government PDFs; **Google Scholar** results give papers, which are resolved to PubMed abstracts. Library: 23 documents. No benchmark question text is used.
+1. **Harvest (56 searches, once).** Generic templates over the 13 districts where arsenic or fluoride is reported (`src/jaldrishti/harvest.py`). Several phrasings per district, because Google is erratic on these queries: the same template returns the CGWB report at rank 1 for Nadia and Wikipedia's *Arsenic* page for Malda. Google results give government PDFs; **Google Scholar** results give papers, which are resolved to PubMed abstracts. The v0.1 library contained 23 documents; the post-hoc v0.2 supplement adds 13 completed searches (69 total) and expands it to 27 documents. One additional HTTP attempt failed; the 14-attempt cap stopped the remaining template. No benchmark question text is used.
 2. **Answer from the library** in about a second. No search needed.
-3. **Live fallback (≤ 1 search)** when a question names a source the library lacks. The planner turns question cues into a query: a named study → Scholar with `as_ylo`/`as_yhi`; "Special Drive", "NAQUIM", "ADB" → that publisher via `as_sitesearch`; a village → quoted place name.
+3. **Live fallback (v0.2: ≤ 2 searches including district resolution)** when a question names a source the library lacks. The planner turns question cues into a query: a named study → Scholar with `as_ylo`/`as_yhi`; "Special Drive", "NAQUIM", "ADB" → that publisher via `as_sitesearch`; a village → quoted place name.
 4. **Place → district resolution** (`jaldrishti ask --mode jaldrishti`): one search resolves a village to its district from the knowledge graph and snippets. A name found in two districts (Dhabani: Bankura and Purulia) is kept as `(Bankura OR Purulia)` instead of guessing.
 
 Every response is cached by its request parameters (never the key) and logged in a credit ledger, so all runs above can be replayed without an API key.
@@ -91,7 +106,7 @@ Source PDFs are not redistributed. They are downloaded from the publishers' site
 
 ## AI tools used
 
-As the rules require: Claude (Anthropic) wrote most of the code and ran the experiments under my direction, and ChatGPT helped research the problem and draft the benchmark facts, which were then verified against the source pages. The problem choice, evaluation design and the decisions on what to keep or drop were mine.
+As the rules require: Claude (Anthropic) wrote most of the code and ran the experiments under my direction, and ChatGPT helped research the problem and draft the benchmark facts, which were then verified against the source pages. OpenAI Codex implemented the post-hoc v0.2 fixes, regression tests, evaluation safeguards and holdout tooling; its subsequent benchmark verification and execution are recorded in commits and reports. The problem choice, evaluation design and the decisions on what to keep or drop were mine.
 
 ## Licence
 

@@ -6,7 +6,7 @@ groundwater is reported; they never use benchmark question text.
 from __future__ import annotations
 import json, time
 from .index import ROOT
-from .search import results, trusted, relevant
+from .search import results, trusted, relevant, LiveSearchLimit
 
 ARSENIC_DISTRICTS = ["Nadia", "North 24 Parganas", "South 24 Parganas", "Murshidabad", "Malda", "Hooghly", "Purba Bardhaman", "Howrah"]
 FLUORIDE_DISTRICTS = ["Birbhum", "Bankura", "Purulia", "Dakshin Dinajpur", "Uttar Dinajpur"]
@@ -31,13 +31,24 @@ def queries():
         out += [p[k] for p in per]
     return out
 
-def harvest(session, budget: int = 50, fetch_per_query: int = 4) -> dict:
-    lib = {"built": time.strftime("%Y-%m-%dT%H:%M:%S%z"), "budget": budget, "queries": [], "docs": []}
-    credits, docs = 0, set()
-    for q in queries():
+def supplemental_queries():
+    return [{"engine": "google", "q": "ground water year book West Bengal filetype:pdf"}] + [
+        {"engine": "google", "q": f"aquifer mapping report {district} West Bengal filetype:pdf", "district": district}
+        for district in ARSENIC_DISTRICTS + FLUORIDE_DISTRICTS]
+
+def harvest(session, budget: int = 50, fetch_per_query: int = 4, supplement: bool = False) -> dict:
+    lib = json.loads(LIBRARY.read_text()) if supplement and LIBRARY.exists() else {"queries": [], "docs": [], "credits": 0}
+    previous = lib.get("credits", 0)
+    lib.update({"built": time.strftime("%Y-%m-%dT%H:%M:%S%z"), "budget": budget})
+    credits, docs = 0, set(lib["docs"])
+    for q in (supplemental_queries() if supplement else queries()):
         if credits >= budget: break
         params = {"engine": q["engine"], "q": q["q"]}
-        d = session.api.search(**params)
+        try:
+            d = session.api.search(**params)
+        except LiveSearchLimit:
+            lib["stopped_reason"] = "live request cap reached; partial harvest retained"
+            break
         credits += 0 if d.get("_missing") else 1      # cached responses were paid for once: count them
         res = results(d); fetched, found = [], set()
         session.contaminant = None
@@ -68,6 +79,8 @@ def harvest(session, budget: int = 50, fetch_per_query: int = 4) -> dict:
         docs |= found
         lib["queries"].append({**q, "cached": d.get("_cached", False), "n_results": len(res), "found": sorted(found), "fetched": fetched})
         print(f"[{credits:>3}] {q['engine'][:7]} {q['q'][:70]:70s} found={sorted(found)}", flush=True)
-    lib["docs"] = sorted(docs); lib["credits"] = credits
+        lib["docs"] = sorted(docs); lib["credits"] = previous + credits
+        LIBRARY.write_text(json.dumps(lib, indent=1))
+    lib["docs"] = sorted(docs); lib["credits"] = previous + credits
     LIBRARY.write_text(json.dumps(lib, indent=1))
     return lib

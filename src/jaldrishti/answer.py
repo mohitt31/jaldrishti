@@ -14,6 +14,16 @@ def score(e: dict, m: Mention, q: Query, stat: str | None, meta: dict) -> float 
     if q.contaminant and e["contaminant"] != q.contaminant: return None
     if q.districts and e.get("district") and e["district"] not in q.districts: return None
     s = 0.0
+    if e["statistic"] == "count_exceeding":
+        entities = {"samples": r"\bsamples?\b", "blocks": r"\bblocks?\b",
+                    "habitations": r"\bhabitations?\b", "wells": r"\bwells?\b"}
+        requested = {name for name, pattern in entities.items() if re.search(pattern, norm(m.text))}
+        entity = norm(e.get("entity") or e.get("unit") or "")
+        entity = next((name for name, pattern in entities.items() if re.fullmatch(pattern, entity)), entity)
+        if len(requested) == 1:
+            if entity in entities and entity not in requested:
+                return None
+            s += 4 if entity in requested else -4
     pl = norm(" | ".join(e["places"]))
     hit = [p for p in m.places if re.search(_bound(p), pl)]
     if m.places and not hit: return None

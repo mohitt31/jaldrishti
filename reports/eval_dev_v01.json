@@ -1,7 +1,7 @@
 {
  "split": "dev",
  "budget": 3,
- "run_at": "2026-10-03T05:32:18+0530",
+ "run_at": "2026-10-02T22:44:14+0000",
  "modes": {
   "baseline": {
    "n": 10,
@@ -18,7 +18,7 @@
    "citation_precision": 1.0,
    "citation_recall": 0.16666666666666666,
    "credits": 26,
-   "seconds": 0.8
+   "seconds": 1.0
   },
   "library": {
    "n": 10,
@@ -34,8 +34,8 @@
    "risk": 0.0,
    "citation_precision": 1.0,
    "citation_recall": 1.0,
-   "credits": 5,
-   "seconds": 3.5
+   "credits": 4,
+   "seconds": 4.3
   },
   "oracle": {
    "n": 10,
@@ -52,7 +52,7 @@
    "citation_precision": 1.0,
    "citation_recall": 1.0,
    "credits": 0,
-   "seconds": 1.5
+   "seconds": 2.0
   }
  }
 }

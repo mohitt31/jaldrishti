@@ -14,6 +14,27 @@ WATER = re.compile(r"water|groundwater|tube ?well|aquifer|hand ?pump|drinking", 
 BODY = re.compile(r"saliva|urin|hair|nail|serum|blood|plasma|skin|tissue", re.I)
 OTHER = re.compile(r"\b(manganese|mn|chromium|cr|nickel|ni|lead|pb|iron|fe|zinc|zn|uranium|nitrate|barium|selenium)\b", re.I)
 
+PLACE_STOP = set("""the a an this that these those in from of for to with and or as at by on during
+west bengal india indian groundwater ground water drinking fluoride arsenic hydrogeochemical
+hydrogeochemistry assessment sensitive health hazards hazard concentration concentrations
+high low study studies samples sample ninety mean range regional modified optimal
+monte carlo simulation bland altman friedman dean keywords introduction results conclusion
+calcium magnesium sodium potassium chloride sulfate sulphate phosphate bicarbonate carbonate ca mg na cl fe mn zn cu as
+abstract methods background objective environmental human population total besides notably
+further dissolution geostatistical statistically significance journal copyright springer nature""".split())
+
+def abstract_places(title: str, text: str) -> list[str]:
+    """Conservative capitalisation heuristic; names remain study-level, not well locations."""
+    from .gazetteer import DISTRICTS
+    excluded = PLACE_STOP | {w for d, aliases in DISTRICTS.items()
+                             for name in [d, *aliases] for w in norm(name).split()}
+    names = []
+    for match in re.finditer(r"\b[A-Z][a-z]+(?:[-'][A-Z]?[a-z]+)*\b", title + ". " + text):
+        word = match.group(0)
+        if norm(word) not in excluded and not OTHER.fullmatch(word) and word not in names:
+            names.append(word)
+    return names
+
 def parse_pubmed(xml_bytes: bytes) -> dict:
     root = ET.fromstring(xml_bytes)
     art = root.find(".//Article")
@@ -51,6 +72,9 @@ def text_evidence(doc: dict, text: str) -> list[dict]:
             m = MEAN.search(part)
             if m:
                 out.append(_rec(doc, k, "mean", m.group(1), detect_unit(m.group(3)), con, dists, period, part, sd=m.group(2)))
+    places = abstract_places(doc.get("title", ""), text)
+    for record in out:
+        record["places"] = places.copy()
     return out
 
 def _rec(doc, k, st, v, unit, con, dists, period, sent, sd=None):

@@ -148,7 +148,7 @@
     ]
    }
   },
-  "seconds": 0.17,
+  "seconds": 0.14,
   "score": {
    "id": "Q001",
    "expected": "number_with_source",
@@ -160,7 +160,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 0.17
+   "seconds": 0.14
   }
  },
  {
@@ -330,7 +330,7 @@
     ]
    }
   },
-  "seconds": 0.07,
+  "seconds": 0.06,
   "score": {
    "id": "Q002",
    "expected": "number_with_source",
@@ -342,7 +342,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 0.07
+   "seconds": 0.06
   }
  },
  {
@@ -452,7 +452,7 @@
     ]
    }
   },
-  "seconds": 0.07,
+  "seconds": 0.05,
   "score": {
    "id": "Q003",
    "expected": "number_with_source",
@@ -464,7 +464,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 0.07
+   "seconds": 0.05
   }
  },
  {
@@ -636,7 +636,7 @@
     ]
    }
   },
-  "seconds": 0.07,
+  "seconds": 0.06,
   "score": {
    "id": "Q004",
    "expected": "number_with_source",
@@ -648,7 +648,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 0.07
+   "seconds": 0.06
   }
  },
  {
@@ -766,7 +766,7 @@
     ]
    }
   },
-  "seconds": 0.14,
+  "seconds": 0.18,
   "score": {
    "id": "Q005",
    "expected": "number_with_source",
@@ -778,7 +778,7 @@
    "n_items": 1,
    "unsupported": 0,
    "credits": 1,
-   "seconds": 0.14
+   "seconds": 0.18
   }
  },
  {
@@ -948,7 +948,7 @@
     ]
    }
   },
-  "seconds": 0.08,
+  "seconds": 0.06,
   "score": {
    "id": "Q006",
    "expected": "number_with_source",
@@ -960,7 +960,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 0.08
+   "seconds": 0.06
   }
  },
  {
@@ -1114,7 +1114,7 @@
     ]
    }
   },
-  "seconds": 0.13,
+  "seconds": 0.09,
   "score": {
    "id": "Q007",
    "expected": "not_comparable",
@@ -1126,7 +1126,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 0.13
+   "seconds": 0.09
   }
  },
  {
@@ -1280,7 +1280,7 @@
     ]
    }
   },
-  "seconds": 0.13,
+  "seconds": 0.09,
   "score": {
    "id": "Q008",
    "expected": "not_comparable",
@@ -1292,7 +1292,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 0.13
+   "seconds": 0.09
   }
  },
  {
@@ -1372,7 +1372,7 @@
     ]
    }
   },
-  "seconds": 0.07,
+  "seconds": 0.05,
   "score": {
    "id": "Q009",
    "expected": "insufficient_evidence",
@@ -1384,7 +1384,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 1,
-   "seconds": 0.07
+   "seconds": 0.05
   }
  },
  {
@@ -1523,7 +1523,7 @@
     ]
    }
   },
-  "seconds": 0.08,
+  "seconds": 0.05,
   "score": {
    "id": "Q010",
    "expected": "insufficient_evidence",
@@ -1535,7 +1535,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 3,
-   "seconds": 0.08
+   "seconds": 0.05
   }
  }
 ]

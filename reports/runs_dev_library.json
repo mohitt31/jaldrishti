@@ -74,8 +74,8 @@
     ]
    }
   },
-  "seconds": 2.02,
-  "library_size": 23,
+  "seconds": 1.84,
+  "library_size": 27,
   "score": {
    "id": "Q001",
    "expected": "number_with_source",
@@ -87,7 +87,7 @@
    "n_items": 1,
    "unsupported": 0,
    "credits": 0,
-   "seconds": 2.02
+   "seconds": 1.84
   }
  },
  {
@@ -136,7 +136,7 @@
       470.83876,
       291.02160000000003
      ],
-     "score": 6.2,
+     "score": 10.2,
      "asked": "baduria",
      "page_verified": true
     }
@@ -163,8 +163,8 @@
     ]
    }
   },
-  "seconds": 0.12,
-  "library_size": 23,
+  "seconds": 0.09,
+  "library_size": 27,
   "score": {
    "id": "Q002",
    "expected": "number_with_source",
@@ -176,7 +176,7 @@
    "n_items": 1,
    "unsupported": 0,
    "credits": 0,
-   "seconds": 0.12
+   "seconds": 0.09
   }
  },
  {
@@ -254,8 +254,8 @@
     ]
    }
   },
-  "seconds": 0.13,
-  "library_size": 23,
+  "seconds": 0.1,
+  "library_size": 27,
   "score": {
    "id": "Q003",
    "expected": "number_with_source",
@@ -267,7 +267,7 @@
    "n_items": 1,
    "unsupported": 0,
    "credits": 0,
-   "seconds": 0.13
+   "seconds": 0.1
   }
  },
  {
@@ -384,8 +384,8 @@
     ]
    }
   },
-  "seconds": 0.46,
-  "library_size": 23,
+  "seconds": 0.33,
+  "library_size": 27,
   "score": {
    "id": "Q004",
    "expected": "number_with_source",
@@ -397,7 +397,7 @@
    "n_items": 1,
    "unsupported": 0,
    "credits": 1,
-   "seconds": 0.46
+   "seconds": 0.33
   }
  },
  {
@@ -475,8 +475,8 @@
     ]
    }
   },
-  "seconds": 0.12,
-  "library_size": 23,
+  "seconds": 0.09,
+  "library_size": 27,
   "score": {
    "id": "Q005",
    "expected": "number_with_source",
@@ -488,7 +488,7 @@
    "n_items": 1,
    "unsupported": 0,
    "credits": 0,
-   "seconds": 0.12
+   "seconds": 0.09
   }
  },
  {
@@ -565,7 +565,7 @@
      "value": "0.33",
      "unit": "mg/L",
      "statistic": "range_min",
-     "place": "Birbhum",
+     "place": "Inferring, Most, According",
      "district": "Birbhum",
      "source_type": null,
      "well_id": null,
@@ -590,7 +590,7 @@
      "value": "18.08",
      "unit": "mg/L",
      "statistic": "range_max",
-     "place": "Birbhum",
+     "place": "Inferring, Most, According",
      "district": "Birbhum",
      "source_type": null,
      "well_id": null,
@@ -632,8 +632,8 @@
     ]
    }
   },
-  "seconds": 0.39,
-  "library_size": 23,
+  "seconds": 0.29,
+  "library_size": 27,
   "score": {
    "id": "Q006",
    "expected": "number_with_source",
@@ -645,7 +645,7 @@
    "n_items": 2,
    "unsupported": 0,
    "credits": 1,
-   "seconds": 0.39
+   "seconds": 0.29
   }
  },
  {
@@ -768,8 +768,8 @@
     ]
    }
   },
-  "seconds": 0.25,
-  "library_size": 23,
+  "seconds": 0.17,
+  "library_size": 27,
   "score": {
    "id": "Q007",
    "expected": "not_comparable",
@@ -781,7 +781,7 @@
    "n_items": 2,
    "unsupported": 0,
    "credits": 0,
-   "seconds": 0.25
+   "seconds": 0.17
   }
  },
  {
@@ -790,46 +790,33 @@
   "mode": "library",
   "trace": [
    {
-    "level": 2,
-    "why": "place-level search",
+    "level": 0,
+    "why": "resolve district of 'Dhabani'",
     "engine": "google",
-    "q": "\"Dhabani\" water quality groundwater",
+    "q": "Dhabani West Bengal district",
+    "resolve": "Dhabani",
     "cached": true,
+    "missing_cache": false,
+    "resolved_district": [
+     "Bankura",
+     "Purulia"
+    ],
     "n_results": 9,
     "located": [],
     "fetched": [],
-    "top": [
-     {
-      "rank": 1,
-      "domain": "ocmms.nic.in",
-      "title": "WEST BENGAL POLLUTION CONTROL BOARD Paribesh ...",
-      "pdf": false
-     },
-     {
-      "rank": 2,
-      "domain": "www.justdial.com",
-      "title": "Top 24 Hours Water Suppliers in Arrah, Arrah near me - Justdial",
-      "pdf": false
-     },
-     {
-      "rank": 3,
-      "domain": "www.ondathanamahavidyalaya.in",
-      "title": "Affiliated to Bankura University",
-      "pdf": true
-     },
-     {
-      "rank": 4,
-      "domain": "www.researchgate.net",
-      "title": "A Study in the Lateritic Micro- watersheds of River ...",
-      "pdf": false
-     },
-     {
-      "rank": 5,
-      "domain": "x.com",
-      "title": "CGWB, ER, Kolkata (@CgwbK) / X",
-      "pdf": false
-     }
-    ],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   },
+   {
+    "level": 2,
+    "why": "place-level search",
+    "engine": "google",
+    "q": "\"Dhabani\" water quality groundwater (Bankura OR Purulia)",
+    "cached": false,
+    "n_results": 0,
+    "located": [],
+    "fetched": [],
+    "top": [],
     "answer_type": "insufficient_evidence"
    }
   ],
@@ -886,8 +873,8 @@
     ]
    }
   },
-  "seconds": 0.43,
-  "library_size": 23,
+  "seconds": 0.32,
+  "library_size": 27,
   "score": {
    "id": "Q008",
    "expected": "not_comparable",
@@ -899,7 +886,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 1,
-   "seconds": 0.43
+   "seconds": 0.32
   }
  },
  {
@@ -943,8 +930,8 @@
     ]
    }
   },
-  "seconds": 0.12,
-  "library_size": 23,
+  "seconds": 0.09,
+  "library_size": 27,
   "score": {
    "id": "Q009",
    "expected": "insufficient_evidence",
@@ -956,7 +943,7 @@
    "n_items": 0,
    "unsupported": 0,
    "credits": 0,
-   "seconds": 0.12
+   "seconds": 0.09
   }
  },
  {
@@ -965,13 +952,30 @@
   "mode": "library",
   "trace": [
    {
+    "level": 0,
+    "why": "resolve district of 'Ranjitpara'",
+    "engine": "google",
+    "q": "Ranjitpara West Bengal district",
+    "resolve": "Ranjitpara",
+    "cached": true,
+    "missing_cache": false,
+    "resolved_district": [
+     "Murshidabad"
+    ],
+    "n_results": 9,
+    "located": [],
+    "fetched": [],
+    "top": [],
+    "answer_type": "insufficient_evidence"
+   },
+   {
     "level": 1,
     "why": "source named in question -> cgwb.gov.in",
     "engine": "google",
-    "q": "arsenic \"special drive\" year book",
+    "q": "arsenic Murshidabad \"special drive\" year book",
     "as_sitesearch": "cgwb.gov.in",
     "cached": true,
-    "n_results": 3,
+    "n_results": 2,
     "located": [
      "web_bf185a48acc4"
     ],
@@ -980,17 +984,11 @@
      {
       "rank": 1,
       "domain": "cgwb.gov.in",
-      "title": "CENTRAL GROUND WATER BOARD",
-      "pdf": true
-     },
-     {
-      "rank": 2,
-      "domain": "cgwb.gov.in",
       "title": "central ground water board ministry of water resources",
       "pdf": true
      },
      {
-      "rank": 3,
+      "rank": 2,
       "domain": "cgwb.gov.in",
       "title": "\u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u092d\u0942\u092e\u093f \u091c\u0932 \u092c\u094b\u0930\u094d\u0921 \u091c\u0932 \u0938\u0902\u0938\u093e\u0927\u0928, \u0928\u0926\u0940 \u0935\u093f\u0915\u093e\u0938 \u0914\u0930 \u0917\u0902",
       "pdf": true
@@ -999,7 +997,7 @@
     "answer_type": "insufficient_evidence"
    }
   ],
-  "credits": 1,
+  "credits": 2,
   "located": [
    "adb_49107_006",
    "annual_gwq_2025",
@@ -1070,8 +1068,8 @@
     ]
    }
   },
-  "seconds": 0.27,
-  "library_size": 23,
+  "seconds": 0.21,
+  "library_size": 27,
   "score": {
    "id": "Q010",
    "expected": "insufficient_evidence",
@@ -1082,8 +1080,8 @@
    "gold_doc_exact": null,
    "n_items": 0,
    "unsupported": 0,
-   "credits": 1,
-   "seconds": 0.27
+   "credits": 2,
+   "seconds": 0.21
   }
  }
 ]

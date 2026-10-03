@@ -33,8 +33,17 @@ def crop(item):
     name = f"{item['doc']}_p{item['page']}_{int(bb[1])}.png"
     out = OUT / "crops" / name
     if out.exists(): return name
-    pdf = pdfium.PdfDocument(str(CORPUS / m["file"])); page = pdf[int(item["page"]) - 1]
-    s = 2.0; img = page.render(scale=s).to_pil().convert("RGB")
+    s = 2.0
+    with pdfium.PdfDocument(str(CORPUS / m["file"])) as pdf:
+        page = pdf[int(item["page"]) - 1]
+        try:
+            bitmap = page.render(scale=s)
+            try:
+                img = bitmap.to_pil().convert("RGB")
+            finally:
+                bitmap.close()
+        finally:
+            page.close()
     W, H = img.size; x0, top, x1, bot = [v * s for v in bb]
     d = ImageDraw.Draw(img, "RGBA")
     d.rectangle([x0 - 4, top - 3, x1 + 4, bot + 3], outline=(217, 72, 15, 255), width=4, fill=(255, 200, 0, 60))

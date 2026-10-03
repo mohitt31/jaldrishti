@@ -39,11 +39,13 @@ class Table:
 def tabular_pages(pdf_path: str) -> list[int]:
     """Cheap prefilter: pages with >=4 text lines holding >=3 numbers."""
     import pypdfium2 as pdfium
-    keep, doc = [], pdfium.PdfDocument(pdf_path)
-    for i in range(len(doc)):
-        txt = doc[i].get_textpage().get_text_range()
-        n = sum(1 for l in txt.splitlines() if len(re.findall(r"(?<![\w.])\d[\d,]*(?:\.\d+)?(?![\w])", l)) >= 3)
-        if n >= 4: keep.append(i + 1)
+    from .pdftext import page_text
+    keep = []
+    with pdfium.PdfDocument(pdf_path) as doc:
+        for i in range(len(doc)):
+            txt = page_text(doc, i)
+            n = sum(1 for l in txt.splitlines() if len(re.findall(r"(?<![\w.])\d[\d,]*(?:\.\d+)?(?![\w])", l)) >= 3)
+            if n >= 4: keep.append(i + 1)
     return keep
 
 def _clean(c):

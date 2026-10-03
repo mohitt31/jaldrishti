@@ -465,5 +465,37 @@
   "type": "peer_reviewed",
   "format": "pubmed_xml",
   "title": "https://pubmed.ncbi.nlm.nih.gov/28850835/"
+ },
+ "https://insa.nic.in/writereaddata/UpLoadedFiles/PINSA/PINSA_2019_Art52.pdf": {
+  "id": "web_e0d61a834889",
+  "file": "discovered/web_e0d61a834889.pdf",
+  "url": "https://insa.nic.in/writereaddata/UpLoadedFiles/PINSA/PINSA_2019_Art52.pdf",
+  "type": "web_pdf",
+  "format": "pdf",
+  "title": "https://insa.nic.in/writereaddata/UpLoadedFiles/PINSA/PINSA_2019_Art52.pdf"
+ },
+ "https://documents1.worldbank.org/curated/en/652931582279304162/pdf/Environmental-and-Social-Management-Framework-Environmental-and-Social-Analysis.pdf": {
+  "id": "web_4789e0ceaa1f",
+  "file": "discovered/web_4789e0ceaa1f.pdf",
+  "url": "https://documents1.worldbank.org/curated/en/652931582279304162/pdf/Environmental-and-Social-Management-Framework-Environmental-and-Social-Analysis.pdf",
+  "type": "web_pdf",
+  "format": "pdf",
+  "title": "https://documents1.worldbank.org/curated/en/652931582279304162/pdf/Environmental-and-Social-Management-Framework-Environmental-and-Social-Analysis.pdf"
+ },
+ "https://environmentclearance.nic.in/writereaddata/FormB/agenda/130120226764554142ndMinutesofSEIAA.pdf": {
+  "id": "web_416808addf6d",
+  "file": "discovered/web_416808addf6d.pdf",
+  "url": "https://environmentclearance.nic.in/writereaddata/FormB/agenda/130120226764554142ndMinutesofSEIAA.pdf",
+  "type": "web_pdf",
+  "format": "pdf",
+  "title": "https://environmentclearance.nic.in/writereaddata/FormB/agenda/130120226764554142ndMinutesofSEIAA.pdf"
+ },
+ "https://nmcg.nic.in/writereaddata/fileupload/5_January%20MPR%20for%20Website.pdf": {
+  "id": "web_98b04049424d",
+  "file": "discovered/web_98b04049424d.pdf",
+  "url": "https://nmcg.nic.in/writereaddata/fileupload/5_January%20MPR%20for%20Website.pdf",
+  "type": "web_pdf",
+  "format": "pdf",
+  "title": "https://nmcg.nic.in/writereaddata/fileupload/5_January%20MPR%20for%20Website.pdf"
  }
 }

@@ -102,7 +102,7 @@ class Session:
         t0 = time.time()
         q0 = parse(question, Linker(self.ev)); self.contaminant = q0.contaminant; self._q = question
         if mode == "library":
-            return self.run_library(question, t0, budget=1)
+            return self.run_library(question, t0, budget=min(2, max(0, budget)))
         if mode == "oracle":
             core = {d["id"] for d in docs()}
             ans = Engine([e for e in self.ev if e["doc"] in core], self.by_id).ask(question)
@@ -153,7 +153,7 @@ class Session:
                 meta = next((m for m in self._discovered().values() if m.get("id") == did), None)
                 if meta: self._use(meta)
         return set(lib["docs"])
-    def run_library(self, question: str, t0: float, budget: int = 1) -> dict:
+    def run_library(self, question: str, t0: float, budget: int = 2) -> dict:
         """Answer from the harvested library; spend at most `budget` live searches if a source is missing."""
         libdocs = self.library_docs()
         ans = Engine([e for e in self.ev if e["doc"] in libdocs], self.by_id).ask(question)
@@ -161,7 +161,21 @@ class Session:
         if not satisfied(ans) and budget:
             q0 = parse(question, Linker(self.ev)); self.contaminant = q0.contaminant; self._q = question
             self.scope = list(q0.districts)
-            for st in plan(q0)[:budget]:
+            attempts = 0
+            names = proper_names(question)
+            if names and not q0.districts:
+                st = resolve_district_step(names[0])
+                d = self.api.search(engine="google", q=st["q"])
+                attempts += 1
+                credits += 0 if d.get("_missing") else 1
+                dist = district_from_results(d)
+                trace.append({**st, "cached": d.get("_cached", False), "missing_cache": d.get("_missing", False),
+                              "resolved_district": dist, "n_results": len(results(d)), "located": [], "fetched": [],
+                              "top": [], "answer_type": ans["answer_type"]})
+                if dist:
+                    q0.districts = list(dist)
+                    self.scope = list(dist)
+            for st in plan(q0)[:max(0, budget - attempts)]:
                 params = {"engine": st["engine"], "q": st["q"]}
                 for k in ("as_sitesearch", "as_ylo", "as_yhi"):
                     if st.get(k): params[k] = st[k]

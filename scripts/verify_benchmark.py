@@ -21,9 +21,19 @@ def has_value(txt, v):
 def has_quote(txt, q):
     toks = [t for t in re.findall(r"[\w.]+", norm(q)) if t]
     return bool(toks) and all(t in txt for t in toks)
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument("--bench", choices=["original", "holdout"], default="original")
+args = parser.parse_args()
+base = pathlib.Path("benchmark/holdout") if args.bench == "holdout" else pathlib.Path("benchmark")
+facts_file = base / ("holdout_facts.csv" if args.bench == "holdout" else "jaldrishti_facts.csv")
+registry = json.loads((C / "docs.json").read_text())
+discovered = pathlib.Path("cache/discovered.json")
+if discovered.exists(): registry += list(json.loads(discovered.read_text()).values())
+by_url = {m["url"]: m["file"] for m in registry if m.get("url") and m.get("file")}
 out = []
-for f in csv.DictReader(open("benchmark/jaldrishti_facts.csv", encoding="utf-8")):
-    pdf = next((v for k, v in FILES.items() if k in f["source_url"]), None)
+for f in csv.DictReader(open(facts_file, encoding="utf-8")):
+    pdf = by_url.get(f["source_url"]) or next((v for k, v in FILES.items() if k in f["source_url"]), None)
     row = {"id": f["fact_id"], "dist": f["district"], "val": f["value"], "page": f["pdf_page_number"]}
     if not pdf: row["status"] = "EXTERNAL"; out.append(row); continue
     p = int(f["pdf_page_number"]); t = norm(page(pdf, p))
@@ -40,8 +50,13 @@ for f in csv.DictReader(open("benchmark/jaldrishti_facts.csv", encoding="utf-8")
         lines = [norm(l) for l in page(pdf, p).splitlines()]
         row["row_match"] = any(has_value(l, f["value"]) and any(w in l for w in labels) for l in lines)
     out.append(row)
-json.dump(out, open("benchmark/verification.json", "w"), indent=1)
+json.dump(out, open(base / "verification.json", "w"), indent=1)
 from collections import Counter
 print(Counter(r["status"].rstrip("+-0123456789") if r["status"].startswith("OFFSET") else r["status"] for r in out))
 for r in out:
     if r["status"] not in ("EXACT", "EXTERNAL") or r.get("row_match") is False: print(r)
+
+if args.bench == "holdout":
+    exact = sum(r["status"] == "EXACT" for r in out)
+    print(f"Holdout found: {exact}/{len(out)} ({100 * exact / len(out):.1f}%)")
+    if not out or exact != len(out): sys.exit(1)

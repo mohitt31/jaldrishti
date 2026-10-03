@@ -41,3 +41,50 @@ citation recall (gold facts recovered), after ALCE (Gao et al. 2023).
 
 Known limitation: the author of the system had read all 30 question texts while building it (only the
 10 dev questions were run). The test split is run once with `--i-understand-test-is-final`.
+
+## Amendment 2 (v0.2; post-hoc fixes, before creation of a fresh holdout)
+
+The v0.1 test results on commit 04b029f remain immutable. Neither the old test evaluator nor its
+reports are rerun or edited. The v0.1 error categories motivated these post-hoc changes:
+
+1. Count-answer selection matches the entity requested (samples, blocks, habitations or wells),
+   rejects known mismatches, and ranks unknown entities below matches.
+2. Abstract extraction links capitalised place tokens from titles and sentences, excluding
+   district/geographic stop words and chemical/research vocabulary. Abstract records remain
+   study-level evidence. The abstract cache is versioned so old records are refreshed.
+3. Library fallback resolves an unnamed district using the existing search-result voting before
+   planning. Supported ambiguity is retained as OR. Resolution and retrieval together use at
+   most two searches; an offline cache miss still consumes an attempt from that cap.
+4. Native PDF documents, pages, text handles and site-rendering bitmaps are explicitly closed,
+   including exception paths.
+5. Supplemental harvest appends one state-level yearbook PDF query and one aquifer-mapping PDF
+   query per existing district (14 generic templates), retains the original library and checkpoints
+   progress. No benchmark question text or place names determine these queries.
+6. A per-session live HTTP-attempt limit includes retries and allows cached replay after the limit.
+7. Package version becomes 0.2.0. Synthetic unit tests cover the changes. The old dev summary is
+   preserved as reports/eval_dev_v01.json; new dev results are explicitly post-hoc.
+8. Benchmark selection (--bench holdout), source-registry-aware verification (--bench holdout),
+   an exclusive holdout-start marker recording commit and input hashes, and a guard against
+   overwriting the existing test evaluation are implemented before the freeze.
+
+After this commit, a NEW holdout set will be created from actual pages of documents already in
+the library or core corpus. It will exclude every location in the original 60-fact CSV. It contains
+20 questions: 12 number_with_source, 5 not_comparable, 3 insufficient_evidence. The source pages
+will be visually checked; the page verifier must find every holdout fact. Questions and facts will
+be committed and pushed BEFORE running the holdout exactly once, with library and oracle modes.
+Baseline is omitted unless at least 60 remaining credits can be established. Evaluation will use
+offline cached replay to preserve the remaining student budget; uncached retrieval is unavailable
+and must be reported as such. No answer-engine or scoring tuning is allowed after holdout creation.
+
+The existing scoring functions are unchanged. Limitations: numeric matching checks value and
+source/page or quote tokens but does not independently check units; citation precision checks the
+presence of the number on the page, not the complete measurement tuple; comparison scoring checks
+answer type, not semantic validity of its reason. All new holdout facts will therefore retain source
+and location provenance for inspection. This is place-disjoint, not source-disjoint or independently
+blinded: the same assistant implements and authors the holdout. The original benchmark was already
+in its conversation history, although test questions were not reread to design these fixes.
+
+Freeze checks: 27 unit tests pass. Offline dev remains baseline 3/10, library 9/10, oracle 10/10.
+The supplement completed 13 new queries (13 ledger credits, 14 HTTP attempts) before its request
+cap, giving 27 library documents and 69 total harvest search credits. The four original test report
+files have unchanged SHA-256 hashes.

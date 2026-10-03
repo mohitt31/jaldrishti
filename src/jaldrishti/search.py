@@ -15,6 +15,9 @@ ENDPOINT = "https://serpapi.com/search.json"
 TRUSTED = ("gov.in", "nic.in", "adb.org", "worldbank.org", "who.int", "unicef.org", "ncbi.nlm.nih.gov",
            "sciencedirect.com", "springer.com", "wiley.com", "tandfonline.com", "mdpi.com", "nature.com")
 
+class LiveSearchLimit(RuntimeError):
+    """The caller's explicit live-request cap has been reached."""
+
 def api_key():
     k = os.environ.get("SERPAPI_KEY")
     if k: return k
@@ -27,6 +30,8 @@ def api_key():
 class SerpApi:
     def __init__(self, offline: bool = False):
         self.offline = offline
+        self.live_attempts = 0
+        self.max_live_searches = int(os.environ["SERPAPI_MAX_LIVE_SEARCHES"]) if "SERPAPI_MAX_LIVE_SEARCHES" in os.environ else None
         CACHE.mkdir(parents=True, exist_ok=True)
     @staticmethod
     def key_of(params: dict) -> str:
@@ -44,6 +49,9 @@ class SerpApi:
         if not key: raise RuntimeError("SERPAPI_KEY not set (env or .env)")
         t = time.time()
         for attempt in range(3):
+            if self.max_live_searches is not None and self.live_attempts >= self.max_live_searches:
+                raise LiveSearchLimit("Session live-search limit reached; cached replay remains available")
+            self.live_attempts += 1
             try:
                 r = requests.get(ENDPOINT, params={**params, "api_key": key}, timeout=90)
                 r.raise_for_status(); break

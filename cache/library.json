@@ -1,6 +1,6 @@
 {
- "built": "2026-10-03T04:10:16+0530",
- "budget": 56,
+ "built": "2026-10-03T05:28:39+0530",
+ "budget": 14,
  "queries": [
   {
    "engine": "google",
@@ -658,6 +658,172 @@
    "n_results": 10,
    "found": [],
    "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "ground water year book West Bengal filetype:pdf",
+   "cached": false,
+   "n_results": 9,
+   "found": [
+    "web_cabfc52ee8dc",
+    "web_e0d61a834889"
+   ],
+   "fetched": [
+    {
+     "url": "https://nihroorkee.gov.in/studies_2014-2025/109-Integrated%20study%20on%20GW%20dynamics_WEST%20BENGAL_PDS_Sudhir.pdf",
+     "reused": "web_cabfc52ee8dc"
+    },
+    {
+     "url": "https://insa.nic.in/writereaddata/UpLoadedFiles/PINSA/PINSA_2019_Art52.pdf",
+     "new_doc": "web_e0d61a834889"
+    }
+   ]
+  },
+  {
+   "engine": "google",
+   "q": "aquifer mapping report Nadia West Bengal filetype:pdf",
+   "district": "Nadia",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "aquifer mapping report North 24 Parganas West Bengal filetype:pdf",
+   "district": "North 24 Parganas",
+   "cached": false,
+   "n_results": 10,
+   "found": [],
+   "fetched": [
+    {
+     "url": "https://www.adb.org/sites/default/files/project-documents/49107/49107-006-iee-en_57.pdf",
+     "error": "403 Client Error: Forbidden for url: https://www.adb.org/sites/default/files/project-documents/49107/49107-006-iee-en_57"
+    }
+   ]
+  },
+  {
+   "engine": "google",
+   "q": "aquifer mapping report South 24 Parganas West Bengal filetype:pdf",
+   "district": "South 24 Parganas",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "aquifer mapping report Murshidabad West Bengal filetype:pdf",
+   "district": "Murshidabad",
+   "cached": false,
+   "n_results": 10,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "aquifer mapping report Malda West Bengal filetype:pdf",
+   "district": "Malda",
+   "cached": false,
+   "n_results": 10,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "aquifer mapping report Hooghly West Bengal filetype:pdf",
+   "district": "Hooghly",
+   "cached": false,
+   "n_results": 10,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "aquifer mapping report Purba Bardhaman West Bengal filetype:pdf",
+   "district": "Purba Bardhaman",
+   "cached": false,
+   "n_results": 10,
+   "found": [
+    "web_4789e0ceaa1f"
+   ],
+   "fetched": [
+    {
+     "url": "https://documents1.worldbank.org/curated/en/652931582279304162/pdf/Environmental-and-Social-Management-Framework-Environmental-and-Social-Analysis.pdf",
+     "new_doc": "web_4789e0ceaa1f"
+    }
+   ]
+  },
+  {
+   "engine": "google",
+   "q": "aquifer mapping report Howrah West Bengal filetype:pdf",
+   "district": "Howrah",
+   "cached": false,
+   "n_results": 10,
+   "found": [
+    "web_416808addf6d",
+    "web_98b04049424d"
+   ],
+   "fetched": [
+    {
+     "url": "https://www.adb.org/sites/default/files/project-documents/49107/49107-006-iee-en_57.pdf",
+     "error": "403 Client Error: Forbidden for url: https://www.adb.org/sites/default/files/project-documents/49107/49107-006-iee-en_57"
+    },
+    {
+     "url": "https://environmentclearance.nic.in/writereaddata/FormB/agenda/130120226764554142ndMinutesofSEIAA.pdf",
+     "new_doc": "web_416808addf6d"
+    },
+    {
+     "url": "https://nmcg.nic.in/writereaddata/fileupload/5_January%20MPR%20for%20Website.pdf",
+     "new_doc": "web_98b04049424d"
+    }
+   ]
+  },
+  {
+   "engine": "google",
+   "q": "aquifer mapping report Birbhum West Bengal filetype:pdf",
+   "district": "Birbhum",
+   "cached": false,
+   "n_results": 10,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "aquifer mapping report Bankura West Bengal filetype:pdf",
+   "district": "Bankura",
+   "cached": false,
+   "n_results": 9,
+   "found": [],
+   "fetched": []
+  },
+  {
+   "engine": "google",
+   "q": "aquifer mapping report Purulia West Bengal filetype:pdf",
+   "district": "Purulia",
+   "cached": false,
+   "n_results": 10,
+   "found": [],
+   "fetched": [
+    {
+     "url": "https://www.wbpcb.gov.in/writereaddata/files/90_annex_2.pdf",
+     "error": "HTTPSConnectionPool(host='www.wbpcb.gov.in', port=443): Max retries exceeded with url: /writereaddata/files/90_annex_2.p"
+    }
+   ]
+  },
+  {
+   "engine": "google",
+   "q": "aquifer mapping report Dakshin Dinajpur West Bengal filetype:pdf",
+   "district": "Dakshin Dinajpur",
+   "cached": false,
+   "n_results": 10,
+   "found": [],
+   "fetched": [
+    {
+     "url": "https://www.adb.org/sites/default/files/project-documents//ind-trans-connect-seia.pdf",
+     "error": "403 Client Error: Forbidden for url: https://www.adb.org/sites/default/files/project-documents//ind-trans-connect-seia.p"
+    }
+   ]
   }
  ],
  "docs": [
@@ -679,11 +845,21 @@
   "pubmed_30963366",
   "pubmed_37442929",
   "web_38c724236c24",
+  "web_416808addf6d",
+  "web_4789e0ceaa1f",
   "web_61fb1257af8e",
+  "web_98b04049424d",
   "web_a57110423daa",
   "web_cabfc52ee8dc",
   "web_cc9c5b60f02a",
-  "web_ddadb2a1f246"
+  "web_ddadb2a1f246",
+  "web_e0d61a834889"
  ],
- "credits": 56
+ "credits": 69,
+ "v02_supplement": {
+  "completed_queries": 13,
+  "live_request_attempts": 14,
+  "ledger_credits_added": 13,
+  "stopped_reason": "request-attempt cap after one unsuccessful attempt; final template not completed"
+ }
 }

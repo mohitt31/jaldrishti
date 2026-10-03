@@ -6,8 +6,9 @@ from .index import CORPUS
 @functools.lru_cache(maxsize=512)
 def page_text(file: str, page: int) -> str:
     import pypdfium2 as pdfium
-    doc = pdfium.PdfDocument(str(CORPUS / file))
-    return doc[page - 1].get_textpage().get_text_range()
+    from .pdftext import page_text as read_page
+    with pdfium.PdfDocument(str(CORPUS / file)) as doc:
+        return read_page(doc, page - 1)
 
 def _n(s): return re.sub(r"(?<=\d),(?=\d{3})", "", s or "")
 

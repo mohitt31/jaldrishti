@@ -3,9 +3,12 @@ from __future__ import annotations
 import csv, json, pathlib
 from .index import ROOT, docs
 
-def load_bench():
-    facts = {f["fact_id"]: f for f in csv.DictReader(open(ROOT / "benchmark/jaldrishti_facts.csv", encoding="utf-8"))}
-    qs = list(csv.DictReader(open(ROOT / "benchmark/jaldrishti_questions.csv", encoding="utf-8")))
+def load_bench(bench="original"):
+    if bench not in ("original", "holdout"):
+        raise ValueError("Unknown benchmark")
+    base, prefix = (ROOT / "benchmark/holdout", "holdout") if bench == "holdout" else (ROOT / "benchmark", "jaldrishti")
+    facts = {f["fact_id"]: f for f in csv.DictReader(open(base / f"{prefix}_facts.csv", encoding="utf-8"))}
+    qs = list(csv.DictReader(open(base / f"{prefix}_questions.csv", encoding="utf-8")))
     return facts, qs
 
 def _num(x):
