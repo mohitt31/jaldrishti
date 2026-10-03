@@ -1,0 +1,21 @@
+question_id,split,district,contaminant,question,expected_answer_type,supporting_fact_ids
+HQ01,holdout,Nadia,arsenic,What arsenic concentration in ppb is listed for Darapur in Nadia in Table 25 of the Annual Ground Water Quality Report 2025?,number_with_source,H001
+HQ02,holdout,Nadia,arsenic,What arsenic concentration in ppb is listed for Mitrapur in Nadia in Table 25 of the Annual Ground Water Quality Report 2025?,number_with_source,H002
+HQ03,holdout,North 24 Parganas,arsenic,How many samples from Amdanga in North 24 Parganas exceeded 10 µg/L arsenic in the ADB Table 4 IMIS 2014–2017 summary?,number_with_source,H003
+HQ04,holdout,North 24 Parganas,arsenic,How many samples from Bagda in North 24 Parganas exceeded 10 µg/L arsenic in the ADB Table 4 IMIS 2014–2017 summary?,number_with_source,H004
+HQ05,holdout,Murshidabad,fluoride,"What fluoride concentration was measured at the kanchangaria dug well in Murshidabad in Apr, 2022, in Annexure I of Ground Water Quality of West Bengal?",number_with_source,H005
+HQ06,holdout,Malda,fluoride,"What fluoride concentration was measured at the Muchia dug well in Malda in Apr, 2022, in Annexure I of Ground Water Quality of West Bengal?",number_with_source,H006
+HQ07,holdout,South 24 Parganas,fluoride,"What fluoride concentration was measured at the Amtala dug well in South 24 Parganas in Apr, 2022, in Annexure I of Ground Water Quality of West Bengal?",number_with_source,H007
+HQ08,holdout,Birbhum,fluoride,"What fluoride concentration was measured at the Barjal dug well in Birbhum in Apr, 2022, in Annexure I of Ground Water Quality of West Bengal?",number_with_source,H008
+HQ09,holdout,Bankura,fluoride,"What fluoride concentration was measured at the Benajira dug well in Bankura in Apr, 2022, in Annexure I of Ground Water Quality of West Bengal?",number_with_source,H009
+HQ10,holdout,Bankura,fluoride,"What fluoride concentration was measured at the Bhabaganpur dug well in Bankura in Apr, 2022, in Annexure I of Ground Water Quality of West Bengal?",number_with_source,H010
+HQ11,holdout,Purulia,fluoride,"What fluoride concentration is listed for the Markabera TW, well ID WBPR_7, sampled 04-06-2023 in Purulia Annexure V?",number_with_source,H011
+HQ12,holdout,Purulia,fluoride,"What fluoride concentration is listed for the Markabera DW, well ID WBPR_8, sampled 04-06-2023 in Purulia Annexure V?",number_with_source,H012
+HQ13,holdout,Nadia,arsenic,Can the Darapur and Mitrapur arsenic concentrations in the 2025 report be treated as before-and-after measurements of the same Nadia well to establish a decline?,not_comparable,H001;H002
+HQ14,holdout,North 24 Parganas,arsenic,Can the Amdanga arsenic count of affected habitations and the count of samples above 10 µg/L in ADB Table 4 be treated as the same statistic?,not_comparable,H003;H014
+HQ15,holdout,Bankura,fluoride,"Can the Benajira and Bhabaganpur fluoride values from Apr, 2022 establish a before-and-after improvement at one Bankura well?",not_comparable,H009;H010
+HQ16,holdout,Purulia,fluoride,Can Markabera TW WBPR_7 and DW WBPR_8 fluoride values on 04-06-2023 be treated as repeated measurements of the same Purulia well?,not_comparable,H011;H012
+HQ17,holdout,South 24 Parganas,fluoride,"Can the Amtala shallow dug-well fluoride value and Ramnagar deeper tube-well fluoride value from Apr, 2022 establish a temporal decline at one South 24 Parganas well?",not_comparable,H007;H013
+HQ18,holdout,Nadia,arsenic,"Using the frozen corpus only, what was the arsenic concentration at Darapur in Nadia on 2 October 2026?",insufficient_evidence,
+HQ19,holdout,North 24 Parganas,arsenic,"Using only ADB Table 4, what was the arithmetic mean arsenic concentration in µg/L across all samples tested in Amdanga, North 24 Parganas?",insufficient_evidence,
+HQ20,holdout,Purulia,arsenic,"Using only Annexure V of the Purulia Aquifer Management Plan, what arsenic concentration was measured at Markabera DW WBPR_8 on 04-06-2023?",insufficient_evidence,

@@ -1,0 +1,124 @@
+{
+  "protocol_commit": "e28db336da08f9c23d213c4b91fbf9c49db1bf5b",
+  "authoring_started_after_freeze": true,
+  "author": "Codex, with no independent external annotator",
+  "selection": "Source-page-first purposive selection of legible new named locations covering all eight districts; selected from actual PDF rows, not system predictions. Four existing core sources; place-disjoint, not source-disjoint. No engine/scorer changes or trial holdout inference during authoring.",
+  "n_facts": 14,
+  "n_questions": 20,
+  "expected_types": {
+    "number_with_source": 12,
+    "not_comparable": 5,
+    "insufficient_evidence": 3
+  },
+  "source_sha256": {
+    "annual_gwq_2025.pdf": "fda3d8f0ec9f3c285c77d89907b5770319789070aa362552ba953f8ef167f16b",
+    "gwq_west_bengal.pdf": "47f32a59b20f482c3c207311eb5ff4e2f432d47923c0182d1ca0843d5e621c64",
+    "amp_purulia.pdf": "dbc971e44dde0281bcf12aac90ccf7042c2db9daf6a86d4e52305e35331fc561",
+    "adb_49107-006-sd-01.pdf": "a0c11c83ed18b071a3dfb5f39c7f7e2c4a3815c0fd5af7978553950b151ac54e"
+  },
+  "csv_sha256": {
+    "holdout_facts.csv": "164c2a50d8be393a7e20f6f76bc0237030bfb2f885479f54e2d5a3204b91b484",
+    "holdout_questions.csv": "8a8199d0a9bb96ff489ebb4d1f5d3fb4277205d6b9ed1f4365068b358bff0240"
+  },
+  "excluded_place_count": 48,
+  "manual_pdf_checks": [
+    {
+      "facts": [
+        "H001",
+        "H002"
+      ],
+      "file": "annual_gwq_2025.pdf",
+      "pdf_page": 104,
+      "printed_page": "80",
+      "header": "As (ppb), Table 25 continuing from PDF 103; row 16 Deep HP and row 17 Hand Pump; no row sampling date stated; sampling UNKNOWN."
+    },
+    {
+      "facts": [
+        "H003",
+        "H004",
+        "H014"
+      ],
+      "file": "adb_49107-006-sd-01.pdf",
+      "pdf_page": 8,
+      "printed_page": "8",
+      "header": "Table 4, No. samples with arsenic >10 µg/L vs No. habitations affected by arsenic (>10 µg/L); IMIS 2014–2017; publication year not established from PDF and left UNKNOWN."
+    },
+    {
+      "facts": [
+        "H005",
+        "H006"
+      ],
+      "file": "gwq_west_bengal.pdf",
+      "pdf_page": 101,
+      "printed_page": "94",
+      "header": "Annexure I header on PDF 90: F mg/L, shallow/unconfined, Apr, 2022. Rows kanchangaria and Muchia; F third numeric column from right."
+    },
+    {
+      "facts": [
+        "H007"
+      ],
+      "file": "gwq_west_bengal.pdf",
+      "pdf_page": 107,
+      "printed_page": "100",
+      "header": "Same Annexure I header PDF 90, row Amtala Dug Well; F 0.22, not adjacent Fe 1.62."
+    },
+    {
+      "facts": [
+        "H008"
+      ],
+      "file": "gwq_west_bengal.pdf",
+      "pdf_page": 94,
+      "printed_page": "87",
+      "header": "Same Annexure I header PDF 90, Barjal Dug Well, F 0.39."
+    },
+    {
+      "facts": [
+        "H009",
+        "H010"
+      ],
+      "file": "gwq_west_bengal.pdf",
+      "pdf_page": 91,
+      "printed_page": "84",
+      "header": "Same Annexure I header PDF 90, Benajira and Bhabaganpur Dug Well rows; F 0.29 and 0.02."
+    },
+    {
+      "facts": [
+        "H011",
+        "H012"
+      ],
+      "file": "amp_purulia.pdf",
+      "pdf_page": 183,
+      "printed_page": "not printed on cited page",
+      "header": "Annexure V, F- mg/l: Markabera TW WBPR_7 0.08 and DW WBPR_8 0.31; both 04-06-2023. Publication 2024 verified on PDF 2 and dated foreword PDF 6. Quotes retain contiguous numeric cells; well identity and F column visually checked separately."
+    },
+    {
+      "facts": [
+        "H013"
+      ],
+      "file": "gwq_west_bengal.pdf",
+      "pdf_page": 124,
+      "printed_page": "117",
+      "header": "Annexure II header PDF 109: deeper/confined, F mg/L, Apr, 2022; Ramnagar Tube Well 0.18. Publication December 2023 on cover."
+    }
+  ],
+  "insufficient_evidence_rationales": {
+    "HQ18": "The frozen sources cannot establish a site measurement on 2 October 2026; H001 is a report value, not that dated observation.",
+    "HQ19": "Table 4 gives counts and exceedance percentages, not sample concentrations or their arithmetic mean.",
+    "HQ20": "Annexure V gives basic chemical parameters including fluoride but has no arsenic column. Scope is explicitly this annexure; no global absence claim."
+  },
+  "not_comparable_rationales": {
+    "HQ13": "Different locations and source types; no established time ordering or repeated-well identity.",
+    "HQ14": "Samples and habitations are different counting entities.",
+    "HQ15": "Different locations sampled in the same stated period, not a before/after pair.",
+    "HQ16": "Distinct TW and DW well IDs; same sampling date does not make them repeated measurements of one well.",
+    "HQ17": "Different locations and aquifer/source classes in the same period cannot establish a temporal decline."
+  },
+  "limitations": [
+    "Convenience sample, not randomized or source-disjoint.",
+    "Same assistant implemented fixes and authored holdout; not independently blind. Prior conversation contained original benchmark material.",
+    "Numeric questions name source/annexure and many share a template; tests precise lookup more than open-ended search.",
+    "Comparison and abstention tasks have explicit scope and are not a representative user sample.",
+    "Existing scorer only checks comparison answer type and numeric value/page, not the full semantic tuple; PDF verification is separate.",
+    "No source page used here is image-only; all provide extractable text."
+  ]
+}

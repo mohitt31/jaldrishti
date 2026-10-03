@@ -1,0 +1,114 @@
+[
+ {
+  "id": "H001",
+  "dist": "Nadia",
+  "val": "61.9",
+  "page": "104",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "H002",
+  "dist": "Nadia",
+  "val": "16.5",
+  "page": "104",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "H003",
+  "dist": "North 24 Parganas",
+  "val": "205",
+  "page": "8",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "H004",
+  "dist": "North 24 Parganas",
+  "val": "434",
+  "page": "8",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "H005",
+  "dist": "Murshidabad",
+  "val": "0.33",
+  "page": "101",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "H006",
+  "dist": "Malda",
+  "val": "0.29",
+  "page": "101",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "H007",
+  "dist": "South 24 Parganas",
+  "val": "0.22",
+  "page": "107",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "H008",
+  "dist": "Birbhum",
+  "val": "0.39",
+  "page": "94",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "H009",
+  "dist": "Bankura",
+  "val": "0.29",
+  "page": "91",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "H010",
+  "dist": "Bankura",
+  "val": "0.02",
+  "page": "91",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "H011",
+  "dist": "Purulia",
+  "val": "0.08",
+  "page": "183",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "H012",
+  "dist": "Purulia",
+  "val": "0.31",
+  "page": "183",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "H013",
+  "dist": "South 24 Parganas",
+  "val": "0.18",
+  "page": "124",
+  "status": "EXACT",
+  "row_match": true
+ },
+ {
+  "id": "H014",
+  "dist": "North 24 Parganas",
+  "val": "58",
+  "page": "8",
+  "status": "EXACT",
+  "row_match": true
+ }
+]
