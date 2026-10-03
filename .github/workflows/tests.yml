@@ -21,3 +21,32 @@ jobs:
           assert len(glob.glob("cache/serpapi/*.json")) > 0
           print("ok:", len(facts), "facts,", len(qs), "questions")
           PY
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: "22"}
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Install browser checker
+        run: |
+          npm install --prefix "$RUNNER_TEMP/browser" playwright@1.62.1
+          "$RUNNER_TEMP/browser/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Check desktop/mobile Python parity and site interactions
+        env:
+          BROWSER_CHANNEL: chromium
+          QA_OUTPUT: reports/browser_release/ci_browser_qa.json
+          SCREENSHOT_DIR: work/ci-screenshots
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 --directory docs > "$RUNNER_TEMP/jaldrishti-site.log" 2>&1 &
+          export NODE_PATH="$RUNNER_TEMP/browser/node_modules"
+          node scripts/check_browser.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-engineering-checks
+          path: |
+            reports/browser_release/ci_browser_qa.json
+            work/ci-screenshots

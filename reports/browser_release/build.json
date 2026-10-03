@@ -1,0 +1,19 @@
+{
+  "label": "post-hoc engineering build; not an accuracy evaluation",
+  "evidence_records": 4007,
+  "documents": 34,
+  "verified_rows": 3994,
+  "verified_page_or_abstract": 13,
+  "unverified": 0,
+  "credits_used": 0,
+  "sizes_bytes": {
+    "evidence.json.gz": 308786,
+    "engine.zip": 13340,
+    "map.json": 55429
+  },
+  "sha256": {
+    "evidence.json.gz": "da58ae5f95cedd39d38fb1f5a995df1b494d2b3a41318cc79b602eff286c7f0f",
+    "engine.zip": "4efbe50a7871926a8ee10db4b4302d28200d02fd4c15fc1a3b06b791f581f58f"
+  },
+  "map_method": "Counts are indexed evidence records, not independent samples. Maxima are the largest finite nonnegative verified concentration value, including summary statistics; counts, percentages and non-detects excluded. No pooling or district-risk inference."
+}

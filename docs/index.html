@@ -37,6 +37,8 @@ table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:7px 8px;b
 details summary{cursor:pointer;color:var(--acc)}footer{margin:40px 0;color:var(--mute);font-size:13px}
 @media (max-width:860px){.grid{grid-template-columns:1fr}.ex{grid-template-columns:1fr}.list{max-height:320px}}
 </style>
+<link rel="stylesheet" href="ask/style.css">
+<script type="module" src="ask/app.js"></script>
 </head>
 <body>
 <header><div class="wrap">
@@ -45,6 +47,25 @@ details summary{cursor:pointer;color:var(--acc)}footer{margin:40px 0;color:var(-
   <span class="warn">Not a household safety tool: a survey value says nothing about your own tube well today.</span>
 </div></header>
 <main class="wrap">
+<section class="ask-panel" id="ask" aria-labelledby="ask-title">
+  <div class="eyebrow">Read the evidence. Question the comparison.</div>
+  <h2 id="ask-title">Ask JalDrishti</h2>
+  <p>Run the real Python reader in your browser. Search the existing SerpApi-discovered evidence library, inspect a source row, or learn why a comparison does not hold.</p>
+  <form id="ask-form"><label for="ask-question">Your question · English / हिन्दी / বাংলা</label><div class="ask-line"><input id="ask-question" required maxlength="2000" placeholder="What fluoride was reported at Amtala in April 2022?" autocomplete="off"><button type="submit" id="ask-submit">Ask →</button></div>
+  <div class="ask-controls"><label for="ask-scope">Evidence scope</label><select id="ask-scope"><option value="library">SerpApi-discovered library</option><option value="reference">Library + curated reference reports</option></select></div></form>
+  <div class="ask-examples" id="ask-examples" aria-label="Example questions"></div>
+  <p class="sub">Python loads on your first question. No server, API key or new web search. The curated-reference option adds sources supplied separately; those are not claimed as SerpApi discoveries. Hindi/Bengali use a small dictionary; village spellings stay as typed.</p>
+  <div id="ask-status" role="status" aria-live="polite">Ready to load Python when you ask.</div>
+  <div id="ask-answer" class="ask-answer" aria-live="polite"></div>
+</section>
+<section class="map-panel" id="map" aria-labelledby="map-title">
+  <h2 id="map-title">Where do we have evidence?</h2>
+  <p class="map-warning">Highest value reported across different surveys and years. Not a risk map; not comparable across districts.</p>
+  <div class="map-layout"><div class="map-frame"><svg id="district-map" role="group" aria-label="West Bengal district evidence coverage"></svg><div class="map-legend"><span><i style="background:#faf9fc"></i>0</span><span><i style="background:#ddd4ee"></i>1–2</span><span><i style="background:#b6a1d2"></i>3–5</span><span><i style="background:#81669f"></i>6+</span><span>indexed documents · not contamination</span></div><label for="district-select">Select a district (also available by keyboard)</label><select id="district-select"></select><p class="map-note">Boundary vintage: 2021. Simplified for display; not for administrative decisions.</p></div>
+  <div><h3 id="district-heading">District evidence</h3><div id="district-counts" class="map-counts"></div><div id="district-max" class="map-max"></div><p class="sub">Counts are indexed records, not independent samples. Maxima include site values and summary statistics from different surveys. Duplicate or overlapping surveys may occur. A missing record says nothing about safety.</p><div id="district-evidence" class="district-list">Loading map…</div></div></div>
+  <p class="map-note">Boundaries: <a href="https://www.geoboundaries.org/api/current/gbOpen/IND/ADM2/">geoBoundaries IND ADM2</a>, Pathways Data Pvt. Ltd. / lgdirectory.gov.in, represented year 2021. This boundary extract is distributed under <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a>; <a href="ask/boundary-source.json">source, licence and transformation</a>. Evidence and boundary data have separate provenance.</p>
+</section>
+
   <h2>v0.1 original test: 20 questions, frozen</h2>
   <div class="grid" id="cards"></div>
   <h2>v0.2 fresh-location holdout: 20 questions, run once</h2>
@@ -55,7 +76,7 @@ details summary{cursor:pointer;color:var(--acc)}footer{margin:40px 0;color:var(-
   <h2>v0.3 development: stricter evidence checks</h2>
   <div class="card" id="v03"></div>
   <p class="sub">The v0.2 questions below have since been used for development. These new scores are post-hoc, not a fresh holdout. The three Purulia library misses now abstain; reference access is explicit. <a href="https://github.com/mohitt31/jaldrishti/blob/main/benchmark/v03/PROTOCOL.md">Protocol and limits</a>.</p>
-  <p>Try the actual local query interface: install the project, restore the sources, then run <code>jaldrishti serve</code>. It defaults to offline cached search. This public Pages site displays recorded results; Python powers the interactive app.</p>
+  <p>The Ask box above executes Python on the current evidence snapshot. The historical results below remain frozen. For optional online source recovery, install the project and run <code>jaldrishti serve</code> locally.</p>
   <h2>Explore the frozen v0.1 / v0.2 answers</h2>
   <div class="ex">
     <div class="card" style="padding:0">

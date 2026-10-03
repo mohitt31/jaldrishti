@@ -87,7 +87,7 @@ class Linker:
         tn = norm(text)
         for s, pat in [("m-ii", r"\bm-ii\b"), ("dug well", r"\bdug[- ]well\b|\bdw\b"), ("tube well", r"\btube[- ]well\b|\btw\b"), ("hand pump", r"hand pump")]:
             if re.search(pat, tn): m.sources.append(s)
-        from .search import proper_names
+        from .query_helpers import proper_names
         authors = {norm(n) for n in re.findall(r"([A-Z][a-z]+) et al", text)}
         for candidate in proper_names(text):
             k = norm(candidate)

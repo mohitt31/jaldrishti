@@ -1,0 +1,134 @@
+{
+  "label": "post-hoc engineering/dev browser checks, not accuracy evaluation",
+  "url": "http://127.0.0.1:8765/",
+  "pyodide_version": "314.0.7",
+  "credits_used": 0,
+  "devices": [
+    {
+      "device": "desktop",
+      "viewport": {
+        "width": 1365,
+        "height": 1000
+      },
+      "initial_decoded_bytes": 701612,
+      "initial_requests": 8,
+      "pyodide_loaded_before_interaction": false,
+      "parity": [
+        {
+          "id": "B01",
+          "exact_match": true
+        },
+        {
+          "id": "B02",
+          "exact_match": true
+        },
+        {
+          "id": "B03",
+          "exact_match": true
+        },
+        {
+          "id": "B04",
+          "exact_match": true
+        },
+        {
+          "id": "B05",
+          "exact_match": true
+        },
+        {
+          "id": "B06",
+          "exact_match": true
+        },
+        {
+          "id": "B07",
+          "exact_match": true
+        },
+        {
+          "id": "B08",
+          "exact_match": true
+        },
+        {
+          "id": "B09",
+          "exact_match": true
+        },
+        {
+          "id": "B10",
+          "exact_match": true
+        }
+      ],
+      "console_errors": [],
+      "failed_requests": [],
+      "horizontal_overflow": false,
+      "checks": [
+        "comparison values, failed checks, row disclosure",
+        "district click/keyboard/dropdown and question fill",
+        "insufficient evidence",
+        "Hindi/Bengali headers",
+        "reference/library separation",
+        "historical result cards"
+      ]
+    },
+    {
+      "device": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial_decoded_bytes": 701612,
+      "initial_requests": 8,
+      "pyodide_loaded_before_interaction": false,
+      "parity": [
+        {
+          "id": "B01",
+          "exact_match": true
+        },
+        {
+          "id": "B02",
+          "exact_match": true
+        },
+        {
+          "id": "B03",
+          "exact_match": true
+        },
+        {
+          "id": "B04",
+          "exact_match": true
+        },
+        {
+          "id": "B05",
+          "exact_match": true
+        },
+        {
+          "id": "B06",
+          "exact_match": true
+        },
+        {
+          "id": "B07",
+          "exact_match": true
+        },
+        {
+          "id": "B08",
+          "exact_match": true
+        },
+        {
+          "id": "B09",
+          "exact_match": true
+        },
+        {
+          "id": "B10",
+          "exact_match": true
+        }
+      ],
+      "console_errors": [],
+      "failed_requests": [],
+      "horizontal_overflow": false,
+      "checks": [
+        "comparison values, failed checks, row disclosure",
+        "district click/keyboard/dropdown and question fill",
+        "insufficient evidence",
+        "Hindi/Bengali headers",
+        "reference/library separation",
+        "historical result cards"
+      ]
+    }
+  ]
+}

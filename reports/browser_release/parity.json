@@ -1,0 +1,646 @@
+{
+  "label": "post-hoc engineering/dev parity; deliberately selected examples, not accuracy or holdout evidence",
+  "command": "jaldrishti ask QUESTION --mode SCOPE --offline --budget 0 --json",
+  "credits_used": 0,
+  "cases": [
+    {
+      "id": "B01",
+      "scope": "library",
+      "question": "What fluoride is reported at Amtala in Mandirbazar, South 24 Parganas, in April 2022?",
+      "answer": {
+        "answer_type": "number_with_source",
+        "items": [
+          {
+            "value": "0.22",
+            "unit": "mg/L",
+            "statistic": "single",
+            "place": "Mandirbazar, Amtala",
+            "contaminant": "fluoride",
+            "location": "Amtala",
+            "aquifer": "shallow",
+            "period_basis": "table_context",
+            "district": "South 24 Parganas",
+            "source_type": "Dug Well",
+            "well_id": null,
+            "date": null,
+            "period": "Apr, 2022",
+            "period_quote": "Annexure I | DISTRIBUTION OF PHYSIO- CHEMICAL CONSTITUENTS IN GROUND WATER IN SHALLOW/UN-CONFINED AQUIFER OF | WEST BENGAL | (Sample collected during Apr, 2022)",
+            "threshold": null,
+            "spatial_support": "site",
+            "doc": "gwq_west_bengal",
+            "title": "Ground Water Quality of West Bengal",
+            "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+            "page": 107,
+            "quote": "South 24 Parganas | Mandirbazar | Amtala | Dug Well | 8.50 | 1007 | 195 | 32 | 28 | 119 | 6 | 21 | 287 | 270 | 135 | 1 | 26 | 0.22 | 534 | 1.62",
+            "header": "F",
+            "publication_year": null,
+            "evidence_id": "gwq_west_bengal:107:0:16:17",
+            "bbox": [
+              28.319999999999997,
+              348.619995,
+              823.6799900000001,
+              363.97999500000003
+            ],
+            "score": 6.4,
+            "asked": "mandirbazar",
+            "page_verified": true,
+            "row_verified": true,
+            "verification_scope": "row_number_and_explicit_identity"
+          },
+          {
+            "value": "0.22",
+            "unit": "mg/L",
+            "statistic": "single",
+            "place": "Mandirbazar, Amtala",
+            "contaminant": "fluoride",
+            "location": "Amtala",
+            "aquifer": "shallow",
+            "period_basis": "table_context",
+            "district": "South 24 Parganas",
+            "source_type": "Dug Well",
+            "well_id": null,
+            "date": null,
+            "period": "Apr, 2022",
+            "period_quote": "Annexure I | DISTRIBUTION OF PHYSIO- CHEMICAL CONSTITUENTS IN GROUND WATER IN SHALLOW/UN-CONFINED AQUIFER OF | WEST BENGAL | (Sample collected during Apr, 2022)",
+            "threshold": null,
+            "spatial_support": "site",
+            "doc": "gwq_west_bengal",
+            "title": "Ground Water Quality of West Bengal",
+            "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+            "page": 107,
+            "quote": "South 24 Parganas | Mandirbazar | Amtala | Dug Well | 8.50 | 1007 | 195 | 32 | 28 | 119 | 6 | 21 | 287 | 270 | 135 | 1 | 26 | 0.22 | 534 | 1.62",
+            "header": "F",
+            "publication_year": null,
+            "evidence_id": "gwq_west_bengal:107:0:16:17",
+            "bbox": [
+              28.319999999999997,
+              348.619995,
+              823.6799900000001,
+              363.97999500000003
+            ],
+            "score": 6.4,
+            "asked": "amtala",
+            "page_verified": true,
+            "row_verified": true,
+            "verification_scope": "row_number_and_explicit_identity"
+          }
+        ],
+        "parsed": {
+          "intent": "lookup",
+          "claim": null,
+          "contaminant": "fluoride",
+          "districts": [
+            "South 24 Parganas"
+          ],
+          "mentions": [
+            {
+              "text": "What fluoride is reported at Amtala in Mandirbazar, South 24 Parganas, in April 2022?",
+              "places": [
+                "mandirbazar",
+                "amtala"
+              ],
+              "well_ids": [],
+              "sources": [],
+              "dates": [
+                "2022-04"
+              ],
+              "statistics": [],
+              "attribute": null
+            }
+          ]
+        }
+      },
+      "matches_cli": true
+    },
+    {
+      "id": "B02",
+      "scope": "reference",
+      "question": "Can the Karimpur arsenic maximum in Nadia and Bhowmick et al. arsenic mean be treated as the same district mean?",
+      "answer": {
+        "answer_type": "not_comparable",
+        "items": [
+          {
+            "value": "0.332",
+            "unit": "mg/L",
+            "statistic": "max",
+            "place": "Karimpur I, Karimpur",
+            "contaminant": "arsenic",
+            "location": "Karimpur",
+            "aquifer": null,
+            "period_basis": "table_context",
+            "district": "Nadia",
+            "source_type": null,
+            "well_id": null,
+            "date": null,
+            "period": "2015 – 16",
+            "period_quote": "Table 20: Overview of Arsenic Contamination Status According Special Drive 2015 – 16",
+            "threshold": null,
+            "spatial_support": "site",
+            "doc": "yearbook_2015_16",
+            "title": "Ground Water Year Book of West Bengal & Andaman & Nicobar Islands (2015-2016)",
+            "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1687515522384483915file.pdf",
+            "page": 49,
+            "quote": "6 | NADIA | 16 | 185 | 84 | 45 | 0.332 | Karimpur I | Karimpur",
+            "header": "Highest Conc. (in mg l-1) detected from the district",
+            "publication_year": 2017,
+            "evidence_id": "yearbook_2015_16:49:0:5:6",
+            "bbox": [
+              57.839999999999996,
+              242.80999999999995,
+              576.70002,
+              258.289995
+            ],
+            "page_verified": true,
+            "row_verified": true,
+            "verification_scope": "row_number_and_explicit_identity"
+          },
+          {
+            "value": "329",
+            "unit": "µg/L",
+            "statistic": "mean",
+            "place": "Communities, As-rich, Another",
+            "contaminant": "arsenic",
+            "location": null,
+            "aquifer": null,
+            "period_basis": null,
+            "district": "Nadia",
+            "source_type": null,
+            "well_id": null,
+            "date": null,
+            "period": null,
+            "period_quote": " mean ± S.D: 329±294 µg L(-1)) was the most important contaminant with concentrations well above the WHO guideline of 10 µg L(-1).",
+            "threshold": null,
+            "spatial_support": "study",
+            "doc": "pubmed_26188634",
+            "title": "https://pubmed.ncbi.nlm.nih.gov/26188634/",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/26188634/",
+            "page": null,
+            "quote": "mean ± S.D: 329±294 µg L(-1)) was the most important contaminant with concentrations well above the WHO guideline of 10 µg L(-1).",
+            "header": "abstract",
+            "publication_year": 2015,
+            "evidence_id": "pubmed_26188634:s4:mean",
+            "bbox": null,
+            "page_verified": true,
+            "row_verified": false,
+            "verification_scope": "page_number_presence"
+          }
+        ],
+        "reasons": [
+          "different statistics: max (Karimpur I, Karimpur) vs mean (Communities, As-rich, Another)",
+          "different spatial support: site vs study",
+          "a district mean is claimed but the values are max and mean"
+        ],
+        "note": "After unit conversion: 332 µg/L vs 329 µg/L.",
+        "parsed": {
+          "intent": "compare",
+          "claim": "same_quantity",
+          "contaminant": "arsenic",
+          "districts": [
+            "Nadia"
+          ],
+          "mentions": [
+            {
+              "text": "Karimpur arsenic maximum in Nadia",
+              "places": [
+                "karimpur"
+              ],
+              "well_ids": [],
+              "sources": [],
+              "dates": [],
+              "statistics": [
+                "max"
+              ],
+              "attribute": null
+            },
+            {
+              "text": "Bhowmick et al. arsenic mean ",
+              "places": [],
+              "well_ids": [],
+              "sources": [],
+              "dates": [],
+              "statistics": [
+                "mean"
+              ],
+              "attribute": null
+            }
+          ]
+        }
+      },
+      "matches_cli": true
+    },
+    {
+      "id": "B03",
+      "scope": "library",
+      "question": "What is the population-weighted mean fluoride in Nadia?",
+      "answer": {
+        "answer_type": "insufficient_evidence",
+        "reason": "No source in the corpus reports a population-weighted mean; computing one would need population data and a sampling design the sources do not give.",
+        "items": [],
+        "parsed": {
+          "intent": "lookup",
+          "claim": null,
+          "contaminant": "fluoride",
+          "districts": [
+            "Nadia"
+          ],
+          "mentions": [
+            {
+              "text": "What is the population-weighted mean fluoride in Nadia?",
+              "places": [],
+              "well_ids": [],
+              "sources": [],
+              "dates": [],
+              "statistics": [
+                "population_weighted_mean"
+              ],
+              "attribute": null
+            }
+          ]
+        }
+      },
+      "matches_cli": true
+    },
+    {
+      "id": "B04",
+      "scope": "library",
+      "question": "What fluoride is listed for Markabera TW WBPR_7 in Purulia?",
+      "answer": {
+        "answer_type": "insufficient_evidence",
+        "items": [],
+        "reason": "No record in the corpus matches None.",
+        "parsed": {
+          "intent": "lookup",
+          "claim": null,
+          "contaminant": "fluoride",
+          "districts": [
+            "Purulia"
+          ],
+          "mentions": [
+            {
+              "text": "What fluoride is listed for Markabera TW WBPR_7 in Purulia?",
+              "places": [],
+              "well_ids": [
+                "wbpr7"
+              ],
+              "sources": [
+                "tube well"
+              ],
+              "dates": [],
+              "statistics": [],
+              "attribute": null
+            }
+          ]
+        }
+      },
+      "matches_cli": true
+    },
+    {
+      "id": "B05",
+      "scope": "reference",
+      "question": "What fluoride is listed for Markabera TW WBPR_7 in Purulia?",
+      "answer": {
+        "answer_type": "number_with_source",
+        "items": [
+          {
+            "value": "0.08",
+            "unit": "mg/L",
+            "statistic": "single",
+            "place": "Purulia -II, Markabera",
+            "contaminant": "fluoride",
+            "location": null,
+            "aquifer": null,
+            "period_basis": "sample_date",
+            "district": "Purulia",
+            "source_type": "TW",
+            "well_id": "WBPR_7",
+            "date": "2023-06-04",
+            "period": "2023-06-04",
+            "period_quote": "West Bengal | Pur ulia | Purulia -II | Markabera | TW | WBP R_7 | 23.30 6619 | 86.45 5091 | 04- 06- 2023 | NAQ UIM | 7. 4 5 | 313 | 130 | 44 | 5 | 28 | 3 | 71 | 55 | ND | 67 | 7 | 37 | 0.08 | 236 | ND",
+            "threshold": null,
+            "spatial_support": "site",
+            "doc": "amp_purulia",
+            "title": "Aquifer Mapping and Management Plan: Purulia District, West Bengal",
+            "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1744936456830985840file.pdf",
+            "page": 183,
+            "quote": "West Bengal | Pur ulia | Purulia -II | Markabera | TW | WBP R_7 | 23.30 6619 | 86.45 5091 | 04- 06- 2023 | NAQ UIM | 7. 4 5 | 313 | 130 | 44 | 5 | 28 | 3 | 71 | 55 | ND | 67 | 7 | 37 | 0.08 | 236 | ND",
+            "header": "F-",
+            "publication_year": 2024,
+            "evidence_id": "amp_purulia:183:0:6:24",
+            "bbox": [
+              20.651612903225804,
+              368.8302235714285,
+              816.34501875,
+              398.39221220338976
+            ],
+            "score": 8.4,
+            "asked": "markabera",
+            "page_verified": true,
+            "row_verified": true,
+            "verification_scope": "row_number_and_explicit_identity"
+          }
+        ],
+        "parsed": {
+          "intent": "lookup",
+          "claim": null,
+          "contaminant": "fluoride",
+          "districts": [
+            "Purulia"
+          ],
+          "mentions": [
+            {
+              "text": "What fluoride is listed for Markabera TW WBPR_7 in Purulia?",
+              "places": [
+                "markabera"
+              ],
+              "well_ids": [
+                "wbpr7"
+              ],
+              "sources": [
+                "tube well"
+              ],
+              "dates": [],
+              "statistics": [],
+              "attribute": null
+            }
+          ]
+        }
+      },
+      "matches_cli": true
+    },
+    {
+      "id": "B06",
+      "scope": "reference",
+      "question": "पुरुलिया में Markabera TW WBPR_7 फ्लोराइड कितना है?",
+      "answer": {
+        "answer_type": "number_with_source",
+        "items": [
+          {
+            "value": "0.08",
+            "unit": "mg/L",
+            "statistic": "single",
+            "place": "Purulia -II, Markabera",
+            "contaminant": "fluoride",
+            "location": null,
+            "aquifer": null,
+            "period_basis": "sample_date",
+            "district": "Purulia",
+            "source_type": "TW",
+            "well_id": "WBPR_7",
+            "date": "2023-06-04",
+            "period": "2023-06-04",
+            "period_quote": "West Bengal | Pur ulia | Purulia -II | Markabera | TW | WBP R_7 | 23.30 6619 | 86.45 5091 | 04- 06- 2023 | NAQ UIM | 7. 4 5 | 313 | 130 | 44 | 5 | 28 | 3 | 71 | 55 | ND | 67 | 7 | 37 | 0.08 | 236 | ND",
+            "threshold": null,
+            "spatial_support": "site",
+            "doc": "amp_purulia",
+            "title": "Aquifer Mapping and Management Plan: Purulia District, West Bengal",
+            "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1744936456830985840file.pdf",
+            "page": 183,
+            "quote": "West Bengal | Pur ulia | Purulia -II | Markabera | TW | WBP R_7 | 23.30 6619 | 86.45 5091 | 04- 06- 2023 | NAQ UIM | 7. 4 5 | 313 | 130 | 44 | 5 | 28 | 3 | 71 | 55 | ND | 67 | 7 | 37 | 0.08 | 236 | ND",
+            "header": "F-",
+            "publication_year": 2024,
+            "evidence_id": "amp_purulia:183:0:6:24",
+            "bbox": [
+              20.651612903225804,
+              368.8302235714285,
+              816.34501875,
+              398.39221220338976
+            ],
+            "score": 8.4,
+            "asked": "markabera",
+            "page_verified": true,
+            "row_verified": true,
+            "verification_scope": "row_number_and_explicit_identity"
+          }
+        ],
+        "parsed": {
+          "intent": "lookup",
+          "claim": null,
+          "contaminant": "fluoride",
+          "districts": [
+            "Purulia"
+          ],
+          "mentions": [
+            {
+              "text": "Purulia in Markabera TW WBPR_7 fluoride what ?",
+              "places": [
+                "markabera"
+              ],
+              "well_ids": [
+                "wbpr7"
+              ],
+              "sources": [
+                "tube well"
+              ],
+              "dates": [],
+              "statistics": [],
+              "attribute": null
+            }
+          ]
+        },
+        "language": "hi",
+        "language_header": "प्रश्न का उत्तर नीचे अंग्रेज़ी में, स्रोतों सहित दिया गया है।",
+        "normalized_question": "Purulia in Markabera TW WBPR_7 fluoride what ?"
+      },
+      "matches_cli": true
+    },
+    {
+      "id": "B07",
+      "scope": "reference",
+      "question": "পুরুলিয়া জেলা Markabera TW WBPR_7 ফ্লোরাইড কত?",
+      "answer": {
+        "answer_type": "number_with_source",
+        "items": [
+          {
+            "value": "0.08",
+            "unit": "mg/L",
+            "statistic": "single",
+            "place": "Purulia -II, Markabera",
+            "contaminant": "fluoride",
+            "location": null,
+            "aquifer": null,
+            "period_basis": "sample_date",
+            "district": "Purulia",
+            "source_type": "TW",
+            "well_id": "WBPR_7",
+            "date": "2023-06-04",
+            "period": "2023-06-04",
+            "period_quote": "West Bengal | Pur ulia | Purulia -II | Markabera | TW | WBP R_7 | 23.30 6619 | 86.45 5091 | 04- 06- 2023 | NAQ UIM | 7. 4 5 | 313 | 130 | 44 | 5 | 28 | 3 | 71 | 55 | ND | 67 | 7 | 37 | 0.08 | 236 | ND",
+            "threshold": null,
+            "spatial_support": "site",
+            "doc": "amp_purulia",
+            "title": "Aquifer Mapping and Management Plan: Purulia District, West Bengal",
+            "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1744936456830985840file.pdf",
+            "page": 183,
+            "quote": "West Bengal | Pur ulia | Purulia -II | Markabera | TW | WBP R_7 | 23.30 6619 | 86.45 5091 | 04- 06- 2023 | NAQ UIM | 7. 4 5 | 313 | 130 | 44 | 5 | 28 | 3 | 71 | 55 | ND | 67 | 7 | 37 | 0.08 | 236 | ND",
+            "header": "F-",
+            "publication_year": 2024,
+            "evidence_id": "amp_purulia:183:0:6:24",
+            "bbox": [
+              20.651612903225804,
+              368.8302235714285,
+              816.34501875,
+              398.39221220338976
+            ],
+            "score": 8.4,
+            "asked": "markabera",
+            "page_verified": true,
+            "row_verified": true,
+            "verification_scope": "row_number_and_explicit_identity"
+          }
+        ],
+        "parsed": {
+          "intent": "lookup",
+          "claim": null,
+          "contaminant": "fluoride",
+          "districts": [
+            "Purulia"
+          ],
+          "mentions": [
+            {
+              "text": "Purulia district Markabera TW WBPR_7 fluoride what?",
+              "places": [
+                "markabera"
+              ],
+              "well_ids": [
+                "wbpr7"
+              ],
+              "sources": [
+                "tube well"
+              ],
+              "dates": [],
+              "statistics": [],
+              "attribute": null
+            }
+          ]
+        },
+        "language": "bn",
+        "language_header": "প্রশ্নের উত্তর নিচে ইংরেজিতে, উৎসসহ দেওয়া হয়েছে।",
+        "normalized_question": "Purulia district Markabera TW WBPR_7 fluoride what?"
+      },
+      "matches_cli": true
+    },
+    {
+      "id": "B08",
+      "scope": "reference",
+      "question": "What fluoride was measured at Markabera TW WBPR_7 in Purulia on 1 January 2099?",
+      "answer": {
+        "answer_type": "insufficient_evidence",
+        "items": [],
+        "reason": "No record in the corpus matches markabera.",
+        "parsed": {
+          "intent": "lookup",
+          "claim": null,
+          "contaminant": "fluoride",
+          "districts": [
+            "Purulia"
+          ],
+          "mentions": [
+            {
+              "text": "What fluoride was measured at Markabera TW WBPR_7 in Purulia on 1 January 2099?",
+              "places": [
+                "markabera"
+              ],
+              "well_ids": [
+                "wbpr7"
+              ],
+              "sources": [
+                "tube well"
+              ],
+              "dates": [
+                "2099-01-01"
+              ],
+              "statistics": [],
+              "attribute": null
+            }
+          ]
+        }
+      },
+      "matches_cli": true
+    },
+    {
+      "id": "B09",
+      "scope": "reference",
+      "question": "What arsenic maximum is reported at Karimpur in Nadia?",
+      "answer": {
+        "answer_type": "number_with_source",
+        "items": [
+          {
+            "value": "0.332",
+            "unit": "mg/L",
+            "statistic": "max",
+            "place": "Karimpur I, Karimpur",
+            "contaminant": "arsenic",
+            "location": "Karimpur",
+            "aquifer": null,
+            "period_basis": "table_context",
+            "district": "Nadia",
+            "source_type": null,
+            "well_id": null,
+            "date": null,
+            "period": "2015 – 16",
+            "period_quote": "Table 20: Overview of Arsenic Contamination Status According Special Drive 2015 – 16",
+            "threshold": null,
+            "spatial_support": "site",
+            "doc": "yearbook_2015_16",
+            "title": "Ground Water Year Book of West Bengal & Andaman & Nicobar Islands (2015-2016)",
+            "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1687515522384483915file.pdf",
+            "page": 49,
+            "quote": "6 | NADIA | 16 | 185 | 84 | 45 | 0.332 | Karimpur I | Karimpur",
+            "header": "Highest Conc. (in mg l-1) detected from the district",
+            "publication_year": 2017,
+            "evidence_id": "yearbook_2015_16:49:0:5:6",
+            "bbox": [
+              57.839999999999996,
+              242.80999999999995,
+              576.70002,
+              258.289995
+            ],
+            "score": 5.4,
+            "asked": "karimpur",
+            "page_verified": true,
+            "row_verified": true,
+            "verification_scope": "row_number_and_explicit_identity"
+          }
+        ],
+        "parsed": {
+          "intent": "lookup",
+          "claim": null,
+          "contaminant": "arsenic",
+          "districts": [
+            "Nadia"
+          ],
+          "mentions": [
+            {
+              "text": "What arsenic maximum is reported at Karimpur in Nadia?",
+              "places": [
+                "karimpur"
+              ],
+              "well_ids": [],
+              "sources": [],
+              "dates": [],
+              "statistics": [
+                "max"
+              ],
+              "attribute": null
+            }
+          ]
+        }
+      },
+      "matches_cli": true
+    },
+    {
+      "id": "B10",
+      "scope": "reference",
+      "question": "পুরুলিয়া জেলা অজানাগ্রাম ফ্লোরাইড কত?",
+      "answer": {
+        "answer_type": "insufficient_evidence",
+        "items": [],
+        "reason": "Unresolved words or village names: অজানাগ্রাম. Village names are preserved; try the source spelling in English.",
+        "language": "bn",
+        "language_header": "প্রশ্নের উত্তর নিচে ইংরেজিতে, উৎসসহ দেওয়া হয়েছে।",
+        "normalized_question": "Purulia district অজানাগ্রাম fluoride what?"
+      },
+      "matches_cli": true
+    }
+  ]
+}

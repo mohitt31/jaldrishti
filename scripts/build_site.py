@@ -93,3 +93,7 @@ v03 = ROOT / "reports/v03_development/summary.json"
 if v03.exists(): data["v03_development"] = json.loads(v03.read_text())
 (OUT / "data.json").write_text(json.dumps(data, ensure_ascii=False))
 print(len(data["questions"]), "questions,", len(list((OUT / "crops").glob("*.png"))), "crops")
+
+# Static Ask uses the current source index, not recorded benchmark answers.
+from export_browser import export
+export()

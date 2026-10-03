@@ -2,15 +2,6 @@
 
 **Cited groundwater arsenic and fluoride evidence for West Bengal, found with SerpApi, checked against the source page, and refused when the evidence does not support the question.**
 
-West Bengal has some of the world's worst groundwater arsenic, and parts of the state have high fluoride. The measurements exist, but they are buried in annexure tables of 100–270 page government reports and in paper abstracts. A search engine finds pages *about* arsenic; it does not hand you "0.16 mg/L at the Bhajanghat dug well, April 2022, page 102". And the most common mistake with these numbers is not a missing value but a bad comparison: a single well's maximum set against a district mean, or two different wells treated as a time series.
-
-JalDrishti answers a question with the exact number, unit, place, period, document and page. Or it says *not comparable* or *insufficient evidence* and explains why.
-
-> Not a household safety tool. A number from a 2022 survey says nothing about your tube well today. Test your own source at an accredited lab.
-
-**Track:** Knowledge & Public Interest
-
-[Open the recorded demo](https://mohitt31.github.io/jaldrishti/) — explore all 50 recorded dev, original-test and fresh-holdout answers, including failures. This is a static evidence explorer, not a live query service.
 
 ## At a glance
 
@@ -23,6 +14,32 @@ JalDrishti answers a question with the exact number, unit, place, period, docume
 | Reproducible without an API key | every SerpApi response is cached; `jaldrishti eval --offline` |
 
 Known limits, all disclosed below: the holdout audit found two comparisons that scored correct while citing the wrong rows (guarded against in v0.3, post-hoc), and the library does not yet contain the newer Purulia keywell report.
+
+## Try it — no install or API key
+
+**[Ask JalDrishti in your browser](https://mohitt31.github.io/jaldrishti/#ask)** · **[Explore district evidence](https://mohitt31.github.io/jaldrishti/#map)**
+
+The real Python engine runs locally in a Pyodide worker, loaded from jsDelivr on your first question. Choose **SerpApi-discovered library** or **Library + curated reference reports** explicitly. This searches a prebuilt evidence snapshot: it makes no new SerpApi calls, does not discover new documents, and needs no server or key. The first use needs internet access to download Python; a CDN failure is shown with a retry message.
+
+Try **332 vs 329 µg/L: comparable?** The engine converts the units and explains why a site maximum and a study mean are not the same district mean. Hindi and Bengali question examples use a deterministic dictionary; answers stay in English with a language header. Unknown village spellings remain constraints and cause abstention.
+
+![Ask: source-grounded comparison with failed checks](docs/screenshots/ask-desktop.png)
+![District evidence coverage and linked source records](docs/screenshots/map-desktop.png)
+
+The map colours **indexed document counts**, never safety. Its reported maxima span different locations, statistics, surveys and years, and cannot be used to compare district risk. Missing records do not establish safety or absence of evidence. Boundaries represent 2021 and are a simplified [geoBoundaries extract under ODbL 1.0](docs/ask/BOUNDARIES-LICENSE.md).
+
+Browser engineering checks and their limits are recorded in [the release report](reports/browser_release/README.md). The frozen test and holdout results below have not changed.
+
+
+West Bengal has some of the world's worst groundwater arsenic, and parts of the state have high fluoride. The measurements exist, but they are buried in annexure tables of 100–270 page government reports and in paper abstracts. A search engine finds pages *about* arsenic; it does not hand you "0.16 mg/L at the Bhajanghat dug well, April 2022, page 102". And the most common mistake with these numbers is not a missing value but a bad comparison: a single well's maximum set against a district mean, or two different wells treated as a time series.
+
+JalDrishti answers a question with the exact number, unit, place, period, document and page. Or it says *not comparable* or *insufficient evidence* and explains why.
+
+> Not a household safety tool. A number from a 2022 survey says nothing about your tube well today. Test your own source at an accredited lab.
+
+**Track:** Knowledge & Public Interest
+
+[The historical explorer](https://mohitt31.github.io/jaldrishti/) retains the recorded dev, original-test and holdout answers, including failures, below the new Ask box and map.
 
 ## Results (v0.1 frozen test split, run once)
 
@@ -93,7 +110,7 @@ jaldrishti serve
 # open http://127.0.0.1:8766
 ```
 
-This runs the actual question engine, not recorded responses. It binds to localhost, defaults to offline cached search, keeps the API key server-side, and shows source scope, sampling/publication fields, extracted rows, PDF page links and search accounting. Choose **SerpApi-discovered library** or **Library + curated reference reports** explicitly. `jaldrishti serve --live-searches 3` enables at most three total live HTTP attempts for that server session; it may consume credits. The GitHub Pages site remains the public static results explorer; a Python server is required for live queries.
+This runs the actual question engine, not recorded responses. It binds to localhost, defaults to offline cached search, keeps the API key server-side, and shows source scope, sampling/publication fields, extracted rows, PDF page links and search accounting. Choose **SerpApi-discovered library** or **Library + curated reference reports** explicitly. `jaldrishti serve --live-searches 3` enables at most three total live HTTP attempts for that server session; it may consume credits. The GitHub Pages Ask box now runs the same reader in browser Python over the exported snapshot. The local server additionally supports bounded source recovery when explicitly enabled.
 
 For a CLI reference lookup: `jaldrishti ask --mode reference --offline "What fluoride is listed for Markabera TW WBPR_7 in Purulia?"`.
 
@@ -117,16 +134,21 @@ Library misses HQ11, HQ12 and HQ16 because the newer Purulia report is not searc
 
 Every successful live response is cached by its request parameters (never the key) and logged in a credit ledger. Recorded outputs can be inspected without an API key, and dev evaluation can be replayed offline. Original-test and holdout commands refuse to overwrite their frozen evaluations.
 
-## How it reads and checks
+## How it works
 
 - **Table reader.** pdfplumber cell grids for ruled tables. For unruled tables, right-aligned numbers are clustered into columns, and header phrases are assigned by x-position. A continuation page inherits the last header, aligned from the right edge (analyte columns sit there). 53/53 gold table facts are recovered from the raw PDFs.
 - **Typed evidence.** Every measured cell becomes `{value, unit, statistic, contaminant, place, source type, well id, date or period, spatial support, document, page, row}`. Units are normalised (mg/L, µg/L = ppb).
 - **Grounded parsing.** A place in a question counts only if it occurs in an indexed table row. Search queries use capitalised names only, so search never peeks at the corpus.
 - **Comparison checker.** "Can A and B establish a change / be averaged / be treated as the same district mean?" is decided by rules: same sampling point (place, source type, well id), same statistic, same spatial support, time separation, same quantity type. The failing checks are listed. Unit conversion is shown, e.g. 0.332 mg/L = 332 µg/L vs 329 µg/L: close numbers, but a single-site maximum versus a study mean.
 - **Abstention.** Population-weighted means, exact dates where the source gives only a period, detection limits, and periods the source does not cover are refused with a reason.
-- **Page re-read.** Before answering, each number is searched for on the cited page with a second PDF library. Numbers that fail are dropped.
+- **Page/row re-read.** Native Python checks candidates with a second PDF reader. The static build precomputes those same checks into `page_verified` and `row_verified`. Browser answers use this snapshot; they do not download or re-read PDFs. Abstract/page-only checks have no row tick. Numbers failing verification are dropped.
+- **Browser Python.** A small zip contains the actual parser, units, comparison and answer modules, plus a scope adapter. PDF libraries and search clients are absent from the browser dependency path. A worker keeps Python off the UI thread.
+- **District evidence map.** The build aggregates source-linked record counts and concentration maxima per district and scope. Counts are not independent samples; repeated or overlapping surveys can occur. The boundary database is separate from the evidence.
+- **Hindi/Bengali input.** Exact district/contaminant aliases and common question words are replaced deterministically. Unknown village names are preserved and refused if unresolved. This is limited vocabulary support, not general translation.
 
-No language model is used at answer time; every output is reproducible.
+No language model is used at answer time. Reproducibility requires the same evidence snapshot and code.
+
+To rebuild the static export after restoring the source corpus, run `python scripts/build_site.py`. To verify the selected browser examples against native Python, run `python scripts/check_browser_parity.py`. Browser QA uses `scripts/check_browser.cjs` with Playwright; see the release report for the command.
 
 ## Benchmark
 
@@ -170,8 +192,8 @@ Source PDFs are not redistributed. They are downloaded from the publishers' site
 
 ## AI tools used
 
-As the rules require: Claude (Anthropic) wrote most of the code and ran the experiments under my direction, and ChatGPT helped research the problem and draft the benchmark facts, which were then verified against the source pages. OpenAI Codex implemented the post-hoc v0.2 fixes, regression tests, safeguards and holdout tooling; authored the new holdout after the freeze; checked the actual PDF pages; ran the once-only evaluation; audited its failures; and updated the README and recorded-demo site. For v0.3, Codex implemented the stricter matching/scorer, continuation-table fixes, bounded retrieval attempt, local query interface and adversarial tests. The holdout has not received an independent human annotation review. Commits and reports record the sequence. The problem choice, evaluation design and the decisions on what to keep or drop were mine.
+As the rules require: Claude (Anthropic) wrote most of the code and ran the experiments under my direction, and ChatGPT helped research the problem and draft the benchmark facts, which were then verified against the source pages. OpenAI Codex implemented the post-hoc v0.2 fixes, regression tests, safeguards and holdout tooling; authored the new holdout after the freeze; checked the actual PDF pages; ran the once-only evaluation; audited its failures; and updated the README and recorded-demo site. For v0.3, Codex implemented the stricter matching/scorer, continuation-table fixes, bounded retrieval attempt, local query interface and adversarial tests. In the browser round, OpenAI Codex built the Pyodide bundle and worker, evidence export with precomputed verification, district boundary/evidence map, Hindi/Bengali dictionary, browser UI, tests, CLI/WASM parity checks and documentation. No LLM runs at answer time. The holdout has not received an independent human annotation review. Commits and reports record the sequence. The problem choice, evaluation design and the decisions on what to keep or drop were mine.
 
 ## Licence
 
-MIT. Data © the original publishers (CGWB, ADB, the cited journals).
+Code: MIT. Evidence remains attributed to the original publishers (CGWB, ADB, cited journals); PDF files are not bundled. The derived district boundary database has its own [ODbL 1.0 licence and attribution](docs/ask/BOUNDARIES-LICENSE.md).

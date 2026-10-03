@@ -195,15 +195,28 @@ def compare(ev, q: Query, metas) -> dict:
     return {"answer_type": "comparable", "items": its, "reasons": [], "note": note}
 
 class Engine:
-    def __init__(self, evidence: list[dict], metas: dict):
+    def __init__(self, evidence: list[dict], metas: dict, verifier=None):
         self.ev, self.metas, self.linker = evidence, metas, Linker(evidence)
+        self.verifier = verifier
     def ask(self, text: str) -> dict:
-        q = parse(text, self.linker)
+        from .locales import normalize_question
+        normalized, language = normalize_question(text)
+        q = parse(normalized, self.linker)
+        unknown = re.findall(r"[\u0900-\u09ff]+", normalized)
+        if unknown:
+            r = {"answer_type": "insufficient_evidence", "items": [], "reason": "Unresolved words or village names: " + ", ".join(unknown) + ". Village names are preserved; try the source spelling in English."}
+            if language:
+                from .locales import HEADERS
+                r.update(language=language, language_header=HEADERS[language], normalized_question=normalized)
+            return r
         r = compare(self.ev, q, self.metas) if q.intent == "compare" else lookup(self.ev, q, self.metas)
-        from .verify import verify_item
+        verify_item = self.verifier
+        if verify_item is None:
+            from .verify import verify_item
         for key in ("items", "related"):
             for i in r.get(key, []):
                 i["page_verified"] = verify_item(i, self.metas.get(i["doc"], {}))
+                i["row_verified"] = bool(i["page_verified"] and i.get("bbox"))
                 i["verification_scope"] = "row_number_and_explicit_identity" if i.get("bbox") else "page_number_presence"
         if r["answer_type"] in ("number_with_source", "not_comparable", "comparable"):
             bad = [i for i in r["items"] if not i["page_verified"]]
@@ -214,4 +227,9 @@ class Engine:
         r["parsed"] = {"intent": q.intent, "claim": q.claim, "contaminant": q.contaminant, "districts": q.districts,
                        "mentions": [{"text": m.text, "places": m.places, "well_ids": m.well_ids, "sources": m.sources,
                                      "dates": m.dates, "statistics": m.statistics, "attribute": m.attribute} for m in q.mentions]}
+        if language:
+            from .locales import HEADERS
+            r["language"] = language
+            r["language_header"] = HEADERS[language]
+            r["normalized_question"] = normalized
         return r
