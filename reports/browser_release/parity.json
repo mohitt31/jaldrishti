@@ -36,10 +36,10 @@
             "publication_year": null,
             "evidence_id": "gwq_west_bengal:107:0:16:17",
             "bbox": [
-              28.319999999999997,
+              28.319999999999983,
               348.619995,
-              823.6799900000001,
-              363.97999500000003
+              823.6799899999995,
+              363.9799949999999
             ],
             "score": 6.4,
             "asked": "mandirbazar",
@@ -73,10 +73,10 @@
             "publication_year": null,
             "evidence_id": "gwq_west_bengal:107:0:16:17",
             "bbox": [
-              28.319999999999997,
+              28.319999999999983,
               348.619995,
-              823.6799900000001,
-              363.97999500000003
+              823.6799899999995,
+              363.9799949999999
             ],
             "score": 6.4,
             "asked": "amtala",
@@ -145,10 +145,10 @@
             "publication_year": 2017,
             "evidence_id": "yearbook_2015_16:49:0:5:6",
             "bbox": [
-              57.839999999999996,
+              57.84000000000002,
               242.80999999999995,
-              576.70002,
-              258.289995
+              576.7000200000001,
+              258.28999500000003
             ],
             "page_verified": true,
             "row_verified": true,
@@ -158,7 +158,7 @@
             "value": "329",
             "unit": "µg/L",
             "statistic": "mean",
-            "place": "Communities, As-rich, Another",
+            "place": "Nadia",
             "contaminant": "arsenic",
             "location": null,
             "aquifer": null,
@@ -186,7 +186,7 @@
           }
         ],
         "reasons": [
-          "different statistics: max (Karimpur I, Karimpur) vs mean (Communities, As-rich, Another)",
+          "different statistics: max (Karimpur I, Karimpur) vs mean (Nadia)",
           "different spatial support: site vs study",
           "a district mean is claimed but the values are max and mean"
         ],
@@ -327,9 +327,9 @@
             "publication_year": 2024,
             "evidence_id": "amp_purulia:183:0:6:24",
             "bbox": [
-              20.651612903225804,
-              368.8302235714285,
-              816.34501875,
+              20.6516129032258,
+              368.83022357142835,
+              816.3450187500001,
               398.39221220338976
             ],
             "score": 8.4,
@@ -400,9 +400,9 @@
             "publication_year": 2024,
             "evidence_id": "amp_purulia:183:0:6:24",
             "bbox": [
-              20.651612903225804,
-              368.8302235714285,
-              816.34501875,
+              20.6516129032258,
+              368.83022357142835,
+              816.3450187500001,
               398.39221220338976
             ],
             "score": 8.4,
@@ -476,9 +476,9 @@
             "publication_year": 2024,
             "evidence_id": "amp_purulia:183:0:6:24",
             "bbox": [
-              20.651612903225804,
-              368.8302235714285,
-              816.34501875,
+              20.6516129032258,
+              368.83022357142835,
+              816.3450187500001,
               398.39221220338976
             ],
             "score": 8.4,
@@ -590,10 +590,10 @@
             "publication_year": 2017,
             "evidence_id": "yearbook_2015_16:49:0:5:6",
             "bbox": [
-              57.839999999999996,
+              57.84000000000002,
               242.80999999999995,
-              576.70002,
-              258.289995
+              576.7000200000001,
+              258.28999500000003
             ],
             "score": 5.4,
             "asked": "karimpur",

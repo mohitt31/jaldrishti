@@ -82,3 +82,17 @@ def test_comparison_with_district_level_item_without_place():
            ev(places=["Belsula"], source="Dug Well", period="Apr, 2022", value_text="0.14", value=0.14, id="b", row=1)]
     r = _engine(evs).ask("Can the NAQUIM study maximum and the April 2022 Belsula dug-well value establish a change in district mean fluoride?")
     assert r["answer_type"] == "not_comparable"
+
+def test_count_columns_are_never_concentrations():
+    from jaldrishti.evidence import column_role
+    for h in ["Fluoride 1.5 No.", "Habitations 1.0– 1.5 mg/L", "No. samples with arsenic >10 µg/L", "Fluoride >1.5 mg/L No."]:
+        r = column_role(h, "Table 12. Fluoride-Affected Blocks in Bankura District")
+        assert r and r["statistic"] == "count_exceeding", h
+    assert column_role("F (mg/L)", "")["statistic"] == "single"
+
+def test_implausible_concentration_is_dropped():
+    from jaldrishti.tables import Table
+    from jaldrishti.evidence import table_evidence
+    t = Table("d", 1, 0, "lattice", ["Location", "F"], [["Bankura", "1046"], ["Bishnupur", "0.29"]], [], "mg/L fluoride", "")
+    vals = [e["value"] for e in table_evidence(t, {})]
+    assert 0.29 in vals and 1046 not in vals

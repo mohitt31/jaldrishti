@@ -1,5 +1,5 @@
 """Export source-derived evidence; never reads benchmark questions or runs evaluation."""
-import gzip, hashlib, json, math, pathlib, zipfile
+import re, gzip, hashlib, json, math, pathlib, zipfile
 from jaldrishti.answer import _cite
 from jaldrishti.index import ROOT, docs
 from jaldrishti.pipeline import Session
@@ -53,8 +53,9 @@ def export():
         im = json.loads(cached.read_text()).get('meta', {}) if cached.exists() else {}
         title = im.get('title') or meta.get('title') or did
         if title.startswith('http'):
-            import re
             title = re.sub(r'\s+', ' ', im.get('period_text', '')).strip()[:170] or title
+        latin = re.sub(r'\s+', ' ', re.sub(r'[^\x20-\x7E]+', ' ', title)).strip(' ,;:-')
+        if re.search(r'[^\x00-\x7F]', title) and len(latin) >= 15: title = latin   # bilingual cover: keep the English part
         catalog[did] = {'title':title, 'url':meta.get('url'), 'publisher':meta.get('publisher') or im.get('publisher'), 'year':meta.get('year') or im.get('year')}
     (out/'catalog.json').write_text(json.dumps(catalog,ensure_ascii=False,separators=(',',':')))
     # Map data is smaller if the full evidence list is fetched lazily on selection.

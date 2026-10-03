@@ -21,18 +21,32 @@ high low study studies samples sample ninety mean range regional modified optima
 monte carlo simulation bland altman friedman dean keywords introduction results conclusion
 calcium magnesium sodium potassium chloride sulfate sulphate phosphate bicarbonate carbonate ca mg na cl fe mn zn cu as
 abstract methods background objective environmental human population total besides notably
-further dissolution geostatistical statistically significance journal copyright springer nature""".split())
+further dissolution geostatistical statistically significance journal copyright springer nature
+the two four five each all endemic affected arsenic-affected under river district districts police stations""".split())
+
+_NAME = r"[A-Z][a-z]{2,}(?:-[A-Z]?[a-z]+)?"
+_LIST = rf"{_NAME}(?:\s*,\s*{_NAME})*(?:\s*,?\s+and\s+{_NAME})?"
+_UNIT = r"(?:villages?|blocks?|sub-?divisions?|municipalit(?:y|ies)|gram panchayats?|towns?)"
+_PLACE_PATTERNS = [
+    re.compile(rf"({_LIST})\s+{_UNIT}\b"),                      # "Khayrasole and Rajnagar blocks", "Kugacchi village"
+    re.compile(rf"\b{_UNIT}\s*[,:(]\s*({_LIST})"),              # "two villages, Sarapur and Chinili"
+    re.compile(rf"\b{_UNIT}[^.;()]{{0,40}}\(({_LIST})\)"),     # "two villages each from Nadia (Jaguli and Kugacchi)"
+    re.compile(rf"({_NAME}),\s+an?\s+(?:village|block|town)\b"),  # "Kasimpore, a village"
+]
 
 def abstract_places(title: str, text: str) -> list[str]:
-    """Conservative capitalisation heuristic; names remain study-level, not well locations."""
+    """Village/block names only where the text says they are villages or blocks (no bare capitalised words).
+    Names remain study-level: they say where a study sampled, not which well a number belongs to."""
     from .gazetteer import DISTRICTS
     excluded = PLACE_STOP | {w for d, aliases in DISTRICTS.items()
                              for name in [d, *aliases] for w in norm(name).split()}
     names = []
-    for match in re.finditer(r"\b[A-Z][a-z]+(?:[-'][A-Z]?[a-z]+)*\b", title + ". " + text):
-        word = match.group(0)
-        if norm(word) not in excluded and not OTHER.fullmatch(word) and word not in names:
-            names.append(word)
+    for src in (title, text):
+        for rx in _PLACE_PATTERNS:
+            for m in rx.finditer(src or ""):
+                for word in re.findall(_NAME, m.group(1)):
+                    if norm(word) not in excluded and not OTHER.fullmatch(word) and word not in names:
+                        names.append(word)
     return names
 
 def parse_pubmed(xml_bytes: bytes) -> dict:

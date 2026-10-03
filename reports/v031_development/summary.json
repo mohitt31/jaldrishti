@@ -1,0 +1,26 @@
+{
+  "label": "POST-HOC DEVELOPMENT REGRESSION, NOT A NEW HOLDOUT",
+  "commit": "358a004a983f069aae5c8efbc8ed6b6b6d317dc8",
+  "dirty": true,
+  "offline": true,
+  "modes": {
+    "library": {
+      "n": 20,
+      "strict_correct": 17,
+      "legacy_correct": 17,
+      "live_credits": 0,
+      "search_attempts": 12
+    },
+    "oracle": {
+      "n": 20,
+      "strict_correct": 20,
+      "legacy_correct": 20,
+      "live_credits": 0,
+      "search_attempts": 0
+    }
+  },
+  "benchmark_sha256": {
+    "holdout_questions.csv": "8a8199d0a9bb96ff489ebb4d1f5d3fb4277205d6b9ed1f4365068b358bff0240",
+    "holdout_facts.csv": "164c2a50d8be393a7e20f6f76bc0237030bfb2f885479f54e2d5a3204b91b484"
+  }
+}

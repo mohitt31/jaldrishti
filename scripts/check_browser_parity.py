@@ -1,5 +1,5 @@
 """Ten explicit developer examples against the real CLI. No eval split is loaded."""
-import gzip,json,pathlib,subprocess,sys
+import gzip,json,os,pathlib,subprocess,sys
 from jaldrishti.browser_runtime import BrowserRuntime
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 CASES=[
@@ -19,7 +19,9 @@ def main():
     runtime=BrowserRuntime(json.loads(gzip.decompress((ROOT/'docs/ask/evidence.json.gz').read_bytes())))
     out=[]
     for n,(scope,q) in enumerate(CASES,1):
-        cmd=[str(ROOT/'.venv/bin/jaldrishti'),'ask',q,'--mode',scope,'--offline','--budget','0','--json']
+        import shutil
+        exe=ROOT/'.venv/bin/jaldrishti'
+        cmd=[os.environ.get('JALDRISHTI_BIN') or str(exe),'ask',q,'--mode',scope,'--offline','--budget','0','--json']
         cli=json.loads(subprocess.check_output(cmd,cwd=ROOT,text=True))
         answer=runtime.ask(q,scope)
         assert cli['credits']==0 and cli['search_attempts']==0

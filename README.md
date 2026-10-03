@@ -125,6 +125,13 @@ Library misses HQ11, HQ12 and HQ16 because the newer Purulia report is not searc
 
 [Development summary](reports/v03_development/summary.json) and per-question strict field failures are recorded separately under `reports/v03_development/`. The earlier scratch replays were development iterations, not final tests. **52 unit tests pass**. Browser checks exercised actual numeric lookup, missing-source refusal, explicit reference comparison, unknown sampling dates and unsupported dates with zero console errors on desktop/mobile. Do not compare the strict score numerically with the weaker frozen score as though they use the same metric. An independent review and new evaluation are still pending: [reviewer handoff](benchmark/v03/REVIEWER_GUIDE.md). No reviewer endorsement is claimed.
 
+### v0.3.1 fixes (post-hoc, found while reviewing the map)
+
+- A count column (`Fluoride 1.0–1.5 mg/L No.`) in the ADB Bankura table was read as a concentration, putting "1046 mg/L" on the map. Any `No.` / `Number` / `Habitations` column is now a count, and concentrations above physical plausibility (fluoride > 40 mg/L, arsenic > 10 mg/L) are rejected as reader errors.
+- Abstract place names now come only from phrases that say they are villages or blocks ("Khayrasole and Rajnagar blocks", "Kasimpore, a village"), not from every capitalised word.
+- Missing units and periods are shown as "not stated" instead of guessed.
+Strict development replay is unchanged (library 17/20, oracle 20/20; `reports/v031_development/`), and browser/CLI parity is 10/10. Frozen reports are untouched.
+
 ## How it uses SerpApi
 
 1. **Harvest (56 searches, once).** Generic templates over the 13 districts where arsenic or fluoride is reported (`src/jaldrishti/harvest.py`). Several phrasings per district, because Google is erratic on these queries: the same template returns the CGWB report at rank 1 for Nadia and Wikipedia's *Arsenic* page for Malda. Google results give government PDFs; **Google Scholar** results give papers, which are resolved to PubMed abstracts. The v0.1 library contained 23 documents; the post-hoc v0.2 supplement adds 13 completed searches (69 total) and expands it to 27 documents. One additional HTTP attempt failed; the 14-attempt cap stopped the remaining template. No benchmark question text is used.

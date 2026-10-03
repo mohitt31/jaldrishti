@@ -20,6 +20,9 @@ def _analyte_of(h: str) -> str | None:
     if re.match(r"^as(\s|\(|$)", t) or "arsenic" in t: return "arsenic"
     return None
 
+# Upper bounds far above any reported groundwater value (fluoride ~ 20-30 mg/L, arsenic ~ 3-4 mg/L worldwide)
+PLAUSIBLE_MAX_MG_L = {"fluoride": 40.0, "arsenic": 10.0}
+
 def column_role(header: str, caption: str) -> dict | None:
     t = norm(header)
     if not t: return None
@@ -35,6 +38,12 @@ def column_role(header: str, caption: str) -> dict | None:
     if "%" in t or "percent" in t:
         return {"role": "measure", "statistic": "pct_exceeding" if (thr or "exceed" in t) else "percent", "contaminant": an,
                 "threshold": thr.group(1) if thr else None, "entity": "samples"} if an or thr else None
+    rng = re.search(r"(\d+(?:\.\d+)?)\s*[-–]\s*(\d+(?:\.\d+)?)", t)
+    if re.search(r"\b(no|no\.|number)\b|habitation", t) and not re.search(r"tested|analysed|analyzed|total no", t):
+        # any 'No.' / 'Number' / 'Habitations' column is a count, never a concentration
+        ent = "habitations" if "habitation" in t else "blocks" if "block" in t else "samples"
+        th = thr.group(1) if thr else (f"{rng.group(1)}-{rng.group(2)}" if rng else None)
+        return {"role": "measure", "statistic": "count_exceeding", "contaminant": an, "threshold": th, "entity": ent}
     if re.search(r"\b(no|no\.|number)\b", t) and (thr or "exceed" in t or "having" in t or "affected" in t):
         ent = "habitations" if "habitation" in t else "blocks" if "block" in t else "samples"
         return {"role": "measure", "statistic": "count_exceeding", "contaminant": an, "threshold": thr.group(1) if thr else None, "entity": ent}
@@ -119,6 +128,11 @@ def table_evidence(t: Table, doc_meta: dict, page_text: str = "") -> list[dict]:
             elif r["statistic"] in ("count_exceeding", "count_total"): unit = r.get("entity")
             elif r["statistic"] in ("pct_exceeding", "percent"): unit = "%"
             else: unit = unit or table_unit
+            if val is not None and unit in ("mg/L", "µg/L", "ppb", "ppm") and r["statistic"] in ("single", "max", "min", "mean"):
+                from .units import to_mg_l
+                mg = to_mg_l(val, unit)
+                if mg is not None and mg > PLAUSIBLE_MAX_MG_L.get(an, 1e9):
+                    continue          # physically implausible for groundwater: almost certainly a mis-read column
             out.append({
                 "doc": t.doc, "page": t.page, "table": t.idx, "row": ri, "col": ci, "method": t.method,
                 "header_from": t.header_from, "contaminant": an, "statistic": r["statistic"],
