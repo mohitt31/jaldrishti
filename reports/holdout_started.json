@@ -1,0 +1,12 @@
+{
+  "commit": "e2aabb0cbc131c9883846f3e0bd4e8fd7fc149c7",
+  "offline": true,
+  "modes": [
+    "library",
+    "oracle"
+  ],
+  "sha256": {
+    "holdout_questions.csv": "8a8199d0a9bb96ff489ebb4d1f5d3fb4277205d6b9ed1f4365068b358bff0240",
+    "holdout_facts.csv": "164c2a50d8be393a7e20f6f76bc0237030bfb2f885479f54e2d5a3204b91b484"
+  }
+}

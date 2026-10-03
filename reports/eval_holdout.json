@@ -1,0 +1,41 @@
+{
+ "split": "holdout",
+ "budget": 3,
+ "run_at": "2026-10-03T05:44:07+0530",
+ "modes": {
+  "library": {
+   "n": 20,
+   "accuracy": 0.85,
+   "numeric_accuracy": 0.8333333333333334,
+   "unsupported_items": 0,
+   "numeric_items": 10,
+   "gold_doc_exact_numeric": 10,
+   "page_verified_items": 10,
+   "abstention_precision": 0.7,
+   "abstention_recall": 0.875,
+   "coverage": 0.7,
+   "risk": 0.0,
+   "citation_precision": 1.0,
+   "citation_recall": 0.8333333333333334,
+   "credits": 1,
+   "seconds": 4.9
+  },
+  "oracle": {
+   "n": 20,
+   "accuracy": 0.95,
+   "numeric_accuracy": 1.0,
+   "unsupported_items": 0,
+   "numeric_items": 12,
+   "gold_doc_exact_numeric": 12,
+   "page_verified_items": 12,
+   "abstention_precision": 0.875,
+   "abstention_recall": 0.875,
+   "coverage": 0.8,
+   "risk": 0.0,
+   "citation_precision": 1.0,
+   "citation_recall": 1.0,
+   "credits": 0,
+   "seconds": 3.0
+  }
+ }
+}
