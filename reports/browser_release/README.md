@@ -10,6 +10,7 @@ The static app uses the SerpApi-discovered library snapshot. It cannot run new s
 
 ## Engineering results and provenance
 
+- [map_inventory.json](map_inventory.json): post-hoc source-linked counts and maxima for each district and scope, matching the map data exactly.
 - [build.json](build.json): source-derived export sizes, hashes, evidence/document counts, row/page verification counts and the map aggregation definition. These are inventory metrics, not accuracy results.
 - [parity.json](parity.json): ten selected **development examples**, each compared against the complete JSON answer from `jaldrishti ask QUESTION --mode SCOPE --offline --budget 0 --json`. Includes numeric, comparison, insufficient evidence, both scopes, Hindi/Bengali and an unresolved village. These are deliberately chosen developer examples, not held-out questions.
 - [browser_qa.json](browser_qa.json): desktop and mobile headless Chrome executed those same inputs through the real downloaded Pyodide runtime. All ten complete answer objects match the CLI on each device. The report records initial decoded payload bytes, overflow, console/network failures and interaction checks. Initial decoded bytes are a conservative body-size measurement; they are not a universal latency or transfer-speed claim. The Python runtime is deferred until the first question.

@@ -71,6 +71,7 @@ def test_shipped_evidence_and_boundary_integrity():
     assert set(d['scopes']['library'])<=set(d['scopes']['reference'])
     assert all(e['row_verified']==bool(e['bbox'] and e['page_verified']) for e in d['evidence'])
     assert all('file' not in m for m in d['metas'].values())
+    assert json.loads((ROOT/'reports/browser_release/map_inventory.json').read_text())['scopes']==json.loads((ROOT/'docs/ask/map.json').read_text())
     geo=json.loads((ROOT/'docs/ask/west-bengal.geojson').read_text())
     assert {f['properties']['name'] for f in geo['features']}==set(DISTRICTS)
     for f in geo['features']:

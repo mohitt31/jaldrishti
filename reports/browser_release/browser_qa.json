@@ -10,7 +10,7 @@
         "width": 1365,
         "height": 1000
       },
-      "initial_decoded_bytes": 701612,
+      "initial_decoded_bytes": 701801,
       "initial_requests": 8,
       "pyodide_loaded_before_interaction": false,
       "parity": [
@@ -73,7 +73,7 @@
         "width": 390,
         "height": 844
       },
-      "initial_decoded_bytes": 701612,
+      "initial_decoded_bytes": 701801,
       "initial_requests": 8,
       "pyodide_loaded_before_interaction": false,
       "parity": [

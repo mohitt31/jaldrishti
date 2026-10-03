@@ -62,6 +62,7 @@ def export():
     full={scope:aggregates([e for e in ev if e['doc'] in payload['scopes'][scope]],metas,names) for scope in payload['scopes']}
     summary={scope:{d:{k:v for k,v in group.items() if k!='evidence'} for d,group in groups.items()} for scope,groups in full.items()}
     (out/'map.json').write_text(json.dumps(summary,ensure_ascii=False,separators=(',',':')))
+    (ROOT/'reports/browser_release/map_inventory.json').write_text(json.dumps({'label':'post-hoc source inventory; not risk or evaluation', 'scopes':summary},ensure_ascii=False,separators=(',',':'))+'\n')
     (out/'districts').mkdir(exist_ok=True)
     for district in names:
         (out/'districts'/f'{district.lower().replace(" ","-")}.json').write_text(json.dumps({s:groups[district]['evidence'] for s,groups in full.items()},ensure_ascii=False,separators=(',',':')))
