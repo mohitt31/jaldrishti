@@ -158,3 +158,14 @@ def test_exceedance_threshold_is_mandatory_and_unit_aware():
     assert score(e,m,q,'count_exceeding',{}) is not None
     e['threshold']='0.05'
     assert score(e,m,q,'count_exceeding',{}) is None
+
+
+def test_bare_sampling_year_is_not_confused_with_report_year(verified):
+    e=engine([record()])
+    assert e.ask('What fluoride at Testvillage in Purulia was measured in 2024?')['answer_type']=='insufficient_evidence'
+    assert e.ask('What fluoride at Testvillage in Purulia was measured in 2023?')['answer_type']=='number_with_source'
+
+
+def test_partial_numeric_request_is_context_not_a_complete_answer(verified):
+    r=engine([record(statistic='max')]).ask('What maximum and mean fluoride are reported at Testvillage in Purulia?')
+    assert r['answer_type']=='insufficient_evidence' and not r['items'] and r['related']

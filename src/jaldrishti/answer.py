@@ -136,7 +136,9 @@ def lookup(ev, q: Query, metas) -> dict:
     if not items:
         return {"answer_type": "insufficient_evidence", "items": [], "reason": "No record in the corpus matches " + ", ".join(str(x) for x in missing) + "."}
     out = {"answer_type": "number_with_source", "items": items}
-    if missing: out["missing"] = missing
+    if missing:
+        return {"answer_type": "insufficient_evidence", "items": [], "related": items,
+                "reason": "No complete set of requested measurements was found; partial evidence is context only.", "missing": missing}
     return out
 
 def _conc_mg(i):

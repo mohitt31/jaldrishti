@@ -44,6 +44,10 @@ def _dates(q: str):
         k = next(v for n, v in MONTHS.items() if n.startswith(m.lower()[:3]))
         iso = f"{y}-{k:02d}"
         if not any(o.startswith(iso) for o in out): out.append(iso)
+    for year in re.findall(r"\b(?:sampled|collected|measured)(?:\s+in)?\s+((?:19|20)\d\d)\b", q, re.I):
+        if not any(x.startswith(year) for x in out): out.append(year)
+    for year in re.findall(r"\bin\s+((?:19|20)\d\d)\s*[?.]?\s*$", q, re.I):
+        if not any(x.startswith(year) for x in out): out.append(year)
     return out
 
 def _statistics(q: str) -> list[str]:
