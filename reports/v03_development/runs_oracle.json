@@ -1,0 +1,2490 @@
+[
+  {
+    "question_id": "HQ01",
+    "question": "What arsenic concentration in ppb is listed for Darapur in Nadia in Table 25 of the Annual Ground Water Quality Report 2025?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "number_with_source",
+      "items": [
+        {
+          "value": "61.9",
+          "unit": "ppb",
+          "statistic": "single",
+          "place": "Harringhata, Darapur",
+          "contaminant": "arsenic",
+          "location": null,
+          "aquifer": null,
+          "period_basis": "unknown",
+          "district": "Nadia",
+          "source_type": "Deep HP",
+          "well_id": null,
+          "date": null,
+          "period": null,
+          "period_quote": null,
+          "threshold": null,
+          "spatial_support": "site",
+          "doc": "annual_gwq_2025",
+          "title": "Annual Ground Water Quality Report 2025",
+          "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1762854375262680475file.pdf",
+          "page": 104,
+          "quote": "16 | West Bengal | Nadia | Harringhata | Darapur | 88.56368 | 22.99178 | Deep HP | 61.9",
+          "header": "As (ppb)",
+          "publication_year": 2025,
+          "evidence_id": "annual_gwq_2025:104:0:1:8",
+          "bbox": [
+            72.149625,
+            114.61999999999999,
+            549.4741836065573,
+            125.53999999999996
+          ],
+          "score": 6.0,
+          "asked": "darapur",
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        }
+      ],
+      "parsed": {
+        "intent": "lookup",
+        "claim": null,
+        "contaminant": "arsenic",
+        "districts": [
+          "Nadia"
+        ],
+        "mentions": [
+          {
+            "text": "What arsenic concentration in ppb is listed for Darapur in Nadia in Table 25 of the Annual Ground Water Quality Report 2025?",
+            "places": [
+              "darapur"
+            ],
+            "well_ids": [],
+            "sources": [],
+            "dates": [],
+            "statistics": [],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.13,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ01",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": [
+        {
+          "matches": [
+            "H001"
+          ],
+          "failures_by_fact": {
+            "H001": []
+          }
+        }
+      ]
+    },
+    "legacy_score": {
+      "id": "HQ01",
+      "expected": "number_with_source",
+      "got": "number_with_source",
+      "correct": true,
+      "verified_items": 1,
+      "evidence_ok": true,
+      "gold_doc_exact": true,
+      "n_items": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "question_id": "HQ02",
+    "question": "What arsenic concentration in ppb is listed for Mitrapur in Nadia in Table 25 of the Annual Ground Water Quality Report 2025?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "number_with_source",
+      "items": [
+        {
+          "value": "16.5",
+          "unit": "ppb",
+          "statistic": "single",
+          "place": "Harringhata, Mitrapur",
+          "contaminant": "arsenic",
+          "location": null,
+          "aquifer": null,
+          "period_basis": "unknown",
+          "district": "Nadia",
+          "source_type": "Hand Pump",
+          "well_id": null,
+          "date": null,
+          "period": null,
+          "period_quote": null,
+          "threshold": null,
+          "spatial_support": "site",
+          "doc": "annual_gwq_2025",
+          "title": "Annual Ground Water Quality Report 2025",
+          "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1762854375262680475file.pdf",
+          "page": 104,
+          "quote": "17 | West Bengal | Nadia | Harringhata | Mitrapur | 88.61286 | 23.00443 | Hand Pump | 16.5",
+          "header": "As (ppb)",
+          "publication_year": 2025,
+          "evidence_id": "annual_gwq_2025:104:0:2:8",
+          "bbox": [
+            72.149625,
+            125.53999999999996,
+            549.4741836065573,
+            136.33999999999992
+          ],
+          "score": 6.0,
+          "asked": "mitrapur",
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        }
+      ],
+      "parsed": {
+        "intent": "lookup",
+        "claim": null,
+        "contaminant": "arsenic",
+        "districts": [
+          "Nadia"
+        ],
+        "mentions": [
+          {
+            "text": "What arsenic concentration in ppb is listed for Mitrapur in Nadia in Table 25 of the Annual Ground Water Quality Report 2025?",
+            "places": [
+              "mitrapur"
+            ],
+            "well_ids": [],
+            "sources": [],
+            "dates": [],
+            "statistics": [],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.13,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ02",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": [
+        {
+          "matches": [
+            "H002"
+          ],
+          "failures_by_fact": {
+            "H002": []
+          }
+        }
+      ]
+    },
+    "legacy_score": {
+      "id": "HQ02",
+      "expected": "number_with_source",
+      "got": "number_with_source",
+      "correct": true,
+      "verified_items": 1,
+      "evidence_ok": true,
+      "gold_doc_exact": true,
+      "n_items": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "question_id": "HQ03",
+    "question": "How many samples from Amdanga in North 24 Parganas exceeded 10 \u00b5g/L arsenic in the ADB Table 4 IMIS 2014\u20132017 summary?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "number_with_source",
+      "items": [
+        {
+          "value": "205",
+          "unit": "samples",
+          "statistic": "count_exceeding",
+          "place": "Amdanga",
+          "contaminant": "arsenic",
+          "location": null,
+          "aquifer": null,
+          "period_basis": "table_context",
+          "district": "North 24 Parganas",
+          "source_type": null,
+          "well_id": null,
+          "date": null,
+          "period": "2014\u20132017",
+          "period_quote": "Source: Ministry of Drinking Water & Sanitation. Government of India. Integrated Management Information | System (IMIS), 2014\u20132017. | 8 Ministry of Drinking Water & Sanitation. Government of India. Integrated Management Information System (IMIS),",
+          "threshold": "10",
+          "spatial_support": "site",
+          "doc": "adb_49107_006",
+          "title": "Arsenic and Fluoride in Drinking Water in West Bengal: Characteristics, Implications, and Mitigation (RRP IND 49107-006)",
+          "url": "https://www.adb.org/sites/default/files/linked-documents/49107-006-sd-01.pdf",
+          "page": 8,
+          "quote": "Amdanga | 58 | 2,676 | 205 | 7.66",
+          "header": "No. samples with arsenic >10 \u00b5g/L",
+          "publication_year": null,
+          "evidence_id": "adb_49107_006:8:0:0:3",
+          "bbox": [
+            116.06,
+            266.9416,
+            470.83876,
+            278.9015999999999
+          ],
+          "score": 11.4,
+          "asked": "amdanga",
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        }
+      ],
+      "parsed": {
+        "intent": "lookup",
+        "claim": null,
+        "contaminant": "arsenic",
+        "districts": [
+          "North 24 Parganas"
+        ],
+        "mentions": [
+          {
+            "text": "How many samples from Amdanga in North 24 Parganas exceeded 10 \u00b5g/L arsenic in the ADB Table 4 IMIS 2014\u20132017 summary?",
+            "places": [
+              "amdanga"
+            ],
+            "well_ids": [],
+            "sources": [],
+            "dates": [],
+            "statistics": [
+              "count_exceeding"
+            ],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.13,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ03",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": [
+        {
+          "matches": [
+            "H003"
+          ],
+          "failures_by_fact": {
+            "H003": []
+          }
+        }
+      ]
+    },
+    "legacy_score": {
+      "id": "HQ03",
+      "expected": "number_with_source",
+      "got": "number_with_source",
+      "correct": true,
+      "verified_items": 1,
+      "evidence_ok": true,
+      "gold_doc_exact": true,
+      "n_items": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "question_id": "HQ04",
+    "question": "How many samples from Bagda in North 24 Parganas exceeded 10 \u00b5g/L arsenic in the ADB Table 4 IMIS 2014\u20132017 summary?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "number_with_source",
+      "items": [
+        {
+          "value": "434",
+          "unit": "samples",
+          "statistic": "count_exceeding",
+          "place": "Bagda",
+          "contaminant": "arsenic",
+          "location": null,
+          "aquifer": null,
+          "period_basis": "table_context",
+          "district": "North 24 Parganas",
+          "source_type": null,
+          "well_id": null,
+          "date": null,
+          "period": "2014\u20132017",
+          "period_quote": "Source: Ministry of Drinking Water & Sanitation. Government of India. Integrated Management Information | System (IMIS), 2014\u20132017. | 8 Ministry of Drinking Water & Sanitation. Government of India. Integrated Management Information System (IMIS),",
+          "threshold": "10",
+          "spatial_support": "site",
+          "doc": "adb_49107_006",
+          "title": "Arsenic and Fluoride in Drinking Water in West Bengal: Characteristics, Implications, and Mitigation (RRP IND 49107-006)",
+          "url": "https://www.adb.org/sites/default/files/linked-documents/49107-006-sd-01.pdf",
+          "page": 8,
+          "quote": "Bagda | 140 | 2,312 | 434 | 18.8",
+          "header": "No. samples with arsenic >10 \u00b5g/L",
+          "publication_year": null,
+          "evidence_id": "adb_49107_006:8:0:2:3",
+          "bbox": [
+            116.06,
+            290.5816,
+            470.83876,
+            302.5416
+          ],
+          "score": 11.4,
+          "asked": "bagda",
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        }
+      ],
+      "parsed": {
+        "intent": "lookup",
+        "claim": null,
+        "contaminant": "arsenic",
+        "districts": [
+          "North 24 Parganas"
+        ],
+        "mentions": [
+          {
+            "text": "How many samples from Bagda in North 24 Parganas exceeded 10 \u00b5g/L arsenic in the ADB Table 4 IMIS 2014\u20132017 summary?",
+            "places": [
+              "bagda"
+            ],
+            "well_ids": [],
+            "sources": [],
+            "dates": [],
+            "statistics": [
+              "count_exceeding"
+            ],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.13,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ04",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": [
+        {
+          "matches": [
+            "H004"
+          ],
+          "failures_by_fact": {
+            "H004": []
+          }
+        }
+      ]
+    },
+    "legacy_score": {
+      "id": "HQ04",
+      "expected": "number_with_source",
+      "got": "number_with_source",
+      "correct": true,
+      "verified_items": 1,
+      "evidence_ok": true,
+      "gold_doc_exact": true,
+      "n_items": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "question_id": "HQ05",
+    "question": "What fluoride concentration was measured at the kanchangaria dug well in Murshidabad in Apr, 2022, in Annexure I of Ground Water Quality of West Bengal?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "number_with_source",
+      "items": [
+        {
+          "value": "0.33",
+          "unit": "mg/L",
+          "statistic": "single",
+          "place": "Bharatpur I, kanchangaria",
+          "contaminant": "fluoride",
+          "location": "kanchangaria",
+          "aquifer": "shallow",
+          "period_basis": "table_context",
+          "district": "Murshidabad",
+          "source_type": "Dug Well",
+          "well_id": null,
+          "date": null,
+          "period": "Apr, 2022",
+          "period_quote": "Annexure I | DISTRIBUTION OF PHYSIO- CHEMICAL CONSTITUENTS IN GROUND WATER IN SHALLOW/UN-CONFINED AQUIFER OF | WEST BENGAL | (Sample collected during Apr, 2022)",
+          "threshold": null,
+          "spatial_support": "site",
+          "doc": "gwq_west_bengal",
+          "title": "Ground Water Quality of West Bengal",
+          "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+          "page": 101,
+          "quote": "Murshidabad | Bharatpur I | kanchangaria | Dug Well | 7.96 | 439 | 195 | 54 | 15 | 30 | 1 | 0 | 287 | 235 | 32 | 2 | 1 | 0.33 | 310 | 1.22",
+          "header": "F",
+          "publication_year": null,
+          "evidence_id": "gwq_west_bengal:101:0:8:17",
+          "bbox": [
+            28.319999999999997,
+            229.06000000000003,
+            823.6799900000001,
+            244.4199950000001
+          ],
+          "score": 9.8,
+          "asked": "kanchangaria",
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        }
+      ],
+      "parsed": {
+        "intent": "lookup",
+        "claim": null,
+        "contaminant": "fluoride",
+        "districts": [
+          "Murshidabad"
+        ],
+        "mentions": [
+          {
+            "text": "What fluoride concentration was measured at the kanchangaria dug well in Murshidabad in Apr, 2022, in Annexure I of Ground Water Quality of West Bengal?",
+            "places": [
+              "kanchangaria"
+            ],
+            "well_ids": [],
+            "sources": [
+              "dug well"
+            ],
+            "dates": [
+              "2022-04"
+            ],
+            "statistics": [],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.13,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ05",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": [
+        {
+          "matches": [
+            "H005"
+          ],
+          "failures_by_fact": {
+            "H005": []
+          }
+        }
+      ]
+    },
+    "legacy_score": {
+      "id": "HQ05",
+      "expected": "number_with_source",
+      "got": "number_with_source",
+      "correct": true,
+      "verified_items": 1,
+      "evidence_ok": true,
+      "gold_doc_exact": true,
+      "n_items": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "question_id": "HQ06",
+    "question": "What fluoride concentration was measured at the Muchia dug well in Malda in Apr, 2022, in Annexure I of Ground Water Quality of West Bengal?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "number_with_source",
+      "items": [
+        {
+          "value": "0.29",
+          "unit": "mg/L",
+          "statistic": "single",
+          "place": "Old Malda, Muchia",
+          "contaminant": "fluoride",
+          "location": "Muchia",
+          "aquifer": "shallow",
+          "period_basis": "table_context",
+          "district": "Malda",
+          "source_type": "Dug Well",
+          "well_id": null,
+          "date": null,
+          "period": "Apr, 2022",
+          "period_quote": "Annexure I | DISTRIBUTION OF PHYSIO- CHEMICAL CONSTITUENTS IN GROUND WATER IN SHALLOW/UN-CONFINED AQUIFER OF | WEST BENGAL | (Sample collected during Apr, 2022)",
+          "threshold": null,
+          "spatial_support": "site",
+          "doc": "gwq_west_bengal",
+          "title": "Ground Water Quality of West Bengal",
+          "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+          "page": 101,
+          "quote": "Malda | Old Malda | Muchia | Dug Well | 7.84 | 354 | 110 | 10 | 21 | 34 | 1 | 0 | 177 | 145 | 32 | 0 | 0 | 0.29 | 206 | 0.50",
+          "header": "F",
+          "publication_year": null,
+          "evidence_id": "gwq_west_bengal:101:0:4:17",
+          "bbox": [
+            28.319999999999997,
+            159.90999500000004,
+            823.6799900000001,
+            175.51000000000005
+          ],
+          "score": 9.8,
+          "asked": "muchia",
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        }
+      ],
+      "parsed": {
+        "intent": "lookup",
+        "claim": null,
+        "contaminant": "fluoride",
+        "districts": [
+          "Malda"
+        ],
+        "mentions": [
+          {
+            "text": "What fluoride concentration was measured at the Muchia dug well in Malda in Apr, 2022, in Annexure I of Ground Water Quality of West Bengal?",
+            "places": [
+              "muchia"
+            ],
+            "well_ids": [],
+            "sources": [
+              "dug well"
+            ],
+            "dates": [
+              "2022-04"
+            ],
+            "statistics": [],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.13,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ06",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": [
+        {
+          "matches": [
+            "H006"
+          ],
+          "failures_by_fact": {
+            "H006": []
+          }
+        }
+      ]
+    },
+    "legacy_score": {
+      "id": "HQ06",
+      "expected": "number_with_source",
+      "got": "number_with_source",
+      "correct": true,
+      "verified_items": 1,
+      "evidence_ok": true,
+      "gold_doc_exact": true,
+      "n_items": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "question_id": "HQ07",
+    "question": "What fluoride concentration was measured at the Amtala dug well in South 24 Parganas in Apr, 2022, in Annexure I of Ground Water Quality of West Bengal?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "number_with_source",
+      "items": [
+        {
+          "value": "0.22",
+          "unit": "mg/L",
+          "statistic": "single",
+          "place": "Mandirbazar, Amtala",
+          "contaminant": "fluoride",
+          "location": "Amtala",
+          "aquifer": "shallow",
+          "period_basis": "table_context",
+          "district": "South 24 Parganas",
+          "source_type": "Dug Well",
+          "well_id": null,
+          "date": null,
+          "period": "Apr, 2022",
+          "period_quote": "Annexure I | DISTRIBUTION OF PHYSIO- CHEMICAL CONSTITUENTS IN GROUND WATER IN SHALLOW/UN-CONFINED AQUIFER OF | WEST BENGAL | (Sample collected during Apr, 2022)",
+          "threshold": null,
+          "spatial_support": "site",
+          "doc": "gwq_west_bengal",
+          "title": "Ground Water Quality of West Bengal",
+          "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+          "page": 107,
+          "quote": "South 24 Parganas | Mandirbazar | Amtala | Dug Well | 8.50 | 1007 | 195 | 32 | 28 | 119 | 6 | 21 | 287 | 270 | 135 | 1 | 26 | 0.22 | 534 | 1.62",
+          "header": "F",
+          "publication_year": null,
+          "evidence_id": "gwq_west_bengal:107:0:16:17",
+          "bbox": [
+            28.319999999999997,
+            348.619995,
+            823.6799900000001,
+            363.97999500000003
+          ],
+          "score": 9.8,
+          "asked": "amtala",
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        }
+      ],
+      "parsed": {
+        "intent": "lookup",
+        "claim": null,
+        "contaminant": "fluoride",
+        "districts": [
+          "South 24 Parganas"
+        ],
+        "mentions": [
+          {
+            "text": "What fluoride concentration was measured at the Amtala dug well in South 24 Parganas in Apr, 2022, in Annexure I of Ground Water Quality of West Bengal?",
+            "places": [
+              "amtala"
+            ],
+            "well_ids": [],
+            "sources": [
+              "dug well"
+            ],
+            "dates": [
+              "2022-04"
+            ],
+            "statistics": [],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.13,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ07",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": [
+        {
+          "matches": [
+            "H007"
+          ],
+          "failures_by_fact": {
+            "H007": []
+          }
+        }
+      ]
+    },
+    "legacy_score": {
+      "id": "HQ07",
+      "expected": "number_with_source",
+      "got": "number_with_source",
+      "correct": true,
+      "verified_items": 1,
+      "evidence_ok": true,
+      "gold_doc_exact": true,
+      "n_items": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "question_id": "HQ08",
+    "question": "What fluoride concentration was measured at the Barjal dug well in Birbhum in Apr, 2022, in Annexure I of Ground Water Quality of West Bengal?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "number_with_source",
+      "items": [
+        {
+          "value": "0.39",
+          "unit": "mg/L",
+          "statistic": "single",
+          "place": "Rampurhat I, Barjal",
+          "contaminant": "fluoride",
+          "location": "Barjal",
+          "aquifer": "shallow",
+          "period_basis": "table_context",
+          "district": "Birbhum",
+          "source_type": "Dug Well",
+          "well_id": null,
+          "date": null,
+          "period": "Apr, 2022",
+          "period_quote": "Annexure I | DISTRIBUTION OF PHYSIO- CHEMICAL CONSTITUENTS IN GROUND WATER IN SHALLOW/UN-CONFINED AQUIFER OF | WEST BENGAL | (Sample collected during Apr, 2022)",
+          "threshold": null,
+          "spatial_support": "site",
+          "doc": "gwq_west_bengal",
+          "title": "Ground Water Quality of West Bengal",
+          "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+          "page": 94,
+          "quote": "Birbhum | Rampurhat I | Barjal | Dug Well | 7.81 | 1533 | 475 | 58 | 80 | 110 | 64 | 0 | 372 | 305 | 269 | 50 | 87 | 0.39 | 946 | 1.29",
+          "header": "F",
+          "publication_year": null,
+          "evidence_id": "gwq_west_bengal:94:0:2:17",
+          "bbox": [
+            28.319999999999997,
+            115.25000000000004,
+            823.6799900000001,
+            130.60999500000008
+          ],
+          "score": 9.8,
+          "asked": "barjal",
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        }
+      ],
+      "parsed": {
+        "intent": "lookup",
+        "claim": null,
+        "contaminant": "fluoride",
+        "districts": [
+          "Birbhum"
+        ],
+        "mentions": [
+          {
+            "text": "What fluoride concentration was measured at the Barjal dug well in Birbhum in Apr, 2022, in Annexure I of Ground Water Quality of West Bengal?",
+            "places": [
+              "barjal"
+            ],
+            "well_ids": [],
+            "sources": [
+              "dug well"
+            ],
+            "dates": [
+              "2022-04"
+            ],
+            "statistics": [],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.14,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ08",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": [
+        {
+          "matches": [
+            "H008"
+          ],
+          "failures_by_fact": {
+            "H008": []
+          }
+        }
+      ]
+    },
+    "legacy_score": {
+      "id": "HQ08",
+      "expected": "number_with_source",
+      "got": "number_with_source",
+      "correct": true,
+      "verified_items": 1,
+      "evidence_ok": true,
+      "gold_doc_exact": true,
+      "n_items": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "question_id": "HQ09",
+    "question": "What fluoride concentration was measured at the Benajira dug well in Bankura in Apr, 2022, in Annexure I of Ground Water Quality of West Bengal?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "number_with_source",
+      "items": [
+        {
+          "value": "0.29",
+          "unit": "mg/L",
+          "statistic": "single",
+          "place": "Bankura-I, Benajira",
+          "contaminant": "fluoride",
+          "location": "Benajira",
+          "aquifer": "shallow",
+          "period_basis": "table_context",
+          "district": "Bankura",
+          "source_type": "Dug Well",
+          "well_id": null,
+          "date": null,
+          "period": "Apr, 2022",
+          "period_quote": "Annexure I | DISTRIBUTION OF PHYSIO- CHEMICAL CONSTITUENTS IN GROUND WATER IN SHALLOW/UN-CONFINED AQUIFER OF | WEST BENGAL | (Sample collected during Apr, 2022)",
+          "threshold": null,
+          "spatial_support": "site",
+          "doc": "gwq_west_bengal",
+          "title": "Ground Water Quality of West Bengal",
+          "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+          "page": 91,
+          "quote": "Bankura | Bankura-I | Benajira | Dug Well | 7.85 | 1892 | 475 | 152 | 23 | 132 | 83 | 0 | 299 | 245 | 326 | 63 | 159 | 0.29 | 1122 | 0.08",
+          "header": "F",
+          "publication_year": null,
+          "evidence_id": "gwq_west_bengal:91:0:1:17",
+          "bbox": [
+            28.32,
+            99.65000000000003,
+            823.67999,
+            115.25000000000004
+          ],
+          "score": 9.8,
+          "asked": "benajira",
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        }
+      ],
+      "parsed": {
+        "intent": "lookup",
+        "claim": null,
+        "contaminant": "fluoride",
+        "districts": [
+          "Bankura"
+        ],
+        "mentions": [
+          {
+            "text": "What fluoride concentration was measured at the Benajira dug well in Bankura in Apr, 2022, in Annexure I of Ground Water Quality of West Bengal?",
+            "places": [
+              "benajira"
+            ],
+            "well_ids": [],
+            "sources": [
+              "dug well"
+            ],
+            "dates": [
+              "2022-04"
+            ],
+            "statistics": [],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.14,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ09",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": [
+        {
+          "matches": [
+            "H009"
+          ],
+          "failures_by_fact": {
+            "H009": []
+          }
+        }
+      ]
+    },
+    "legacy_score": {
+      "id": "HQ09",
+      "expected": "number_with_source",
+      "got": "number_with_source",
+      "correct": true,
+      "verified_items": 1,
+      "evidence_ok": true,
+      "gold_doc_exact": true,
+      "n_items": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "question_id": "HQ10",
+    "question": "What fluoride concentration was measured at the Bhabaganpur dug well in Bankura in Apr, 2022, in Annexure I of Ground Water Quality of West Bengal?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "number_with_source",
+      "items": [
+        {
+          "value": "0.02",
+          "unit": "mg/L",
+          "statistic": "single",
+          "place": "Bankura-I, Bhabaganpur",
+          "contaminant": "fluoride",
+          "location": "Bhabaganpur",
+          "aquifer": "shallow",
+          "period_basis": "table_context",
+          "district": "Bankura",
+          "source_type": "Dug Well",
+          "well_id": null,
+          "date": null,
+          "period": "Apr, 2022",
+          "period_quote": "Annexure I | DISTRIBUTION OF PHYSIO- CHEMICAL CONSTITUENTS IN GROUND WATER IN SHALLOW/UN-CONFINED AQUIFER OF | WEST BENGAL | (Sample collected during Apr, 2022)",
+          "threshold": null,
+          "spatial_support": "site",
+          "doc": "gwq_west_bengal",
+          "title": "Ground Water Quality of West Bengal",
+          "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+          "page": 91,
+          "quote": "Bankura | Bankura-I | Bhabaganpur | Dug Well | 7.19 | 1012 | 285 | 40 | 45 | 78 | 6 | 0 | 232 | 190 | 145 | 25 | 40 | 0.02 | 520 | 0.14",
+          "header": "F",
+          "publication_year": null,
+          "evidence_id": "gwq_west_bengal:91:0:2:17",
+          "bbox": [
+            28.32,
+            115.25000000000004,
+            823.67999,
+            130.60999500000008
+          ],
+          "score": 9.8,
+          "asked": "bhabaganpur",
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        }
+      ],
+      "parsed": {
+        "intent": "lookup",
+        "claim": null,
+        "contaminant": "fluoride",
+        "districts": [
+          "Bankura"
+        ],
+        "mentions": [
+          {
+            "text": "What fluoride concentration was measured at the Bhabaganpur dug well in Bankura in Apr, 2022, in Annexure I of Ground Water Quality of West Bengal?",
+            "places": [
+              "bhabaganpur"
+            ],
+            "well_ids": [],
+            "sources": [
+              "dug well"
+            ],
+            "dates": [
+              "2022-04"
+            ],
+            "statistics": [],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.14,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ10",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": [
+        {
+          "matches": [
+            "H010"
+          ],
+          "failures_by_fact": {
+            "H010": []
+          }
+        }
+      ]
+    },
+    "legacy_score": {
+      "id": "HQ10",
+      "expected": "number_with_source",
+      "got": "number_with_source",
+      "correct": true,
+      "verified_items": 1,
+      "evidence_ok": true,
+      "gold_doc_exact": true,
+      "n_items": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "question_id": "HQ11",
+    "question": "What fluoride concentration is listed for the Markabera TW, well ID WBPR_7, sampled 04-06-2023 in Purulia Annexure V?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "number_with_source",
+      "items": [
+        {
+          "value": "0.08",
+          "unit": "mg/L",
+          "statistic": "single",
+          "place": "Purulia -II, Markabera",
+          "contaminant": "fluoride",
+          "location": null,
+          "aquifer": null,
+          "period_basis": "sample_date",
+          "district": "Purulia",
+          "source_type": "TW",
+          "well_id": "WBPR_7",
+          "date": "2023-06-04",
+          "period": "2023-06-04",
+          "period_quote": "West Bengal | Pur ulia | Purulia -II | Markabera | TW | WBP R_7 | 23.30 6619 | 86.45 5091 | 04- 06- 2023 | NAQ UIM | 7. 4 5 | 313 | 130 | 44 | 5 | 28 | 3 | 71 | 55 | ND | 67 | 7 | 37 | 0.08 | 236 | ND",
+          "threshold": null,
+          "spatial_support": "site",
+          "doc": "amp_purulia",
+          "title": "Aquifer Mapping and Management Plan: Purulia District, West Bengal",
+          "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1744936456830985840file.pdf",
+          "page": 183,
+          "quote": "West Bengal | Pur ulia | Purulia -II | Markabera | TW | WBP R_7 | 23.30 6619 | 86.45 5091 | 04- 06- 2023 | NAQ UIM | 7. 4 5 | 313 | 130 | 44 | 5 | 28 | 3 | 71 | 55 | ND | 67 | 7 | 37 | 0.08 | 236 | ND",
+          "header": "F-",
+          "publication_year": 2024,
+          "evidence_id": "amp_purulia:183:0:6:24",
+          "bbox": [
+            20.651612903225804,
+            368.8302235714285,
+            816.34501875,
+            398.39221220338976
+          ],
+          "score": 10.8,
+          "asked": "markabera",
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        }
+      ],
+      "parsed": {
+        "intent": "lookup",
+        "claim": null,
+        "contaminant": "fluoride",
+        "districts": [
+          "Purulia"
+        ],
+        "mentions": [
+          {
+            "text": "What fluoride concentration is listed for the Markabera TW, well ID WBPR_7, sampled 04-06-2023 in Purulia Annexure V?",
+            "places": [
+              "markabera"
+            ],
+            "well_ids": [
+              "wbpr7"
+            ],
+            "sources": [
+              "tube well"
+            ],
+            "dates": [
+              "2023-06-04"
+            ],
+            "statistics": [],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.16,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ11",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": [
+        {
+          "matches": [
+            "H011"
+          ],
+          "failures_by_fact": {
+            "H011": []
+          }
+        }
+      ]
+    },
+    "legacy_score": {
+      "id": "HQ11",
+      "expected": "number_with_source",
+      "got": "number_with_source",
+      "correct": true,
+      "verified_items": 1,
+      "evidence_ok": true,
+      "gold_doc_exact": true,
+      "n_items": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "question_id": "HQ12",
+    "question": "What fluoride concentration is listed for the Markabera DW, well ID WBPR_8, sampled 04-06-2023 in Purulia Annexure V?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "number_with_source",
+      "items": [
+        {
+          "value": "0.31",
+          "unit": "mg/L",
+          "statistic": "single",
+          "place": "Purulia -II, Markabera",
+          "contaminant": "fluoride",
+          "location": null,
+          "aquifer": null,
+          "period_basis": "sample_date",
+          "district": "Purulia",
+          "source_type": "DW",
+          "well_id": "WBPR_8",
+          "date": "2023-06-04",
+          "period": "2023-06-04",
+          "period_quote": "West Bengal | Pur ulia | Purulia -II | Markabera | DW | WBP R_8 | 23.30 6628 | 86.45 562 | 04- 06- 2023 | NAQ UIM | 7. | 209 | 80 | 20 | 7 | 10 | 2 | 18 | 75 | ND | 92 | 4 | 5 | 0.31 | 122 | ND",
+          "threshold": null,
+          "spatial_support": "site",
+          "doc": "amp_purulia",
+          "title": "Aquifer Mapping and Management Plan: Purulia District, West Bengal",
+          "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1744936456830985840file.pdf",
+          "page": 183,
+          "quote": "West Bengal | Pur ulia | Purulia -II | Markabera | DW | WBP R_8 | 23.30 6628 | 86.45 562 | 04- 06- 2023 | NAQ UIM | 7. | 209 | 80 | 20 | 7 | 10 | 2 | 18 | 75 | ND | 92 | 4 | 5 | 0.31 | 122 | ND",
+          "header": "F-",
+          "publication_year": 2024,
+          "evidence_id": "amp_purulia:183:0:7:24",
+          "bbox": [
+            20.651612903225804,
+            398.39221220338976,
+            816.34501875,
+            427.88779220338984
+          ],
+          "score": 10.8,
+          "asked": "markabera",
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        }
+      ],
+      "parsed": {
+        "intent": "lookup",
+        "claim": null,
+        "contaminant": "fluoride",
+        "districts": [
+          "Purulia"
+        ],
+        "mentions": [
+          {
+            "text": "What fluoride concentration is listed for the Markabera DW, well ID WBPR_8, sampled 04-06-2023 in Purulia Annexure V?",
+            "places": [
+              "markabera"
+            ],
+            "well_ids": [
+              "wbpr8"
+            ],
+            "sources": [
+              "dug well"
+            ],
+            "dates": [
+              "2023-06-04"
+            ],
+            "statistics": [],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.15,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ12",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": [
+        {
+          "matches": [
+            "H012"
+          ],
+          "failures_by_fact": {
+            "H012": []
+          }
+        }
+      ]
+    },
+    "legacy_score": {
+      "id": "HQ12",
+      "expected": "number_with_source",
+      "got": "number_with_source",
+      "correct": true,
+      "verified_items": 1,
+      "evidence_ok": true,
+      "gold_doc_exact": true,
+      "n_items": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "question_id": "HQ13",
+    "question": "Can the Darapur and Mitrapur arsenic concentrations in the 2025 report be treated as before-and-after measurements of the same Nadia well to establish a decline?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "not_comparable",
+      "items": [
+        {
+          "value": "61.9",
+          "unit": "ppb",
+          "statistic": "single",
+          "place": "Harringhata, Darapur",
+          "contaminant": "arsenic",
+          "location": null,
+          "aquifer": null,
+          "period_basis": "unknown",
+          "district": "Nadia",
+          "source_type": "Deep HP",
+          "well_id": null,
+          "date": null,
+          "period": null,
+          "period_quote": null,
+          "threshold": null,
+          "spatial_support": "site",
+          "doc": "annual_gwq_2025",
+          "title": "Annual Ground Water Quality Report 2025",
+          "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1762854375262680475file.pdf",
+          "page": 104,
+          "quote": "16 | West Bengal | Nadia | Harringhata | Darapur | 88.56368 | 22.99178 | Deep HP | 61.9",
+          "header": "As (ppb)",
+          "publication_year": 2025,
+          "evidence_id": "annual_gwq_2025:104:0:1:8",
+          "bbox": [
+            72.149625,
+            114.61999999999999,
+            549.4741836065573,
+            125.53999999999996
+          ],
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        },
+        {
+          "value": "16.5",
+          "unit": "ppb",
+          "statistic": "single",
+          "place": "Harringhata, Mitrapur",
+          "contaminant": "arsenic",
+          "location": null,
+          "aquifer": null,
+          "period_basis": "unknown",
+          "district": "Nadia",
+          "source_type": "Hand Pump",
+          "well_id": null,
+          "date": null,
+          "period": null,
+          "period_quote": null,
+          "threshold": null,
+          "spatial_support": "site",
+          "doc": "annual_gwq_2025",
+          "title": "Annual Ground Water Quality Report 2025",
+          "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1762854375262680475file.pdf",
+          "page": 104,
+          "quote": "17 | West Bengal | Nadia | Harringhata | Mitrapur | 88.61286 | 23.00443 | Hand Pump | 16.5",
+          "header": "As (ppb)",
+          "publication_year": 2025,
+          "evidence_id": "annual_gwq_2025:104:0:2:8",
+          "bbox": [
+            72.149625,
+            125.53999999999996,
+            549.4741836065573,
+            136.33999999999992
+          ],
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        }
+      ],
+      "reasons": [
+        "not the same sampling point: Harringhata, Darapur [Deep HP] vs Harringhata, Mitrapur [Hand Pump]",
+        "no time separation: both None"
+      ],
+      "note": "After unit conversion: 61.9 \u00b5g/L vs 16.5 \u00b5g/L.",
+      "parsed": {
+        "intent": "compare",
+        "claim": "time_series",
+        "contaminant": "arsenic",
+        "districts": [
+          "Nadia"
+        ],
+        "mentions": [
+          {
+            "text": "Darapur",
+            "places": [
+              "darapur"
+            ],
+            "well_ids": [],
+            "sources": [],
+            "dates": [],
+            "statistics": [],
+            "attribute": null
+          },
+          {
+            "text": "Mitrapur arsenic concentrations in the 2025 report ",
+            "places": [
+              "mitrapur"
+            ],
+            "well_ids": [],
+            "sources": [],
+            "dates": [],
+            "statistics": [],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.21,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ13",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": [
+        {
+          "matches": [
+            "H001"
+          ],
+          "failures_by_fact": {
+            "H001": [],
+            "H002": [
+              "value",
+              "location",
+              "source_type"
+            ]
+          }
+        },
+        {
+          "matches": [
+            "H002"
+          ],
+          "failures_by_fact": {
+            "H001": [
+              "value",
+              "location",
+              "source_type"
+            ],
+            "H002": []
+          }
+        }
+      ]
+    },
+    "legacy_score": {
+      "id": "HQ13",
+      "expected": "not_comparable",
+      "got": "not_comparable",
+      "correct": true,
+      "verified_items": 2,
+      "evidence_ok": true,
+      "gold_doc_exact": true,
+      "n_items": 2,
+      "unsupported": 0
+    }
+  },
+  {
+    "question_id": "HQ14",
+    "question": "Can the Amdanga arsenic count of affected habitations and the count of samples above 10 \u00b5g/L in ADB Table 4 be treated as the same statistic?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "not_comparable",
+      "items": [
+        {
+          "value": "58",
+          "unit": "habitations",
+          "statistic": "count_exceeding",
+          "place": "Amdanga",
+          "contaminant": "arsenic",
+          "location": null,
+          "aquifer": null,
+          "period_basis": "table_context",
+          "district": "North 24 Parganas",
+          "source_type": null,
+          "well_id": null,
+          "date": null,
+          "period": "2014\u20132017",
+          "period_quote": "Source: Ministry of Drinking Water & Sanitation. Government of India. Integrated Management Information | System (IMIS), 2014\u20132017. | 8 Ministry of Drinking Water & Sanitation. Government of India. Integrated Management Information System (IMIS),",
+          "threshold": "10",
+          "spatial_support": "site",
+          "doc": "adb_49107_006",
+          "title": "Arsenic and Fluoride in Drinking Water in West Bengal: Characteristics, Implications, and Mitigation (RRP IND 49107-006)",
+          "url": "https://www.adb.org/sites/default/files/linked-documents/49107-006-sd-01.pdf",
+          "page": 8,
+          "quote": "Amdanga | 58 | 2,676 | 205 | 7.66",
+          "header": "habitations affected by (>10 \u00b5g/L)",
+          "publication_year": null,
+          "evidence_id": "adb_49107_006:8:0:0:1",
+          "bbox": [
+            116.06,
+            266.9416,
+            470.83876,
+            278.9015999999999
+          ],
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        },
+        {
+          "value": "205",
+          "unit": "samples",
+          "statistic": "count_exceeding",
+          "place": "Amdanga",
+          "contaminant": "arsenic",
+          "location": null,
+          "aquifer": null,
+          "period_basis": "table_context",
+          "district": "North 24 Parganas",
+          "source_type": null,
+          "well_id": null,
+          "date": null,
+          "period": "2014\u20132017",
+          "period_quote": "Source: Ministry of Drinking Water & Sanitation. Government of India. Integrated Management Information | System (IMIS), 2014\u20132017. | 8 Ministry of Drinking Water & Sanitation. Government of India. Integrated Management Information System (IMIS),",
+          "threshold": "10",
+          "spatial_support": "site",
+          "doc": "adb_49107_006",
+          "title": "Arsenic and Fluoride in Drinking Water in West Bengal: Characteristics, Implications, and Mitigation (RRP IND 49107-006)",
+          "url": "https://www.adb.org/sites/default/files/linked-documents/49107-006-sd-01.pdf",
+          "page": 8,
+          "quote": "Amdanga | 58 | 2,676 | 205 | 7.66",
+          "header": "No. samples with arsenic >10 \u00b5g/L",
+          "publication_year": null,
+          "evidence_id": "adb_49107_006:8:0:0:3",
+          "bbox": [
+            116.06,
+            266.9416,
+            470.83876,
+            278.9015999999999
+          ],
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        }
+      ],
+      "reasons": [
+        "different quantities: count of habitations vs count of samples",
+        "neither value is a district-wide estimate"
+      ],
+      "note": null,
+      "parsed": {
+        "intent": "compare",
+        "claim": "same_quantity",
+        "contaminant": "arsenic",
+        "districts": [],
+        "mentions": [
+          {
+            "text": "Amdanga arsenic count of affected habitations",
+            "places": [
+              "amdanga"
+            ],
+            "well_ids": [],
+            "sources": [],
+            "dates": [],
+            "statistics": [
+              "count_exceeding"
+            ],
+            "attribute": null
+          },
+          {
+            "text": "count of samples above 10 \u00b5g/L in ADB Table 4 ",
+            "places": [
+              "amdanga"
+            ],
+            "well_ids": [],
+            "sources": [],
+            "dates": [],
+            "statistics": [
+              "count_exceeding"
+            ],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.23,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ14",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": [
+        {
+          "matches": [
+            "H014"
+          ],
+          "failures_by_fact": {
+            "H003": [
+              "value",
+              "unit"
+            ],
+            "H014": []
+          }
+        },
+        {
+          "matches": [
+            "H003"
+          ],
+          "failures_by_fact": {
+            "H003": [],
+            "H014": [
+              "value",
+              "unit"
+            ]
+          }
+        }
+      ]
+    },
+    "legacy_score": {
+      "id": "HQ14",
+      "expected": "not_comparable",
+      "got": "not_comparable",
+      "correct": true,
+      "verified_items": 2,
+      "evidence_ok": true,
+      "gold_doc_exact": true,
+      "n_items": 2,
+      "unsupported": 0
+    }
+  },
+  {
+    "question_id": "HQ15",
+    "question": "Can the Benajira and Bhabaganpur fluoride values from Apr, 2022 establish a before-and-after improvement at one Bankura well?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "not_comparable",
+      "items": [
+        {
+          "value": "0.29",
+          "unit": "mg/L",
+          "statistic": "single",
+          "place": "Bankura-I, Benajira",
+          "contaminant": "fluoride",
+          "location": "Benajira",
+          "aquifer": "shallow",
+          "period_basis": "table_context",
+          "district": "Bankura",
+          "source_type": "Dug Well",
+          "well_id": null,
+          "date": null,
+          "period": "Apr, 2022",
+          "period_quote": "Annexure I | DISTRIBUTION OF PHYSIO- CHEMICAL CONSTITUENTS IN GROUND WATER IN SHALLOW/UN-CONFINED AQUIFER OF | WEST BENGAL | (Sample collected during Apr, 2022)",
+          "threshold": null,
+          "spatial_support": "site",
+          "doc": "gwq_west_bengal",
+          "title": "Ground Water Quality of West Bengal",
+          "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+          "page": 91,
+          "quote": "Bankura | Bankura-I | Benajira | Dug Well | 7.85 | 1892 | 475 | 152 | 23 | 132 | 83 | 0 | 299 | 245 | 326 | 63 | 159 | 0.29 | 1122 | 0.08",
+          "header": "F",
+          "publication_year": null,
+          "evidence_id": "gwq_west_bengal:91:0:1:17",
+          "bbox": [
+            28.32,
+            99.65000000000003,
+            823.67999,
+            115.25000000000004
+          ],
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        },
+        {
+          "value": "0.02",
+          "unit": "mg/L",
+          "statistic": "single",
+          "place": "Bankura-I, Bhabaganpur",
+          "contaminant": "fluoride",
+          "location": "Bhabaganpur",
+          "aquifer": "shallow",
+          "period_basis": "table_context",
+          "district": "Bankura",
+          "source_type": "Dug Well",
+          "well_id": null,
+          "date": null,
+          "period": "Apr, 2022",
+          "period_quote": "Annexure I | DISTRIBUTION OF PHYSIO- CHEMICAL CONSTITUENTS IN GROUND WATER IN SHALLOW/UN-CONFINED AQUIFER OF | WEST BENGAL | (Sample collected during Apr, 2022)",
+          "threshold": null,
+          "spatial_support": "site",
+          "doc": "gwq_west_bengal",
+          "title": "Ground Water Quality of West Bengal",
+          "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+          "page": 91,
+          "quote": "Bankura | Bankura-I | Bhabaganpur | Dug Well | 7.19 | 1012 | 285 | 40 | 45 | 78 | 6 | 0 | 232 | 190 | 145 | 25 | 40 | 0.02 | 520 | 0.14",
+          "header": "F",
+          "publication_year": null,
+          "evidence_id": "gwq_west_bengal:91:0:2:17",
+          "bbox": [
+            28.32,
+            115.25000000000004,
+            823.67999,
+            130.60999500000008
+          ],
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        }
+      ],
+      "reasons": [
+        "not the same sampling point: Bankura-I, Benajira [Dug Well] vs Bankura-I, Bhabaganpur [Dug Well]",
+        "no time separation: both Apr, 2022"
+      ],
+      "note": "After unit conversion: 290 \u00b5g/L vs 20 \u00b5g/L.",
+      "parsed": {
+        "intent": "compare",
+        "claim": "time_series",
+        "contaminant": "fluoride",
+        "districts": [
+          "Bankura"
+        ],
+        "mentions": [
+          {
+            "text": "Benajira",
+            "places": [
+              "benajira"
+            ],
+            "well_ids": [],
+            "sources": [],
+            "dates": [
+              "2022-04"
+            ],
+            "statistics": [],
+            "attribute": null
+          },
+          {
+            "text": "Bhabaganpur fluoride values from Apr, 2022 ",
+            "places": [
+              "bhabaganpur"
+            ],
+            "well_ids": [],
+            "sources": [],
+            "dates": [
+              "2022-04"
+            ],
+            "statistics": [],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.22,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ15",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": [
+        {
+          "matches": [
+            "H009"
+          ],
+          "failures_by_fact": {
+            "H009": [],
+            "H010": [
+              "value",
+              "location"
+            ]
+          }
+        },
+        {
+          "matches": [
+            "H010"
+          ],
+          "failures_by_fact": {
+            "H009": [
+              "value",
+              "location"
+            ],
+            "H010": []
+          }
+        }
+      ]
+    },
+    "legacy_score": {
+      "id": "HQ15",
+      "expected": "not_comparable",
+      "got": "not_comparable",
+      "correct": true,
+      "verified_items": 2,
+      "evidence_ok": true,
+      "gold_doc_exact": true,
+      "n_items": 2,
+      "unsupported": 0
+    }
+  },
+  {
+    "question_id": "HQ16",
+    "question": "Can Markabera TW WBPR_7 and DW WBPR_8 fluoride values on 04-06-2023 be treated as repeated measurements of the same Purulia well?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "not_comparable",
+      "items": [
+        {
+          "value": "0.08",
+          "unit": "mg/L",
+          "statistic": "single",
+          "place": "Purulia -II, Markabera",
+          "contaminant": "fluoride",
+          "location": null,
+          "aquifer": null,
+          "period_basis": "sample_date",
+          "district": "Purulia",
+          "source_type": "TW",
+          "well_id": "WBPR_7",
+          "date": "2023-06-04",
+          "period": "2023-06-04",
+          "period_quote": "West Bengal | Pur ulia | Purulia -II | Markabera | TW | WBP R_7 | 23.30 6619 | 86.45 5091 | 04- 06- 2023 | NAQ UIM | 7. 4 5 | 313 | 130 | 44 | 5 | 28 | 3 | 71 | 55 | ND | 67 | 7 | 37 | 0.08 | 236 | ND",
+          "threshold": null,
+          "spatial_support": "site",
+          "doc": "amp_purulia",
+          "title": "Aquifer Mapping and Management Plan: Purulia District, West Bengal",
+          "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1744936456830985840file.pdf",
+          "page": 183,
+          "quote": "West Bengal | Pur ulia | Purulia -II | Markabera | TW | WBP R_7 | 23.30 6619 | 86.45 5091 | 04- 06- 2023 | NAQ UIM | 7. 4 5 | 313 | 130 | 44 | 5 | 28 | 3 | 71 | 55 | ND | 67 | 7 | 37 | 0.08 | 236 | ND",
+          "header": "F-",
+          "publication_year": 2024,
+          "evidence_id": "amp_purulia:183:0:6:24",
+          "bbox": [
+            20.651612903225804,
+            368.8302235714285,
+            816.34501875,
+            398.39221220338976
+          ],
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        },
+        {
+          "value": "0.31",
+          "unit": "mg/L",
+          "statistic": "single",
+          "place": "Purulia -II, Markabera",
+          "contaminant": "fluoride",
+          "location": null,
+          "aquifer": null,
+          "period_basis": "sample_date",
+          "district": "Purulia",
+          "source_type": "DW",
+          "well_id": "WBPR_8",
+          "date": "2023-06-04",
+          "period": "2023-06-04",
+          "period_quote": "West Bengal | Pur ulia | Purulia -II | Markabera | DW | WBP R_8 | 23.30 6628 | 86.45 562 | 04- 06- 2023 | NAQ UIM | 7. | 209 | 80 | 20 | 7 | 10 | 2 | 18 | 75 | ND | 92 | 4 | 5 | 0.31 | 122 | ND",
+          "threshold": null,
+          "spatial_support": "site",
+          "doc": "amp_purulia",
+          "title": "Aquifer Mapping and Management Plan: Purulia District, West Bengal",
+          "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/1744936456830985840file.pdf",
+          "page": 183,
+          "quote": "West Bengal | Pur ulia | Purulia -II | Markabera | DW | WBP R_8 | 23.30 6628 | 86.45 562 | 04- 06- 2023 | NAQ UIM | 7. | 209 | 80 | 20 | 7 | 10 | 2 | 18 | 75 | ND | 92 | 4 | 5 | 0.31 | 122 | ND",
+          "header": "F-",
+          "publication_year": 2024,
+          "evidence_id": "amp_purulia:183:0:7:24",
+          "bbox": [
+            20.651612903225804,
+            398.39221220338976,
+            816.34501875,
+            427.88779220338984
+          ],
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        }
+      ],
+      "reasons": [
+        "not the same sampling point: Purulia -II, Markabera [TW WBPR_7] vs Purulia -II, Markabera [DW WBPR_8]"
+      ],
+      "note": "After unit conversion: 80 \u00b5g/L vs 310 \u00b5g/L.",
+      "parsed": {
+        "intent": "compare",
+        "claim": "repeat",
+        "contaminant": "fluoride",
+        "districts": [
+          "Purulia"
+        ],
+        "mentions": [
+          {
+            "text": "Markabera TW WBPR_7",
+            "places": [
+              "markabera"
+            ],
+            "well_ids": [
+              "wbpr7"
+            ],
+            "sources": [
+              "tube well"
+            ],
+            "dates": [
+              "2023-06-04"
+            ],
+            "statistics": [],
+            "attribute": null
+          },
+          {
+            "text": "DW WBPR_8 fluoride values on 04-06-2023 ",
+            "places": [],
+            "well_ids": [
+              "wbpr8"
+            ],
+            "sources": [
+              "dug well"
+            ],
+            "dates": [
+              "2023-06-04"
+            ],
+            "statistics": [],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.25,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ16",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": [
+        {
+          "matches": [
+            "H011"
+          ],
+          "failures_by_fact": {
+            "H011": [],
+            "H012": [
+              "value",
+              "well_id",
+              "source_type"
+            ]
+          }
+        },
+        {
+          "matches": [
+            "H012"
+          ],
+          "failures_by_fact": {
+            "H011": [
+              "value",
+              "well_id",
+              "source_type"
+            ],
+            "H012": []
+          }
+        }
+      ]
+    },
+    "legacy_score": {
+      "id": "HQ16",
+      "expected": "not_comparable",
+      "got": "not_comparable",
+      "correct": true,
+      "verified_items": 2,
+      "evidence_ok": true,
+      "gold_doc_exact": true,
+      "n_items": 2,
+      "unsupported": 0
+    }
+  },
+  {
+    "question_id": "HQ17",
+    "question": "Can the Amtala shallow dug-well fluoride value and Ramnagar deeper tube-well fluoride value from Apr, 2022 establish a temporal decline at one South 24 Parganas well?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "not_comparable",
+      "items": [
+        {
+          "value": "0.22",
+          "unit": "mg/L",
+          "statistic": "single",
+          "place": "Mandirbazar, Amtala",
+          "contaminant": "fluoride",
+          "location": "Amtala",
+          "aquifer": "shallow",
+          "period_basis": "table_context",
+          "district": "South 24 Parganas",
+          "source_type": "Dug Well",
+          "well_id": null,
+          "date": null,
+          "period": "Apr, 2022",
+          "period_quote": "Annexure I | DISTRIBUTION OF PHYSIO- CHEMICAL CONSTITUENTS IN GROUND WATER IN SHALLOW/UN-CONFINED AQUIFER OF | WEST BENGAL | (Sample collected during Apr, 2022)",
+          "threshold": null,
+          "spatial_support": "site",
+          "doc": "gwq_west_bengal",
+          "title": "Ground Water Quality of West Bengal",
+          "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+          "page": 107,
+          "quote": "South 24 Parganas | Mandirbazar | Amtala | Dug Well | 8.50 | 1007 | 195 | 32 | 28 | 119 | 6 | 21 | 287 | 270 | 135 | 1 | 26 | 0.22 | 534 | 1.62",
+          "header": "F",
+          "publication_year": null,
+          "evidence_id": "gwq_west_bengal:107:0:16:17",
+          "bbox": [
+            28.319999999999997,
+            348.619995,
+            823.6799900000001,
+            363.97999500000003
+          ],
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        },
+        {
+          "value": "0.18",
+          "unit": "mg/L",
+          "statistic": "single",
+          "place": "Baruipur, Ramnagar",
+          "contaminant": "fluoride",
+          "location": "Ramnagar",
+          "aquifer": "deeper",
+          "period_basis": "table_context",
+          "district": "South 24 Parganas",
+          "source_type": "Tube Well",
+          "well_id": null,
+          "date": null,
+          "period": "Apr, 2022",
+          "period_quote": "Annexure II | DISTRIBUTION OF PHYSIO- CHEMICAL CONSTITUENTS IN GROUND WATER IN DEEPER/CONFINED AQUIFER OF WEST | BENGAL | (Sample collected during Apr, 2022)",
+          "threshold": null,
+          "spatial_support": "site",
+          "doc": "gwq_west_bengal",
+          "title": "Ground Water Quality of West Bengal",
+          "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+          "page": 124,
+          "quote": "South 24 Parganas | Baruipur | Ramnagar | Tube Well | 7.49 | 557 | 150 | 36 | 15 | 71 | 0 | 0 | 262 | 215 | 60 | 0 | 4 | 0.18 | 346 | 0.26",
+          "header": "F",
+          "publication_year": null,
+          "evidence_id": "gwq_west_bengal:124:0:0:17",
+          "bbox": [
+            28.32,
+            54.9899200000001,
+            829.19999,
+            75.86000000000001
+          ],
+          "page_verified": true,
+          "verification_scope": "row_number_and_explicit_identity"
+        }
+      ],
+      "reasons": [
+        "not the same sampling point: Mandirbazar, Amtala [Dug Well] vs Baruipur, Ramnagar [Tube Well]",
+        "no time separation: both Apr, 2022"
+      ],
+      "note": "After unit conversion: 220 \u00b5g/L vs 180 \u00b5g/L.",
+      "parsed": {
+        "intent": "compare",
+        "claim": "change",
+        "contaminant": "fluoride",
+        "districts": [
+          "South 24 Parganas"
+        ],
+        "mentions": [
+          {
+            "text": "Amtala shallow dug-well fluoride value",
+            "places": [
+              "amtala"
+            ],
+            "well_ids": [],
+            "sources": [
+              "dug well"
+            ],
+            "dates": [
+              "2022-04"
+            ],
+            "statistics": [],
+            "attribute": null
+          },
+          {
+            "text": "Ramnagar deeper tube-well fluoride value from Apr, 2022 ",
+            "places": [
+              "ramnagar"
+            ],
+            "well_ids": [],
+            "sources": [
+              "tube well"
+            ],
+            "dates": [
+              "2022-04"
+            ],
+            "statistics": [],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.22,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ17",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": [
+        {
+          "matches": [
+            "H007"
+          ],
+          "failures_by_fact": {
+            "H007": [],
+            "H013": [
+              "value",
+              "location",
+              "physical_page",
+              "source_type",
+              "aquifer"
+            ]
+          }
+        },
+        {
+          "matches": [
+            "H013"
+          ],
+          "failures_by_fact": {
+            "H007": [
+              "value",
+              "location",
+              "physical_page",
+              "source_type",
+              "aquifer"
+            ],
+            "H013": []
+          }
+        }
+      ]
+    },
+    "legacy_score": {
+      "id": "HQ17",
+      "expected": "not_comparable",
+      "got": "not_comparable",
+      "correct": true,
+      "verified_items": 2,
+      "evidence_ok": true,
+      "gold_doc_exact": true,
+      "n_items": 2,
+      "unsupported": 0
+    }
+  },
+  {
+    "question_id": "HQ18",
+    "question": "Using the frozen corpus only, what was the arsenic concentration at Darapur in Nadia on 2 October 2026?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "insufficient_evidence",
+      "items": [],
+      "reason": "No record in the corpus matches darapur.",
+      "parsed": {
+        "intent": "lookup",
+        "claim": null,
+        "contaminant": "arsenic",
+        "districts": [
+          "Nadia"
+        ],
+        "mentions": [
+          {
+            "text": "Using the frozen corpus only, what was the arsenic concentration at Darapur in Nadia on 2 October 2026?",
+            "places": [
+              "darapur"
+            ],
+            "well_ids": [],
+            "sources": [],
+            "dates": [
+              "2026-10-02"
+            ],
+            "statistics": [],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.13,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ18",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": []
+    },
+    "legacy_score": {
+      "id": "HQ18",
+      "expected": "insufficient_evidence",
+      "got": "insufficient_evidence",
+      "correct": true,
+      "verified_items": 0,
+      "evidence_ok": null,
+      "gold_doc_exact": null,
+      "n_items": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "question_id": "HQ19",
+    "question": "Using only ADB Table 4, what was the arithmetic mean arsenic concentration in \u00b5g/L across all samples tested in Amdanga, North 24 Parganas?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "insufficient_evidence",
+      "items": [],
+      "reason": "No record in the corpus matches amdanga.",
+      "parsed": {
+        "intent": "lookup",
+        "claim": null,
+        "contaminant": "arsenic",
+        "districts": [
+          "North 24 Parganas"
+        ],
+        "mentions": [
+          {
+            "text": "Using only ADB Table 4, what was the arithmetic mean arsenic concentration in \u00b5g/L across all samples tested in Amdanga, North 24 Parganas?",
+            "places": [
+              "amdanga"
+            ],
+            "well_ids": [],
+            "sources": [],
+            "dates": [],
+            "statistics": [
+              "mean"
+            ],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.13,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ19",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": []
+    },
+    "legacy_score": {
+      "id": "HQ19",
+      "expected": "insufficient_evidence",
+      "got": "insufficient_evidence",
+      "correct": true,
+      "verified_items": 0,
+      "evidence_ok": null,
+      "gold_doc_exact": null,
+      "n_items": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "question_id": "HQ20",
+    "question": "Using only Annexure V of the Purulia Aquifer Management Plan, what arsenic concentration was measured at Markabera DW WBPR_8 on 04-06-2023?",
+    "mode": "oracle",
+    "trace": [],
+    "credits": 0,
+    "located": [
+      "adb_49107_006",
+      "amp_purulia",
+      "annual_gwq_2025",
+      "gwq_west_bengal",
+      "naquim_bankura",
+      "pubmed_26164468",
+      "pubmed_26188634",
+      "pubmed_33893897",
+      "yearbook_2015_16"
+    ],
+    "answer": {
+      "answer_type": "insufficient_evidence",
+      "items": [],
+      "reason": "No record in the corpus matches markabera.",
+      "parsed": {
+        "intent": "lookup",
+        "claim": null,
+        "contaminant": "arsenic",
+        "districts": [
+          "Purulia"
+        ],
+        "mentions": [
+          {
+            "text": "Using only Annexure V of the Purulia Aquifer Management Plan, what arsenic concentration was measured at Markabera DW WBPR_8 on 04-06-2023?",
+            "places": [
+              "markabera"
+            ],
+            "well_ids": [
+              "wbpr8"
+            ],
+            "sources": [
+              "dug well"
+            ],
+            "dates": [
+              "2023-06-04"
+            ],
+            "statistics": [],
+            "attribute": null
+          }
+        ]
+      }
+    },
+    "seconds": 0.13,
+    "search_attempts": 0,
+    "cached_searches": 0,
+    "strict_score": {
+      "id": "HQ20",
+      "correct": true,
+      "type_ok": true,
+      "all_gold_tuples_covered": true,
+      "no_extra_items": true,
+      "items": []
+    },
+    "legacy_score": {
+      "id": "HQ20",
+      "expected": "insufficient_evidence",
+      "got": "insufficient_evidence",
+      "correct": true,
+      "verified_items": 0,
+      "evidence_ok": null,
+      "gold_doc_exact": null,
+      "n_items": 0,
+      "unsupported": 0
+    }
+  }
+]

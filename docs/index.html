@@ -52,7 +52,11 @@ details summary{cursor:pointer;color:var(--acc)}footer{margin:40px 0;color:var(-
   <p class="sub">Post-hoc fixes; new locations from existing sources. CSVs committed before this offline run. Baseline omitted to preserve the API budget. These are different question sets, so the scores do not measure a before/after improvement. <b>Some scored-correct comparisons cite the wrong rows.</b> See audit notes on the answers and the <a href="https://github.com/mohitt31/jaldrishti/blob/main/reports/holdout_audit.md">full audit</a>. The same assistant implemented and authored the holdout; no independent blinding.</p>
   <p class="sub">Same reader in all three modes; only how sources are found differs. Risk = wrong answers among answers given. Citation verification checks whether a number occurs on its page, not the full measurement tuple. Comparison scoring checks answer type only. <a href="https://github.com/mohitt31/jaldrishti">Code, benchmark and full traces on GitHub</a>.</p>
 
-  <h2>Explore every answer</h2>
+  <h2>v0.3 development: stricter evidence checks</h2>
+  <div class="card" id="v03"></div>
+  <p class="sub">The v0.2 questions below have since been used for development. These new scores are post-hoc, not a fresh holdout. The three Purulia library misses now abstain; reference access is explicit. <a href="https://github.com/mohitt31/jaldrishti/blob/main/benchmark/v03/PROTOCOL.md">Protocol and limits</a>.</p>
+  <p>Try the actual local query interface: install the project, restore the sources, then run <code>jaldrishti serve</code>. It defaults to offline cached search. This public Pages site displays recorded results; Python powers the interactive app.</p>
+  <h2>Explore the frozen v0.1 / v0.2 answers</h2>
   <div class="ex">
     <div class="card" style="padding:0">
       <div class="flt tabs" id="flt"></div>
@@ -82,11 +86,12 @@ const MODES={baseline:"Baseline: Google the question",library:"JalDrishti",oracl
 const LBL={number_with_source:"number with source",not_comparable:"not comparable",insufficient_evidence:"insufficient evidence",error:"error",comparable:"comparable"};
 let D,cur=null,mode="library",split="holdout";
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-fetch("data.json").then(r=>{if(!r.ok)throw new Error("Cannot load recorded runs");return r.json();}).then(d=>{D=d;cards("test","cards");cards("holdout","holdout-cards");filters();list();lib();}).catch(e=>{document.getElementById("detail").textContent="Could not load the recorded demo. Please reload or view the reports on GitHub.";console.error(e);});
+fetch("data.json").then(r=>{if(!r.ok)throw new Error("Cannot load recorded runs");return r.json();}).then(d=>{D=d;cards("test","cards");cards("holdout","holdout-cards");filters();list();lib();development();}).catch(e=>{document.getElementById("detail").textContent="Could not load the recorded demo. Please reload or view the reports on GitHub.";console.error(e);});
 function cards(which,target){const s=D.summary[which];document.getElementById(target).innerHTML=Object.keys(s).map(m=>{const v=s[m],c=Math.round(v.accuracy*v.n),meta=D.evaluation[which];
  return `<div class="card ${m==="library"?"hl":""}"><div class="lbl">${MODES[m]}</div><div class="big" style="margin-top:8px">${c}<span style="font-size:20px;color:var(--mute)"> / ${v.n}</span></div>
  <div class="bar"><i style="width:${v.accuracy*100}%"></i></div><div class="sub">${meta.offline?"0 live SerpApi credits (offline replay; "+v.credits+" recorded search attempts)":v.credits+" live SerpApi credits"}${m==="library"?" + "+meta.harvest_credits+" for the library":""} · answers given ${Math.round(v.coverage*100)}% · risk ${v.coverage?Math.round(v.risk*100)+"%":"–"}</div>
  <div class="sub">Citation precision: ${v.citation_precision==null?"–":v.citation_precision.toFixed(2)} (number found on page)</div></div>`}).join("");}
+function development(){const d=D.v03_development;if(!d)return;document.getElementById("v03").innerHTML=`<p><b>Reused development questions · full-tuple scoring</b></p><table><thead><tr><th>Mode</th><th>Strict correct</th><th>New live credits</th></tr></thead><tbody>${Object.entries(d.modes).map(([m,v])=>`<tr><td>${m==="library"?"SerpApi-discovered library":"Oracle: curated core reports"}</td><td>${v.strict_correct}/${v.n}</td><td>${v.live_credits}</td></tr>`).join("")}</tbody></table><p class="sub">Checks value, unit, contaminant, district, location, statistic, sampling time, source and page, plus annotated well/type/aquifer fields. Comparisons require both supported operands. Scientific reasoning still needs independent review.</p>`;}
 function filters(){document.getElementById("flt").innerHTML=["holdout","test","dev"].map(s=>`<button class="${s===split?"on":""}" onclick="split='${s}';filters();list()">${s==="test"?"v0.1 test":s==="holdout"?"v0.2 holdout":"v0.2 dev"}</button>`).join("");}
 function list(){const qs=D.questions.filter(q=>q.split===split);if(!cur||cur.split!==split)cur=qs[0];
  document.getElementById("list").innerHTML=qs.map(q=>`<div class="q ${q===cur?"on":""}" onclick="pick('${q.id}')"><div class="t"><b>${q.id}</b> ${esc(q.question)}</div>

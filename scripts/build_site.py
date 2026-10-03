@@ -89,5 +89,7 @@ if started.exists(): data["holdout_provenance"] = json.loads(started.read_text()
 lib = json.loads((ROOT / "cache/library.json").read_text())
 data["library"] = {"credits": lib["credits"], "docs": [{"id": d, "title": title_of(d), "url": META.get(d, {}).get("url")} for d in lib["docs"]],
                    "queries": [{"engine": q["engine"], "q": q["q"], "found": q["found"]} for q in lib["queries"]]}
+v03 = ROOT / "reports/v03_development/summary.json"
+if v03.exists(): data["v03_development"] = json.loads(v03.read_text())
 (OUT / "data.json").write_text(json.dumps(data, ensure_ascii=False))
 print(len(data["questions"]), "questions,", len(list((OUT / "crops").glob("*.png"))), "crops")

@@ -85,7 +85,16 @@ This runs the actual question engine, not recorded responses. It binds to localh
 
 For a CLI reference lookup: `jaldrishti ask --mode reference --offline "What fluoride is listed for Markabera TW WBPR_7 in Purulia?"`.
 
-Development checks are recorded separately under `reports/v03_development/` after the code commit. Do not compare the strict score numerically with the weaker frozen score as though they use the same metric. An independent review and new evaluation are still pending: [reviewer handoff](benchmark/v03/REVIEWER_GUIDE.md). No reviewer endorsement is claimed.
+The recorded development run on code commit `7d308a2` gives:
+
+| Reused v0.2 questions (post-hoc development) | Strict full-tuple score | Legacy score | New live API credits |
+|---|---:|---:|---:|
+| Search-discovered library | **17/20** | 17/20 | 0 |
+| Oracle: curated core reports supplied | **20/20** | 20/20 | 0 |
+
+Library misses HQ11, HQ12 and HQ16 because the newer Purulia report is not search-discovered; it now abstains instead of substituting unrelated rows. Strict checks now recover the previously wrong count comparison and the specified Ramnagar/Benajira rows, and leave unknown sampling dates unknown. **These are development results after tuning on known failures, not an independent held-out score.** A perfect oracle score on this small reused set does not establish general reliability. The live app's explicit reference mode combines the curated corpus with the discovered library; it is not a separately benchmarked mode.
+
+[Development summary](reports/v03_development/summary.json) and per-question strict field failures are recorded separately under `reports/v03_development/`. The earlier scratch replays were development iterations, not final tests. **52 unit tests pass**. Browser checks exercised actual numeric lookup, missing-source refusal, explicit reference comparison, unknown sampling dates and unsupported dates with zero console errors on desktop/mobile. Do not compare the strict score numerically with the weaker frozen score as though they use the same metric. An independent review and new evaluation are still pending: [reviewer handoff](benchmark/v03/REVIEWER_GUIDE.md). No reviewer endorsement is claimed.
 
 ## How it uses SerpApi
 
