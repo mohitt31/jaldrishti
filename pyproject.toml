@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "jaldrishti"
-version = "0.2.0"
+version = "0.3.0"
 description = "Cited groundwater arsenic and fluoride evidence for West Bengal, found with SerpApi and checked against the source page"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -19,3 +19,6 @@ jaldrishti = "jaldrishti.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+jaldrishti = ["web/*"]

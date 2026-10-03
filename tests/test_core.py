@@ -6,6 +6,13 @@ from jaldrishti.search import proper_names, district_from_results, relevant
 from jaldrishti.question import Linker, parse
 from jaldrishti.answer import Engine
 from jaldrishti.tables import is_data, is_num
+import pytest
+
+@pytest.fixture(autouse=True)
+def synthetic_page_verification(monkeypatch):
+    # These are reader/selection unit tests; independent verification is tested separately.
+    monkeypatch.setattr("jaldrishti.verify.verify_item", lambda item, meta: True)
+
 
 def ev(**k):
     base = {"doc": "d", "page": 1, "table": 0, "row": 0, "col": 0, "method": "lattice", "header_from": None, "contaminant": "fluoride",

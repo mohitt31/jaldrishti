@@ -1,0 +1,39 @@
+{
+  "label": "v0.3 post-hoc generic district/publisher search; original library unchanged",
+  "docs": [
+    "web_82587ba907b0"
+  ],
+  "queries": [
+    {
+      "engine": "google",
+      "q": "aquifer management plan Purulia West Bengal",
+      "as_sitesearch": "cgwb.gov.in",
+      "found": [],
+      "cached": false,
+      "fetched": []
+    },
+    {
+      "engine": "google",
+      "q": "\"Purulia\" \"aquifer\" site:cgwb.gov.in",
+      "found": [
+        "web_82587ba907b0"
+      ],
+      "cached": false,
+      "fetched": [
+        {
+          "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/16875126461850365383file.pdf",
+          "reused": "web_82587ba907b0"
+        }
+      ]
+    },
+    {
+      "engine": "google",
+      "q": "\"Purulia\" \"Northern Blocks\" groundwater filetype:pdf",
+      "found": [],
+      "cached": false,
+      "fetched": []
+    }
+  ],
+  "live_credits": 3,
+  "live_http_attempts": 3
+}

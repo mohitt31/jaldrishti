@@ -1,0 +1,13 @@
+{
+  "H001": {"source_type": "Deep HP"},
+  "H002": {"source_type": "Hand Pump"},
+  "H005": {"source_type": "Dug Well", "aquifer": "shallow"},
+  "H006": {"source_type": "Dug Well", "aquifer": "shallow"},
+  "H007": {"source_type": "Dug Well", "aquifer": "shallow"},
+  "H008": {"source_type": "Dug Well", "aquifer": "shallow"},
+  "H009": {"source_type": "Dug Well", "aquifer": "shallow"},
+  "H010": {"source_type": "Dug Well", "aquifer": "shallow"},
+  "H011": {"source_type": "TW", "well_id": "WBPR_7"},
+  "H012": {"source_type": "DW", "well_id": "WBPR_8"},
+  "H013": {"source_type": "Tube Well", "aquifer": "deeper"}
+}

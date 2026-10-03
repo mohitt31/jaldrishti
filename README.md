@@ -60,6 +60,33 @@ The holdout has 14 facts from four existing PDFs, 20 questions and all eight dis
 
 The existing scorer is retained for comparability. Its citation metric checks whether a number occurs on the cited page; it does not independently validate the complete measurement tuple. Numeric matching uses value and document/page (or quote tokens), and does not independently check units. Comparison correctness is scored by answer type, not by a semantic assessment of each reason.
 
+## v0.3 development: stricter evidence and a live local app
+
+v0.3 was explicitly authorized after the v0.2 audit. The original test and v0.2 holdout reports stay frozen. **The former holdout is now development data, not a fresh performance test.** The stricter scoring protocol is in [`benchmark/v03/PROTOCOL.md`](benchmark/v03/PROTOCOL.md).
+
+- Unknown well IDs and requested places remain constraints; a record with the wrong or unknown requested district is rejected. Requested well type, count entity, threshold and sampling date must match.
+- Publication-cover text no longer supplies sampling dates. The table/row must establish the sampling period; otherwise it remains unknown.
+- Both operands of a comparison must be found and verified. A shared block name does not make two villages the same sampling point. Failed or incomplete comparisons abstain.
+- A second PDF reader checks the cited row's number and explicit location/well ID where row bounds exist. Page-only/abstract fallback remains weaker and is labelled. The check is not a complete independent scientific interpretation of every column.
+- The reader recovers a missing first continuation row from column geometry and inherits a count column's contaminant from its table caption.
+- Strict development scoring checks value, unit, contaminant, district, place, statistic, sampling period, source URL/physical page and verification, with extra well/type/aquifer annotations. It requires both comparison operands; reasoning still needs domain review.
+
+Three additional bounded SerpApi queries cost **3 recorded live credits** (208 → 211; 16 additional credits across v0.2 + v0.3 work). They rediscovered an older source but did **not** locate the newer Purulia keywell report. The [separate search overlay](cache/library_v03.json) preserves provenance and leaves the original library manifest unchanged. No more paid searches were made. A reference mode explicitly adds the already curated corpus; it must not be claimed as SerpApi discovery.
+
+### Interactive query interface
+
+```bash
+# after installation, fetch_corpus.py, restore and index (see Run it below)
+jaldrishti serve
+# open http://127.0.0.1:8766
+```
+
+This runs the actual question engine, not recorded responses. It binds to localhost, defaults to offline cached search, keeps the API key server-side, and shows source scope, sampling/publication fields, extracted rows, PDF page links and search accounting. Choose **SerpApi-discovered library** or **Library + curated reference reports** explicitly. `jaldrishti serve --live-searches 3` enables at most three total live HTTP attempts for that server session; it may consume credits. The GitHub Pages site remains the public static results explorer; a Python server is required for live queries.
+
+For a CLI reference lookup: `jaldrishti ask --mode reference --offline "What fluoride is listed for Markabera TW WBPR_7 in Purulia?"`.
+
+Development checks are recorded separately under `reports/v03_development/` after the code commit. Do not compare the strict score numerically with the weaker frozen score as though they use the same metric. An independent review and new evaluation are still pending: [reviewer handoff](benchmark/v03/REVIEWER_GUIDE.md). No reviewer endorsement is claimed.
+
 ## How it uses SerpApi
 
 1. **Harvest (56 searches, once).** Generic templates over the 13 districts where arsenic or fluoride is reported (`src/jaldrishti/harvest.py`). Several phrasings per district, because Google is erratic on these queries: the same template returns the CGWB report at rank 1 for Nadia and Wikipedia's *Arsenic* page for Malda. Google results give government PDFs; **Google Scholar** results give papers, which are resolved to PubMed abstracts. The v0.1 library contained 23 documents; the post-hoc v0.2 supplement adds 13 completed searches (69 total) and expands it to 27 documents. One additional HTTP attempt failed; the 14-attempt cap stopped the remaining template. No benchmark question text is used.
@@ -122,7 +149,7 @@ Source PDFs are not redistributed. They are downloaded from the publishers' site
 
 ## AI tools used
 
-As the rules require: Claude (Anthropic) wrote most of the code and ran the experiments under my direction, and ChatGPT helped research the problem and draft the benchmark facts, which were then verified against the source pages. OpenAI Codex implemented the post-hoc v0.2 fixes, regression tests, safeguards and holdout tooling; authored the new holdout after the freeze; checked the actual PDF pages; ran the once-only evaluation; audited its failures; and updated the README and recorded-demo site. The holdout has not received an independent human annotation review. Commits and reports record the sequence. The problem choice, evaluation design and the decisions on what to keep or drop were mine.
+As the rules require: Claude (Anthropic) wrote most of the code and ran the experiments under my direction, and ChatGPT helped research the problem and draft the benchmark facts, which were then verified against the source pages. OpenAI Codex implemented the post-hoc v0.2 fixes, regression tests, safeguards and holdout tooling; authored the new holdout after the freeze; checked the actual PDF pages; ran the once-only evaluation; audited its failures; and updated the README and recorded-demo site. For v0.3, Codex implemented the stricter matching/scorer, continuation-table fixes, bounded retrieval attempt, local query interface and adversarial tests. The holdout has not received an independent human annotation review. Commits and reports record the sequence. The problem choice, evaluation design and the decisions on what to keep or drop were mine.
 
 ## Licence
 

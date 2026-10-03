@@ -18,19 +18,25 @@ def _print_answer(r):
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="jaldrishti")
     sub = ap.add_subparsers(dest="cmd", required=True)
-    a = sub.add_parser("ask"); a.add_argument("question"); a.add_argument("--mode", default="jaldrishti", choices=["library", "jaldrishti", "baseline", "oracle"])
+    a = sub.add_parser("ask"); a.add_argument("question"); a.add_argument("--mode", default="jaldrishti", choices=["library", "reference", "jaldrishti", "baseline", "oracle"])
     a.add_argument("--live", action="store_true", help="fetch newly found sources"); a.add_argument("--offline", action="store_true", help="cached search results only")
     a.add_argument("--budget", type=int, default=3); a.add_argument("--json", action="store_true")
     e = sub.add_parser("eval"); e.add_argument("--split", default="dev", choices=["dev", "test"]); e.add_argument("--modes", default="baseline,library,oracle")
     e.add_argument("--live", action="store_true"); e.add_argument("--offline", action="store_true"); e.add_argument("--budget", type=int, default=3)
     e.add_argument("--i-understand-test-is-final", action="store_true")
     e.add_argument("--bench", choices=["original", "holdout"], default="original")
+    web = sub.add_parser("serve", help="interactive local query UI; offline by default")
+    web.add_argument("--port", type=int, default=8766)
+    web.add_argument("--live-searches", type=int, choices=range(4), default=0, help="0–3 total live HTTP attempts for this server session")
     sub.add_parser("index"); sub.add_parser("credits")
     sub.add_parser("restore", help="download every source the recorded runs used (no SerpApi key needed)")
     hv = sub.add_parser("harvest", help="build the West Bengal evidence library with a fixed SerpApi budget"); hv.add_argument("--budget", type=int, default=56)
     hv.add_argument("--supplement", action="store_true", help="append generic PDF query variants to the existing library")
     ad = sub.add_parser("add-source", help="fetch a PDF or PubMed URL into the corpus"); ad.add_argument("urls", nargs="+")
     args = ap.parse_args(argv)
+    if args.cmd == "serve":
+        from .server import serve
+        serve(args.port, args.live_searches); return
     if args.cmd == "index":
         from .index import docs, build_doc
         for m in docs(): print(m["id"], len(build_doc(m, force=True)))

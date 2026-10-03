@@ -33,7 +33,7 @@ def build_doc(meta: dict, force=False) -> list[dict]:
     h = sha(pdf)
     if out.exists() and not force:
         d = json.loads(out.read_text())
-        if d.get("sha256") == h and (meta.get("format") != "pubmed_xml" or d.get("abstract_version") == 2):
+        if d.get("sha256") == h and d.get("schema_version") == 4 and (meta.get("format") != "pubmed_xml" or d.get("abstract_version") == 2):
             return d["evidence"]
     ev = []
     if meta.get("format") == "pubmed_xml":
@@ -50,14 +50,14 @@ def build_doc(meta: dict, force=False) -> list[dict]:
             for t in read_tables(str(pdf), meta["id"]):
                 ev.extend(table_evidence(t, meta, page_text(pdoc, t.page - 1)))
     for e in ev: e.setdefault("id", f"{meta['id']}:{e['page']}:{e['table']}:{e['row']}:{e['col']}")
-    out.write_text(json.dumps({"doc": meta["id"], "sha256": h, "meta": meta, "evidence": ev, "abstract_version": 2}))
+    out.write_text(json.dumps({"doc": meta["id"], "sha256": h, "meta": meta, "evidence": ev, "abstract_version": 2, "schema_version": 4}))
     return ev
 
 def load(build=True) -> list[dict]:
     ev = []
     for m in docs():
         f = CACHE / f"{m['id']}.json"
-        if m.get("format") == "pubmed_xml" and build: ev.extend(build_doc(m))
+        if build: ev.extend(build_doc(m))
         elif f.exists(): ev.extend(json.loads(f.read_text())["evidence"])
         elif build: ev.extend(build_doc(m))
     return ev

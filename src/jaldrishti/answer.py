@@ -3,7 +3,7 @@ from __future__ import annotations
 import re
 from .gazetteer import norm, compact
 from .question import Query, Mention, Linker, parse
-from .units import to_mg_l
+from .units import to_mg_l, detect_unit
 
 CONC_UNITS = {"mg/L", "µg/L", "ppb", "ppm"}
 SRC_MAP = {"m-ii": {"m-ii"}, "dug well": {"dug well", "dw"}, "tube well": {"tube well", "tw"}, "hand pump": {"hand pump", "hp"}}
@@ -11,19 +11,35 @@ SRC_MAP = {"m-ii": {"m-ii"}, "dug well": {"dug well", "dw"}, "tube well": {"tube
 def _bound(p): return r"(?<![a-z0-9])" + re.escape(p) + r"(?![a-z0-9])"
 
 def score(e: dict, m: Mention, q: Query, stat: str | None, meta: dict) -> float | None:
+    if m.unresolved_places: return None
     if q.contaminant and e["contaminant"] != q.contaminant: return None
-    if q.districts and e.get("district") and e["district"] not in q.districts: return None
+    if q.districts and e.get("district") not in q.districts: return None
+    if e.get("non_detect"): return None
+    # A named document family is a constraint, not a ranking bonus.
+    full = norm(q.text)
+    source = norm(" ".join([meta.get("title", ""), meta.get("period_text", ""), meta.get("url", "")]))
+    for phrase in ("annual ground water quality report", "ground water quality of west bengal", "aquifer management plan", "ground water year book"):
+        if phrase in full and phrase not in source: return None
+    if re.search(r"\badb\b", full) and "adb" not in source: return None
+    if "deeper" in norm(m.text) and e.get("aquifer") != "deeper": return None
+    if "shallow" in norm(m.text) and e.get("aquifer") != "shallow": return None
     s = 0.0
     if e["statistic"] == "count_exceeding":
         entities = {"samples": r"\bsamples?\b", "blocks": r"\bblocks?\b",
                     "habitations": r"\bhabitations?\b", "wells": r"\bwells?\b"}
         requested = {name for name, pattern in entities.items() if re.search(pattern, norm(m.text))}
+        requested_threshold = re.search(r"(?:above|exceed(?:ed|ing)?|>)\s*(\d+(?:\.\d+)?)", norm(m.text))
+        if requested_threshold:
+            wanted_unit, given_unit = detect_unit(m.text), detect_unit(e.get("header", ""))
+            if wanted_unit not in CONC_UNITS or given_unit not in CONC_UNITS or e.get("threshold") is None: return None
+            if abs(to_mg_l(float(requested_threshold.group(1)), wanted_unit) - to_mg_l(float(e["threshold"]), given_unit)) > 1e-12: return None
         entity = norm(e.get("entity") or e.get("unit") or "")
         entity = next((name for name, pattern in entities.items() if re.fullmatch(pattern, entity)), entity)
         if len(requested) == 1:
             if entity in entities and entity not in requested:
                 return None
-            s += 4 if entity in requested else -4
+            if entity not in requested: return None
+            s += 4
     pl = norm(" | ".join(e["places"]))
     hit = [p for p in m.places if re.search(_bound(p), pl)]
     if m.places and not hit: return None
@@ -31,15 +47,17 @@ def score(e: dict, m: Mention, q: Query, stat: str | None, meta: dict) -> float 
     if m.well_ids:
         if compact(e.get("well_id") or "") not in m.well_ids: return None
         s += 3
-    if m.sources and e.get("source"):
-        if not any(norm(e["source"]) in SRC_MAP[x] for x in m.sources): return None
+    if m.sources:
+        if not any(norm(e.get("source") or "") in SRC_MAP[x] for x in m.sources): return None
         s += 1
+    if e.get("spatial_support") == "site" and not m.places and not m.well_ids:
+        return None
     if stat:
         want = {"range": {"min", "max", "range_min", "range_max"}, "min": {"min", "range_min"},
                 "max": {"max", "range_max"}}.get(stat, {stat})
         if e["statistic"] not in want: return None
         s += 2
-    elif not m.places:
+    elif not m.places and not m.well_ids:
         return None
     else:
         s += 1 if e["statistic"] == "single" else 0
@@ -55,9 +73,11 @@ def score(e: dict, m: Mention, q: Query, stat: str | None, meta: dict) -> float 
             span = re.search(r"((?:19|20)\d\d)\s*-\s*(\d\d)\b", per)
             if span: years |= set(range(int(span.group(1)), int(span.group(1)[:2] + span.group(2)) + 1))
             if int(y) not in years: return None          # question names a time the source does not cover
-            s += 2 if (not mon or mon in per) else 0.5
+            if len(d) > 7: return None  # a period cannot substantiate a specific calendar day
+            if mon and mon not in per: return None
+            s += 2
         else:
-            s -= 3                                           # period unknown: allowed, but ranked last
+            return None  # a requested sampling date needs evidence
     ctx = norm(" ".join([e.get("context", ""), e.get("header", ""), meta.get("title", ""), meta.get("publisher", ""), str(e.get("period") or "")]))
     s += min(3.0, 0.4 * sum(1 for tk in m.tokens if len(tk) > 3 and tk in ctx))
     if e.get("spatial_support") == "district" and re.search(r"\bdistrict\b", norm(m.text)): s += 0.5
@@ -66,8 +86,9 @@ def score(e: dict, m: Mention, q: Query, stat: str | None, meta: dict) -> float 
 def _cite(e, metas):
     m = metas.get(e["doc"], {})
     return {"value": e["value_text"], "unit": e["unit"], "statistic": e["statistic"], "place": ", ".join(e["places"][:3]) or e.get("district") or "",
+            "contaminant": e.get("contaminant"), "location": e.get("location"), "aquifer": e.get("aquifer"), "period_basis": e.get("period_basis"),
             "district": e.get("district"), "source_type": e.get("source"), "well_id": e.get("well_id"), "date": e.get("date"),
-            "period": e.get("period"), "threshold": e.get("threshold"), "spatial_support": e.get("spatial_support"),
+            "period": e.get("period"), "period_quote": e.get("period_quote"), "threshold": e.get("threshold"), "spatial_support": e.get("spatial_support"),
             "doc": e["doc"], "title": m.get("title"), "url": m.get("url"), "page": e["page"], "quote": e["row_text"],
             "header": e.get("header"), "publication_year": m.get("year"), "evidence_id": e.get("id"), "bbox": e.get("bbox")}
 
@@ -130,18 +151,18 @@ def compare(ev, q: Query, metas) -> dict:
     for m in q.mentions:
         ad = author_docs(m.text, metas)
         if ad is not None and not ad[0]:
-            return {"answer_type": "insufficient_evidence", "items": its, "needs_source": ad[1],
+            return {"answer_type": "insufficient_evidence", "items": [], "related": its, "needs_source": ad[1],
                     "reason": f"'{m.text.strip()}' cites {', '.join(ad[1])} et al., which is not in the corpus."}
         evm = [e for e in ev if e["doc"] in ad[0]] if ad else ev
         stats = [s for s in m.statistics if s in ("max", "mean", "count_exceeding")] or [None]
         r = best(evm, m, q, stats[0], metas)
-        if not r and stats[0] is None and not m.places:
-            r = best(evm, m, q, "single", metas)
-        if not r: return {"answer_type": "insufficient_evidence", "items": its, "reason": f"No record matches: '{m.text.strip()}'."}
+        if not r: return {"answer_type": "insufficient_evidence", "items": [], "related": its, "reason": f"No record matches: '{m.text.strip()}'."}
         its.append(_cite(r[0][1], metas))
     a, b = its
-    same_point = bool(set(map(norm, a["place"].split(", "))) & set(map(norm, b["place"].split(", ")))) and \
-        (a["source_type"] or "") == (b["source_type"] or "") and (a["well_id"] or "") == (b["well_id"] or "") and a["spatial_support"] == b["spatial_support"] == "site"
+    def point(i):
+        return compact(i.get("well_id") or i.get("location") or (i["place"].split(", ")[-1] if i["place"] else ""))
+    same_point = bool(point(a)) and point(a) == point(b) and a["district"] == b["district"] and \
+        (a["source_type"] or "") == (b["source_type"] or "") and a["spatial_support"] == b["spatial_support"] == "site"
     fails = []
     def need(cond, msg):
         if not cond: fails.append(msg)
@@ -153,7 +174,7 @@ def compare(ev, q: Query, metas) -> dict:
     if c in ("repeat", "time_series", "change_same_well", "change"):
         need(same_point, f"not the same sampling point: {a['place']} [{a['source_type'] or '-'}{' ' + a['well_id'] if a['well_id'] else ''}] vs {b['place']} [{b['source_type'] or '-'}{' ' + b['well_id'] if b['well_id'] else ''}]")
         need(a["statistic"] == b["statistic"], stat_msg)
-        if c != "repeat": need(pa != pb, f"no time separation: both {pa}")
+        if c != "repeat": need(bool(pa and pb) and pa != pb, f"no time separation: both {pa}")
     if c in ("district_change", "same_quantity", "average"):
         need(a["statistic"] == b["statistic"], stat_msg)
         need(kind(a) == kind(b), f"different quantities: {kind(a)} vs {kind(b)}")
@@ -161,7 +182,7 @@ def compare(ev, q: Query, metas) -> dict:
         need(a["spatial_support"] == b["spatial_support"] == "district", supp_msg if a["spatial_support"] != b["spatial_support"] else f"neither value is a district-wide {('mean' if 'mean' in norm(q.text) else 'estimate')}")
         if "mean" in norm(q.text): need(a["statistic"] == b["statistic"] == "mean", f"a district mean is claimed but the values are {a['statistic']} and {b['statistic']}")
     if c == "district_change":
-        need(pa != pb, f"no time separation: both {pa}")
+        need(bool(pa and pb) and pa != pb, f"no time separation: both {pa}")
         if a["statistic"].startswith("count"): need(a["threshold"] == b["threshold"] and a["doc"] == b["doc"], "counts come from different programmes or thresholds")
     note = None
     ca, cb = _conc_mg(a), _conc_mg(b)
@@ -181,12 +202,13 @@ class Engine:
         for key in ("items", "related"):
             for i in r.get(key, []):
                 i["page_verified"] = verify_item(i, self.metas.get(i["doc"], {}))
-        if r["answer_type"] == "number_with_source":
+                i["verification_scope"] = "row_number_and_explicit_identity" if i.get("bbox") else "page_number_presence"
+        if r["answer_type"] in ("number_with_source", "not_comparable", "comparable"):
             bad = [i for i in r["items"] if not i["page_verified"]]
             r["items"] = [i for i in r["items"] if i["page_verified"]]
             if bad: r["dropped_unverified"] = [i["value"] for i in bad]
-            if not r["items"]:
-                r = {"answer_type": "insufficient_evidence", "items": [], "reason": "Candidate numbers failed the page re-read check."} | {"parsed": r.get("parsed")}
+            if bad or not r["items"]:
+                r = {"answer_type": "insufficient_evidence", "items": [], "reason": "Candidate evidence failed the page re-read check; no complete grounded answer is available."} | {"parsed": r.get("parsed")}
         r["parsed"] = {"intent": q.intent, "claim": q.claim, "contaminant": q.contaminant, "districts": q.districts,
                        "mentions": [{"text": m.text, "places": m.places, "well_ids": m.well_ids, "sources": m.sources,
                                      "dates": m.dates, "statistics": m.statistics, "attribute": m.attribute} for m in q.mentions]}

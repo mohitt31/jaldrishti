@@ -71,6 +71,25 @@ def _caption_note(page, bbox):
     below = _page_lines(page, bottom=bbox[3])[:3]
     return " | ".join(l["text"] for l in above), " | ".join(l["text"] for l in below)
 
+def _leading_row(page, table):
+    """Recover a continuation row above a missing top border using the next row's grid."""
+    if not table.rows or len(table.rows[0].cells) < 8: return None
+    cells = table.rows[0].cells
+    if any(c is None for c in cells): return None
+    top = table.bbox[1]
+    height = min(50, max(25, table.rows[0].bbox[3] - table.rows[0].bbox[1] + 5))
+    words = [w for w in page.extract_words(x_tolerance=1.5, y_tolerance=2)
+             if top - height <= w["top"] and w["bottom"] <= top
+             and table.bbox[0] <= (w["x0"]+w["x1"])/2 <= table.bbox[2]]
+    if not words: return None
+    row = []
+    for a,_,b,_ in cells:
+        ws = sorted([w for w in words if a <= (w["x0"]+w["x1"])/2 < b], key=lambda w:(round(w["top"]),w["x0"]))
+        row.append(" ".join(w["text"] for w in ws))
+    if sum(is_data(c) for c in row) < max(6,len(cells)//2): return None
+    if not row[0] or is_num(row[0]): return None
+    return row, (table.bbox[0],min(w["top"] for w in words)-1,table.bbox[2],top)
+
 def _lattice(page, doc, pno):
     out = []
     for k, t in enumerate(page.find_tables()):
@@ -83,6 +102,11 @@ def _lattice(page, doc, pno):
         while h < len(raw) and sum(is_data(c) for c in raw[h]) < 2:
             h += 1
         if h >= len(raw): continue
+        if h == 0:
+            recovered = _leading_row(page, t)
+            if recovered:
+                row, bb = recovered
+                raw.insert(0,row);bbs.insert(0,bb)
         hdr = [" ".join(raw[r][j] for r in range(h) if raw[r][j]).strip() for j in range(ncol)]
         keep = [j for j in range(ncol) if any(r[j] for r in raw[h:])]
         cols, last = [], -1

@@ -31,6 +31,7 @@ class SerpApi:
     def __init__(self, offline: bool = False):
         self.offline = offline
         self.live_attempts = 0
+        self.live_credits = 0
         self.max_live_searches = int(os.environ["SERPAPI_MAX_LIVE_SEARCHES"]) if "SERPAPI_MAX_LIVE_SEARCHES" in os.environ else None
         CACHE.mkdir(parents=True, exist_ok=True)
     @staticmethod
@@ -65,6 +66,7 @@ class SerpApi:
             lg.write(json.dumps({"ts": time.strftime("%Y-%m-%dT%H:%M:%S"), "engine": params.get("engine"), "q": params.get("q"),
                                  "start": params.get("start", 0), "credits": 1, "seconds": round(time.time() - t, 2),
                                  "n": len(d.get("organic_results", []))}) + "\n")
+        self.live_credits += 1
         d["_cached"] = False
         return d
 
@@ -96,7 +98,7 @@ def relevant(r: dict, contaminant: str | None, scope: list[str] | None = None) -
 # ---------- planner ----------
 SOURCE_HINTS = [  # phrase in question -> (query phrase, site restriction)
     (r"special drive", '"special drive" year book', "cgwb.gov.in"),
-    (r"naquim|aquifer mapping", "aquifer mapping NAQUIM report", "cgwb.gov.in"),
+    (r"naquim|aquifer mapping|aquifer management|annexure v", "aquifer management plan", "cgwb.gov.in"),
     (r"annual ground water quality report", '"annual ground water quality report"', "cgwb.gov.in"),
     (r"\bcgwb\b|april 2022|shallow-aquifer", '"ground water quality" West Bengal', "cgwb.gov.in"),
     (r"\badb\b|imis", "ADB arsenic fluoride drinking water West Bengal", "adb.org"),
@@ -104,7 +106,7 @@ SOURCE_HINTS = [  # phrase in question -> (query phrase, site restriction)
 
 NOT_PLACE = set("""What Which How Can Could Does Do Is Are Use Only The April June July May March October Special Drive Annual Ground
 Water Quality Report CGWB ADB IMIS NAQUIM Explain Retain Exclude Bengal West North South District Year Book Study Mondal Bhowmick
-Table Dug Well Hand Pump India Mark Gaighata-only""".split())
+Table Dug Well Hand Pump India Mark Gaighata-only Annexure Aquifer Management Plan Apr Jan Feb Mar Aug Sep Nov Dec January February August September November December Parganas Characteristics Implications Mitigation Drinking""".split())
 
 def proper_names(text: str) -> list[str]:
     """Candidate place names from capitalisation alone (no corpus lookup, so search does not peek at the answer)."""

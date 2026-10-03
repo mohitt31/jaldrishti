@@ -30,6 +30,7 @@ def column_role(header: str, caption: str) -> dict | None:
         if "exceed" in t and "acceptable" in t: return {"role": "stat", "statistic": "pct_exceeding_acceptable"}
     an = _analyte_of(header) or (find_contaminant(caption) if re.search(r"\b(as|f)\b|arsenic|fluoride|conc", t) else None)
     thr = re.search(r">\s*(\d+(?:\.\d+)?)", t)
+    if not an and (thr or "affected" in t): an = find_contaminant(caption)
     if "date" in t: return {"role": "date"}
     if "%" in t or "percent" in t:
         return {"role": "measure", "statistic": "pct_exceeding" if (thr or "exceed" in t) else "percent", "contaminant": an,
@@ -93,7 +94,7 @@ def table_evidence(t: Table, doc_meta: dict, page_text: str = "") -> list[dict]:
         if not t.columns[j] and roles[j] is None and roles[j - 1] and (j < 2 or t.columns[j - 1]):
             roles[j] = roles[j - 1]
     default_d = find_districts(t.caption) or doc_meta.get("districts") or []
-    per_tbl, per_q = _period(t.caption, t.note, doc_meta.get("period_text", ""), page_text[:600])
+    per_tbl, per_q = _period(t.caption, t.note)
     transposed = any(r and r["role"] == "stat" for r in roles)
     for ri, row in enumerate(t.rows):
         texts = [c for c in row if c and not is_num(c) and norm(c) not in ND]
@@ -124,8 +125,10 @@ def table_evidence(t: Table, doc_meta: dict, page_text: str = "") -> list[dict]:
                 "value_text": cell.strip(), "value": val, "non_detect": nd, "unit": unit,
                 "threshold": r.get("threshold"), "district": dists[0] if len(dists) == 1 else (dists[0] if dists else None),
                 "places": _places(texts, src),
+                "location": next((row[j] for j,h in enumerate(t.columns) if re.search(r"location|village", norm(h)) and j < len(row) and row[j] and not is_num(row[j])), None),
+                "aquifer": "deeper" if re.search(r"deeper|confined", norm(t.caption)) and "un-confined" not in norm(t.caption) else "shallow" if re.search(r"shallow|un-confined|unconfined", norm(t.caption)) else None,
                 "source": src, "well_id": well, "date": date,
-                "period": date or per_tbl, "period_quote": per_q if not date else rowtxt,
+                "period": date or per_tbl, "period_basis": "sample_date" if date else "table_context" if per_tbl else "unknown", "period_quote": per_q if not date else rowtxt,
                 "spatial_support": "district" if not [p for p in texts if not find_districts(p) and not _analyte_of(p) and norm(p) not in SOURCES and not WELL_ID.match(p)] else "site",
                 "context": cap, "header": t.columns[ci] if ci < len(t.columns) else "", "row_text": rowtxt,
                 "bbox": list(t.row_bboxes[ri]) if ri < len(t.row_bboxes) else None,

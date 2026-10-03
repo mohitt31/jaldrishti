@@ -31,7 +31,7 @@ class Session:
         for d in self.reg:
             f = CORPUS / d["file"]
             if f.exists() and d.get("format") != "pubmed_xml": self.by_sha[sha(f)] = d["id"]
-        self.ev = load() + [e for m in self.extra.values() for e in json.loads((ICACHE / f"{m['id']}.json").read_text())["evidence"]]
+        self.ev = load() + [e for m in self.extra.values() for e in build_doc(m)]
     def _discovered(self):
         f = ROOT / "cache/discovered.json"
         return json.loads(f.read_text()) if f.exists() else {}
@@ -99,10 +99,18 @@ class Session:
                     if d: found.add(d)
         return found
     def run(self, question: str, mode: str = "jaldrishti", budget: int = 3) -> dict:
+        before = getattr(self.api, "live_credits", 0)
+        r = self._run(question, mode, budget)
+        r["search_attempts"] = len(r.get("trace", []))
+        r["cached_searches"] = sum(bool(t.get("cached")) for t in r.get("trace", []))
+        r["credits"] = getattr(self.api, "live_credits", 0) - before
+        return r
+
+    def _run(self, question: str, mode: str = "jaldrishti", budget: int = 3) -> dict:
         t0 = time.time()
         q0 = parse(question, Linker(self.ev)); self.contaminant = q0.contaminant; self._q = question
-        if mode == "library":
-            return self.run_library(question, t0, budget=min(2, max(0, budget)))
+        if mode in ("library", "reference"):
+            return self.run_library(question, t0, budget=min(2, max(0, budget)), include_reference=(mode == "reference"))
         if mode == "oracle":
             core = {d["id"] for d in docs()}
             ans = Engine([e for e in self.ev if e["doc"] in core], self.by_id).ask(question)
@@ -148,14 +156,18 @@ class Session:
         from .harvest import LIBRARY
         if not LIBRARY.exists(): return set()
         lib = json.loads(LIBRARY.read_text())
+        overlay = ROOT / "cache/library_v03.json"
+        if overlay.exists():
+            lib["docs"] = sorted(set(lib["docs"]) | set(json.loads(overlay.read_text())["docs"]))
         for did in lib["docs"]:               # make harvested docs visible
             if did not in self.by_id:
                 meta = next((m for m in self._discovered().values() if m.get("id") == did), None)
                 if meta: self._use(meta)
         return set(lib["docs"])
-    def run_library(self, question: str, t0: float, budget: int = 2) -> dict:
+    def run_library(self, question: str, t0: float, budget: int = 2, include_reference: bool = False) -> dict:
         """Answer from the harvested library; spend at most `budget` live searches if a source is missing."""
         libdocs = self.library_docs()
+        if include_reference: libdocs |= {d["id"] for d in docs()}
         ans = Engine([e for e in self.ev if e["doc"] in libdocs], self.by_id).ask(question)
         trace, credits, located = [], 0, set(libdocs)
         if not satisfied(ans) and budget:
@@ -187,5 +199,5 @@ class Session:
                               "top": [{"rank": r["rank"], "domain": r["domain"], "title": r["title"][:90], "pdf": bool(r["pdf"])} for r in res[:5]],
                               "answer_type": ans["answer_type"]})
                 if satisfied(ans): break
-        return {"mode": "library", "trace": trace, "credits": credits, "located": sorted(located & {e["doc"] for e in self.ev}),
+        return {"mode": "reference" if include_reference else "library", "reference_corpus_included": include_reference, "trace": trace, "credits": credits, "located": sorted(located & {e["doc"] for e in self.ev}),
                 "answer": ans, "seconds": round(time.time() - t0, 2), "library_size": len(libdocs)}
