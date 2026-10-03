@@ -10,6 +10,8 @@ JalDrishti answers a question with the exact number, unit, place, period, docume
 
 **Track:** Knowledge & Public Interest
 
+[Open the recorded demo](https://mohitt31.github.io/jaldrishti/) — explore all 50 recorded dev, original-test and fresh-holdout answers, including failures. This is a static evidence explorer, not a live query service.
+
 ## Results (v0.1 frozen test split, run once)
 
 20 held-out questions, scored against 60 hand-verified facts. Every mode uses the same reader. Only how sources are found differs.
@@ -29,7 +31,7 @@ JalDrishti answers a question with the exact number, unit, place, period, docume
 - Q019, Q026: the village names in a paper abstract (Khayrasole, Rajnagar) are not linked as places, so the abstract range is not found. Reader fails in oracle mode too.
 - Library misses: Q012/Q023 (Bhowmick et al. 2015 was not surfaced by Scholar), Q014 (CGWB Year Book 2015–16 not harvested), Q021/Q022 (Purulia aquifer-mapping keywell tables from 2023 not harvested).
 
-## v0.2 status (post-hoc)
+## v0.2 results (post-hoc fixes; fresh-location holdout)
 
 The original test results above remain unchanged. v0.2 fixes were selected after the v0.1 error categories were known; they are **post-hoc**, not an improvement measured on the original test set.
 
@@ -40,7 +42,21 @@ The original test results above remain unchanged. v0.2 fixes were selected after
 
 Changes: match the entity in count questions; link capitalised abstract place names; resolve an unnamed district before library fallback (at most two searches including resolution); close native PDF handles; add bounded generic PDF harvest templates. Abstract place extraction is a heuristic and records retain study-level spatial support.
 
-A new place-disjoint holdout will be written after the v0.2 freeze commit, committed before execution, and run once. The implementation and benchmark author are the same assistant, so this is not an independently authored blind evaluation. Earlier benchmark content was already in the assistant's conversation history; no test questions were reread for these fixes.
+The new holdout was authored after the v0.2 freeze (`e28db33`), committed and pushed before execution (`e2aabb0`), and run **once, offline**, in library and oracle modes. Results are frozen at `502f46a`. The baseline was skipped: 208 recorded live credits against the stated 250-search allowance leaves at most 42, below the 60-credit condition.
+
+| Evaluation set | Baseline | Library | Oracle | New live credits in v0.2 run |
+|---|---:|---:|---:|---:|
+| v0.1 original test, unchanged | 2/20 | 12/20 | 17/20 | Not rerun |
+| v0.2 fresh-location holdout | Not run | **17/20** | **19/20** | **0** |
+| v0.2 dev offline replay | 3/10 | 9/10 | 10/10 | 0 |
+
+**Different question sets: 12/20 → 17/20 is not a measured before/after improvement.** Holdout numeric accuracy is library **10/12**, oracle **12/12**. Both score four of five comparisons and three of three insufficient-evidence cases correctly by answer type. Scored coverage is 70% / 80%, scored risk 0% / 0%, and citation precision 1.00 / 1.00.
+
+**The audit found errors that these metrics miss.** Library HQ16 says “not comparable” using Rajasthan/Madhya Pradesh rows instead of Purulia. Both modes select the wrong Ramnagar row in HQ17; oracle selects another Benajira row in HQ15. Nadia records use the report date as a period despite an unknown sampling date. Thus 0% scored risk does **not** mean zero scientific errors, and 1.00 citation precision does **not** mean every citation supports the requested measurement. The unchanged scorer awards comparison credit by answer type. These failures were retained, with no tuning or rerun. See the [post-run audit](reports/holdout_audit.md) and [raw results](reports/eval_holdout.json).
+
+The report's library `credits: 1` counts an unsuccessful offline fallback/cache lookup; **no live API call was made**. The ledger stayed 208 before/after. v0.2 work used **13 additional recorded live credits** (195 → 208) during harvesting, with 14 HTTP attempts including one failure. Historical harvest cost is 69 (56 + 13).
+
+The holdout has 14 facts from four existing PDFs, 20 questions and all eight districts. All 14 values were checked against rendered PDF rows and headers, then passed `python scripts/verify_benchmark.py --bench holdout` (14/14 found). Locations exclude those in the original facts; sources are reused. See [facts](benchmark/holdout/holdout_facts.csv), [questions](benchmark/holdout/holdout_questions.csv) and the [verification manifest](benchmark/holdout/manifest.json). The implementation and benchmark author are the same assistant, so this is not an independently authored blind evaluation. Earlier benchmark content was already in the assistant's conversation history; no test questions were reread for these fixes.
 
 The existing scorer is retained for comparability. Its citation metric checks whether a number occurs on the cited page; it does not independently validate the complete measurement tuple. Numeric matching uses value and document/page (or quote tokens), and does not independently check units. Comparison correctness is scored by answer type, not by a semantic assessment of each reason.
 
@@ -51,7 +67,7 @@ The existing scorer is retained for comparability. Its citation metric checks wh
 3. **Live fallback (v0.2: ≤ 2 searches including district resolution)** when a question names a source the library lacks. The planner turns question cues into a query: a named study → Scholar with `as_ylo`/`as_yhi`; "Special Drive", "NAQUIM", "ADB" → that publisher via `as_sitesearch`; a village → quoted place name.
 4. **Place → district resolution** (`jaldrishti ask --mode jaldrishti`): one search resolves a village to its district from the knowledge graph and snippets. A name found in two districts (Dhabani: Bankura and Purulia) is kept as `(Bankura OR Purulia)` instead of guessing.
 
-Every response is cached by its request parameters (never the key) and logged in a credit ledger, so all runs above can be replayed without an API key.
+Every successful live response is cached by its request parameters (never the key) and logged in a credit ledger. Recorded outputs can be inspected without an API key, and dev evaluation can be replayed offline. Original-test and holdout commands refuse to overwrite their frozen evaluations.
 
 ## How it reads and checks
 
@@ -97,16 +113,16 @@ pytest -q
 src/jaldrishti/  tables.py (PDF tables) · evidence.py (typed records) · textfacts.py (abstracts)
                  question.py (parsing) · answer.py (lookup, comparison, abstention) · verify.py (page re-read)
                  search.py (SerpApi client, cache, planner) · harvest.py · pipeline.py · evaluate.py · cli.py
-benchmark/       facts, questions, evaluation contract
+benchmark/       original facts/questions, holdout/, evaluation contract
 cache/serpapi/   every SerpApi response used (replayable)   cache/credits.jsonl  credit ledger
-reports/         dev and test results with full traces
+reports/         dev, frozen original test, holdout results and post-run audit
 ```
 
 Source PDFs are not redistributed. They are downloaded from the publishers' sites.
 
 ## AI tools used
 
-As the rules require: Claude (Anthropic) wrote most of the code and ran the experiments under my direction, and ChatGPT helped research the problem and draft the benchmark facts, which were then verified against the source pages. OpenAI Codex implemented the post-hoc v0.2 fixes, regression tests, evaluation safeguards and holdout tooling; its subsequent benchmark verification and execution are recorded in commits and reports. The problem choice, evaluation design and the decisions on what to keep or drop were mine.
+As the rules require: Claude (Anthropic) wrote most of the code and ran the experiments under my direction, and ChatGPT helped research the problem and draft the benchmark facts, which were then verified against the source pages. OpenAI Codex implemented the post-hoc v0.2 fixes, regression tests, safeguards and holdout tooling; authored the new holdout after the freeze; checked the actual PDF pages; ran the once-only evaluation; audited its failures; and updated the README and recorded-demo site. The holdout has not received an independent human annotation review. Commits and reports record the sequence. The problem choice, evaluation design and the decisions on what to keep or drop were mine.
 
 ## Licence
 

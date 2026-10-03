@@ -63,13 +63,29 @@ def slim(r):
                        "n": t.get("n_results"), "located": t.get("located"), "district": t.get("resolved_district"),
                        "top": t.get("top", [])[:3]} for t in r.get("trace", [])]}
 
+AUDIT = {
+    "HQ01": {"library": "Sampling period is UNKNOWN in the gold row. The engine's November 2025 period is the report date.", "oracle": "Sampling period is UNKNOWN in the gold row. The engine's November 2025 period is the report date."},
+    "HQ02": {"library": "Sampling period is UNKNOWN in the gold row. The engine's November 2025 period is the report date.", "oracle": "Sampling period is UNKNOWN in the gold row. The engine's November 2025 period is the report date."},
+    "HQ13": {"library": "Different wells support refusal, but November 2025 is not a verified sampling period.", "oracle": "Different wells support refusal, but November 2025 is not a verified sampling period."},
+    "HQ15": {"oracle": "Scored correct by answer type, but the Benajira row is 0.20 instead of the requested April 2022 row, 0.29."},
+    "HQ16": {"library": "Scored correct by answer type, but these are Rajasthan/Madhya Pradesh rows, not the requested Markabera wells. Grounding is wrong."},
+    "HQ17": {"library": "Scored correct by answer type, but selects a different Ramnagar record (0.29 instead of the specified 0.18).", "oracle": "Scored correct by answer type, but selects a different Ramnagar record (0.29 instead of the specified 0.18)."},
+}
 data = {"summary": {}, "questions": []}
-for split in ("dev", "test"):
+for split in ("dev", "test", "holdout"):
+    if not (ROOT / f"reports/eval_{split}.json").exists(): continue
     data["summary"][split] = json.loads((ROOT / f"reports/eval_{split}.json").read_text())["modes"]
-    runs = {m: {r["question_id"]: r for r in json.loads((ROOT / f"reports/runs_{split}_{m}.json").read_text())} for m in ("baseline", "library", "oracle")}
+    runs = {m: {r["question_id"]: r for r in json.loads((ROOT / f"reports/runs_{split}_{m}.json").read_text())} for m in data["summary"][split]}
     for qid, r in runs["library"].items():
         data["questions"].append({"id": qid, "split": split, "question": r["question"], "expected": r["score"]["expected"],
-                                  "modes": {m: slim(runs[m][qid]) for m in runs}})
+                                  "audit": AUDIT.get(qid, {}), "modes": {m: slim(runs[m][qid]) for m in runs}})
+data["evaluation"] = {
+    "test": {"label": "v0.1 original test", "harvest_credits": 56, "offline": False},
+    "dev": {"label": "v0.2 development replay", "harvest_credits": 69, "offline": True},
+    "holdout": {"label": "v0.2 fresh-location holdout", "harvest_credits": 69, "offline": True},
+}
+started = ROOT / "reports/holdout_started.json"
+if started.exists(): data["holdout_provenance"] = json.loads(started.read_text())
 lib = json.loads((ROOT / "cache/library.json").read_text())
 data["library"] = {"credits": lib["credits"], "docs": [{"id": d, "title": title_of(d), "url": META.get(d, {}).get("url")} for d in lib["docs"]],
                    "queries": [{"engine": q["engine"], "q": q["q"], "found": q["found"]} for q in lib["queries"]]}

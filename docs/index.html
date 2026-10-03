@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>JalDrishti</title>
+<link rel="icon" href="data:,">
 <meta name="description" content="Cited groundwater arsenic and fluoride evidence for West Bengal, found with SerpApi and checked against the source page.">
 <style>
 :root{--bg:#f7f6f2;--card:#fff;--ink:#1b1f23;--mute:#5b6570;--line:#e3e0d8;--acc:#0b6e74;--acc2:#d9480f;--ok:#2b8a3e;--warn:#b35c00;--no:#8a1c1c;--chip:#eef4f4}
@@ -44,15 +45,18 @@ details summary{cursor:pointer;color:var(--acc)}footer{margin:40px 0;color:var(-
   <span class="warn">Not a household safety tool: a survey value says nothing about your own tube well today.</span>
 </div></header>
 <main class="wrap">
-  <h2>Held-out test: 20 questions, run once</h2>
+  <h2>v0.1 original test: 20 questions, frozen</h2>
   <div class="grid" id="cards"></div>
-  <p class="sub">Same reader in all three modes; only how sources are found differs. Risk = wrong answers among answers given. Every cited number was re-found on its cited page. <a href="https://github.com/mohitt31/jaldrishti">Code, benchmark and full traces on GitHub</a>.</p>
+  <h2>v0.2 fresh-location holdout: 20 questions, run once</h2>
+  <div class="grid" id="holdout-cards"></div>
+  <p class="sub">Post-hoc fixes; new locations from existing sources. CSVs committed before this offline run. Baseline omitted to preserve the API budget. These are different question sets, so the scores do not measure a before/after improvement. <b>Some scored-correct comparisons cite the wrong rows.</b> See audit notes on the answers and the <a href="https://github.com/mohitt31/jaldrishti/blob/main/reports/holdout_audit.md">full audit</a>. The same assistant implemented and authored the holdout; no independent blinding.</p>
+  <p class="sub">Same reader in all three modes; only how sources are found differs. Risk = wrong answers among answers given. Citation verification checks whether a number occurs on its page, not the full measurement tuple. Comparison scoring checks answer type only. <a href="https://github.com/mohitt31/jaldrishti">Code, benchmark and full traces on GitHub</a>.</p>
 
   <h2>Explore every answer</h2>
   <div class="ex">
     <div class="card" style="padding:0">
       <div class="flt tabs" id="flt"></div>
-      <div class="sub" style="padding:0 12px">Dots: baseline · JalDrishti · oracle (green = scored correct)</div>
+      <div class="sub" style="padding:0 12px">Dots follow the available mode tabs (green = scored correct). The holdout has no baseline run.</div>
       <div class="list" id="list"></div>
     </div>
     <div class="card" id="detail"></div>
@@ -64,46 +68,47 @@ details summary{cursor:pointer;color:var(--acc)}footer{margin:40px 0;color:var(-
   <h2>How it works</h2>
   <div class="card">
     <ol>
-      <li><b>Harvest.</b> 56 Google and Google Scholar searches over generic district templates build a library of government reports and paper abstracts. No question text is used.</li>
+      <li><b>Harvest.</b> 69 completed Google and Google Scholar searches over generic district templates (56 original + 13 supplemental) build a library of government reports and paper abstracts. No question text is used.</li>
       <li><b>Read.</b> Every table cell becomes a typed record: value, unit, statistic, place, well, date or period, spatial support, page, row.</li>
       <li><b>Answer or refuse.</b> Places must exist in a table row. Comparisons are checked for the same sampling point, statistic, spatial support and time separation. Requests the sources cannot support are refused with a reason.</li>
       <li><b>Re-read.</b> Before answering, each number is searched for again on the cited PDF page with a second PDF library.</li>
-      <li><b>Fallback.</b> If a source is missing, at most one live search, planned from cues in the question (named study → Scholar, publisher → site filter, village → quoted place).</li>
+      <li><b>Fallback.</b> If a source is missing, at most two searches including district resolution, planned from cues in the question (named study → Scholar, publisher → site filter, village → quoted place).</li>
     </ol>
   </div>
 </main>
-<footer class="wrap">Data © CGWB, ADB and the cited journals; crops are shown for verification. Built for the SerpApi India Hackathon 2026, Knowledge &amp; Public Interest track.</footer>
+<footer class="wrap">Static explorer of recorded answers, not a live question service. AI assistance: Claude, ChatGPT and OpenAI Codex; roles and evaluation limitations are documented in the README. Data © CGWB, ADB and the cited journals; crops are shown for verification. Built for the SerpApi India Hackathon 2026, Knowledge &amp; Public Interest track.</footer>
 <script>
 const MODES={baseline:"Baseline: Google the question",library:"JalDrishti",oracle:"Oracle: gold documents"};
 const LBL={number_with_source:"number with source",not_comparable:"not comparable",insufficient_evidence:"insufficient evidence",error:"error",comparable:"comparable"};
-let D,cur=null,mode="library",split="test";
+let D,cur=null,mode="library",split="holdout";
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-fetch("data.json").then(r=>r.json()).then(d=>{D=d;cards();filters();list();lib();});
-function cards(){const s=D.summary.test;document.getElementById("cards").innerHTML=Object.keys(MODES).map(m=>{const v=s[m],c=Math.round(v.accuracy*v.n);
+fetch("data.json").then(r=>{if(!r.ok)throw new Error("Cannot load recorded runs");return r.json();}).then(d=>{D=d;cards("test","cards");cards("holdout","holdout-cards");filters();list();lib();}).catch(e=>{document.getElementById("detail").textContent="Could not load the recorded demo. Please reload or view the reports on GitHub.";console.error(e);});
+function cards(which,target){const s=D.summary[which];document.getElementById(target).innerHTML=Object.keys(s).map(m=>{const v=s[m],c=Math.round(v.accuracy*v.n),meta=D.evaluation[which];
  return `<div class="card ${m==="library"?"hl":""}"><div class="lbl">${MODES[m]}</div><div class="big" style="margin-top:8px">${c}<span style="font-size:20px;color:var(--mute)"> / ${v.n}</span></div>
- <div class="bar"><i style="width:${v.accuracy*100}%"></i></div><div class="sub">${v.credits} SerpApi credits${m==="library"?" + "+D.library.credits+" once for the library":""} · answers given ${Math.round(v.coverage*100)}% · risk ${v.coverage?Math.round(v.risk*100)+"%":"–"}</div>
- <div class="sub">dev: ${Math.round(D.summary.dev[m].accuracy*10)}/10</div></div>`}).join("");}
-function filters(){document.getElementById("flt").innerHTML=["test","dev"].map(s=>`<button class="${s===split?"on":""}" onclick="split='${s}';filters();list()">${s} split</button>`).join("");}
+ <div class="bar"><i style="width:${v.accuracy*100}%"></i></div><div class="sub">${meta.offline?"0 live SerpApi credits (offline replay; "+v.credits+" recorded search attempts)":v.credits+" live SerpApi credits"}${m==="library"?" + "+meta.harvest_credits+" for the library":""} · answers given ${Math.round(v.coverage*100)}% · risk ${v.coverage?Math.round(v.risk*100)+"%":"–"}</div>
+ <div class="sub">Citation precision: ${v.citation_precision==null?"–":v.citation_precision.toFixed(2)} (number found on page)</div></div>`}).join("");}
+function filters(){document.getElementById("flt").innerHTML=["holdout","test","dev"].map(s=>`<button class="${s===split?"on":""}" onclick="split='${s}';filters();list()">${s==="test"?"v0.1 test":s==="holdout"?"v0.2 holdout":"v0.2 dev"}</button>`).join("");}
 function list(){const qs=D.questions.filter(q=>q.split===split);if(!cur||cur.split!==split)cur=qs[0];
  document.getElementById("list").innerHTML=qs.map(q=>`<div class="q ${q===cur?"on":""}" onclick="pick('${q.id}')"><div class="t"><b>${q.id}</b> ${esc(q.question)}</div>
- <div class="m dots">${Object.keys(MODES).map(m=>`<span class="${q.modes[m].correct?"y":"n"}" title="${MODES[m]}"></span>`).join("")} expected: ${LBL[q.expected]}</div></div>`).join("");detail();}
+ <div class="m dots">${Object.keys(q.modes).map(m=>`<span class="${q.modes[m].correct?"y":"n"}" title="${MODES[m]}"></span>`).join("")} expected: ${LBL[q.expected]}</div></div>`).join("");detail();}
 function pick(id){cur=D.questions.find(q=>q.id===id);list();}
 function item(i){const link=i.url?`<a href="${esc(i.url)}#page=${i.page||1}" target="_blank" rel="noopener">${esc(i.title)}</a>`:esc(i.title);
  return `<div class="item"><div class="val">${esc(i.value)} <small>${esc(i.unit||"")} · ${esc(i.statistic)}</small></div>
  <div>${esc(i.place||i.district||"")}${i.source_type?" · "+esc(i.source_type):""}${i.well_id?" · "+esc(i.well_id):""} · ${esc(i.date||i.period||"period not stated")}</div>
  <div class="sub">${link}${i.page?", page "+i.page:" (abstract)"} ${i.page_verified?(i.page?"· ✓ re-found on page":"· ✓ re-found in abstract"):""}</div>
  ${i.crop?`<img class="crop" loading="lazy" src="crops/${i.crop}" alt="Cited table row, highlighted">`:`<div class="sub" style="margin-top:6px">“${esc((i.quote||"").slice(0,220))}”</div>`}</div>`;}
-function detail(){if(!cur)return;const a=cur.modes[mode];
+function detail(){if(!cur)return;if(!cur.modes[mode])mode="library";const a=cur.modes[mode];
  let h=`<div class="sub">${cur.id} · ${cur.split} split · expected <b>${LBL[cur.expected]}</b></div><h3 style="margin:6px 0 4px">${esc(cur.question)}</h3>
- <div class="tabs">${Object.keys(MODES).map(m=>`<button class="${m===mode?"on":""}" onclick="mode='${m}';detail()">${MODES[m]} ${cur.modes[m].correct?"✓":"✗"}</button>`).join("")}</div>
- <span class="badge b-${a.answer_type}">${LBL[a.answer_type]||a.answer_type}</span> <span class="sub">${a.credits} search credit${a.credits===1?"":"s"} for this question · ${a.correct?"scored correct":"scored wrong"}</span>`;
+ <div class="tabs">${Object.keys(cur.modes).map(m=>`<button class="${m===mode?"on":""}" onclick="mode='${m}';detail()">${MODES[m]} ${cur.modes[m].correct?"✓":"✗"}</button>`).join("")}</div>
+ <span class="badge b-${a.answer_type}">${LBL[a.answer_type]||a.answer_type}</span> <span class="sub">${a.credits} recorded search attempt${a.credits===1?"":"s"}${D.evaluation[cur.split].offline?" · 0 live credits":""} for this question · ${a.correct?"scored correct":"scored wrong"}</span>`;
+ if(cur.audit&&cur.audit[mode])h+=`<p class="warn"><b>Post-run audit:</b> ${esc(cur.audit[mode])}</p>`;
  if(a.reasons&&a.reasons.length)h+=`<ul class="reasons">${a.reasons.map(r=>`<li>${esc(r)}</li>`).join("")}</ul>`;
  if(a.note)h+=`<p class="sub">${esc(a.note)}</p>`;if(a.reason)h+=`<p>${esc(a.reason)}</p>`;
  h+=a.items.map(item).join("");
  if(a.related&&a.related.length)h+=`<p class="sub" style="margin-top:12px">Related record (shown as context, not as an answer):</p>`+a.related.map(item).join("");
  if(a.trace&&a.trace.length)h+=`<h4 style="margin:18px 0 4px">Searches</h4><div class="trace">${a.trace.map(t=>`<div class="st"><code>${esc(t.engine)}</code> ${esc(t.q)}${t.site?` <code>site: ${esc(t.site)}</code>`:""}
  <div class="sub">${t.n} results${t.district?" · district: "+esc([].concat(t.district).join(" or ")):""}${t.located&&t.located.length?" · located "+t.located.length+" source(s)":""}</div></div>`).join("")}</div>`;
- else if(mode==="library")h+=`<p class="sub" style="margin-top:14px">Answered from the harvested library, no search for this question.</p>`;
+ else if(mode==="library")h+=`<p class="sub" style="margin-top:14px">No search trace recorded. Consult the answer type and reason above; this does not imply that the question was answered.</p>`;
  document.getElementById("detail").innerHTML=h;}
 function lib(){const L=D.library;document.getElementById("lib").innerHTML=`<p>${L.docs.length} documents from ${L.credits} searches (${L.queries.filter(q=>q.engine==="google").length} Google, ${L.queries.filter(q=>q.engine!=="google").length} Google Scholar).</p>
  <details><summary>Documents</summary><table>${L.docs.map(d=>`<tr><td>${d.url?`<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title)}</a>`:esc(d.title)}</td></tr>`).join("")}</table></details>
