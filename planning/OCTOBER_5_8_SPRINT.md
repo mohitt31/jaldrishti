@@ -1,4 +1,4 @@
-# JalDrishti: October 5–8 submission sprint
+# NeerTathya: October 5–8 submission sprint
 
 Planning date: 5 October 2026. Internal submission target: **8 October, 18:00 IST**. Official deadline: **10 October, 23:59 IST**. All dates below are IST. Time allocations, participant counts and gates are targets, not achieved results.
 

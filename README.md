@@ -1,4 +1,4 @@
-# JalDrishti
+# NeerTathya
 
 **Cited groundwater arsenic and fluoride evidence for West Bengal, found with SerpApi, checked against the source page, and refused when the evidence does not support the question.**
 
@@ -11,13 +11,15 @@
 | Fresh holdout (new places, written after the v0.2 freeze, run once) | **17/20** (numeric 10/12) |
 | Cited numbers re-found on the cited PDF page | **100 %** in every run |
 | Bad comparisons (different wells, statistics, periods, spatial support) | refused, with the failing checks listed |
-| Reproducible without an API key | every SerpApi response is cached; `jaldrishti eval --offline` |
+| Reproducible without an API key | every SerpApi response is cached; `neertathya eval --offline` |
 
 Known limits, all disclosed below: the holdout audit found two comparisons that scored correct while citing the wrong rows (guarded against in v0.3, post-hoc), and the library does not yet contain the newer Purulia keywell report.
 
 ## Try it — no install or API key
 
-**[Ask JalDrishti in your browser](https://mohitt31.github.io/jaldrishti/#ask)** · **[Explore district evidence](https://mohitt31.github.io/jaldrishti/#map)**
+Formerly **JalDrishti**. The existing repository/Pages links, Python import paths, note schema and saved browser notes remain compatible. The public app and CLI are now **NeerTathya** (`neertathya`); `jaldrishti` remains a command alias. Historical reports retain their original names.
+
+**[Ask NeerTathya in your browser](https://mohitt31.github.io/jaldrishti/#ask)** · **[Explore district evidence](https://mohitt31.github.io/jaldrishti/#map)**
 
 The real Python engine runs locally in a Pyodide worker, loaded from jsDelivr on your first question. Choose **SerpApi-discovered library** or **Library + curated reference reports** explicitly. This searches a prebuilt evidence snapshot: it makes no new SerpApi calls, does not discover new documents, and needs no server or key. The first use needs internet access to download Python; a CDN failure is shown with a retry message.
 
@@ -27,6 +29,8 @@ Try **332 vs 329 µg/L: comparable?** The engine converts the units and explains
 ![District evidence coverage and linked source records](docs/screenshots/map-desktop.png)
 
 The map colours **indexed document counts**, never safety. Its reported maxima span different locations, statistics, surveys and years, and cannot be used to compare district risk. Missing records do not establish safety or absence of evidence. Boundaries represent 2021 and are a simplified [geoBoundaries extract under ODbL 1.0](docs/ask/BOUNDARIES-LICENSE.md).
+
+The responsive NeerTathya workspace adds a multiline question composer, explicit source scope, a district-to-question action, light/dark styles and a portable note flow. [Design and compatibility checks](reports/design_release/README.md) are engineering tests, not user validation.
 
 Browser engineering checks and their limits are recorded in [the release report](reports/browser_release/README.md). The frozen test and holdout results below have not changed.
 
@@ -40,7 +44,7 @@ Browser engineering checks and their limits are recorded in [the release report]
 
 West Bengal has some of the world's worst groundwater arsenic, and parts of the state have high fluoride. The measurements exist, but they are buried in annexure tables of 100–270 page government reports and in paper abstracts. A search engine finds pages *about* arsenic; it does not hand you "0.16 mg/L at the Bhajanghat dug well, April 2022, page 102". And the most common mistake with these numbers is not a missing value but a bad comparison: a single well's maximum set against a district mean, or two different wells treated as a time series.
 
-JalDrishti answers a question with the exact number, unit, place, period, document and page. Or it says *not comparable* or *insufficient evidence* and explains why.
+NeerTathya answers a question with the exact number, unit, place, period, document and page. Or it says *not comparable* or *insufficient evidence* and explains why.
 
 > Not a household safety tool. A number from a 2022 survey says nothing about your tube well today. Test your own source at an accredited lab.
 
@@ -55,10 +59,10 @@ JalDrishti answers a question with the exact number, unit, place, period, docume
 | Mode | Correct | SerpApi credits | Answers given | Wrong among answered (risk) | Citation precision |
 |---|---|---|---|---|---|
 | **Baseline**: Google the question as typed (up to 3 pages) | **2 / 20** | 58 | 0 % | – | – |
-| **JalDrishti**: harvested library + at most 1 live search | **12 / 20** | 9 (+56 once for the library) | 55 % | **9 %** (1 of 11) | **1.00** |
+| **NeerTathya**: harvested library + at most 1 live search | **12 / 20** | 9 (+56 once for the library) | 55 % | **9 %** (1 of 11) | **1.00** |
 | Oracle: the 9 gold documents given directly, no search | 17 / 20 | 0 | 80 % | 6 % | 1.00 |
 
-- Dev split (10 questions, used while building): baseline 3/10, JalDrishti 9/10, oracle 10/10.
+- Dev split (10 questions, used while building): baseline 3/10, NeerTathya 9/10, oracle 10/10.
 - *Citation precision*: share of cited numbers that the tool re-finds on the cited page by re-reading the PDF independently of the table reader. Every cited number in every mode passed.
 - Full outputs, including every search query, result and fetched file: [`reports/eval_test.json`](reports/eval_test.json) and `reports/runs_test_*.json`.
 
@@ -113,13 +117,13 @@ Three additional bounded SerpApi queries cost **3 recorded live credits** (208 �
 
 ```bash
 # after installation, fetch_corpus.py, restore and index (see Run it below)
-jaldrishti serve
+neertathya serve
 # open http://127.0.0.1:8766
 ```
 
-This runs the actual question engine, not recorded responses. It binds to localhost, defaults to offline cached search, keeps the API key server-side, and shows source scope, sampling/publication fields, extracted rows, PDF page links and search accounting. Choose **SerpApi-discovered library** or **Library + curated reference reports** explicitly. `jaldrishti serve --live-searches 3` enables at most three total live HTTP attempts for that server session; it may consume credits. The GitHub Pages Ask box now runs the same reader in browser Python over the exported snapshot. The local server additionally supports bounded source recovery when explicitly enabled.
+This runs the actual question engine, not recorded responses. It binds to localhost, defaults to offline cached search, keeps the API key server-side, and shows source scope, sampling/publication fields, extracted rows, PDF page links and search accounting. Choose **SerpApi-discovered library** or **Library + curated reference reports** explicitly. `neertathya serve --live-searches 3` enables at most three total live HTTP attempts for that server session; it may consume credits. The GitHub Pages Ask box now runs the same reader in browser Python over the exported snapshot. The local server additionally supports bounded source recovery when explicitly enabled.
 
-For a CLI reference lookup: `jaldrishti ask --mode reference --offline "What fluoride is listed for Markabera TW WBPR_7 in Purulia?"`.
+For a CLI reference lookup: `neertathya ask --mode reference --offline "What fluoride is listed for Markabera TW WBPR_7 in Purulia?"`.
 
 The recorded development run on code commit `7d308a2` gives:
 
@@ -144,7 +148,7 @@ Strict development replay is unchanged (library 17/20, oracle 20/20; `reports/v0
 1. **Harvest (56 searches, once).** Generic templates over the 13 districts where arsenic or fluoride is reported (`src/jaldrishti/harvest.py`). Several phrasings per district, because Google is erratic on these queries: the same template returns the CGWB report at rank 1 for Nadia and Wikipedia's *Arsenic* page for Malda. Google results give government PDFs; **Google Scholar** results give papers, which are resolved to PubMed abstracts. The v0.1 library contained 23 documents; the post-hoc v0.2 supplement adds 13 completed searches (69 total) and expands it to 27 documents. One additional HTTP attempt failed; the 14-attempt cap stopped the remaining template. No benchmark question text is used.
 2. **Answer from the library** in about a second. No search needed.
 3. **Live fallback (v0.2: ≤ 2 searches including district resolution)** when a question names a source the library lacks. The planner turns question cues into a query: a named study → Scholar with `as_ylo`/`as_yhi`; "Special Drive", "NAQUIM", "ADB" → that publisher via `as_sitesearch`; a village → quoted place name.
-4. **Place → district resolution** (`jaldrishti ask --mode jaldrishti`): one search resolves a village to its district from the knowledge graph and snippets. A name found in two districts (Dhabani: Bankura and Purulia) is kept as `(Bankura OR Purulia)` instead of guessing.
+4. **Place → district resolution** (`neertathya ask --mode jaldrishti`): one search resolves a village to its district from the knowledge graph and snippets. A name found in two districts (Dhabani: Bankura and Purulia) is kept as `(Bankura OR Purulia)` instead of guessing.
 
 Every successful live response is cached by its request parameters (never the key) and logged in a credit ledger. Recorded outputs can be inspected without an API key, and dev evaluation can be replayed offline. Original-test and holdout commands refuse to overwrite their frozen evaluations.
 
@@ -178,18 +182,18 @@ Metrics follow selective QA (coverage and risk, Kamath et al. 2020) and citation
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
 python3 fetch_corpus.py        # 6 public reports from cgwb.gov.in and adb.org
-jaldrishti restore             # every PDF/abstract the recorded runs used
-jaldrishti index               # build the evidence index (a few minutes)
+neertathya restore             # every PDF/abstract the recorded runs used
+neertathya index               # build the evidence index (a few minutes)
 
 # replay the frozen evaluation from the cached SerpApi responses, no key needed
-jaldrishti eval --split dev --offline --modes baseline,library,oracle
+neertathya eval --split dev --offline --modes baseline,library,oracle
 
 # ask a question
-jaldrishti ask --mode library "What fluoride value is reported for the Daulatabad dug well in April 2022?"
+neertathya ask --mode library "What fluoride value is reported for the Daulatabad dug well in April 2022?"
 
 # live search (needs SERPAPI_KEY in .env)
-jaldrishti harvest --budget 56
-jaldrishti ask --mode jaldrishti --live "How many Baduria samples exceeded 10 µg/L arsenic in the IMIS 2014–2017 table?"
+neertathya harvest --budget 56
+neertathya ask --mode jaldrishti --live "How many Baduria samples exceeded 10 µg/L arsenic in the IMIS 2014–2017 table?"
 pytest -q
 ```
 
@@ -208,7 +212,7 @@ Source PDFs are not redistributed. They are downloaded from the publishers' site
 
 ## AI tools used
 
-As the rules require: Claude (Anthropic) wrote most of the code and ran the experiments under my direction, and ChatGPT helped research the problem and draft the benchmark facts, which were then verified against the source pages. OpenAI Codex implemented the post-hoc v0.2 fixes, regression tests, safeguards and holdout tooling; authored the new holdout after the freeze; checked the actual PDF pages; ran the once-only evaluation; audited its failures; and updated the README and recorded-demo site. For v0.3, Codex implemented the stricter matching/scorer, continuation-table fixes, bounded retrieval attempt, local query interface and adversarial tests. In the browser round, OpenAI Codex built the Pyodide bundle and worker, evidence export with precomputed verification, district boundary/evidence map, Hindi/Bengali dictionary, browser UI, tests, CLI/WASM parity checks and documentation. No LLM runs at answer time. In the October 5 sprint, Codex prepared the execution/pilot/recruitment documents and implemented the portable evidence-note/review flow, source-provenance display, imported-answer rechecks, failure/retry tests and judge-facing evidence page. It did not recruit, interview or impersonate users, or obtain expert endorsement. The holdout has not received an independent human annotation review. Commits and reports record the sequence. The problem choice, evaluation design and the decisions on what to keep or drop were mine.
+As the rules require: Claude (Anthropic) wrote most of the code and ran the experiments under my direction, and ChatGPT helped research the problem and draft the benchmark facts, which were then verified against the source pages. OpenAI Codex implemented the post-hoc v0.2 fixes, regression tests, safeguards and holdout tooling; authored the new holdout after the freeze; checked the actual PDF pages; ran the once-only evaluation; audited its failures; and updated the README and recorded-demo site. For v0.3, Codex implemented the stricter matching/scorer, continuation-table fixes, bounded retrieval attempt, local query interface and adversarial tests. In the browser round, OpenAI Codex built the Pyodide bundle and worker, evidence export with precomputed verification, district boundary/evidence map, Hindi/Bengali dictionary, browser UI, tests, CLI/WASM parity checks and documentation. No LLM runs at answer time. In the October 5 sprint, Codex prepared the execution/pilot/recruitment documents and implemented the portable evidence-note/review flow, source-provenance display, imported-answer rechecks, failure/retry tests and judge-facing evidence page. Codex also redesigned the responsive research workspace and implemented the NeerTathya public branding and compatible CLI alias. It did not recruit, interview or impersonate users, or obtain expert endorsement. The holdout has not received an independent human annotation review. Commits and reports record the sequence. The problem choice, evaluation design and the decisions on what to keep or drop were mine.
 
 ## Licence
 

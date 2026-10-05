@@ -4,13 +4,13 @@ Status: **no participants confirmed or contacted by the assistant**. These are m
 
 ## Relevant peer / postgraduate researcher
 
-Hi! I'm testing JalDrishti, a tool for preparing source-cited groundwater arsenic/fluoride notes from West Bengal reports. Could you spare 30–35 minutes on 6 October? You'd try a few evidence-finding/comparison tasks using normal Google/PDF search and the tool. I'm measuring completion, mistakes and time—not looking for praise. No groundwater expertise claim is required; I'll report your actual background accurately. I can do [slot 1] or [slot 2], on your usual laptop/phone. Participation is voluntary. May I record anonymous task timings and feedback? Screen recording is optional and needs separate consent.
+Hi! I'm testing NeerTathya, a tool for preparing source-cited groundwater arsenic/fluoride notes from West Bengal reports. Could you spare 30–35 minutes on 6 October? You'd try a few evidence-finding/comparison tasks using normal Google/PDF search and the tool. I'm measuring completion, mistakes and time—not looking for praise. No groundwater expertise claim is required; I'll report your actual background accurately. I can do [slot 1] or [slot 2], on your usual laptop/phone. Participation is voluntary. May I record anonymous task timings and feedback? Screen recording is optional and needs separate consent.
 
 Before booking: Have you used groundwater reports, research papers or environmental tables for coursework/research? What task did you last need them for?
 
 ## Faculty / domain-review request
 
-Dear Professor, I am Mohit Prajapati, a third-year B.S. Applied Geology student at IIT Kharagpur. I am building JalDrishti, which retrieves arsenic/fluoride evidence with source-page citations and refuses unsupported comparisons. Could I request 10 minutes to review one evidence note and its two cited source rows? I especially want to know whether the spatial/statistical comparison and sampling-period interpretation are defensible. This is a hackathon prototype, not a household safety assessment. Your feedback would not be presented as endorsement; I would seek separate permission before attributing any quote or your name publicly. [Browser link] [Source note, once ready]
+Dear Professor, I am Mohit Prajapati, a third-year B.S. Applied Geology student at IIT Kharagpur. I am building NeerTathya, which retrieves arsenic/fluoride evidence with source-page citations and refuses unsupported comparisons. Could I request 10 minutes to review one evidence note and its two cited source rows? I especially want to know whether the spatial/statistical comparison and sampling-period interpretation are defensible. This is a hackathon prototype, not a household safety assessment. Your feedback would not be presented as endorsement; I would seek separate permission before attributing any quote or your name publicly. [Browser link] [Source note, once ready]
 
 ## Scheduling and fallback
 

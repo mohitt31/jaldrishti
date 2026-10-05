@@ -1,0 +1,81 @@
+{
+  "label": "post-hoc engineering UI checks; browser emulation, not a user study",
+  "url": "http://127.0.0.1:8765/",
+  "credits_used": 0,
+  "devices": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1040,
+      "dark": false,
+      "initial_decoded_bytes": 751657,
+      "overflow": false,
+      "console_errors": [],
+      "checks": [
+        "skip link focus",
+        "note navigation",
+        "map-to-question action",
+        "legacy saved-note compatibility",
+        "44px primary touch targets",
+        "actual Python comparison",
+        "branded export filename",
+        "edited question clears stale answer",
+        "keyboard submit",
+        "scope reset"
+      ]
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "dark": false,
+      "initial_decoded_bytes": 751657,
+      "overflow": false,
+      "console_errors": [],
+      "checks": [
+        "skip link focus",
+        "note navigation",
+        "map-to-question action",
+        "legacy saved-note compatibility",
+        "44px primary touch targets",
+        "actual Python comparison",
+        "branded export filename",
+        "edited question clears stale answer",
+        "keyboard submit",
+        "scope reset"
+      ]
+    },
+    {
+      "name": "narrow-mobile",
+      "width": 320,
+      "height": 740,
+      "dark": false,
+      "initial_decoded_bytes": 751657,
+      "overflow": false,
+      "console_errors": [],
+      "checks": [
+        "skip link focus",
+        "note navigation",
+        "map-to-question action",
+        "legacy saved-note compatibility",
+        "44px primary touch targets"
+      ]
+    },
+    {
+      "name": "dark-desktop",
+      "width": 1280,
+      "height": 900,
+      "dark": true,
+      "initial_decoded_bytes": 751657,
+      "overflow": false,
+      "console_errors": [],
+      "checks": [
+        "skip link focus",
+        "note navigation",
+        "map-to-question action",
+        "legacy saved-note compatibility",
+        "44px primary touch targets"
+      ]
+    }
+  ]
+}

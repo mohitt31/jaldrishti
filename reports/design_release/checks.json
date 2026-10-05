@@ -1,0 +1,36 @@
+{
+  "label": "post-hoc engineering/design release, not accuracy or user evaluation",
+  "python_tests_passed": 78,
+  "node_tests_passed": 12,
+  "serpapi_credits_used": 0,
+  "ledger_recorded_credits": 211,
+  "protected_sha256": {
+    "reports/eval_holdout.json": "cc90b624922fe5bf7cb3f33cce301b0fb371b6c00b344a90b08aa68319c5cda4",
+    "reports/eval_dev.json": "e8a345a2bd62bc03486888faf8fab6ab43a325e7e29f6f85b0caaf41b1f2faa1",
+    "reports/eval_dev_v01.json": "b6d1683b13c85c75044d4c58470ba6661130112254123aafd41b4984cc2312b1",
+    "reports/eval_test.json": "db494c6f01580fd629c34f834f3ed21ff8db155fab2fec028870119ad7757742",
+    "reports/runs_test_baseline.json": "a3cd7c051543f039a8083dbfc6aa2f47f0379c29f22ba88bf9c4f605c65aa176",
+    "reports/runs_test_oracle.json": "f535a1476954002612963b1775e67245e338740da986e9ce1da92e66ce571c15",
+    "reports/runs_test_library.json": "94512beef440076ef589d5f7b553647243454d485712e69bedc930c2bf91de64",
+    "reports/runs_holdout_oracle.json": "99ffdf912e4d8c33d7a1efeb5f5513796ec0d877283a22e352a8fa5e1d22600a",
+    "reports/runs_holdout_library.json": "7cc4717a2c4d4274d12b49b805479a5c3b8b65ece11a1f693d589f2cc9c391c2",
+    "cache/credits.jsonl": "c0075eb244887c0b46ef5eb72b4b8b14dcd19ee1e3c80acb71a72f8214d2174a",
+    "cache/library.json": "9210c5675b7e1a463e54460e54ae8e3ac6847459b25705c7f7d6d7f19c34075a",
+    "cache/library_v03.json": "5b390e5b6bdeba44084705cf316e0a0fb476fe7196f240147853dd3e5c83d46f"
+  },
+  "engine_and_evidence_unchanged_from_prior_commit": true,
+  "initial_decoded_bytes": 751657,
+  "sizes_bytes": {
+    "docs/index.html": 22772,
+    "docs/ask/style.css": 15331,
+    "docs/ask/app.js": 14818,
+    "docs/ask/evidence.json.gz": 311614,
+    "docs/ask/engine.zip": 13340
+  },
+  "limitations": [
+    "No physical-phone or Safari/Firefox testing",
+    "No new user sessions or expert endorsement",
+    "Public name uniqueness/trademark clearance not established",
+    "Legacy repository/Pages URLs and compatibility identifiers intentionally retained"
+  ]
+}

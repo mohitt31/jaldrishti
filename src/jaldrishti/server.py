@@ -62,6 +62,6 @@ def serve(port=8766,live_searches=0):
     session.api.max_live_searches=live_searches
     session.library_docs()
     with HTTPServer(('127.0.0.1',port),make_handler(session)) as server:
-        print(f'JalDrishti v0.3: http://127.0.0.1:{server.server_port} — live search cap {live_searches}',flush=True)
+        print(f'NeerTathya v0.3: http://127.0.0.1:{server.server_port} — live search cap {live_searches}',flush=True)
         try:server.serve_forever()
         except KeyboardInterrupt:pass

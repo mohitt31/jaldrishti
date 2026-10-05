@@ -11,7 +11,7 @@ const timestamp=()=>new Date().toISOString();
 const id=()=>globalThis.crypto.randomUUID();
 export function createNote(){return {schema:SCHEMA,note_id:id(),created_at:timestamp(),title:'Groundwater evidence note',entries:[],reviews:[]};}
 export function validateNote(value){
- jsonSafe(value);if(!value||value.schema!==SCHEMA)fail('Not a supported JalDrishti note');text(value.note_id,80,'note ID');text(value.created_at,60,'creation time');text(value.title,120,'title');
+ jsonSafe(value);if(!value||value.schema!==SCHEMA)fail('Not a supported NeerTathya note');text(value.note_id,80,'note ID');text(value.created_at,60,'creation time');text(value.title,120,'title');
  if(!Array.isArray(value.entries)||value.entries.length>20||!Array.isArray(value.reviews)||value.reviews.length>100)fail('Note limit: 20 answers and 100 review comments');
  const validAnswer=a=>{
   for(const key of ['items','related']){if(a[key]===undefined&&key==='related')continue;if(!Array.isArray(a[key])||a[key].length>100)fail('Invalid citation list');for(const i of a[key]){if(!i||typeof i!=='object'||Array.isArray(i))fail('Invalid citation');for(const field of ['value','unit','title','url','quote','place','district','source_type','well_id','date','period','period_quote','statistic','contaminant','spatial_support','evidence_id'])if(i[field]!=null&&!['string','number'].includes(typeof i[field]))fail('Invalid citation field');if(i.page!=null&&(!Number.isInteger(i.page)||i.page<1))fail('Invalid source page');for(const field of ['row_verified','page_verified'])if(i[field]!==undefined&&typeof i[field]!=='boolean')fail('Invalid verification flag');}}
@@ -29,7 +29,7 @@ export function removeEntry(note,entry_id){const n=validateNote(note);n.entries=
 export function safeLink(url,page){try{const u=new URL(url);if(!['http:','https:'].includes(u.protocol))return null;if(page)u.hash='page='+Number(page);return u.href;}catch{return null;}}
 // Encode raw user/source strings as Markdown text, never active HTML or injected links.
 export function mdText(value){return String(value??'not stated').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/([\\`*_{}\[\]()!#|])/g,'\\$1');}
-export function markdown(note){const n=validateNote(note);let lines=['# '+mdText(n.title),'','Exported research note. Imported content and review statuses are not independently authenticated. Recheck against the loaded JalDrishti snapshot before relying on it.','No household safety conclusion; different surveys are not a district risk ranking.','','Note ID: '+mdText(n.note_id),'Created: '+mdText(n.created_at),''];
+export function markdown(note){const n=validateNote(note);let lines=['# '+mdText(n.title),'','Exported research note. Imported content and review statuses are not independently authenticated. Recheck against the loaded NeerTathya snapshot before relying on it.','No household safety conclusion; different surveys are not a district risk ranking.','','Note ID: '+mdText(n.note_id),'Created: '+mdText(n.created_at),''];
  for(const [index,e] of n.entries.entries()){
   lines.push('## '+(index+1)+'. '+mdText(e.question),'','Evidence scope: '+mdText(e.scope),'Recorded answer type: '+mdText(e.answer.answer_type),'Saved: '+mdText(e.saved_at),'');
   if(e.answer.reason)lines.push(mdText(e.answer.reason),'');if(e.answer.note)lines.push(mdText(e.answer.note),'');for(const reason of e.answer.reasons||[])lines.push('- Failed check: '+mdText(reason));

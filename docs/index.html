@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JalDrishti</title>
+<title>NeerTathya</title>
 <link rel="icon" href="data:,">
 <meta name="description" content="Cited groundwater arsenic and fluoride evidence for West Bengal, found with SerpApi and checked against the source page.">
 <style>
@@ -41,22 +41,29 @@ details summary{cursor:pointer;color:var(--acc)}footer{margin:40px 0;color:var(-
 <script type="module" src="ask/app.js"></script>
 </head>
 <body>
-<header><div class="wrap">
-  <h1>JalDrishti</h1>
-  <p class="lede">Ask about groundwater arsenic or fluoride in West Bengal. Get the exact number with its document, page and table row, or a reasoned refusal when the evidence cannot support the question.</p>
-  <span class="warn">Not a household safety tool: a survey value says nothing about your own tube well today.</span>
+<a class="skip-link" href="#ask-question">Skip to question</a>
+<header class="site-header"><div class="wrap nav-row">
+  <a class="brand" href="#" aria-label="NeerTathya home"><svg viewBox="0 0 36 36" width="36" height="36" aria-hidden="true"><rect width="36" height="36" rx="10" fill="currentColor"/><path d="M18 6C15 11 10 16 10 21a8 8 0 0 0 16 0c0-5-5-10-8-15Z" fill="none" stroke="white" stroke-width="1.7"/><path d="M12 22c4-4 8 4 12 0" fill="none" stroke="white" stroke-width="1.7"/></svg><span>NeerTathya<small>Groundwater evidence · West Bengal</small></span></a>
+  <nav aria-label="Main navigation"><a href="#ask">Ask</a><a href="#map">District map</a><a href="#note-panel" id="open-note">My note</a><a href="review.html">Evidence &amp; limits ↗</a></nav>
 </div></header>
+<div class="wrap hero">
+  <div><div class="eyebrow">A research workspace for West Bengal</div><h1><span class="hero-lead">A number is only the start.<br></span><em>Find the evidence behind it.</em></h1><p class="lede">Look up arsenic and fluoride measurements, check whether they can be compared, and build a source-cited research note.</p></div>
+  <div class="hero-aside"><span class="mini-label">Your research path</span><ol><li><span>Ask a specific question</span><small>Name a place, measurement or comparison.</small></li><li><span>Inspect the source</span><small>Check the row, location and sampling period.</small></li><li><span>Save a note for review</span><small>Keep the evidence and its limits together.</small></li></ol></div>
+</div>
+<div class="wrap"><p class="safety-line"><span aria-hidden="true">ⓘ</span> Research evidence, not household safety advice. A survey cannot establish whether your own well is safe today.</p></div>
 <main class="wrap">
 <section class="ask-panel" id="ask" aria-labelledby="ask-title">
-  <div class="eyebrow">Read the evidence. Question the comparison.</div>
-  <h2 id="ask-title">Ask JalDrishti</h2>
-  <p>For researchers preparing groundwater evidence notes: find a cited measurement, check a comparison, then export a note for review. Python runs locally in your browser.</p>
-  <form id="ask-form"><label for="ask-question">Your question · English / हिन्दी / বাংলা</label><div class="ask-line"><input id="ask-question" required maxlength="2000" placeholder="What fluoride was reported at Amtala in April 2022?" autocomplete="off"><button type="submit" id="ask-submit">Ask →</button></div>
-  <div class="ask-controls"><label for="ask-scope">Evidence scope</label><select id="ask-scope"><option value="library">SerpApi-discovered library</option><option value="reference">Library + curated reference reports</option></select></div></form>
-  <div class="ask-examples" id="ask-examples" aria-label="Example questions"></div>
-  <p class="sub">Python loads on your first question. No server, API key or new web search. The curated-reference option adds sources supplied separately; those are not claimed as SerpApi discoveries. Hindi/Bengali use a small dictionary; village spellings stay as typed.</p>
+  <div class="section-heading"><div><div class="eyebrow">01 / Ask &amp; inspect</div><h2 id="ask-title">What are you investigating?</h2></div><span class="local-label">Runs in your browser</span></div>
+  <div class="question-workspace"><div class="question-composer">
+  <form id="ask-form"><label for="ask-question">Your groundwater question</label><div class="ask-line"><textarea id="ask-question" required maxlength="2000" rows="3" aria-describedby="question-hint" placeholder="What fluoride was reported at Amtala in April 2022?" autocomplete="off"></textarea></div>
+  <p id="question-hint" class="sub">Include the place and contaminant. Add a well or sampling period when known. English / हिन्दी / বাংলা</p>
+  <div class="ask-controls"><div class="scope-field"><label for="ask-scope">Sources to use</label><select id="ask-scope" aria-describedby="scope-hint"><option value="library">SerpApi-discovered library</option><option value="reference">Library + curated reference reports</option></select></div><button type="submit" id="ask-submit">Ask →</button></div>
+  <p id="scope-hint" class="sub">Searches a saved evidence snapshot, not the live web. Curated references were supplied separately.</p></form>
+  <details class="runtime-help"><summary>How this browser version works</summary><p class="sub">Python loads on your first question. No server, API key or new SerpApi search. Row checks were precomputed when this snapshot was built; open the source to review them. Hindi/Bengali use a small dictionary; village spellings stay as typed.</p></details>
+  </div><aside class="question-starters" aria-labelledby="examples-title"><div class="mini-label" id="examples-title">Start with an example</div><p class="sub">A measurement, a comparison, or a question the sources cannot answer.</p><div class="ask-examples" id="ask-examples" aria-label="Example questions"></div><p class="sub example-scope">Each example selects its required source scope.</p></aside></div>
   <div id="ask-status" role="status" aria-live="polite">Ready to load Python when you ask.</div>
   <div id="ask-answer" class="ask-answer" aria-live="polite"></div>
+  <div id="answer-placeholder" class="answer-placeholder"><span class="placeholder-mark" aria-hidden="true">↳</span><div><b>Your evidence will appear here.</b><p class="sub">A cited measurement, a comparison with failed checks, or an explanation of what is missing.</p></div></div>
   <div class="note-buttons"><button id="note-add" type="button" disabled>Save answer to evidence note</button><a href="review.html">Claims, evidence &amp; limitations →</a></div>
   <details class="note-panel" id="note-panel"><summary id="note-summary">Evidence note</summary>
     <p class="sub">Saved only in this browser. Export JSON to pass the note to a reviewer; they can import it here and append comments. Nothing is sent to a reviewer automatically. Imported content and review statuses are not authenticated. Avoid personal information.</p>
@@ -67,17 +74,18 @@ details summary{cursor:pointer;color:var(--acc)}footer{margin:40px 0;color:var(-
   </details>
 </section>
 <section class="map-panel" id="map" aria-labelledby="map-title">
-  <h2 id="map-title">Where do we have evidence?</h2>
+  <div class="section-heading"><div><div class="eyebrow">02 / Explore coverage</div><h2 id="map-title">Follow the evidence by district.</h2></div><a href="#ask">Back to question ↑</a></div>
   <p class="sub">Post-hoc evidence snapshot · <a href="https://github.com/mohitt31/jaldrishti/blob/main/reports/browser_release/map_inventory.json">source-linked counts and maxima</a></p>
   <p class="map-warning">Highest value reported across different surveys and years. Not a risk map; not comparable across districts.</p>
   <div class="map-layout"><div class="map-frame"><svg id="district-map" role="group" aria-label="West Bengal district evidence coverage"></svg><div class="map-legend"><span><i style="background:#faf9fc"></i>0</span><span><i style="background:#ddd4ee"></i>1–2</span><span><i style="background:#b6a1d2"></i>3–5</span><span><i style="background:#81669f"></i>6+</span><span>indexed documents · not contamination</span></div><label for="district-select">Select a district (also available by keyboard)</label><select id="district-select"></select><p class="map-note">Boundary vintage: 2021. Simplified for display; not for administrative decisions.</p></div>
-  <div><h3 id="district-heading">District evidence</h3><div id="district-counts" class="map-counts"></div><div id="district-max" class="map-max"></div><p class="sub">Counts are indexed records, not independent samples. Maxima include site values and summary statistics from different surveys. Duplicate or overlapping surveys may occur. A missing record says nothing about safety.</p><div id="district-evidence" class="district-list">Loading map…</div></div></div>
+  <div class="district-panel"><div class="mini-label">Selected district</div><h3 id="district-heading">District evidence</h3><a id="map-to-ask" class="map-to-ask" href="#ask" hidden>Use this district’s question ↑</a><div id="district-counts" class="map-counts"></div><div id="district-max" class="map-max"></div><p class="sub">Counts are indexed records, not independent samples. Maxima include site values and summary statistics from different surveys. Duplicate or overlapping surveys may occur. A missing record says nothing about safety.</p><div id="district-evidence" class="district-list">Loading map…</div></div></div>
   <p class="map-note">Boundaries: <a href="https://www.geoboundaries.org/api/current/gbOpen/IND/ADM2/">geoBoundaries IND ADM2</a>, Pathways Data Pvt. Ltd. / lgdirectory.gov.in, represented year 2021. This boundary extract is distributed under <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a>; <a href="ask/boundary-source.json">source, licence and transformation</a>. Evidence and boundary data have separate provenance.</p>
 </section>
 
-  <h2>v0.1 original test: 20 questions, frozen</h2>
+  <section id="results" class="results-section" aria-labelledby="results-title"><div class="eyebrow">03 / Inspect the evaluation</div><h2 id="results-title">Results, with their limits.</h2><p class="sub">Recorded experiments below are separate from the current Ask workspace. Known errors remain visible.</p>
+  <h3>v0.1 original test: 20 questions, frozen</h3>
   <div class="grid" id="cards"></div>
-  <h2>v0.2 fresh-location holdout: 20 questions, run once</h2>
+  <h3>v0.2 fresh-location holdout: 20 questions, run once</h3>
   <div class="grid" id="holdout-cards"></div>
   <p class="sub">Post-hoc fixes; new locations from existing sources. CSVs committed before this offline run. Baseline omitted to preserve the API budget. These are different question sets, so the scores do not measure a before/after improvement. <b>Some scored-correct comparisons cite the wrong rows.</b> See audit notes on the answers and the <a href="https://github.com/mohitt31/jaldrishti/blob/main/reports/holdout_audit.md">full audit</a>. The same assistant implemented and authored the holdout; no independent blinding.</p>
   <p class="sub">Same reader in all three modes; only how sources are found differs. Risk = wrong answers among answers given. Citation verification checks whether a number occurs on its page, not the full measurement tuple. Comparison scoring checks answer type only. <a href="https://github.com/mohitt31/jaldrishti">Code, benchmark and full traces on GitHub</a>.</p>
@@ -86,7 +94,7 @@ details summary{cursor:pointer;color:var(--acc)}footer{margin:40px 0;color:var(-
   <div class="card" id="v03"></div>
   <p class="sub">The v0.2 questions below have since been used for development. These new scores are post-hoc, not a fresh holdout. The three Purulia library misses now abstain; reference access is explicit. <a href="https://github.com/mohitt31/jaldrishti/blob/main/benchmark/v03/PROTOCOL.md">Protocol and limits</a>.</p>
   <p>The Ask box above executes Python on the current evidence snapshot. The historical results below remain frozen. For optional online source recovery, install the project and run <code>jaldrishti serve</code> locally.</p>
-  <h2>Explore the frozen v0.1 / v0.2 answers</h2>
+  </section><section id="explorer" aria-labelledby="explorer-title"><h2 id="explorer-title">Explore the frozen v0.1 / v0.2 answers</h2>
   <div class="ex">
     <div class="card" style="padding:0">
       <div class="flt tabs" id="flt"></div>
@@ -96,7 +104,7 @@ details summary{cursor:pointer;color:var(--acc)}footer{margin:40px 0;color:var(-
     <div class="card" id="detail"></div>
   </div>
 
-  <h2>The library SerpApi built</h2>
+  </section><h2>The library SerpApi built</h2>
   <div class="card" id="lib"></div>
 
   <h2>How it works</h2>
@@ -110,9 +118,9 @@ details summary{cursor:pointer;color:var(--acc)}footer{margin:40px 0;color:var(-
     </ol>
   </div>
 </main>
-<footer class="wrap">Static explorer of recorded answers, not a live question service. AI assistance: Claude, ChatGPT and OpenAI Codex; roles and evaluation limitations are documented in the README. Data © CGWB, ADB and the cited journals; crops are shown for verification. Built for the SerpApi India Hackathon 2026, Knowledge &amp; Public Interest track.</footer>
+<footer class="wrap">Ask runs Python over a saved evidence snapshot; the explorer shows historical answers. No new web search runs in this site. AI assistance: Claude, ChatGPT and OpenAI Codex; roles and evaluation limitations are documented in the README. Data © CGWB, ADB and the cited journals; crops are shown for verification. Built for the SerpApi India Hackathon 2026, Knowledge &amp; Public Interest track.</footer>
 <script>
-const MODES={baseline:"Baseline: Google the question",library:"JalDrishti",oracle:"Oracle: gold documents"};
+const MODES={baseline:"Baseline: Google the question",library:"NeerTathya",oracle:"Oracle: gold documents"};
 const LBL={number_with_source:"number with source",not_comparable:"not comparable",insufficient_evidence:"insufficient evidence",error:"error",comparable:"comparable"};
 let D,cur=null,mode="library",split="holdout";
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));

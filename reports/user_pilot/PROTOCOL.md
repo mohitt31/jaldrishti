@@ -4,7 +4,7 @@ Status: **DRAFT, NOT YET LOCKED OR RUN**. This document is a proposed protocol; 
 
 ## Question and participants
 
-Can a geology/environmental research user produce a correctly scoped, cited evidence note more successfully or quickly with JalDrishti than with Google and PDF reading?
+Can a geology/environmental research user produce a correctly scoped, cited evidence note more successfully or quickly with NeerTathya than with Google and PDF reading?
 
 Target: 3–5 relevant users; accurately distinguish undergraduate peers, postgraduate researchers and professionals. Convenience recruitment, small sample and developer involvement limit generalisation. A faculty review of one note is separate qualitative feedback, not a timed participant unless that person actually completes the protocol.
 
@@ -17,7 +17,7 @@ Prepare three pairs of different but comparable instances, verified against actu
 
 Use new task instances, not frozen test/holdout question files. The existing showcase is a development example, not a study task. Have a person other than the developer check the gold rubric if available; otherwise disclose developer-authored scoring. Do not tune to outcomes after sessions begin.
 
-A = Google + normal PDF viewing; B = JalDrishti. Participants receive the same task type but different instance in the second condition to reduce answer-memory effects. Odd participants receive A then B; even participants B then A. Swap paired instance assignment across participants, record allocation, and disclose any difficulty imbalance. Same device and connection within each participant, no coaching on answers. A is a defined baseline, not a claim to represent every professional's usual workflow.
+A = Google + normal PDF viewing; B = NeerTathya. Participants receive the same task type but different instance in the second condition to reduce answer-memory effects. Odd participants receive A then B; even participants B then A. Swap paired instance assignment across participants, record allocation, and disclose any difficulty imbalance. Same device and connection within each participant, no coaching on answers. A is a defined baseline, not a claim to represent every professional's usual workflow.
 
 Each timed task has a **four-minute target cap**, fixed before starting. Six tasks give up to 24 minutes plus introduction and feedback; invite 30–35 minutes. These are scheduling choices, not observed completion times. Adjust once before protocol lock if a dry run shows the cap is unsuitable, and disclose the adjustment. A developer dry run is not a participant.
 

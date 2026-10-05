@@ -16,7 +16,7 @@ def _print_answer(r):
     print("  Not a household safety judgement: test your own source with an accredited lab.")
 
 def main(argv=None):
-    ap = argparse.ArgumentParser(prog="jaldrishti")
+    ap = argparse.ArgumentParser(prog="neertathya")
     sub = ap.add_subparsers(dest="cmd", required=True)
     a = sub.add_parser("ask"); a.add_argument("question"); a.add_argument("--mode", default="jaldrishti", choices=["library", "reference", "jaldrishti", "baseline", "oracle"])
     a.add_argument("--live", action="store_true", help="fetch newly found sources"); a.add_argument("--offline", action="store_true", help="cached search results only")
