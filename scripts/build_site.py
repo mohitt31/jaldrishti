@@ -97,3 +97,6 @@ print(len(data["questions"]), "questions,", len(list((OUT / "crops").glob("*.png
 # Static Ask uses the current source index, not recorded benchmark answers.
 from export_browser import export
 export()
+
+from export_provenance import export as export_provenance
+export_provenance()

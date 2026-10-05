@@ -1,0 +1,36 @@
+{
+  "label": "post-hoc engineering simulation; no human participants or real reviewer feedback",
+  "url": "http://127.0.0.1:8765/",
+  "credits_used": 0,
+  "devices": [
+    {
+      "device": "desktop",
+      "export_import_roundtrip": true,
+      "original_evidence_unchanged_by_review": true,
+      "import_rechecked_with_python": true,
+      "edited_measurement_detected": true,
+      "malformed_import_preserves_note": true,
+      "unsafe_html_not_executed": true,
+      "offline_after_loaded": true,
+      "horizontal_overflow": false,
+      "page_errors": []
+    },
+    {
+      "device": "mobile emulation",
+      "export_import_roundtrip": true,
+      "original_evidence_unchanged_by_review": true,
+      "import_rechecked_with_python": true,
+      "edited_measurement_detected": true,
+      "malformed_import_preserves_note": true,
+      "unsafe_html_not_executed": true,
+      "offline_after_loaded": true,
+      "horizontal_overflow": false,
+      "page_errors": []
+    }
+  ],
+  "reliability": {
+    "injected_cdn_failure_shows_error": true,
+    "retry_same_page_recovers": true,
+    "limitation": "Offline check is after runtime/data loaded; no cold-start offline or physical-phone claim. Injected failure intentionally produces a failed request."
+  }
+}
