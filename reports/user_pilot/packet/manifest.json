@@ -63,7 +63,13 @@
     "reports/user_pilot/packet/allocation.json": "61c159e1b0deab01a910b3ce80bd49bd657071a1d9f4986ac2d92823c3a88d18",
     "reports/user_pilot/packet/PARTICIPANT_CARDS.md": "59746b7789e5e3aad7a1909b0a92c461e10cb3ce2f710f815b57f635bf59599b",
     "reports/user_pilot/packet/FACILITATOR_GUIDE.md": "e586ca18550d67191b264b375cd744f222e0119227a19e4fb06835c545cb14d4",
-    "reports/user_pilot/packet/facilitator.html": "ebfca348c403f0da2d9aeac306a3e42adc9e6e404fb93c09388438b181a0d707",
+    "reports/user_pilot/packet/facilitator.html": "de574a8201cd3dae41bf0ad2f214a623782504e6180ff44918b2ae1427f34122",
     "scripts/summarize_pilot.py": "6ce2ac0ba643fc4073cd3e20279e250b8ca6a5cd92272a030e06529b53dfc0e8"
-  }
+  },
+  "amendments_before_any_session": [
+    {
+      "date": "2026-10-06",
+      "change": "Constrain flexible form controls on narrow Linux browsers after CI overflow failure. Task wording, scoring, allocation, engine and source snapshot unchanged."
+    }
+  ]
 }
