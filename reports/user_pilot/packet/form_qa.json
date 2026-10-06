@@ -1,0 +1,11 @@
+{
+  "label": "synthetic engineering test; no actual participant or user data",
+  "consent_gate": true,
+  "timer_stop": true,
+  "timeout": true,
+  "immutable_appended_records": true,
+  "pending_rubric_preserved": true,
+  "export": true,
+  "mobile_overflow": false,
+  "page_errors": []
+}

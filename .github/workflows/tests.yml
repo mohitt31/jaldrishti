@@ -43,6 +43,7 @@ jobs:
           python -m http.server 8765 --bind 127.0.0.1 --directory docs > "$RUNNER_TEMP/jaldrishti-site.log" 2>&1 &
           export NODE_PATH="$RUNNER_TEMP/browser/node_modules"
           node --test tests/note.test.mjs
+          PILOT_QA_OUTPUT=work/pilot/ci-form-qa.json node scripts/check_pilot.cjs
           node scripts/check_browser.cjs
           DESIGN_QA_OUTPUT=reports/design_release/ci_browser_qa.json DESIGN_SCREENSHOTS=work/ci-design-screenshots node scripts/check_design.cjs
           WORKFLOW_QA_OUTPUT=reports/workflow_release/ci_browser_qa.json WORKFLOW_SCREENSHOTS=work/ci-workflow-screenshots node scripts/check_workflow.cjs

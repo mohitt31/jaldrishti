@@ -1,0 +1,69 @@
+{
+  "label": "prepared formative pilot packet, version frozen before participants; not a new accuracy benchmark",
+  "packet": "pilot-v1",
+  "locked_at_utc": "2026-10-05T10:58:14.275797+00:00",
+  "engine_build": "5a676b9daccad48b937b7197861740fbb70381da",
+  "evidence_snapshot": {
+    "schema": 1,
+    "label": "Build snapshot identity; not a sampling or publication date",
+    "sha256": {
+      "evidence.json.gz": "578f8cbc6150c4faa9b9625d3c7f1f99dbe4f5aad1813f52c1249393de8e0ad3",
+      "engine.zip": "4efbe50a7871926a8ee10db4b4302d28200d02fd4c15fc1a3b06b791f581f58f",
+      "catalog.json": "cf113bb91365630ddfdeb028671c69466fd0ddd0da825ef24384f44ed0d30a5f",
+      "provenance.json": "bd8ba7bab8c5ab50622083d3def40e92ac6d15d6e4c721001fb0a981ecb2b236"
+    },
+    "library_manifests": {
+      "cache/library.json": "9210c5675b7e1a463e54460e54ae8e3ac6847459b25705c7f7d6d7f19c34075a",
+      "cache/library_v03.json": "5b390e5b6bdeba44084705cf316e0a0fb476fe7196f240147853dd3e5c83d46f"
+    }
+  },
+  "tasks": 6,
+  "paired_categories": 3,
+  "participants_confirmed": 0,
+  "sessions_conducted": 0,
+  "credits_used": 0,
+  "source": {
+    "title": "Ground Water Quality of West Bengal",
+    "publisher": "CGWB",
+    "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+    "sha256": "47f32a59b20f482c3c207311eb5ff4e2f432d47923c0182d1ca0843d5e621c64",
+    "header_pdf_page": 90,
+    "header_printed_page": 83,
+    "period_quote": "Sample collected during Apr, 2022",
+    "unit": "mg/L",
+    "visual_verification": "Assistant inspected rendered physical PDF pages 90, 91 and 92 on 2026-10-05; not independent human review."
+  },
+  "visual_pages_checked": [
+    90,
+    91,
+    92
+  ],
+  "printed_pages": [
+    83,
+    84,
+    85
+  ],
+  "new_fact_locations": [
+    "Bandhakona",
+    "Beliatore",
+    "Bikna",
+    "Chunpara",
+    "Gholkunda",
+    "Jagadalla",
+    "Makurgram",
+    "Shalboni"
+  ],
+  "old_fact_location_overlap": false,
+  "frozen_questions_read_or_run": false,
+  "independent_human_gold_review": false,
+  "sha256": {
+    "reports/user_pilot/PROTOCOL.md": "1f1e76cd5a0e85d14695ece2489115f56dd4b04423817c16db931ab5b4b59d75",
+    "reports/user_pilot/packet/tasks.json": "46758857914b4658870f4346191bf8bd33f1058709f51f2598249210e9be7927",
+    "reports/user_pilot/packet/answer_key.json": "95d941a39f5b185da9cf9d4a25a0ae6dcf19d13e88bdf5d4b6093eae2b916f61",
+    "reports/user_pilot/packet/allocation.json": "61c159e1b0deab01a910b3ce80bd49bd657071a1d9f4986ac2d92823c3a88d18",
+    "reports/user_pilot/packet/PARTICIPANT_CARDS.md": "59746b7789e5e3aad7a1909b0a92c461e10cb3ce2f710f815b57f635bf59599b",
+    "reports/user_pilot/packet/FACILITATOR_GUIDE.md": "e586ca18550d67191b264b375cd744f222e0119227a19e4fb06835c545cb14d4",
+    "reports/user_pilot/packet/facilitator.html": "ebfca348c403f0da2d9aeac306a3e42adc9e6e404fb93c09388438b181a0d707",
+    "scripts/summarize_pilot.py": "6ce2ac0ba643fc4073cd3e20279e250b8ca6a5cd92272a030e06529b53dfc0e8"
+  }
+}

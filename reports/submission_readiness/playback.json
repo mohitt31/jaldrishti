@@ -1,0 +1,10 @@
+{
+  "label": "post-hoc engineering playback check, fresh browser context without authentication",
+  "url": "http://127.0.0.1:8765/demo.html",
+  "duration_seconds": 122.958333,
+  "under_three_minutes": true,
+  "playback_started": true,
+  "seek_near_end": true,
+  "mobile_overflow": false,
+  "page_errors": []
+}

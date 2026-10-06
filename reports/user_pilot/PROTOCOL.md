@@ -1,6 +1,6 @@
 # Proposed formative user pilot — no results collected
 
-Status: **DRAFT, NOT YET LOCKED OR RUN**. This document is a proposed protocol; it does not establish benefits. Before the first session, lock the build commit, task packet, allocation schedule, expected answers and rubric in a separate dated manifest. Do not call this an independent validation study.
+Status: **pilot-v1 packet prepared and versioned; NOT RUN with participants**. The locked packet, source checks, allocation and rubric are in [packet/](packet/); its `manifest.json` identifies the build and file hashes. This document is a proposed protocol; it does not establish benefits. Before the first session, lock the build commit, task packet, allocation schedule, expected answers and rubric in a separate dated manifest. Do not call this an independent validation study.
 
 ## Question and participants
 
@@ -10,7 +10,7 @@ Target: 3–5 relevant users; accurately distinguish undergraduate peers, postgr
 
 ## Tasks, baseline and order
 
-Prepare three pairs of different but comparable instances, verified against actual source pages before the session:
+The prepared packet uses three pairs of new locations in the same CGWB Bankura fluoride annexure. This intentionally narrow formative pilot has source familiarity/learning limitations. Its task types, verified against actual source pages, are:
 1. Find a measurement and report contaminant, value/unit, statistic, place, sampling period or “not stated”, and an exact source/page.
 2. Decide whether two specified observations support a stated comparison; cite both and explain the relevant mismatch or support.
 3. Handle an explicitly unavailable attribute/time/place in a defined source packet. “Not found in the packet” is not “does not exist anywhere”.
@@ -40,3 +40,7 @@ Fix the most consequential observed problems after the first round. Retest with 
 ## Release gate
 
 Before claiming any user benefit, retain: actual participant count/backgrounds, locked protocol/task manifest, anonymised raw logs, scoring rubric, source/page checks, build IDs, failures and limitations. With no sessions, the correct public status is “not evaluated with users”.
+
+## Packet-specific decisions before first session
+
+Use `packet/FACILITATOR_GUIDE.md` and `packet/allocation.json` for the fixed condition/instance order. Both conditions get the report title and can refine queries; source opening is required. The primary timed output is a plain-text cited note in either condition. Native export/review is a separate qualitative task, avoiding a baseline export requirement the app alone supports. The missing-attribute tasks are bounded to the specified report pages. All tasks are fluoride in Bankura, so findings must not be generalised to arsenic, other districts or unseen PDFs. The six developer engine checks are labelled readiness checks, not participant outcomes.

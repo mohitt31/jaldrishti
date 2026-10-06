@@ -1,0 +1,151 @@
+{
+  "target_only": true,
+  "participants_confirmed": 0,
+  "allocations": [
+    {
+      "participant_id": "P01",
+      "planned_order": [
+        {
+          "condition": "A",
+          "task_id": "L1"
+        },
+        {
+          "condition": "A",
+          "task_id": "C1"
+        },
+        {
+          "condition": "A",
+          "task_id": "M1"
+        },
+        {
+          "condition": "B",
+          "task_id": "L2"
+        },
+        {
+          "condition": "B",
+          "task_id": "C2"
+        },
+        {
+          "condition": "B",
+          "task_id": "M2"
+        }
+      ]
+    },
+    {
+      "participant_id": "P02",
+      "planned_order": [
+        {
+          "condition": "B",
+          "task_id": "L1"
+        },
+        {
+          "condition": "B",
+          "task_id": "C1"
+        },
+        {
+          "condition": "B",
+          "task_id": "M1"
+        },
+        {
+          "condition": "A",
+          "task_id": "L2"
+        },
+        {
+          "condition": "A",
+          "task_id": "C2"
+        },
+        {
+          "condition": "A",
+          "task_id": "M2"
+        }
+      ]
+    },
+    {
+      "participant_id": "P03",
+      "planned_order": [
+        {
+          "condition": "A",
+          "task_id": "L2"
+        },
+        {
+          "condition": "A",
+          "task_id": "C2"
+        },
+        {
+          "condition": "A",
+          "task_id": "M2"
+        },
+        {
+          "condition": "B",
+          "task_id": "L1"
+        },
+        {
+          "condition": "B",
+          "task_id": "C1"
+        },
+        {
+          "condition": "B",
+          "task_id": "M1"
+        }
+      ]
+    },
+    {
+      "participant_id": "P04",
+      "planned_order": [
+        {
+          "condition": "B",
+          "task_id": "L2"
+        },
+        {
+          "condition": "B",
+          "task_id": "C2"
+        },
+        {
+          "condition": "B",
+          "task_id": "M2"
+        },
+        {
+          "condition": "A",
+          "task_id": "L1"
+        },
+        {
+          "condition": "A",
+          "task_id": "C1"
+        },
+        {
+          "condition": "A",
+          "task_id": "M1"
+        }
+      ]
+    },
+    {
+      "participant_id": "P05",
+      "planned_order": [
+        {
+          "condition": "A",
+          "task_id": "L1"
+        },
+        {
+          "condition": "A",
+          "task_id": "C1"
+        },
+        {
+          "condition": "A",
+          "task_id": "M1"
+        },
+        {
+          "condition": "B",
+          "task_id": "L2"
+        },
+        {
+          "condition": "B",
+          "task_id": "C2"
+        },
+        {
+          "condition": "B",
+          "task_id": "M2"
+        }
+      ]
+    }
+  ]
+}

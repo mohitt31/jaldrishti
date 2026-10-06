@@ -1,0 +1,114 @@
+{
+  "packet": "pilot-v1",
+  "scope": "Bankura fluoride Annexure I; selected formative tasks, not a fresh accuracy benchmark",
+  "tasks": [
+    {
+      "id": "L1",
+      "pair": "L",
+      "instance": 1,
+      "kind": "lookup",
+      "prompt": "What fluoride is reported at Beliatore dug well in Bankura in April 2022? Return a source-cited note with the value and unit, well type/location, statistic, sampling period and physical PDF page. Do not infer household safety.",
+      "engine_question": "What fluoride is reported at Beliatore dug well in Bankura in April 2022?",
+      "source_title": "Ground Water Quality of West Bengal",
+      "criteria": [
+        "value_unit",
+        "place_well",
+        "single_site_statistic",
+        "sampling_month",
+        "exact_source_page",
+        "source_opened",
+        "no_safety_claim"
+      ]
+    },
+    {
+      "id": "L2",
+      "pair": "L",
+      "instance": 2,
+      "kind": "lookup",
+      "prompt": "What fluoride is reported at Chunpara dug well in Bankura in April 2022? Return a source-cited note with the value and unit, well type/location, statistic, sampling period and physical PDF page. Do not infer household safety.",
+      "engine_question": "What fluoride is reported at Chunpara dug well in Bankura in April 2022?",
+      "source_title": "Ground Water Quality of West Bengal",
+      "criteria": [
+        "value_unit",
+        "place_well",
+        "single_site_statistic",
+        "sampling_month",
+        "exact_source_page",
+        "source_opened",
+        "no_safety_claim"
+      ]
+    },
+    {
+      "id": "C1",
+      "pair": "C",
+      "instance": 1,
+      "kind": "comparison",
+      "prompt": "Can the April 2022 fluoride values at Bikna dug well and Makurgram dug well in Bankura establish a change over time at the same well? Return a note with both measurements, source pages and the reason the proposed time-trend inference does or does not follow.",
+      "engine_question": "Can the April 2022 fluoride values at Bikna dug well and Makurgram dug well in Bankura establish a change over time at the same well?",
+      "source_title": "Ground Water Quality of West Bengal",
+      "criteria": [
+        "both_values_units",
+        "both_places_wells",
+        "sampling_month",
+        "exact_source_pages",
+        "different_wells_reason",
+        "no_time_separation_reason",
+        "source_opened",
+        "no_safety_claim"
+      ]
+    },
+    {
+      "id": "C2",
+      "pair": "C",
+      "instance": 2,
+      "kind": "comparison",
+      "prompt": "Can the April 2022 fluoride values at Gholkunda dug well and Jagadalla dug well in Bankura establish a change over time at the same well? Return a note with both measurements, source pages and the reason the proposed time-trend inference does or does not follow.",
+      "engine_question": "Can the April 2022 fluoride values at Gholkunda dug well and Jagadalla dug well in Bankura establish a change over time at the same well?",
+      "source_title": "Ground Water Quality of West Bengal",
+      "criteria": [
+        "both_values_units",
+        "both_places_wells",
+        "sampling_month",
+        "exact_source_pages",
+        "different_wells_reason",
+        "no_time_separation_reason",
+        "source_opened",
+        "no_safety_claim"
+      ]
+    },
+    {
+      "id": "M1",
+      "pair": "M",
+      "instance": 1,
+      "kind": "missing_attribute",
+      "prompt": "What fluoride was measured at Shalboni dug well in Bankura on 15 April 2022? Restrict the claim to Annexure I, physical PDF pages 90\u201392, of the named report. State what date precision is actually supported, with a citation; do not claim no evidence exists elsewhere.",
+      "engine_question": "What fluoride was measured at Shalboni dug well in Bankura on 15 April 2022?",
+      "source_title": "Ground Water Quality of West Bengal",
+      "criteria": [
+        "refuse_exact_day",
+        "month_only_evidence",
+        "bounded_to_packet",
+        "exact_source_pages",
+        "source_opened",
+        "no_safety_claim"
+      ]
+    },
+    {
+      "id": "M2",
+      "pair": "M",
+      "instance": 2,
+      "kind": "missing_attribute",
+      "prompt": "What fluoride was measured at Bandhakona dug well in Bankura on 15 April 2022? Restrict the claim to Annexure I, physical PDF pages 90\u201392, of the named report. State what date precision is actually supported, with a citation; do not claim no evidence exists elsewhere.",
+      "engine_question": "What fluoride was measured at Bandhakona dug well in Bankura on 15 April 2022?",
+      "source_title": "Ground Water Quality of West Bengal",
+      "criteria": [
+        "refuse_exact_day",
+        "month_only_evidence",
+        "bounded_to_packet",
+        "exact_source_pages",
+        "source_opened",
+        "no_safety_claim"
+      ]
+    }
+  ]
+}

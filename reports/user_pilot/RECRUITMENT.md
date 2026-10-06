@@ -10,7 +10,7 @@ Before booking: Have you used groundwater reports, research papers or environmen
 
 ## Faculty / domain-review request
 
-Dear Professor, I am Mohit Prajapati, a third-year B.S. Applied Geology student at IIT Kharagpur. I am building NeerTathya, which retrieves arsenic/fluoride evidence with source-page citations and refuses unsupported comparisons. Could I request 10 minutes to review one evidence note and its two cited source rows? I especially want to know whether the spatial/statistical comparison and sampling-period interpretation are defensible. This is a hackathon prototype, not a household safety assessment. Your feedback would not be presented as endorsement; I would seek separate permission before attributing any quote or your name publicly. [Browser link] [Source note, once ready]
+Dear Professor, I am Mohit Prajapati, a third-year B.S. Applied Geology student at IIT Kharagpur. I am building NeerTathya, which retrieves arsenic/fluoride evidence with source-page citations and refuses unsupported comparisons. Could I request 10 minutes to review one evidence note and its two cited source rows? I especially want to know whether the spatial/statistical comparison and sampling-period interpretation are defensible. This is a hackathon prototype, not a household safety assessment. Your feedback would not be presented as endorsement; I would seek separate permission before attributing any quote or your name publicly. https://mohitt31.github.io/jaldrishti/ — the “332 vs 329 µg/L” example produces the comparison note for review.
 
 ## Scheduling and fallback
 

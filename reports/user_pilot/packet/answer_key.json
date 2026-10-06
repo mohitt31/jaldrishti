@@ -1,0 +1,201 @@
+{
+  "source": {
+    "title": "Ground Water Quality of West Bengal",
+    "publisher": "CGWB",
+    "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+    "sha256": "47f32a59b20f482c3c207311eb5ff4e2f432d47923c0182d1ca0843d5e621c64",
+    "header_pdf_page": 90,
+    "header_printed_page": 83,
+    "period_quote": "Sample collected during Apr, 2022",
+    "unit": "mg/L",
+    "visual_verification": "Assistant inspected rendered physical PDF pages 90, 91 and 92 on 2026-10-05; not independent human review."
+  },
+  "tasks": [
+    {
+      "id": "L1",
+      "facts": [
+        {
+          "id": "gwq_west_bengal:91:0:4:17",
+          "location": "Beliatore",
+          "district": "Bankura",
+          "source": "Dug Well",
+          "aquifer": "shallow",
+          "statistic": "single",
+          "value_text": "0.04",
+          "unit": "mg/L",
+          "period": "Apr, 2022",
+          "page": 91
+        }
+      ],
+      "criteria": [
+        "value_unit",
+        "place_well",
+        "single_site_statistic",
+        "sampling_month",
+        "exact_source_page",
+        "source_opened",
+        "no_safety_claim"
+      ],
+      "expected_type": "number_with_source"
+    },
+    {
+      "id": "L2",
+      "facts": [
+        {
+          "id": "gwq_west_bengal:91:0:10:17",
+          "location": "Chunpara",
+          "district": "Bankura",
+          "source": "Dug Well",
+          "aquifer": "shallow",
+          "statistic": "single",
+          "value_text": "0.73",
+          "unit": "mg/L",
+          "period": "Apr, 2022",
+          "page": 91
+        }
+      ],
+      "criteria": [
+        "value_unit",
+        "place_well",
+        "single_site_statistic",
+        "sampling_month",
+        "exact_source_page",
+        "source_opened",
+        "no_safety_claim"
+      ],
+      "expected_type": "number_with_source"
+    },
+    {
+      "id": "C1",
+      "facts": [
+        {
+          "id": "gwq_west_bengal:91:0:5:17",
+          "location": "Bikna",
+          "district": "Bankura",
+          "source": "Dug Well",
+          "aquifer": "shallow",
+          "statistic": "single",
+          "value_text": "0.79",
+          "unit": "mg/L",
+          "period": "Apr, 2022",
+          "page": 91
+        },
+        {
+          "id": "gwq_west_bengal:91:0:6:17",
+          "location": "Makurgram",
+          "district": "Bankura",
+          "source": "Dug Well",
+          "aquifer": "shallow",
+          "statistic": "single",
+          "value_text": "0.34",
+          "unit": "mg/L",
+          "period": "Apr, 2022",
+          "page": 91
+        }
+      ],
+      "criteria": [
+        "both_values_units",
+        "both_places_wells",
+        "sampling_month",
+        "exact_source_pages",
+        "different_wells_reason",
+        "no_time_separation_reason",
+        "source_opened",
+        "no_safety_claim"
+      ],
+      "expected_type": "not_comparable"
+    },
+    {
+      "id": "C2",
+      "facts": [
+        {
+          "id": "gwq_west_bengal:92:0:10:17",
+          "location": "Gholkunda",
+          "district": "Bankura",
+          "source": "Dug Well",
+          "aquifer": "shallow",
+          "statistic": "single",
+          "value_text": "0.19",
+          "unit": "mg/L",
+          "period": "Apr, 2022",
+          "page": 92
+        },
+        {
+          "id": "gwq_west_bengal:92:0:11:17",
+          "location": "Jagadalla",
+          "district": "Bankura",
+          "source": "Dug Well",
+          "aquifer": "shallow",
+          "statistic": "single",
+          "value_text": "0.33",
+          "unit": "mg/L",
+          "period": "Apr, 2022",
+          "page": 92
+        }
+      ],
+      "criteria": [
+        "both_values_units",
+        "both_places_wells",
+        "sampling_month",
+        "exact_source_pages",
+        "different_wells_reason",
+        "no_time_separation_reason",
+        "source_opened",
+        "no_safety_claim"
+      ],
+      "expected_type": "not_comparable"
+    },
+    {
+      "id": "M1",
+      "facts": [
+        {
+          "id": "gwq_west_bengal:91:0:7:17",
+          "location": "Shalboni",
+          "district": "Bankura",
+          "source": "Dug Well",
+          "aquifer": "shallow",
+          "statistic": "single",
+          "value_text": "0.32",
+          "unit": "mg/L",
+          "period": "Apr, 2022",
+          "page": 91
+        }
+      ],
+      "criteria": [
+        "refuse_exact_day",
+        "month_only_evidence",
+        "bounded_to_packet",
+        "exact_source_pages",
+        "source_opened",
+        "no_safety_claim"
+      ],
+      "expected_type": "insufficient_evidence"
+    },
+    {
+      "id": "M2",
+      "facts": [
+        {
+          "id": "gwq_west_bengal:91:0:8:17",
+          "location": "Bandhakona",
+          "district": "Bankura",
+          "source": "Dug Well",
+          "aquifer": "shallow",
+          "statistic": "single",
+          "value_text": "0.03",
+          "unit": "mg/L",
+          "period": "Apr, 2022",
+          "page": 91
+        }
+      ],
+      "criteria": [
+        "refuse_exact_day",
+        "month_only_evidence",
+        "bounded_to_packet",
+        "exact_source_pages",
+        "source_opened",
+        "no_safety_claim"
+      ],
+      "expected_type": "insufficient_evidence"
+    }
+  ]
+}
