@@ -1,56 +1,38 @@
 # NeerTathya
 
-**Cited groundwater arsenic and fluoride evidence for West Bengal, found with SerpApi, checked against the source page, and refused when the evidence does not support the question.**
+**Ask about groundwater arsenic or fluoride in West Bengal. Get the exact number with its document, page and table row, or a reasoned refusal when the evidence cannot support the question.**
 
+**[Ask it in your browser](https://mohitt31.github.io/jaldrishti/#ask)** · **[District evidence map](https://mohitt31.github.io/jaldrishti/#map)** · **[Demo video](https://mohitt31.github.io/jaldrishti/demo.html)** · Track: Knowledge & Public Interest
+
+West Bengal has some of the world's worst groundwater arsenic, and parts of the state have high fluoride. The measurements exist, but they sit in annexure tables of 100–270 page government reports and in paper abstracts. A search engine finds pages *about* arsenic; it does not hand you "0.16 mg/L at the Bhajanghat dug well, April 2022, page 102". And the most common mistake with these numbers is not a missing value but a bad comparison: one well's maximum set against a district mean, or two different wells read as a trend.
+
+NeerTathya:
+1. **Finds the evidence with SerpApi.** Google and Google Scholar searches over 13 arsenic and fluoride districts build a library of government reports and research abstracts. Every query, result and fetched document is recorded.
+2. **Reads the tables.** Every measured cell becomes a typed record: value, unit, statistic, place, well, sampling period, page and row.
+3. **Answers or refuses.** A number comes with its source row. A comparison is checked for the same sampling point, statistic, spatial support and time; if any check fails, it says *not comparable* and lists why. Missing evidence gives *insufficient evidence*, not a guess.
+4. **Checks itself.** Each cited number is re-read on the cited PDF page with a second PDF library before it is shown.
+
+Try **"332 vs 329 µg/L: comparable?"**: Karimpur's 0.332 mg/L maximum and a study's 329 µg/L mean look identical after unit conversion, but one is a single site's maximum and the other a study average. The real Python engine runs in your browser (Pyodide). No server, no API key. Questions can also be asked in Hindi or Bengali.
+
+![Ask: source-grounded comparison with failed checks](docs/screenshots/ask-desktop.png)
 
 ## At a glance
 
 | | Result |
 |---|---|
-| Frozen test (20 Qs, run once) | **12/20 vs 2/20** for Googling the question, with **9 searches instead of 58** |
-| Fresh holdout (new places, written after the v0.2 freeze, run once) | **17/20** (numeric 10/12) |
+| Frozen test (20 questions, run once) | **12/20**, versus **2/20** for googling the question; **9 searches instead of 58** |
+| Fresh holdout (new places, written after the v0.2 freeze, run once) | **17/20** (numeric questions 10/12) |
 | Cited numbers re-found on the cited PDF page | **100 %** in every run |
 | Bad comparisons (different wells, statistics, periods, spatial support) | refused, with the failing checks listed |
 | Reproducible without an API key | every SerpApi response is cached; `neertathya eval --offline` |
 
-Known limits, all disclosed below: the holdout audit found two comparisons that scored correct while citing the wrong rows (guarded against in v0.3, post-hoc), and the library does not yet contain the newer Purulia keywell report.
+> Research evidence, not household safety advice. A survey value says nothing about your own tube well today; test your water at an accredited lab.
 
-## Try it — no install or API key
+**Limits.** No user study or expert review has been completed yet ([pilot kit ready](reports/user_pilot/PROTOCOL.md)). The holdout audit found two comparisons scored correct while citing the wrong rows; v0.3 guards against this (post-hoc). The library misses the newer Purulia keywell report. Hindi/Bengali support is a fixed vocabulary, not translation. Details for every claim: [claims and evidence](https://mohitt31.github.io/jaldrishti/review.html).
 
-Formerly **JalDrishti**. The existing repository/Pages links, Python import paths, note schema and saved browser notes remain compatible. The public app and CLI are now **NeerTathya** (`neertathya`); `jaldrishti` remains a command alias. Historical reports retain their original names.
-
-**[Watch the local functional demo](https://mohitt31.github.io/jaldrishti/demo.html)** · **[Ask NeerTathya in your browser](https://mohitt31.github.io/jaldrishti/#ask)** · **[Explore district evidence](https://mohitt31.github.io/jaldrishti/#map)**
-
-The real Python engine runs locally in a Pyodide worker, loaded from jsDelivr on your first question. Choose **SerpApi-discovered library** or **Library + curated reference reports** explicitly. This searches a prebuilt evidence snapshot: it makes no new SerpApi calls, does not discover new documents, and needs no server or key. The first use needs internet access to download Python; a CDN failure is shown with a retry message.
-
-Try **332 vs 329 µg/L: comparable?** The engine converts the units and explains why a site maximum and a study mean are not the same district mean. Hindi and Bengali question examples use a deterministic dictionary; answers stay in English with a language header. Unknown village spellings remain constraints and cause abstention.
-
-![Ask: source-grounded comparison with failed checks](docs/screenshots/ask-desktop.png)
 ![District evidence coverage and linked source records](docs/screenshots/map-desktop.png)
 
-The map colours **indexed document counts**, never safety. Its reported maxima span different locations, statistics, surveys and years, and cannot be used to compare district risk. Missing records do not establish safety or absence of evidence. Boundaries represent 2021 and are a simplified [geoBoundaries extract under ODbL 1.0](docs/ask/BOUNDARIES-LICENSE.md).
-
-The responsive NeerTathya workspace adds a multiline question composer, explicit source scope, a district-to-question action, light/dark styles and a portable note flow. [Design and compatibility checks](reports/design_release/README.md) are engineering tests, not user validation.
-
-Browser engineering checks and their limits are recorded in [the release report](reports/browser_release/README.md). The frozen test and holdout results below have not changed.
-
-**Complete a research-note task:** ask → inspect the row and source discovery trail → save the answer → export a readable Markdown note or review JSON → import the JSON for review → append comments → recheck the recorded answers with Python. Original evidence is readonly in the review interface; comments stay separate. Imported contents and reviewer statuses are unauthenticated until checked, and a matching Python output is not expert certification. Notes are stored locally in the browser; file sharing is manual.
-
-[One-page claims and evidence](https://mohitt31.github.io/jaldrishti/review.html) · [Workflow engineering checks](reports/workflow_release/README.md) · [October 5–8 execution plan](planning/OCTOBER_5_8_SPRINT.md).
-
-**User benefit is not yet measured.** No completed user sessions or domain-review endorsement are claimed. The [prepared pilot protocol](reports/user_pilot/PROTOCOL.md) and [recruitment drafts](reports/user_pilot/RECRUITMENT.md) specify the next human work. The [versioned pilot packet](reports/user_pilot/packet/FACILITATOR_GUIDE.md) includes source-checked tasks, a rubric and a local timing/observation form. Targets and synthetic checks are not study results.
-
-
-
-West Bengal has some of the world's worst groundwater arsenic, and parts of the state have high fluoride. The measurements exist, but they are buried in annexure tables of 100–270 page government reports and in paper abstracts. A search engine finds pages *about* arsenic; it does not hand you "0.16 mg/L at the Bhajanghat dug well, April 2022, page 102". And the most common mistake with these numbers is not a missing value but a bad comparison: a single well's maximum set against a district mean, or two different wells treated as a time series.
-
-NeerTathya answers a question with the exact number, unit, place, period, document and page. Or it says *not comparable* or *insufficient evidence* and explains why.
-
-> Not a household safety tool. A number from a 2022 survey says nothing about your tube well today. Test your own source at an accredited lab.
-
-**Track:** Knowledge & Public Interest
-
-[The historical explorer](https://mohitt31.github.io/jaldrishti/) retains the recorded dev, original-test and holdout answers, including failures, below the new Ask box and map.
+The map colours **indexed document counts**, never safety. Its reported maxima come from different places, statistics, surveys and years, so they cannot be used to compare district risk.
 
 ## Results (v0.1 frozen test split, run once)
 
@@ -210,9 +192,24 @@ reports/         dev, frozen original test, holdout results and post-run audit
 
 Source PDFs are not redistributed. They are downloaded from the publishers' sites.
 
+## Notes for reviewers
+
+- **Name.** Formerly JalDrishti. Repository/Pages URLs, Python import paths, note schema and saved notes are unchanged; `jaldrishti` remains a CLI alias of `neertathya`. Historical reports keep their original names.
+- **Browser app.** The Pyodide worker loads Python from jsDelivr on the first question and searches a prebuilt evidence snapshot: it makes no new SerpApi calls. Scope is explicit: *SerpApi-discovered library* or *Library + curated reference reports*. A CDN failure shows a retry message.
+- **Research notes.** Ask → inspect the row and discovery trail → save → export Markdown or review JSON → import for review → comment → recheck with Python. Notes stay in the browser; a matching recheck shows reproducibility, not expert certification.
+- **Engineering checks:** [browser release](reports/browser_release/README.md), [design](reports/design_release/README.md), [workflow](reports/workflow_release/README.md), [historical answer explorer](https://mohitt31.github.io/jaldrishti/).
+- **User pilot (not yet run):** [protocol](reports/user_pilot/PROTOCOL.md), [facilitator packet](reports/user_pilot/packet/FACILITATOR_GUIDE.md).
+- **Map boundaries:** 2021, simplified [geoBoundaries extract under ODbL 1.0](docs/ask/BOUNDARIES-LICENSE.md).
+
 ## AI tools used
 
-As the rules require: Claude (Anthropic) wrote most of the code and ran the experiments under my direction, and ChatGPT helped research the problem and draft the benchmark facts, which were then verified against the source pages. OpenAI Codex implemented the post-hoc v0.2 fixes, regression tests, safeguards and holdout tooling; authored the new holdout after the freeze; checked the actual PDF pages; ran the once-only evaluation; audited its failures; and updated the README and recorded-demo site. For v0.3, Codex implemented the stricter matching/scorer, continuation-table fixes, bounded retrieval attempt, local query interface and adversarial tests. In the browser round, OpenAI Codex built the Pyodide bundle and worker, evidence export with precomputed verification, district boundary/evidence map, Hindi/Bengali dictionary, browser UI, tests, CLI/WASM parity checks and documentation. No LLM runs at answer time. In the October 5 sprint, Codex prepared the execution/pilot/recruitment documents and implemented the portable evidence-note/review flow, source-provenance display, imported-answer rechecks, failure/retry tests and judge-facing evidence page. Codex also redesigned the responsive research workspace and implemented the NeerTathya public branding and compatible CLI alias. Codex then prepared the source-checked formative pilot packet, observation tool, conservative summary script and automated local functional demo with captions and explicitly synthetic reviewer actions. It did not recruit, interview or impersonate users, or obtain expert endorsement. The holdout has not received an independent human annotation review. Commits and reports record the sequence. The problem choice, evaluation design and the decisions on what to keep or drop were mine.
+As the rules require. I chose the problem, set the evaluation design and freeze rules, and decided what to keep or drop. AI assistants did most of the building, under my direction:
+
+- **Claude (Anthropic):** core engine (table reader, evidence records, answer and comparison logic, page re-read), SerpApi planner, harvest and cache, CLI, scorer, first evaluation runs, the original explorer site, and later reviews and fixes (including the count-column and plausibility fixes).
+- **ChatGPT:** problem research and the first draft of the 60 benchmark facts, each then checked against its source page.
+- **OpenAI Codex:** v0.2/v0.3 fixes and stricter scoring; the v0.2 holdout, which it authored after the freeze (this limits its independence); the browser app (Pyodide), map, Hindi/Bengali vocabulary, research notes, redesign, pilot kit and the recorded demo.
+
+No language model runs at answer time. No AI-generated user feedback or expert endorsement is used. Commits and reports record the sequence.
 
 ## Licence
 

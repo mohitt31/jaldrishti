@@ -1,6 +1,6 @@
-# Submission draft — NeerTathya
+# Submission text: NeerTathya
 
-Status: copy-ready project text; **not submitted**. The actual local recording passes local duration/playback checks; verify the public link after deployment. Human eligibility, team and agreement fields must reflect the participant's true information.
+Copy-ready. Fill the participant-only fields yourself (identity, eligibility, team, how you heard, agreements).
 
 ## Project name
 NeerTathya
@@ -8,31 +8,32 @@ NeerTathya
 ## Track
 Knowledge & Public Interest
 
-## Short description
-Source-cited arsenic and fluoride research notes for West Bengal. Find a measurement, inspect its source row, reject an unsupported comparison, and export the evidence for review.
+## Tagline (one line)
+Cited groundwater arsenic and fluoride evidence for West Bengal: the exact number with its source row, or a reasoned refusal.
 
-## Project description
-A groundwater concentration is easy to quote incorrectly: a site maximum is not a district mean, a publication year is not a sampling date, and two different wells do not establish a time trend.
+## Description
+West Bengal has some of the world's worst groundwater arsenic, and parts of the state have high fluoride. The measurements exist, but they sit in annexure tables of 100–270 page government reports and in paper abstracts. Search engines find pages about arsenic, not the row that answers a question. And the most common mistake is not a missing number but a bad comparison: one well's maximum against a district mean, or two different wells read as a trend.
 
-NeerTathya helps a geology or environmental researcher prepare a defensible evidence note. SerpApi Google Search and Google Scholar harvesting finds government reports and research abstracts. A deterministic Python engine extracts and checks measurement context, cites the physical PDF page and row, and refuses unsupported requests. A browser worker runs the real engine over a saved source snapshot without a key or server. Separately curated sources are explicitly labelled.
+NeerTathya answers a question with the exact value, unit, place, sampling period, document, page and table row. It re-reads each cited number on the source page before showing it. When two values cannot be compared (different wells, statistics, spatial support or periods) it says "not comparable" and lists the failed checks; when the sources do not support an answer it says so instead of guessing. The real Python engine runs in the browser, with a district evidence map, Hindi/Bengali questions and exportable research notes.
 
-Users can inspect discovery provenance, save answers and refusals, export a note, import reviewer comments and recheck saved answers against Python. The district map shows evidence coverage, not safety or district risk. Hindi/Bengali input uses a limited dictionary.
+## How SerpApi is used
+- Google Search and Google Scholar searches over 13 arsenic and fluoride districts build the evidence library: CGWB and ADB reports from Google, research papers from Scholar resolved to PubMed abstracts. Several phrasings per district, because results for these queries are erratic.
+- Question-time fallback: when a source is missing, the planner turns cues in the question into one targeted search (named study → Scholar with year filters, publisher → site filter, village → quoted place name, with district resolution).
+- Every response is cached by its request parameters and logged in a credit ledger, so the evaluation replays without an API key, and every answer can show which query found its document.
 
-Frozen evaluations, known scoring failures and post-hoc fixes are disclosed. Human usefulness has not yet been measured. No household-safety judgement or expert endorsement is claimed.
+## Results
+- Frozen test, 20 questions run once: 12/20, versus 2/20 for googling the question as typed; 9 searches instead of 58 (plus a one-off 56-search harvest).
+- Fresh holdout of new places, written after a code freeze and run once: 17/20.
+- Every cited number was re-found on its cited PDF page.
+- Benchmark of 60 facts, each checked against its source page, committed before the system was built. Failures and post-hoc fixes are published.
 
-## Why SerpApi is essential
-Google Search surfaced report PDFs, while Google Scholar supplied paper discovery resolved to source abstracts. Query/source relationships and cached responses make discovery inspectable and replayable. The harvested library supplies the reader's evidence: it is not a decorative API call. Browser questions reuse this snapshot and make no new API requests. Curated-reference additions are not attributed to SerpApi discovery. See the UI's discovery trail and the saved library manifests.
-
-Historical original-test evidence: library 12/20 versus baseline 2/20 under the original scorer; 9 question-time searches plus 56 prior harvest searches for the library, versus 58 baseline searches. This is not an equal total-budget comparison, a human time-savings result, or a new blind evaluation. The later audit documents wrong-row comparisons that the old scoring metric missed.
+Limits: no user study or expert review yet; the holdout was written by an AI assistant after the freeze; the library misses one newer Purulia report. Not a household safety tool.
 
 ## Links
-- Public project: https://mohitt31.github.io/jaldrishti/
-- Repository: https://github.com/mohitt31/jaldrishti
-- Claims and limitations: https://mohitt31.github.io/jaldrishti/review.html
-- Demo: https://mohitt31.github.io/jaldrishti/demo.html (verify deployed video before submission)
+- App: https://mohitt31.github.io/jaldrishti/
+- Code: https://github.com/mohitt31/jaldrishti
+- Demo video: (YouTube/unlisted link)
+- Claims and evidence: https://mohitt31.github.io/jaldrishti/review.html
 
-## AI disclosure — copy with the entry
-Claude, ChatGPT and OpenAI Codex assisted with research, benchmark preparation, coding, tests, documentation and the automated local demo recording. Source facts were checked against reports; the assistant also authored evaluation material, which limits independence. No LLM runs at answer time. Detailed roles, development history and evaluation limitations are in the README. No AI-generated participant feedback or expert endorsement is used.
-
-## Participant-only fields — do not guess or publicly commit private answers
-Confirm lead identity/contact information, adult India residency/eligibility, actual team contributions, occupation/experience, how the event was discovered, and whether any project existed before the event. Repository creation dates alone do not establish project origin. Read and accept the organiser's agreements personally before explicit submission. Save the submitted-state confirmation and timestamp privately; a draft is not an entry.
+## AI tools used
+I chose the problem, set the evaluation design and freeze rules, and decided what to keep or drop. Claude (Anthropic) built the core engine, SerpApi planner, harvest, scorer and first evaluations; ChatGPT helped research the problem and drafted the benchmark facts, which were checked against source pages; OpenAI Codex built the later fixes, the browser app, map, notes and the holdout set (authored after the freeze, which limits its independence). No language model runs at answer time.
