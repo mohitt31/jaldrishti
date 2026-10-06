@@ -2,7 +2,7 @@
 
 **Ask about groundwater arsenic or fluoride in West Bengal. Get the exact number with its document, page and table row, or a reasoned refusal when the evidence cannot support the question.**
 
-**[Ask it in your browser](https://mohitt31.github.io/jaldrishti/#ask)** · **[District evidence map](https://mohitt31.github.io/jaldrishti/#map)** · **[Demo video](https://mohitt31.github.io/jaldrishti/demo.html)** · Track: Knowledge & Public Interest
+**[Ask it in your browser](https://mohitt31.github.io/jaldrishti/#ask)** · **[District evidence map](https://mohitt31.github.io/jaldrishti/#map)** · **[Demo video (2:13)](https://mohitt31.github.io/jaldrishti/demo.html)** · Track: Knowledge & Public Interest
 
 West Bengal has some of the world's worst groundwater arsenic, and parts of the state have high fluoride. The measurements exist, but they sit in annexure tables of 100–270 page government reports and in paper abstracts. A search engine finds pages *about* arsenic; it does not hand you "0.16 mg/L at the Bhajanghat dug well, April 2022, page 102". And the most common mistake with these numbers is not a missing value but a bad comparison: one well's maximum set against a district mean, or two different wells read as a trend.
 
