@@ -140,6 +140,15 @@ Strict development replay is unchanged (library 17/20, oracle 20/20; `reports/v0
 
 ## How it uses SerpApi
 
+| SerpApi feature | What NeerTathya uses it for | Why this one |
+|---|---|---|
+| Google Search (`engine=google`, `gl=in`, `hl=en`) | Government PDFs: CGWB year books, aquifer-mapping reports, state assessments | The measurement tables live in official PDFs that general web search ranks unevenly; India-localised results surface `.gov.in` copies |
+| `filetype:pdf` in the query | Supplement queries for year books and district aquifer reports | Skips HTML summary pages and lands on the document that holds the table |
+| `as_sitesearch` | A question that names a publisher ("NAQUIM", "Special Drive", "ADB") goes to that site only; fallback to `cgwb.gov.in` | One targeted search instead of several broad ones |
+| Google Scholar (`engine=google_scholar`) | Research papers on a district, resolved to PubMed abstracts | Field studies often report village-level values; the PubMed abstract is a stable, citable copy |
+| `as_ylo` / `as_yhi` | A question citing a study year is limited to that window | Keeps older or later papers on the same place from crowding out the study the question means |
+| `knowledge_graph` and snippets | Village → district resolution | One search answers "which district is Dhabani in?"; two candidate districts are kept, not guessed |
+
 1. **Harvest (56 searches, once).** Generic templates over the 13 districts where arsenic or fluoride is reported (`src/jaldrishti/harvest.py`). Several phrasings per district, because Google is erratic on these queries: the same template returns the CGWB report at rank 1 for Nadia and Wikipedia's *Arsenic* page for Malda. Google results give government PDFs; **Google Scholar** results give papers, which are resolved to PubMed abstracts. The v0.1 library contained 23 documents; the post-hoc v0.2 supplement adds 13 completed searches (69 total) and expands it to 27 documents. One additional HTTP attempt failed; the 14-attempt cap stopped the remaining template. No benchmark question text is used.
 2. **Answer from the library** in about a second. No search needed.
 3. **Live fallback (v0.2: ≤ 2 searches including district resolution)** when a question names a source the library lacks. The planner turns question cues into a query: a named study → Scholar with `as_ylo`/`as_yhi`; "Special Drive", "NAQUIM", "ADB" → that publisher via `as_sitesearch`; a village → quoted place name.
