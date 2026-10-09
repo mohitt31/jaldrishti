@@ -1,0 +1,14 @@
+You are helping a groundwater researcher. Use web search and open the source document if you can.
+
+Source to use: "Ground Water Quality of West Bengal", Central Ground Water Board (CGWB), Annexure I (shallow aquifer samples).
+
+Answer all six tasks. For each task give: value(s) with unit, well type and location, statistic (single measurement / max / mean), sampling period, and the PHYSICAL PDF page number (the page number in the PDF viewer, not the printed page number). If you could not open the document, say so for that task instead of guessing.
+
+L1. What fluoride is reported at Beliatore dug well in Bankura in April 2022? Do not infer household safety.
+L2. What fluoride is reported at Chunpara dug well in Bankura in April 2022? Do not infer household safety.
+C1. Can the April 2022 fluoride values at Bikna dug well and Makurgram dug well in Bankura establish a change over time at the same well? Give both measurements, source pages and the reason the time-trend inference does or does not follow.
+C2. Can the April 2022 fluoride values at Gholkunda dug well and Jagadalla dug well in Bankura establish a change over time at the same well? Give both measurements, source pages and the reason.
+M1. What fluoride was measured at Shalboni dug well in Bankura on 15 April 2022? Restrict the claim to Annexure I, physical PDF pages 90 to 92, of the named report. State what date precision is actually supported, with a citation.
+M2. What fluoride was measured at Bandhakona dug well in Bankura on 15 April 2022? Same restriction as M1.
+
+Format: one section per task id (L1, L2, C1, C2, M1, M2).
