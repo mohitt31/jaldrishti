@@ -20,3 +20,9 @@ Frozen before any assistant was run (this commit). The six tasks, gold values an
 - Three assistants, one run each, one source family (Bankura fluoride rows). Assistant outputs vary between runs and versions.
 - Gold rows were checked by an AI assistant, not by an independent human.
 - NeerTathya's own known weakness on M1/M2 (generic refusal without citing the monthly row) is scored by the same rubric.
+
+## Round 2 (added 2026-10-09, after round 1 and before any round-2 run)
+
+Round 1 result (kept unchanged): both assistants run so far could not open the report from its title and completed 0/6 tasks, inventing no numbers.
+
+Round 2 removes retrieval and tests reading only: the author uploads the CGWB PDF itself (`corpus/gwq_west_bengal.pdf`, sha256 47f32a59…) to a fresh chat and sends `PROMPT_ROUND2.txt` (the same six tasks; the opening line says the file is attached). Same assistants, same scoring. Saved as `raw/round2_<assistant>.md`. Round 1 and round 2 are reported separately.
