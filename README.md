@@ -229,9 +229,11 @@ Source PDFs are not redistributed. They are downloaded from the publishers' site
 
 As the rules require. I chose the problem, set the evaluation design and freeze rules, and decided what to keep or drop. AI assistants did most of the building, under my direction:
 
-- **Claude (Anthropic):** core engine (table reader, evidence records, answer and comparison logic, page re-read), SerpApi planner, harvest and cache, CLI, scorer, first evaluation runs, the original explorer site, and later reviews and fixes (including the count-column and plausibility fixes).
+- **Claude (Anthropic):** core engine (table reader, evidence records, answer and comparison logic, page re-read), SerpApi planner, harvest and cache, CLI, scorer, first evaluation runs, the original explorer site, and later reviews and fixes (including the count-column and plausibility fixes); the v2 demo video edit and its narration script.
 - **ChatGPT:** problem research and the first draft of the 60 benchmark facts, each then checked against its source page.
 - **OpenAI Codex:** v0.2/v0.3 fixes and stricter scoring; the v0.2 holdout, which it authored after the freeze (this limits its independence); the browser app (Pyodide), map, Hindi/Bengali vocabulary, research notes, redesign, pilot kit and the recorded demo.
+
+- **Kokoro (open-source text-to-speech):** the English voice that narrates the demo video.
 
 No language model runs at answer time. No AI-generated user feedback or expert endorsement is used. Commits and reports record the sequence.
 

@@ -20,11 +20,14 @@ NeerTathya answers a question with the exact value, unit, place, sampling period
 - Google Search and Google Scholar searches over 13 arsenic and fluoride districts build the evidence library: CGWB and ADB reports from Google, research papers from Scholar resolved to PubMed abstracts. Several phrasings per district, because results for these queries are erratic.
 - Question-time fallback: when a source is missing, the planner turns cues in the question into one targeted search (named study → Scholar with year filters, publisher → site filter, village → quoted place name, with district resolution).
 - Every response is cached by its request parameters and logged in a credit ledger, so the evaluation replays without an API key, and every answer can show which query found its document.
+- A weekly scheduled GitHub Action runs three searches and lists new trusted West Bengal reports not yet in the library, for human review.
 
 ## Results
 - Frozen test, 20 questions run once: 12/20, versus 2/20 for googling the question as typed; 9 searches instead of 58 (plus a one-off 56-search harvest).
 - Fresh holdout of new places, written after a code freeze and run once: 17/20.
 - Every cited number was re-found on its cited PDF page.
+- Evidence library: 4,025 measurement records from 16 source documents across 21 districts.
+- Compared with public AI assistants on six source-checked tasks: given only the report title with web search, two assistants got 0/6 because neither could reach the annexure table; given the PDF, they got 6/6. Finding the source is the hard part, which is what the SerpApi library does.
 - Benchmark of 60 facts, each checked against its source page, committed before the system was built. Failures and post-hoc fixes are published.
 
 Limits: no user study or expert review yet; the holdout was written by an AI assistant after the freeze; the library misses one newer Purulia report. Not a household safety tool.
@@ -36,4 +39,4 @@ Limits: no user study or expert review yet; the holdout was written by an AI ass
 - Claims and evidence: https://mohitt31.github.io/jaldrishti/review.html
 
 ## AI tools used
-I chose the problem, set the evaluation design and freeze rules, and decided what to keep or drop. Claude (Anthropic) built the core engine, SerpApi planner, harvest, scorer and first evaluations; ChatGPT helped research the problem and drafted the benchmark facts, which were checked against source pages; OpenAI Codex built the later fixes, the browser app, map, notes and the holdout set (authored after the freeze, which limits its independence). No language model runs at answer time.
+I chose the problem, set the evaluation design and freeze rules, and decided what to keep or drop. Claude (Anthropic) built the core engine, SerpApi planner, harvest, scorer and first evaluations; ChatGPT helped research the problem and drafted the benchmark facts, which were checked against source pages; OpenAI Codex built the later fixes, the browser app, map, notes and the holdout set (authored after the freeze, which limits its independence). The demo narration is an open-source text-to-speech voice (Kokoro). No language model runs at answer time.
