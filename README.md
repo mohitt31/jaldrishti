@@ -24,6 +24,7 @@ Try **"332 vs 329 µg/L: comparable?"**: Karimpur's 0.332 mg/L maximum and a stu
 | Fresh holdout (new places, written after the v0.2 freeze, run once) | **17/20** (numeric questions 10/12) |
 | Cited numbers re-found on the cited PDF page | **100 %** in every run |
 | Bad comparisons (different wells, statistics, periods, spatial support) | refused, with the failing checks listed |
+| Evidence library | **4,025** measurement records from **16** source documents across **21** districts; **99.7 %** of rows re-checked on the PDF page |
 | Reproducible without an API key | every SerpApi response is cached; `neertathya eval --offline` |
 
 > Research evidence, not household safety advice. A survey value says nothing about your own tube well today; test your water at an accredited lab.
@@ -145,6 +146,8 @@ Strict development replay is unchanged (library 17/20, oracle 20/20; `reports/v0
 4. **Place → district resolution** (`neertathya ask --mode jaldrishti`): one search resolves a village to its district from the knowledge graph and snippets. A name found in two districts (Dhabani: Bankura and Purulia) is kept as `(Bankura OR Purulia)` instead of guessing.
 
 Every successful live response is cached by its request parameters (never the key) and logged in a credit ledger. Recorded outputs can be inspected without an API key, and dev evaluation can be replayed offline. Original-test and holdout commands refuse to overwrite their frozen evaluations.
+
+5. **Weekly source watch.** A scheduled GitHub Action ([`source-watch`](.github/workflows/watch.yml)) runs three searches every Monday and lists trusted West Bengal PDF results that are not yet in the library ([`reports/watch/LATEST.md`](reports/watch/)). It only lists candidates for human review; nothing is added automatically. It skips quietly when no API key is configured.
 
 ## How it works
 

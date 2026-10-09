@@ -18,3 +18,5 @@ body{font-size:15px;line-height:1.6}a{text-underline-offset:3px}.wrap{max-width:
 @media(max-width:760px){.ask-panel>.note-buttons button{flex:0 1 auto}}
 
 @media(max-width:760px){.hero-lead{display:none}.hero h1{font-size:31px;margin:10px 0}.hero{padding-top:24px;padding-bottom:16px}}
+
+.hero-stats{margin-top:18px;font-size:15px;color:var(--muted,#55615f);display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline}.hero-stats b{font-size:20px;color:var(--ink,#16201f)}.hero-stats span{opacity:.5}
