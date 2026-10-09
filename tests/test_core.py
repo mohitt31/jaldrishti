@@ -96,3 +96,9 @@ def test_implausible_concentration_is_dropped():
     t = Table("d", 1, 0, "lattice", ["Location", "F"], [["Bankura", "1046"], ["Bishnupur", "0.29"]], [], "mg/L fluoride", "")
     vals = [e["value"] for e in table_evidence(t, {})]
     assert 0.29 in vals and 1046 not in vals
+
+def test_exact_day_question_cites_the_month_record_as_context():
+    evs = [ev(places=["Shalboni"], source="Dug Well", period="Apr, 2022", value_text="0.32", value=0.32, district="Bankura")]
+    r = _engine(evs).ask("What fluoride was measured at Shalboni dug well in Bankura on 15 April 2022?")
+    assert r["answer_type"] == "insufficient_evidence" and not r["items"]
+    assert r["related"] and r["related"][0]["value"] == "0.32" and "Apr, 2022" in r["reason"]

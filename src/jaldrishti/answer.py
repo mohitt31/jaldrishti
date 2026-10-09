@@ -133,6 +133,20 @@ def lookup(ev, q: Query, metas) -> dict:
     if m.attribute == "detection_limit":
         return {"answer_type": "insufficient_evidence", "items": [], "related": items,
                 "reason": "The matching row reports a value but no detection limit for that result."}
+    day = [d for d in m.dates if len(d) > 7]
+    if not items and day:
+        # a calendar day was asked; look for the same record at month precision and show it as context, not as the answer
+        month = Mention(**{**m.__dict__, "dates": [d[:7] for d in m.dates]})
+        related = []
+        for p, s in targets:
+            r = best(ev, Mention(**{**month.__dict__, "places": [p] if p else []}), q, s, metas)
+            if r: related.append(_cite(r[0][1], metas) | {"score": round(r[0][0], 2), "asked": p or s})
+        if related:
+            i = related[0]
+            return {"answer_type": "insufficient_evidence", "items": [], "related": related,
+                    "reason": f"The source gives only the sampling period '{i['period']}', not the day {day[0]}. "
+                              f"The {i['period']} record is shown as context: {i['value']} {i['unit'] or ''} at {i['place']}, page {i['page']}. "
+                              f"It should not be reported as a {day[0]} measurement."}
     if not items:
         return {"answer_type": "insufficient_evidence", "items": [], "reason": "No record in the corpus matches " + ", ".join(str(x) for x in missing) + "."}
     out = {"answer_type": "number_with_source", "items": items}

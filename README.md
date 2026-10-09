@@ -34,6 +34,18 @@ Try **"332 vs 329 µg/L: comparable?"**: Karimpur's 0.332 mg/L maximum and a stu
 
 The map colours **indexed document counts**, never safety. Its reported maxima come from different places, statistics, surveys and years, so they cannot be used to compare district risk.
 
+## Compared with general AI assistants
+
+Six source-checked tasks (lookups, a different-wells "trend" trap, and an exact-day question the source only answers by month) were given to public AI chat assistants ([protocol and transcripts](reports/llm_baseline/REPORT.md); automated check, not a user study):
+
+| | Tasks fully correct |
+|---|---|
+| Two assistants, given the report **title** with web search | **0/6**: neither could open the CGWB annexure (neither invented numbers) |
+| DeepSeek / Gemini, given the **PDF file** | 6/6 each |
+| NeerTathya (finds the source itself) | 4/6 + 2 partial, now fixed post-hoc |
+
+Once handed the right PDF, current assistants read these rows well. Getting to that PDF is the hard part, and that is what the SerpApi library does; NeerTathya then answers deterministically, re-checks the page and can be rerun without any language model.
+
 ## Results (v0.1 frozen test split, run once)
 
 20 held-out questions, scored against 60 hand-verified facts. Every mode uses the same reader. Only how sources are found differs.

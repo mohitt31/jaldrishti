@@ -19,3 +19,6 @@ Scoring against `reports/user_pilot/packet/answer_key.json`: L1 0.04 mg/L p.91; 
 
 ## Limits
 Two assistants per round, one run each, six tasks from one table of one report; versions not recorded; outputs vary between runs. Round 1 and round 2 used different assistants for at least one slot. The gold rows were checked by an AI assistant, not an independent human.
+
+## Post-hoc fix prompted by this check (v0.3.2)
+After this comparison, NeerTathya's exact-day handling was changed: when a day is asked and the source only gives a month, it still answers *insufficient evidence* but now shows the month record as context (M1: "only 'Apr, 2022' … 0.32 mg/L at Shalboni, page 91 … should not be reported as a 2022-04-15 measurement"). The table above shows the result before this fix. Strict development replay is unchanged (17/20, 20/20; `reports/v032_development/`).
