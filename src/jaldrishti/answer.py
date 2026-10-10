@@ -148,12 +148,51 @@ def lookup(ev, q: Query, metas) -> dict:
                               f"The {i['period']} record is shown as context: {i['value']} {i['unit'] or ''} at {i['place']}, page {i['page']}. "
                               f"It should not be reported as a {day[0]} measurement."}
     if not items:
-        return {"answer_type": "insufficient_evidence", "items": [], "reason": "No record in the corpus matches " + ", ".join(str(x) for x in missing) + "."}
+        named = [str(x) for x in missing if x]
+        if named:
+            return {"answer_type": "insufficient_evidence", "items": [], "reason": "No record in the corpus matches " + ", ".join(named) + "."}
+        return unscoped(ev, q, metas)
     out = {"answer_type": "number_with_source", "items": items}
     if missing:
         return {"answer_type": "insufficient_evidence", "items": [], "related": items,
                 "reason": "No complete set of requested measurements was found; partial evidence is context only.", "missing": missing}
     return out
+
+SAFETY = re.compile(r"\b(safe|unsafe|drink|drinking|potable|my (?:tube ?well|well|water|hand ?pump))\b")
+TREND = re.compile(r"\b(increas\w*|decreas\w*|trend\w*|over time|worse\w*|improv\w*|ris(?:e|en|ing)|fall\w*)\b")
+
+def unscoped(ev, q: Query, metas, k: int = 3) -> dict:
+    """No place, well or statistic was named: say what would answer it and show the strongest records as context only."""
+    t = norm(q.text)
+    con = q.contaminant or "arsenic or fluoride"
+    where = " and ".join(q.districts) if q.districts else "West Bengal"
+    pool = [e for e in ev if (not q.contaminant or e["contaminant"] == q.contaminant)
+            and (not q.districts or e.get("district") in q.districts) and not e.get("non_detect")]
+    def mg(e):
+        try: return to_mg_l(float(e["value"]), e["unit"]) if e.get("unit") in CONC_UNITS else None
+        except (TypeError, ValueError): return None
+    conc = sorted([e for e in pool if e["statistic"] in ("single", "max", "range_max") and mg(e) is not None],
+                  key=lambda e: -mg(e))
+    if SAFETY.search(t):
+        why = ("NeerTathya reports survey measurements with their sources; it cannot say whether a particular well is safe today. "
+               "Test your water at an accredited laboratory. ")
+    elif TREND.search(t):
+        why = ("A trend needs the same sampling point measured at different times, which this question does not name. "
+               "Name a well or village, or compare two named values. ")
+    else:
+        why = "The question names no village, block, well or statistic, so no single number answers it. "
+    if not pool:
+        return {"answer_type": "insufficient_evidence", "items": [], "reason": why + f"No {con} records for {where} are indexed in this scope."}
+    docs = len({e["doc"] for e in pool})
+    why += f"This scope has {len(pool)} {con} records for {where} from {docs} document{'s' if docs != 1 else ''}."
+    related = [_cite(e, metas) | {"asked": "context"} for e in conc[:k]]
+    if related:
+        top = conc[0]
+        place = top.get("location") or (top["places"][0] if top.get("places") else None)
+        why += (" The highest indexed concentrations are listed below as context, not as an answer: they come from different sites, surveys and years.")
+        if place and top.get("district"):
+            why += f" For example, ask: \"What {top['contaminant']} is reported at {place} in {top['district']}?\""
+    return {"answer_type": "insufficient_evidence", "items": [], "related": related, "scope_hint": True, "reason": why}
 
 def _conc_mg(i):
     try: v = float(i["value"].replace(",", ""))
@@ -232,6 +271,8 @@ class Engine:
                 i["page_verified"] = verify_item(i, self.metas.get(i["doc"], {}))
                 i["row_verified"] = bool(i["page_verified"] and i.get("bbox"))
                 i["verification_scope"] = "row_number_and_explicit_identity" if i.get("bbox") else "page_number_presence"
+        if r.get("scope_hint"):
+            r["related"] = [i for i in r.get("related", []) if i["page_verified"]]
         if r["answer_type"] in ("number_with_source", "not_comparable", "comparable"):
             bad = [i for i in r["items"] if not i["page_verified"]]
             r["items"] = [i for i in r["items"] if i["page_verified"]]

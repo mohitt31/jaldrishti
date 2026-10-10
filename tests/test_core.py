@@ -102,3 +102,26 @@ def test_exact_day_question_cites_the_month_record_as_context():
     r = _engine(evs).ask("What fluoride was measured at Shalboni dug well in Bankura on 15 April 2022?")
     assert r["answer_type"] == "insufficient_evidence" and not r["items"]
     assert r["related"] and r["related"][0]["value"] == "0.32" and "Apr, 2022" in r["reason"]
+
+def _district_records():
+    return [ev(places=["Raghunathpur"], location="Raghunathpur", value_text="3.1", value=3.1, id="a", bbox=[0, 0, 1, 1]),
+            ev(places=["Jhalda"], location="Jhalda", value_text="1.2", value=1.2, id="b", statistic="max", bbox=[0, 0, 1, 1]),
+            ev(places=["Para"], location="Para", value_text="0.4", value=0.4, id="c", bbox=[0, 0, 1, 1])]
+
+def test_question_without_place_explains_and_shows_context_not_an_answer():
+    r = _engine(_district_records()).ask("What fluoride is reported in Purulia?")
+    assert r["answer_type"] == "insufficient_evidence" and not r["items"]
+    assert "None" not in r["reason"] and "names no village" in r["reason"] and "3 fluoride records for Purulia" in r["reason"]
+    assert [i["value"] for i in r["related"]] == ["3.1", "1.2", "0.4"] and "Raghunathpur" in r["reason"]
+
+def test_safety_and_trend_questions_are_not_answered_with_a_number():
+    e = _engine(_district_records())
+    s = e.ask("Is my tube well in Purulia safe to drink?")
+    assert s["answer_type"] == "insufficient_evidence" and not s["items"] and "accredited laboratory" in s["reason"]
+    t = e.ask("Has fluoride in Purulia increased over time?")
+    assert t["answer_type"] == "insufficient_evidence" and "same sampling point" in t["reason"]
+
+def test_question_without_place_shows_only_verified_context():
+    e = Engine(_district_records(), {"d": {"title": "T"}}, verifier=lambda i, m: i["value"] != "3.1")
+    r = e.ask("What fluoride is reported in Purulia?")
+    assert [i["value"] for i in r["related"]] == ["1.2", "0.4"]
