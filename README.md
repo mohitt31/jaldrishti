@@ -4,6 +4,8 @@
 
 **[Ask it in your browser](https://mohitt31.github.io/jaldrishti/#ask)** · **[District evidence map](https://mohitt31.github.io/jaldrishti/#map)** · **[Demo video (2:13)](https://mohitt31.github.io/jaldrishti/demo.html)** · Track: Knowledge & Public Interest
 
+**60-second check, no install:** open [Ask](https://mohitt31.github.io/jaldrishti/#ask), click **332 vs 329 µg/L: comparable?** (Python loads once; the first answer takes a few seconds), and read the failed checks; then click **A measured value** and follow its PDF page link. Questions run in your browser and make no new searches.
+
 West Bengal has some of the world's worst groundwater arsenic, and parts of the state have high fluoride. The measurements exist, but they sit in annexure tables of 100–270 page government reports and in paper abstracts. A search engine finds pages *about* arsenic; it does not hand you "0.16 mg/L at the Bhajanghat dug well, April 2022, page 102". And the most common mistake with these numbers is not a missing value but a bad comparison: one well's maximum set against a district mean, or two different wells read as a trend.
 
 NeerTathya:
@@ -14,7 +16,7 @@ NeerTathya:
 
 Try **"332 vs 329 µg/L: comparable?"**: Karimpur's 0.332 mg/L maximum and a study's 329 µg/L mean look identical after unit conversion, but one is a single site's maximum and the other a study average. The real Python engine runs in your browser (Pyodide). No server, no API key. Questions can also be asked in Hindi or Bengali.
 
-![Ask: source-grounded comparison with failed checks](docs/screenshots/ask-desktop.png)
+[![332 vs 329 µg/L: not comparable, with the failed checks listed (from the demo video)](docs/screenshots/compare.gif)](https://mohitt31.github.io/jaldrishti/demo.html)
 
 ## At a glance
 
