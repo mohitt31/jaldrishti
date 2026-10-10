@@ -140,6 +140,11 @@ Library misses HQ11, HQ12 and HQ16 because the newer Purulia report is not searc
 - Missing units and periods are shown as "not stated" instead of guessed.
 Strict development replay is unchanged (library 17/20, oracle 20/20; `reports/v031_development/`), and browser/CLI parity is 10/10. Frozen reports are untouched.
 
+### v0.3.3 fix (post-hoc, found by typing open questions into the browser app)
+
+- A question that names no village, block, well or statistic ("What arsenic is reported in Malda?") used to return "No record in the corpus matches None." It now says what would answer it, how many records the scope holds for that district, and lists the highest verified concentrations as context, not as an answer. Safety questions ("Is my tube well safe?") are told that survey values cannot certify a well and to test at an accredited lab; trend questions are told a trend needs the same sampling point at different times.
+- Live-search fallback behaviour is unchanged. Strict development replay is identical (library 17/20, oracle 20/20, same 12 search attempts; `reports/v033_development/`) and browser/CLI parity is 12/12. Frozen reports are untouched.
+
 ## How it uses SerpApi
 
 | SerpApi feature | What NeerTathya uses it for | Why this one |

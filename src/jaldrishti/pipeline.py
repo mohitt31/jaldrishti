@@ -17,7 +17,7 @@ MISSING = re.compile(r"^No record|not in the corpus|Could not identify")
 def satisfied(ans: dict) -> bool:
     if ans["answer_type"] in ("not_comparable", "comparable"): return True
     if ans["answer_type"] == "number_with_source": return not ans.get("missing")
-    return not MISSING.search(ans.get("reason", "")) and not ans.get("needs_source")
+    return not MISSING.search(ans.get("reason", "")) and not ans.get("needs_source") and not ans.get("scope_hint")
 
 class Session:
     def __init__(self, live: bool = False, offline: bool = False, fetch_per_step: int = 2):

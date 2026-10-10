@@ -1,4 +1,4 @@
-"""Ten explicit developer examples against the real CLI. No eval split is loaded."""
+"""Twelve explicit developer examples against the real CLI. No eval split is loaded."""
 import gzip,json,os,pathlib,subprocess,sys
 from jaldrishti.browser_runtime import BrowserRuntime
 ROOT=pathlib.Path(__file__).resolve().parents[1]
@@ -13,6 +13,8 @@ CASES=[
  ('reference','What fluoride was measured at Markabera TW WBPR_7 in Purulia on 1 January 2099?'),
  ('reference','What arsenic maximum is reported at Karimpur in Nadia?'),
  ('reference','পুরুলিয়া জেলা অজানাগ্রাম ফ্লোরাইড কত?'),
+ ('library','What arsenic is reported in Malda?'),
+ ('library','Is my tube well in Nadia safe to drink?'),
 ]
 
 def main():

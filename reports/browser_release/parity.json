@@ -267,7 +267,118 @@
       "answer": {
         "answer_type": "insufficient_evidence",
         "items": [],
-        "reason": "No record in the corpus matches None.",
+        "related": [
+          {
+            "value": "7.7",
+            "unit": "mg/L",
+            "statistic": "max",
+            "place": "Joypur",
+            "contaminant": "fluoride",
+            "location": null,
+            "aquifer": null,
+            "period_basis": "unknown",
+            "district": "Purulia",
+            "source_type": null,
+            "well_id": null,
+            "date": null,
+            "period": null,
+            "period_quote": null,
+            "threshold": null,
+            "spatial_support": "site",
+            "doc": "web_38c724236c24",
+            "title": "https://cgwb.gov.in/old_website/AQM/NAQUIM_REPORT/WEST-BENGAL/Purulia%20Final%20West%20Bengal.pdf",
+            "url": "https://cgwb.gov.in/old_website/AQM/NAQUIM_REPORT/WEST-BENGAL/Purulia%20Final%20West%20Bengal.pdf",
+            "page": 94,
+            "quote": "Joypur | 7.7 | 2 | 277",
+            "header": "Maximum concentration of Fluoride(mg/l)",
+            "publication_year": null,
+            "evidence_id": "web_38c724236c24:94:0:6:1",
+            "bbox": [
+              66.62400500000003,
+              231.8599949999999,
+              528.82001,
+              246.97999499999992
+            ],
+            "asked": "context",
+            "page_verified": true,
+            "row_verified": true,
+            "verification_scope": "row_number_and_explicit_identity"
+          },
+          {
+            "value": "4.93",
+            "unit": "mg/L",
+            "statistic": "max",
+            "place": "Jhalda-i",
+            "contaminant": "fluoride",
+            "location": null,
+            "aquifer": null,
+            "period_basis": "unknown",
+            "district": "Purulia",
+            "source_type": null,
+            "well_id": null,
+            "date": null,
+            "period": null,
+            "period_quote": null,
+            "threshold": null,
+            "spatial_support": "site",
+            "doc": "web_38c724236c24",
+            "title": "https://cgwb.gov.in/old_website/AQM/NAQUIM_REPORT/WEST-BENGAL/Purulia%20Final%20West%20Bengal.pdf",
+            "url": "https://cgwb.gov.in/old_website/AQM/NAQUIM_REPORT/WEST-BENGAL/Purulia%20Final%20West%20Bengal.pdf",
+            "page": 94,
+            "quote": "Jhalda-i | 4.93 | 3 | 242",
+            "header": "Maximum concentration of Fluoride(mg/l)",
+            "publication_year": null,
+            "evidence_id": "web_38c724236c24:94:0:5:1",
+            "bbox": [
+              66.62400500000003,
+              216.8599949999999,
+              528.82001,
+              231.8599949999999
+            ],
+            "asked": "context",
+            "page_verified": true,
+            "row_verified": true,
+            "verification_scope": "row_number_and_explicit_identity"
+          },
+          {
+            "value": "4.3",
+            "unit": "mg/L",
+            "statistic": "max",
+            "place": "Raghunathpur-I",
+            "contaminant": "fluoride",
+            "location": null,
+            "aquifer": null,
+            "period_basis": "unknown",
+            "district": "Purulia",
+            "source_type": null,
+            "well_id": null,
+            "date": null,
+            "period": null,
+            "period_quote": null,
+            "threshold": null,
+            "spatial_support": "site",
+            "doc": "web_38c724236c24",
+            "title": "https://cgwb.gov.in/old_website/AQM/NAQUIM_REPORT/WEST-BENGAL/Purulia%20Final%20West%20Bengal.pdf",
+            "url": "https://cgwb.gov.in/old_website/AQM/NAQUIM_REPORT/WEST-BENGAL/Purulia%20Final%20West%20Bengal.pdf",
+            "page": 94,
+            "quote": "Raghunathpur-I | 4.3 | 3 | 207",
+            "header": "Maximum concentration of Fluoride(mg/l)",
+            "publication_year": null,
+            "evidence_id": "web_38c724236c24:94:0:14:1",
+            "bbox": [
+              66.62400500000003,
+              352.4899899999999,
+              528.82001,
+              367.60999000000004
+            ],
+            "asked": "context",
+            "page_verified": true,
+            "row_verified": true,
+            "verification_scope": "row_number_and_explicit_identity"
+          }
+        ],
+        "scope_hint": true,
+        "reason": "The question names no village, block, well or statistic, so no single number answers it. This scope has 259 fluoride records for Purulia from 3 documents. The highest indexed concentrations are listed below as context, not as an answer: they come from different sites, surveys and years. For example, ask: \"What fluoride is reported at Joypur in Purulia?\"",
         "parsed": {
           "intent": "lookup",
           "claim": null,
@@ -639,6 +750,181 @@
         "language": "bn",
         "language_header": "প্রশ্নের উত্তর নিচে ইংরেজিতে, উৎসসহ দেওয়া হয়েছে।",
         "normalized_question": "Purulia district অজানাগ্রাম fluoride what?"
+      },
+      "matches_cli": true
+    },
+    {
+      "id": "B11",
+      "scope": "library",
+      "question": "What arsenic is reported in Malda?",
+      "answer": {
+        "answer_type": "insufficient_evidence",
+        "items": [],
+        "related": [],
+        "scope_hint": true,
+        "reason": "The question names no village, block, well or statistic, so no single number answers it. This scope has 2 arsenic records for Malda from 1 document.",
+        "parsed": {
+          "intent": "lookup",
+          "claim": null,
+          "contaminant": "arsenic",
+          "districts": [
+            "Malda"
+          ],
+          "mentions": [
+            {
+              "text": "What arsenic is reported in Malda?",
+              "places": [],
+              "well_ids": [],
+              "sources": [],
+              "dates": [],
+              "statistics": [],
+              "attribute": null
+            }
+          ]
+        }
+      },
+      "matches_cli": true
+    },
+    {
+      "id": "B12",
+      "scope": "library",
+      "question": "Is my tube well in Nadia safe to drink?",
+      "answer": {
+        "answer_type": "insufficient_evidence",
+        "items": [],
+        "related": [
+          {
+            "value": "0.76",
+            "unit": "mg/L",
+            "statistic": "single",
+            "place": "Krimpur - II, Mahisbathan",
+            "contaminant": "fluoride",
+            "location": "Mahisbathan",
+            "aquifer": "shallow",
+            "period_basis": "table_context",
+            "district": "Nadia",
+            "source_type": "Dug Well",
+            "well_id": null,
+            "date": null,
+            "period": "Apr, 2022",
+            "period_quote": "Annexure I | DISTRIBUTION OF PHYSIO- CHEMICAL CONSTITUENTS IN GROUND WATER IN SHALLOW/UN-CONFINED AQUIFER OF | WEST BENGAL | (Sample collected during Apr, 2022)",
+            "threshold": null,
+            "spatial_support": "site",
+            "doc": "gwq_west_bengal",
+            "title": "Ground Water Quality of West Bengal",
+            "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+            "page": 102,
+            "quote": "Nadia | Krimpur - II | Mahisbathan | Dug Well | 7.36 | 1197 | 390 | 58 | 60 | 93 | 5 | 0 | 226 | 185 | 209 | 9 | 122 | 0.76 | 694 | 1.53",
+            "header": "F",
+            "publication_year": null,
+            "evidence_id": "gwq_west_bengal:102:0:4:17",
+            "bbox": [
+              28.319999999999986,
+              146.21000000000004,
+              823.6799899999994,
+              161.59000000000003
+            ],
+            "asked": "context",
+            "page_verified": true,
+            "row_verified": true,
+            "verification_scope": "row_number_and_explicit_identity"
+          },
+          {
+            "value": "0.62",
+            "unit": "mg/L",
+            "statistic": "single",
+            "place": "Krishnanagar - I, Gobrapota (Dhakapara)",
+            "contaminant": "fluoride",
+            "location": "Gobrapota (Dhakapara)",
+            "aquifer": "deeper",
+            "period_basis": "table_context",
+            "district": "Nadia",
+            "source_type": "Tube Well",
+            "well_id": null,
+            "date": null,
+            "period": "Apr, 2022",
+            "period_quote": "Annexure II | DISTRIBUTION OF PHYSIO- CHEMICAL CONSTITUENTS IN GROUND WATER IN DEEPER/CONFINED AQUIFER OF WEST | BENGAL | (Sample collected during Apr, 2022)",
+            "threshold": null,
+            "spatial_support": "site",
+            "doc": "gwq_west_bengal",
+            "title": "Ground Water Quality of West Bengal",
+            "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+            "page": 116,
+            "quote": "Nadia | Krishnanagar - I | Gobrapota (Dhakapara) | Tube Well | 7.22 | 423 | 200 | 42 | 23 | 11 | 3 | 0 | 244 | 200 | 7 | 2 | 12 | 0.62 | 250 | 1.90",
+            "header": "F",
+            "publication_year": null,
+            "evidence_id": "gwq_west_bengal:116:0:12:17",
+            "bbox": [
+              28.319999999999986,
+              286.199995,
+              829.1999899999996,
+              307.3200099999999
+            ],
+            "asked": "context",
+            "page_verified": true,
+            "row_verified": true,
+            "verification_scope": "row_number_and_explicit_identity"
+          },
+          {
+            "value": "0.29",
+            "unit": "mg/L",
+            "statistic": "single",
+            "place": "Krishnanagar - II, Jahangirpur Mark-ii Tw",
+            "contaminant": "fluoride",
+            "location": "Jahangirpur Mark-ii Tw",
+            "aquifer": "deeper",
+            "period_basis": "table_context",
+            "district": "Nadia",
+            "source_type": "Tube Well",
+            "well_id": null,
+            "date": null,
+            "period": "Apr, 2022",
+            "period_quote": "Annexure II | DISTRIBUTION OF PHYSIO- CHEMICAL CONSTITUENTS IN GROUND WATER IN DEEPER/CONFINED AQUIFER OF WEST | BENGAL | (Sample collected during Apr, 2022)",
+            "threshold": null,
+            "spatial_support": "site",
+            "doc": "gwq_west_bengal",
+            "title": "Ground Water Quality of West Bengal",
+            "url": "https://cgwb.gov.in/cgwbpnm/public/uploads/documents/170799987922095186file.pdf",
+            "page": 116,
+            "quote": "Nadia | Krishnanagar - II | Jahangirpur Mark-ii Tw | Tube Well | 7.48 | 525 | 240 | 42 | 33 | 11 | 2 | 0 | 299 | 245 | 14 | 1 | 9 | 0.29 | 295 | 6.02",
+            "header": "F",
+            "publication_year": null,
+            "evidence_id": "gwq_west_bengal:116:0:16:17",
+            "bbox": [
+              28.319999999999986,
+              353.899995,
+              829.1999899999996,
+              375.0199950000003
+            ],
+            "asked": "context",
+            "page_verified": true,
+            "row_verified": true,
+            "verification_scope": "row_number_and_explicit_identity"
+          }
+        ],
+        "scope_hint": true,
+        "reason": "NeerTathya reports survey measurements with their sources; it cannot say whether a particular well is safe today. Test your water at an accredited laboratory. This scope has 63 arsenic or fluoride records for Nadia from 5 documents. The highest indexed concentrations are listed below as context, not as an answer: they come from different sites, surveys and years. For example, ask: \"What fluoride is reported at Mahisbathan in Nadia?\"",
+        "parsed": {
+          "intent": "lookup",
+          "claim": null,
+          "contaminant": null,
+          "districts": [
+            "Nadia"
+          ],
+          "mentions": [
+            {
+              "text": "Is my tube well in Nadia safe to drink?",
+              "places": [],
+              "well_ids": [],
+              "sources": [
+                "tube well"
+              ],
+              "dates": [],
+              "statistics": [],
+              "attribute": null
+            }
+          ]
+        }
       },
       "matches_cli": true
     }

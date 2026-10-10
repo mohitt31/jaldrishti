@@ -182,7 +182,7 @@ def unscoped(ev, q: Query, metas, k: int = 3) -> dict:
     else:
         why = "The question names no village, block, well or statistic, so no single number answers it. "
     if not pool:
-        return {"answer_type": "insufficient_evidence", "items": [], "reason": why + f"No {con} records for {where} are indexed in this scope."}
+        return {"answer_type": "insufficient_evidence", "items": [], "scope_hint": True, "reason": why + f"No {con} records for {where} are indexed in this scope."}
     docs = len({e["doc"] for e in pool})
     why += f"This scope has {len(pool)} {con} records for {where} from {docs} document{'s' if docs != 1 else ''}."
     related = [_cite(e, metas) | {"asked": "context"} for e in conc[:k]]
